@@ -1,10 +1,11 @@
 package ca.thecorgi.barrenisles;
 
-import ca.thecorgi.barrenisles.registry.EntityRegistry;
+import ca.thecorgi.barrenisles.utils.registry.EntityRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
-import software.bernie.example.EntityUtils;
 import software.bernie.geckolib3.GeckoLib;
+
+import static ca.thecorgi.barrenisles.utils.EntityUtils.createDuneraptor;
 
 public class BarrenIsles implements ModInitializer {
     public static String ModID = "barrenisles";
@@ -13,8 +14,7 @@ public class BarrenIsles implements ModInitializer {
     public void onInitialize() {
         GeckoLib.initialize();
             new EntityRegistry();
-            FabricDefaultAttributeRegistry.register(EntityRegistry.DUNERAPTOR_ENTITY,
-                    EntityUtils.createGenericEntityAttributes());
+            FabricDefaultAttributeRegistry.register(EntityRegistry.DUNERAPTOR_ENTITY, createDuneraptor());
 
     }
 }

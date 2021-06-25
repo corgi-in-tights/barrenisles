@@ -1,4 +1,4 @@
-package ca.thecorgi.barrenisles.registry;
+package ca.thecorgi.barrenisles.utils.registry;
 
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.Entity;

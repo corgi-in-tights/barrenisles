@@ -1,7 +1,7 @@
 package ca.thecorgi.barrenisles.client;
 
 import ca.thecorgi.barrenisles.client.renderer.DuneraptorRenderer;
-import ca.thecorgi.barrenisles.registry.EntityRegistry;
+import ca.thecorgi.barrenisles.utils.registry.EntityRegistry;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
 import net.fabricmc.loader.api.FabricLoader;

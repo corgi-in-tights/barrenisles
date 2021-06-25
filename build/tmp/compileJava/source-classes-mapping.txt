@@ -1,14 +1,16 @@
-ca/thecorgi/barrenisles/BarrenIsles.java
- ca.thecorgi.barrenisles.BarrenIsles
+ca/thecorgi/barrenisles/utils/registry/EntityRegistryBuilder.java
+ ca.thecorgi.barrenisles.utils.registry.EntityRegistryBuilder
 ca/thecorgi/barrenisles/client/ClientInit.java
  ca.thecorgi.barrenisles.client.ClientInit
-ca/thecorgi/barrenisles/registry/EntityRegistryBuilder.java
- ca.thecorgi.barrenisles.registry.EntityRegistryBuilder
 ca/thecorgi/barrenisles/client/renderer/DuneraptorRenderer.java
  ca.thecorgi.barrenisles.client.renderer.DuneraptorRenderer
 ca/thecorgi/barrenisles/client/model/DuneraptorModel.java
  ca.thecorgi.barrenisles.client.model.DuneraptorModel
+ca/thecorgi/barrenisles/utils/EntityUtils.java
+ ca.thecorgi.barrenisles.utils.EntityUtils
+ca/thecorgi/barrenisles/utils/registry/EntityRegistry.java
+ ca.thecorgi.barrenisles.utils.registry.EntityRegistry
 ca/thecorgi/barrenisles/entity/duneraptor/DuneraptorEntity.java
  ca.thecorgi.barrenisles.entity.duneraptor.DuneraptorEntity
-ca/thecorgi/barrenisles/registry/EntityRegistry.java
- ca.thecorgi.barrenisles.registry.EntityRegistry
+ca/thecorgi/barrenisles/BarrenIsles.java
+ ca.thecorgi.barrenisles.BarrenIsles

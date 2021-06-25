@@ -1,4 +1,4 @@
-package ca.thecorgi.barrenisles.registry;
+package ca.thecorgi.barrenisles.utils.registry;
 
 import ca.thecorgi.barrenisles.entity.duneraptor.DuneraptorEntity;
 import net.fabricmc.loader.api.FabricLoader;
@@ -13,10 +13,10 @@ import static ca.thecorgi.barrenisles.BarrenIsles.ModID;
 
 public class EntityRegistry {
     public static final EntityType<DuneraptorEntity> DUNERAPTOR_ENTITY = buildEntity(DuneraptorEntity::new,
-            DuneraptorEntity.class, .7F, 1.3F);
+            DuneraptorEntity.class, 3, 1);
 
     public static <T extends Entity> EntityType<T> buildEntity(EntityType.EntityFactory<T> entity, Class<T> entityClass,
-                                                               float width, float height) {
+                                                               int width, int height) {
         if (FabricLoader.getInstance().isDevelopmentEnvironment()) {
             String name = entityClass.getSimpleName().toLowerCase();
             return EntityRegistryBuilder.<T>createBuilder(new Identifier(ModID, name)).entity(entity)
