@@ -1,6 +1,6 @@
 package ca.thecorgi.barrenisles.client.model;
 
-import ca.thecorgi.barrenisles.entity.duneraptor.DuneraptorEntity;
+import ca.thecorgi.barrenisles.entity.DuneraptorEntity;
 import net.minecraft.util.Identifier;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.processor.IBone;

@@ -5,7 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import software.bernie.geckolib3.GeckoLib;
 
-import static ca.thecorgi.barrenisles.utils.EntityUtils.createDuneraptor;
+import static ca.thecorgi.barrenisles.utils.EntityUtils.*;
 
 public class BarrenIsles implements ModInitializer {
     public static String ModID = "barrenisles";
@@ -15,6 +15,6 @@ public class BarrenIsles implements ModInitializer {
         GeckoLib.initialize();
             new EntityRegistry();
             FabricDefaultAttributeRegistry.register(EntityRegistry.DUNERAPTOR_ENTITY, createDuneraptor());
-
+            FabricDefaultAttributeRegistry.register(EntityRegistry.BURAMAPHU_ENTITY, createBuramaphu());
     }
 }

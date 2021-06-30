@@ -8,10 +8,18 @@ import net.minecraft.entity.mob.PathAwareEntity;
 public class EntityUtils {
     public static DefaultAttributeContainer.Builder createDuneraptor() {
         return PathAwareEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.23D)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.4D)
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 25.0D)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 20D)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 4D)
-                .add(EntityAttributes.GENERIC_ATTACK_SPEED, 0.8D);
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 5D)
+                .add(EntityAttributes.GENERIC_ATTACK_SPEED, 0.5D);
+    }
+    public static DefaultAttributeContainer.Builder createBuramaphu() {
+        return PathAwareEntity.createMobAttributes()
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.21D)
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 15D)
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 20D)
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 7D)
+                .add(EntityAttributes.GENERIC_ATTACK_SPEED, 0.2D);
     }
 }

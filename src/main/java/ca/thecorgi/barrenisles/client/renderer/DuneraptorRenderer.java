@@ -1,7 +1,7 @@
 package ca.thecorgi.barrenisles.client.renderer;
 
 import ca.thecorgi.barrenisles.client.model.DuneraptorModel;
-import ca.thecorgi.barrenisles.entity.duneraptor.DuneraptorEntity;
+import ca.thecorgi.barrenisles.entity.DuneraptorEntity;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
