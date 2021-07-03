@@ -1,22 +1,39 @@
-ca/thecorgi/barrenisles/client/renderer/DuneraptorRenderer.java
- ca.thecorgi.barrenisles.client.renderer.DuneraptorRenderer
-ca/thecorgi/barrenisles/entity/DuneraptorEntity.java
- ca.thecorgi.barrenisles.entity.DuneraptorEntity
-ca/thecorgi/barrenisles/utils/registry/EntityRegistryBuilder.java
- ca.thecorgi.barrenisles.utils.registry.EntityRegistryBuilder
-ca/thecorgi/barrenisles/client/model/DuneraptorModel.java
- ca.thecorgi.barrenisles.client.model.DuneraptorModel
-ca/thecorgi/barrenisles/utils/EntityUtils.java
- ca.thecorgi.barrenisles.utils.EntityUtils
 ca/thecorgi/barrenisles/entity/BuramaphuEntity.java
  ca.thecorgi.barrenisles.entity.BuramaphuEntity
-ca/thecorgi/barrenisles/BarrenIsles.java
- ca.thecorgi.barrenisles.BarrenIsles
-ca/thecorgi/barrenisles/client/ClientInit.java
- ca.thecorgi.barrenisles.client.ClientInit
+ca/thecorgi/barrenisles/mixin/NoiseChunkGeneratorMixin.java
+ ca.thecorgi.barrenisles.mixin.NoiseChunkGeneratorMixin
+ca/thecorgi/barrenisles/utils/EntityUtils.java
+ ca.thecorgi.barrenisles.utils.EntityUtils
 ca/thecorgi/barrenisles/utils/registry/EntityRegistry.java
  ca.thecorgi.barrenisles.utils.registry.EntityRegistry
+ca/thecorgi/barrenisles/structures/OasisStructure.java
+ ca.thecorgi.barrenisles.structures.OasisStructure
+ ca.thecorgi.barrenisles.structures.OasisStructure$Start
+ca/thecorgi/barrenisles/BarrenIsles.java
+ ca.thecorgi.barrenisles.BarrenIsles
+ca/thecorgi/barrenisles/utils/registry/EntityRegistryBuilder.java
+ ca.thecorgi.barrenisles.utils.registry.EntityRegistryBuilder
+ca/thecorgi/barrenisles/client/renderer/DuneraptorRenderer.java
+ ca.thecorgi.barrenisles.client.renderer.DuneraptorRenderer
 ca/thecorgi/barrenisles/client/renderer/BuramaphuRenderer.java
  ca.thecorgi.barrenisles.client.renderer.BuramaphuRenderer
+ca/thecorgi/barrenisles/structures/Rock2Structure.java
+ ca.thecorgi.barrenisles.structures.Rock2Structure
+ ca.thecorgi.barrenisles.structures.Rock2Structure$Start
+ca/thecorgi/barrenisles/client/model/DuneraptorModel.java
+ ca.thecorgi.barrenisles.client.model.DuneraptorModel
 ca/thecorgi/barrenisles/client/model/BuramaphuModel.java
  ca.thecorgi.barrenisles.client.model.BuramaphuModel
+ca/thecorgi/barrenisles/utils/registry/BarrenIslesStructures.java
+ ca.thecorgi.barrenisles.utils.registry.BarrenIslesStructures
+ca/thecorgi/barrenisles/structures/Rock1Structure.java
+ ca.thecorgi.barrenisles.structures.Rock1Structure
+ ca.thecorgi.barrenisles.structures.Rock1Structure$Start
+ca/thecorgi/barrenisles/mixin/StructuresConfigAccessor.java
+ ca.thecorgi.barrenisles.mixin.StructuresConfigAccessor
+ca/thecorgi/barrenisles/utils/registry/ConfiguredStructures.java
+ ca.thecorgi.barrenisles.utils.registry.ConfiguredStructures
+ca/thecorgi/barrenisles/client/ClientInit.java
+ ca.thecorgi.barrenisles.client.ClientInit
+ca/thecorgi/barrenisles/entity/DuneraptorEntity.java
+ ca.thecorgi.barrenisles.entity.DuneraptorEntity
