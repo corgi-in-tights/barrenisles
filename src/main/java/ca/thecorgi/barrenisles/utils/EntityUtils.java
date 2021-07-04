@@ -1,14 +1,13 @@
 package ca.thecorgi.barrenisles.utils;
 
-import ca.thecorgi.barrenisles.entity.DuneraptorEntity;
-import net.minecraft.entity.Entity;
+import ca.thecorgi.barrenisles.entity.Duneraptor;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.PathAwareEntity;
 
 public class EntityUtils {
     public static DefaultAttributeContainer.Builder createDuneraptor() {
-        return DuneraptorEntity.createMobAttributes()
+        return Duneraptor.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.4D)
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 25.0D)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 5D);

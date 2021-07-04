@@ -1,0 +1,226 @@
+---- Minecraft Crash Report ----
+// Who set us up the TNT?
+
+Time: 2021-07-03, 11:33 p.m.
+Description: Rendering entity in world
+
+software.bernie.geckolib3.geo.exception.GeckoLibException: barrenisles:animations/buramaphu.animation.json: Could not find animation file. Please double check name.
+	at software.bernie.geckolib3.model.AnimatedGeoModel.getAnimation(AnimatedGeoModel.java:99)
+	at software.bernie.geckolib3.core.controller.AnimationController.lambda$setAnimation$0(AnimationController.java:165)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at software.bernie.geckolib3.core.controller.AnimationController.setAnimation(AnimationController.java:177)
+	at ca.thecorgi.barrenisles.entity.BuramaphuEntity.predicate(BuramaphuEntity.java:32)
+	at software.bernie.geckolib3.core.controller.AnimationController.testAnimationPredicate(AnimationController.java:488)
+	at software.bernie.geckolib3.core.controller.AnimationController.process(AnimationController.java:359)
+	at software.bernie.geckolib3.core.processor.AnimationProcessor.tickAnimation(AnimationProcessor.java:65)
+	at software.bernie.geckolib3.model.AnimatedGeoModel.setLivingAnimations(AnimatedGeoModel.java:78)
+	at ca.thecorgi.barrenisles.client.model.BuramaphuModel.setLivingAnimations(BuramaphuModel.java:31)
+	at ca.thecorgi.barrenisles.client.model.BuramaphuModel.setLivingAnimations(BuramaphuModel.java:12)
+	at software.bernie.geckolib3.renderers.geo.GeoEntityRenderer.render(GeoEntityRenderer.java:153)
+	at software.bernie.geckolib3.renderers.geo.GeoEntityRenderer.render(GeoEntityRenderer.java:41)
+	at net.minecraft.client.render.entity.EntityRenderDispatcher.render(EntityRenderDispatcher.java:131)
+	at net.minecraft.client.render.WorldRenderer.renderEntity(WorldRenderer.java:1313)
+	at net.minecraft.client.render.WorldRenderer.render(WorldRenderer.java:1298)
+	at net.minecraft.client.render.GameRenderer.renderWorld(GameRenderer.java:1025)
+	at net.minecraft.client.render.GameRenderer.render(GameRenderer.java:822)
+	at net.minecraft.client.MinecraftClient.render(MinecraftClient.java:1149)
+	at net.minecraft.client.MinecraftClient.run(MinecraftClient.java:746)
+	at net.minecraft.client.main.Main.main(Main.java:191)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at net.fabricmc.loader.game.MinecraftGameProvider.launch(MinecraftGameProvider.java:234)
+	at net.fabricmc.loader.launch.knot.Knot.launch(Knot.java:153)
+	at net.fabricmc.loader.launch.knot.KnotClient.main(KnotClient.java:28)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at software.bernie.geckolib3.model.AnimatedGeoModel.getAnimation(AnimatedGeoModel.java:99)
+	at software.bernie.geckolib3.core.controller.AnimationController.lambda$setAnimation$0(AnimationController.java:165)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at software.bernie.geckolib3.core.controller.AnimationController.setAnimation(AnimationController.java:177)
+	at ca.thecorgi.barrenisles.entity.BuramaphuEntity.predicate(BuramaphuEntity.java:32)
+	at software.bernie.geckolib3.core.controller.AnimationController.testAnimationPredicate(AnimationController.java:488)
+	at software.bernie.geckolib3.core.controller.AnimationController.process(AnimationController.java:359)
+	at software.bernie.geckolib3.core.processor.AnimationProcessor.tickAnimation(AnimationProcessor.java:65)
+	at software.bernie.geckolib3.model.AnimatedGeoModel.setLivingAnimations(AnimatedGeoModel.java:78)
+	at ca.thecorgi.barrenisles.client.model.BuramaphuModel.setLivingAnimations(BuramaphuModel.java:31)
+	at ca.thecorgi.barrenisles.client.model.BuramaphuModel.setLivingAnimations(BuramaphuModel.java:12)
+	at software.bernie.geckolib3.renderers.geo.GeoEntityRenderer.render(GeoEntityRenderer.java:153)
+	at software.bernie.geckolib3.renderers.geo.GeoEntityRenderer.render(GeoEntityRenderer.java:41)
+
+-- Entity being rendered --
+Details:
+	Entity Type: barrenisles:buramaphuentity (ca.thecorgi.barrenisles.entity.BuramaphuEntity)
+	Entity ID: 1
+	Entity Name: entity.barrenisles.buramaphuentity
+	Entity's Exact location: 154.50, 4.00, 230.50
+	Entity's Block location: World: (154,4,230), Section: (at 10,4,6 in 9,0,14; chunk contains blocks 144,0,224 to 159,255,239), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Entity's Momentum: -0.00, -0.08, -0.00
+	Entity's Passengers: []
+	Entity's Vehicle: null
+
+-- Renderer details --
+Details:
+	Assigned renderer: ca.thecorgi.barrenisles.client.renderer.BuramaphuRenderer@2b69f552
+	Location: 0.00,0.00,0.00 - World: (0,0,0), Section: (at 0,0,0 in 0,0,0; chunk contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Rotation: 0.0
+	Delta: 0.0
+Stacktrace:
+	at net.minecraft.client.render.entity.EntityRenderDispatcher.render(EntityRenderDispatcher.java:131)
+	at net.minecraft.client.render.WorldRenderer.renderEntity(WorldRenderer.java:1313)
+	at net.minecraft.client.render.WorldRenderer.render(WorldRenderer.java:1298)
+	at net.minecraft.client.render.GameRenderer.renderWorld(GameRenderer.java:1025)
+
+-- Affected level --
+Details:
+	All players: 1 total; [ClientPlayerEntity['Player614'/2, l='ClientLevel', x=154.50, y=4.00, z=230.50]]
+	Chunk stats: 841, 483
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (144,4,224), Section: (at 0,4,0 in 9,0,14; chunk contains blocks 144,0,224 to 159,255,239), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 158 game time, 158 day time
+	Server brand: fabric
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.world.ClientWorld.addDetailsToCrashReport(ClientWorld.java:365)
+	at net.minecraft.client.MinecraftClient.addDetailsToCrashReport(MinecraftClient.java:2416)
+	at net.minecraft.client.MinecraftClient.run(MinecraftClient.java:763)
+	at net.minecraft.client.main.Main.main(Main.java:191)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at net.fabricmc.loader.game.MinecraftGameProvider.launch(MinecraftGameProvider.java:234)
+	at net.fabricmc.loader.launch.knot.Knot.launch(Knot.java:153)
+	at net.fabricmc.loader.launch.knot.KnotClient.main(KnotClient.java:28)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+
+-- Last reload --
+Details:
+	Reload number: 1
+	Reload reason: initial
+	Finished: Yes
+	Packs: Default, Fabric Mods
+
+-- System Details --
+Details:
+	Minecraft Version: 1.17
+	Minecraft Version ID: 1.17
+	Operating System: Mac OS X (x86_64) version 11.2
+	Java Version: 16.0.1, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 2555203728 bytes (2436 MiB) / 4034920448 bytes (3848 MiB) up to 8589934592 bytes (8192 MiB)
+	CPUs: 12
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+	Identifier: Intel64 Family 6 Model 158 Stepping 10
+	Microarchitecture: unknown
+	Frequency (GHz): 2.60
+	Number of physical packages: 1
+	Number of physical CPUs: 6
+	Number of logical CPUs: 12
+	Graphics card #0 name: Intel UHD Graphics 630
+	Graphics card #0 vendor: Intel
+	Graphics card #0 VRAM (MB): 1536.00
+	Graphics card #0 deviceId: 0x3e9b
+	Graphics card #0 versionInfo: Revision ID: 0x0000, gMux Version: 5.0.0
+	Graphics card #1 name: AMD Radeon Pro 5500M
+	Graphics card #1 vendor: AMD (0x1002)
+	Graphics card #1 VRAM (MB): 4096.00
+	Graphics card #1 deviceId: 0x7340
+	Graphics card #1 versionInfo: Revision ID: 0x0040, ROM Revision: 113-D3220E-190, VBIOS Version: 113-D32206U1-019, Option ROM Version: 113-D32206U1-019, EFI Driver Version: 01.A1.190, gMux Version: 5.0.0
+	Memory slot #0 capacity (MB): 16384.00
+	Memory slot #0 clockSpeed (GHz): 2.67
+	Memory slot #0 type: DDR4
+	Memory slot #1 capacity (MB): 16384.00
+	Memory slot #1 clockSpeed (GHz): 2.67
+	Memory slot #1 type: DDR4
+	Virtual memory max (MB): 32768.00
+	Virtual memory used (MB): 17785.30
+	Swap memory total (MB): 0.00
+	Swap memory used (MB): 0.00
+	JVM Flags: 1 total; -XX:+ShowCodeDetailsInExceptionMessages
+	Fabric Mods: 
+		barrenisles: Barren Isles 1.0.0
+		fabric: Fabric API 0.36.0+1.17
+		fabric-api-base: Fabric API Base 0.3.0+a02b44633d
+		fabric-api-lookup-api-v1: Fabric API Lookup API (v1) 1.2.0+2b5c62d03d
+		fabric-biome-api-v1: Fabric Biome API (v1) 3.1.11+c345aea83d
+		fabric-blockrenderlayer-v1: Fabric BlockRenderLayer Registration (v1) 1.1.5+a02b44633d
+		fabric-command-api-v1: Fabric Command API (v1) 1.1.1+a02b44633d
+		fabric-commands-v0: Fabric Commands (v0) 0.2.2+92519afa3d
+		fabric-containers-v0: Fabric Containers (v0) 0.1.12+a02b44633d
+		fabric-content-registries-v0: Fabric Content Registries (v0) 0.2.2+a02b44633d
+		fabric-crash-report-info-v1: Fabric Crash Report Info (v1) 0.1.5+be9da3103d
+		fabric-dimensions-v1: Fabric Dimensions API (v1) 2.0.10+a02b44633d
+		fabric-entity-events-v1: Fabric Entity Events (v1) 1.1.0+a02b44633d
+		fabric-events-interaction-v0: Fabric Events Interaction (v0) 0.4.9+a722d8c03d
+		fabric-events-lifecycle-v0: Fabric Events Lifecycle (v0) 0.2.1+92519afa3d
+		fabric-game-rule-api-v1: Fabric Game Rule API (v1) 1.0.6+a02b44633d
+		fabric-item-api-v1: Fabric Item API (v1) 1.2.4+a02b44633d
+		fabric-item-groups-v0: Fabric Item Groups (v0) 0.2.10+b7ab61213d
+		fabric-key-binding-api-v1: Fabric Key Binding API (v1) 1.0.4+a02b44633d
+		fabric-keybindings-v0: Fabric Key Bindings (v0) 0.2.2+36b77c3e3d
+		fabric-lifecycle-events-v1: Fabric Lifecycle Events (v1) 1.4.4+a02b44633d
+		fabric-loot-tables-v1: Fabric Loot Tables (v1) 1.0.4+a02b44633d
+		fabric-mining-levels-v0: Fabric Mining Levels (v0) 0.1.3+92519afa3d
+		fabric-models-v0: Fabric Models (v0) 0.3.0+a02b44633d
+		fabric-networking-api-v1: Fabric Networking API (v1) 1.0.11+b7ab61213d
+		fabric-networking-blockentity-v0: Fabric Networking Block Entity (v0) 0.2.11+a02b44633d
+		fabric-networking-v0: Fabric Networking (v0) 0.3.2+92519afa3d
+		fabric-object-builder-api-v1: Fabric Object Builder API (v1) 1.10.9+b7ab61213d
+		fabric-object-builders-v0: Fabric Object Builders (v0) 0.7.3+a02b44633d
+		fabric-particles-v1: Fabric Particles (v1) 0.2.4+a02b44633d
+		fabric-registry-sync-v0: Fabric Registry Sync (v0) 0.7.10+e2961fee3d
+		fabric-renderer-api-v1: Fabric Renderer API (v1) 0.4.3+676f40fa3d
+		fabric-renderer-indigo: Fabric Renderer - Indigo 0.4.8+a02b44633d
+		fabric-renderer-registries-v1: Fabric Renderer Registries (v1) 3.2.0+a02b44633d
+		fabric-rendering-data-attachment-v1: Fabric Rendering Data Attachment (v1) 0.1.5+a02b44633d
+		fabric-rendering-fluids-v1: Fabric Rendering Fluids (v1) 0.1.13+a02b44633d
+		fabric-rendering-v0: Fabric Rendering (v0) 1.1.2+92519afa3d
+		fabric-rendering-v1: Fabric Rendering (v1) 1.6.0+a02b44633d
+		fabric-resource-loader-v0: Fabric Resource Loader (v0) 0.4.7+b7ab61213d
+		fabric-screen-api-v1: Fabric Screen API (v1) 1.0.4+155f865c3d
+		fabric-screen-handler-api-v1: Fabric Screen Handler API (v1) 1.1.8+a02b44633d
+		fabric-structure-api-v1: Fabric Structure API (v1) 1.1.11+e36969833d
+		fabric-tag-extensions-v0: Fabric Tag Extensions (v0) 1.1.4+a02b44633d
+		fabric-textures-v0: Fabric Textures (v0) 1.0.6+a02b44633d
+		fabric-tool-attribute-api-v1: Fabric Tool Attribute API (v1) 1.2.12+b7ab61213d
+		fabricloader: Fabric Loader 0.11.6
+		geckolib3: Geckolib 3.0.5
+		java: Java HotSpot(TM) 64-Bit Server VM 16
+		minecraft: Minecraft 1.17
+	Launched Version: Fabric
+	Backend library: LWJGL version 3.2.1 build 12
+	Backend API: AMD Radeon Pro 5500M OpenGL Engine GL version 4.1 ATI-4.2.15, ATI Technologies Inc.
+	Window size: 1708x960
+	GL Caps: Using framebuffer using OpenGL 3.2
+	GL debug messages: <disabled>
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fabric'
+	Type: Integrated Server (map_client.txt)
+	Graphics mode: fancy
+	Resource Packs: vanilla, Fabric Mods
+	Current Language: English (US)
+	CPU: 12x Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+	Player Count: 1 / 8; [ServerPlayerEntity['Player614'/2, l='ServerLevel[New World]', x=154.50, y=4.00, z=230.50]]
+	Data Packs: vanilla (incompatible), Fabric Mods

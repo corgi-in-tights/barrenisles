@@ -9,6 +9,8 @@ ca/thecorgi/barrenisles/utils/registry/EntityRegistry.java
 ca/thecorgi/barrenisles/structures/OasisStructure.java
  ca.thecorgi.barrenisles.structures.OasisStructure
  ca.thecorgi.barrenisles.structures.OasisStructure$Start
+ca/thecorgi/barrenisles/utils/registry/BiomeModifications.java
+ ca.thecorgi.barrenisles.utils.registry.BiomeModifications
 ca/thecorgi/barrenisles/BarrenIsles.java
  ca.thecorgi.barrenisles.BarrenIsles
 ca/thecorgi/barrenisles/utils/registry/EntityRegistryBuilder.java

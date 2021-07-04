@@ -4,9 +4,9 @@
   "version": "1.0.0",
 
   "name": "Barren Isles",
-  "description": "Improves the desert with new additions, barren but not forgotten.",
+  "description": "Barren but not forgotten.",
   "authors": [
-    "corgi in tights#0001"
+    "corgi in tights"
   ],
   "contact": {
     "homepage": "",
@@ -34,8 +34,5 @@
     "fabric": "*",
     "minecraft": "1.17.x",
     "java": ">=16"
-  },
-  "suggests": {
-    "another-mod": "*"
   }
 }
