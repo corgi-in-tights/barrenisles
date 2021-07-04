@@ -5,6 +5,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.passive.HorseBaseEntity;
+import net.minecraft.entity.passive.RabbitEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -24,10 +25,10 @@ import software.bernie.geckolib3.core.manager.AnimationFactory;
 import java.util.UUID;
 
 
-public class Duneraptor extends HorseBaseEntity implements IAnimatable, Saddleable {
+public class DuneraptorEntity extends HorseBaseEntity implements IAnimatable, Saddleable {
     AnimationFactory factory = new AnimationFactory(this);
 
-    public Duneraptor(EntityType<? extends HorseBaseEntity> type, World worldIn) {
+    public DuneraptorEntity(EntityType<? extends HorseBaseEntity> type, World worldIn) {
         super(type, worldIn);
         this.ignoreCameraFrustum = true;
     }
@@ -45,7 +46,7 @@ public class Duneraptor extends HorseBaseEntity implements IAnimatable, Saddleab
 
     @Override
     public void registerControllers(AnimationData data) {
-        data.addAnimationController(new AnimationController<Duneraptor>(this, "controller", 0, this::predicate));
+        data.addAnimationController(new AnimationController<DuneraptorEntity>(this, "controller", 0, this::predicate));
     }
 
     @Override

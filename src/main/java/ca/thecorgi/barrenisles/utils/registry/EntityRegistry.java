@@ -2,7 +2,7 @@ package ca.thecorgi.barrenisles.utils.registry;
 
 import ca.thecorgi.barrenisles.entity.BuramaphuEntity;
 
-import ca.thecorgi.barrenisles.entity.Duneraptor;
+import ca.thecorgi.barrenisles.entity.DuneraptorEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
@@ -13,8 +13,8 @@ import software.bernie.example.registry.EntityRegistryBuilder;
 import static ca.thecorgi.barrenisles.BarrenIsles.ModID;
 
 public class EntityRegistry {
-    public static final EntityType<Duneraptor> DUNERAPTOR_ENTITY = buildEntity(Duneraptor::new,
-            Duneraptor.class, 1.5F, 2.0F);
+    public static final EntityType<DuneraptorEntity> DUNERAPTOR_ENTITY = buildEntity(DuneraptorEntity::new,
+            DuneraptorEntity.class, 1.5F, 2.0F);
     public static final EntityType<BuramaphuEntity> BURAMAPHU_ENTITY = buildEntity(BuramaphuEntity::new,
             BuramaphuEntity.class, 3F, 2.5F);
 
