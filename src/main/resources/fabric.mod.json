@@ -4,9 +4,9 @@
   "version": "${version}",
 
   "name": "Barren Isles",
-  "description": "Barren, to the bone.",
+  "description": "Improves the desert with new additions, barren but not forgotten.",
   "authors": [
-    "corgi in tights"
+    "corgi in tights#0001"
   ],
   "contact": {
     "homepage": "",
@@ -26,6 +26,7 @@
     ]
   },
   "mixins": [
+    "barrenisles.mixins.json"
   ],
 
   "depends": {

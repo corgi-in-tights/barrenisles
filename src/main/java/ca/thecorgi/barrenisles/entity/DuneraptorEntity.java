@@ -1,8 +1,11 @@
 package ca.thecorgi.barrenisles.entity;
 
 
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
+import net.minecraft.entity.attribute.DefaultAttributeContainer;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.Monster;
 import net.minecraft.entity.passive.HorseBaseEntity;
@@ -32,7 +35,7 @@ import java.util.List;
 import java.util.UUID;
 
 
-public class DuneraptorEntity extends HorseBaseEntity implements Monster, IAnimatable, Saddleable {
+public class DuneraptorEntity extends HorseBaseEntity implements IAnimatable, Saddleable {
     AnimationFactory factory = new AnimationFactory(this);
 
     public DuneraptorEntity(EntityType<? extends HorseBaseEntity> type, World worldIn) {
@@ -40,22 +43,16 @@ public class DuneraptorEntity extends HorseBaseEntity implements Monster, IAnima
         this.ignoreCameraFrustum = true;
     }
 
-    private <E extends IAnimatable> PlayState predicate (AnimationEvent<E> event) {
+    private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (event.isMoving() && !this.isAttacking()) {
-            this.setMovementSpeed(1.9F);
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("duneraptor.walk", true));
-            return PlayState.CONTINUE;
-        }
-        if (this.isAttacking()) {
-            this.setMovementSpeed(0F);
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("duneraptor.run", true));
+        } else if (this.isAttacking()) {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("duneraptor.attack", false));
-            return PlayState.CONTINUE;
         } else {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("duneraptor.idle", true));
-            return PlayState.CONTINUE;
         }
+        return PlayState.CONTINUE;
     }
-
 
     @Override
     public void registerControllers(AnimationData data) {
@@ -68,40 +65,19 @@ public class DuneraptorEntity extends HorseBaseEntity implements Monster, IAnima
     }
 
     @Override
-    protected void initGoals() {
-        this.targetSelector.add(3, new RevengeGoal(this));
-        this.goalSelector.add(4, new MeleeAttackGoal(this, 0.2D, true));
+    protected void initGoals () {
+        // Entity will walk around.
+        this.goalSelector.add(7, new WanderAroundFarGoal(this, 0.4D, 70));
+        // Entity will look at Player.
+        this.goalSelector.add(8, new LookAtEntityGoal(this, PlayerEntity.class, 6.5F));
+        // Entity will look around
         this.goalSelector.add(5, new LookAroundGoal(this));
-        this.goalSelector.add(7, new WanderAroundGoal(this, 0.23D, 70));
-        this.goalSelector.add(8, new LookAtEntityGoal(this, PlayerEntity.class, 6));
-        this.goalSelector.add(9, new SwimGoal(this));
-        this.goalSelector.add(10, new TemptGoal(this, 1.2D, Ingredient.ofItems(Items.CARROT_ON_A_STICK), false));
-    }
-
-    @Nullable
-    @Override
-    public PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
-        return null;
-    }
-
-    @Override
-    public boolean tryAttack (Entity target) {
-        if (target.getUuid().equals(this.getOwnerUuid()) || this.isTame()) {
-            Box box = this.getBoundingBox().expand(5, 3, 5);
-            List<HostileEntity> hostiles = this.world.getEntitiesByClass(HostileEntity.class, box, EntityPredicates.canBePushedBy(this));
-            if (!hostiles.isEmpty()) {
-                for (HostileEntity hostile : hostiles) {
-                    this.getNavigation().startMovingTo(hostile, 0F);
-                    this.getLookControl().lookAt(hostile, 30.0F, 30.0F);
-                    this.setTarget(hostile);
-                    return super.tryAttack(hostile);
-                }
-            }
-
-            return false;
-        } else {
-            return super.tryAttack(target);
-        }
+        // Entity will melee-attack
+        this.goalSelector.add(4, new MeleeAttackGoal(this, 0.4D, true));
+        // Entity will follow player
+        this.targetSelector.add(5, new FollowTargetGoal<>(this, PlayerEntity.class, true));
+        // Entity will attempt revenge
+        this.targetSelector.add(3, new RevengeGoal(this));
     }
 
     @Override
@@ -110,7 +86,7 @@ public class DuneraptorEntity extends HorseBaseEntity implements Monster, IAnima
         if (player != null && player.getUuid().equals(this.getOwnerUuid())) {
             return true;
         } else {
-            return this.getHealth() <= 24;
+            return this.getHealth() <= 25;
         }
     }
 
@@ -146,8 +122,8 @@ public class DuneraptorEntity extends HorseBaseEntity implements Monster, IAnima
     }
 
     public void writeCustomDataToTag (NbtCompound tag) {
-        tag.putBoolean("EatingHaystack", this.isEatingGrass());
-        tag.putBoolean("Bred", this.isBred());
+        this.setEatingGrass(tag.getBoolean("EatingHaystack"));
+        this.setBred(tag.getBoolean("Bred"));
         tag.putInt("Temper", this.getTemper());
         tag.putBoolean("Tame", this.isTame());
         if (this.getOwnerUuid() != null) {
@@ -193,16 +169,14 @@ public class DuneraptorEntity extends HorseBaseEntity implements Monster, IAnima
         this.heal(1.5F);
     }
 
-    public EntityDimensions getDimensions(EntityPose pose) {
-        return pose == EntityPose.SLEEPING ? SLEEPING_DIMENSIONS : super.getDimensions(pose).scaled(this.getScaleFactor());
-    }
+//    public EntityDimensions getDimensions(EntityPose pose) {
+//        return pose == EntityPose.SLEEPING ? SLEEPING_DIMENSIONS : super.getDimensions(pose).scaled(this.getScaleFactor());
+//    }
 
 //    @Override
-//    public void tickMovement(){
+//    public void tickMovement() {
 //        if (this.world.getBlockState(this.getBlockPos().down()).isOf(Blocks.SAND)) {
-//            this.setMovementSpeed(0.34F);
+//            this.setMovementSpeed(3.4F);
 //        }
 //    }
-//
-
 }
