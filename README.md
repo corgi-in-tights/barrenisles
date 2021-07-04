@@ -1,3 +1,3 @@
 # Barren Isles
 Barren, to the bone.
-Adds in a new barren dimension.
+Improves the desert with new additions, barren but not forgotten.
