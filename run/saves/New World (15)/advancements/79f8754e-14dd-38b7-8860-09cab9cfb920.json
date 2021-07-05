@@ -1,0 +1,36 @@
+{
+  "minecraft:recipes/transportation/carrot_on_a_stick": {
+    "criteria": {
+      "has_carrot": "2021-07-05 17:44:44 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/arrow": {
+    "criteria": {
+      "has_feather": "2021-07-05 17:50:51 -0400"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2021-07-05 17:50:49 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/green_dye": {
+    "criteria": {
+      "has_cactus": "2021-07-05 17:56:29 -0400"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:desert_hills": "2021-07-05 17:50:53 -0400",
+      "minecraft:desert": "2021-07-05 17:44:44 -0400",
+      "minecraft:river": "2021-07-05 17:55:18 -0400",
+      "minecraft:savanna": "2021-07-05 17:55:39 -0400"
+    },
+    "done": false
+  },
+  "DataVersion": 2724
+}

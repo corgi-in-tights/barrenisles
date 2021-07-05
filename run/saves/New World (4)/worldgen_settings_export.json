@@ -1,0 +1,86 @@
+{
+  "bonus_chest": false,
+  "dimensions": {
+    "minecraft:overworld": {
+      "type": "minecraft:overworld",
+      "generator": {
+        "settings": {
+          "lakes": false,
+          "features": false,
+          "biome": "minecraft:plains",
+          "structures": {
+            "stronghold": {
+              "distance": 32,
+              "spread": 3,
+              "count": 128
+            },
+            "structures": {
+              "barrenisles:oasis_pool": {
+                "spacing": 18,
+                "separation": 12,
+                "salt": 399119345
+              },
+              "barrenisles:rock_2_pool": {
+                "spacing": 50,
+                "separation": 22,
+                "salt": 578325823
+              },
+              "minecraft:village": {
+                "spacing": 32,
+                "separation": 8,
+                "salt": 10387312
+              },
+              "barrenisles:rock_1_pool": {
+                "spacing": 30,
+                "separation": 14,
+                "salt": 283223445
+              }
+            }
+          },
+          "layers": [
+            {
+              "height": 1,
+              "block": "minecraft:bedrock"
+            },
+            {
+              "height": 2,
+              "block": "minecraft:dirt"
+            },
+            {
+              "height": 1,
+              "block": "minecraft:grass_block"
+            }
+          ]
+        },
+        "type": "minecraft:flat"
+      }
+    },
+    "minecraft:the_nether": {
+      "type": "minecraft:the_nether",
+      "generator": {
+        "biome_source": {
+          "preset": "minecraft:nether",
+          "seed": -1185091085648590568,
+          "type": "minecraft:multi_noise"
+        },
+        "seed": -1185091085648590568,
+        "settings": "minecraft:nether",
+        "type": "minecraft:noise"
+      }
+    },
+    "minecraft:the_end": {
+      "type": "minecraft:the_end",
+      "generator": {
+        "biome_source": {
+          "seed": -1185091085648590568,
+          "type": "minecraft:the_end"
+        },
+        "seed": -1185091085648590568,
+        "settings": "minecraft:end",
+        "type": "minecraft:noise"
+      }
+    }
+  },
+  "seed": -1185091085648590568,
+  "generate_features": false
+}

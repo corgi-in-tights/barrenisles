@@ -22,5 +22,4 @@ public class DuneraptorRenderer extends GeoEntityRenderer<DuneraptorEntity> {
                                      int packedLightIn, Identifier textureLocation) {
         return RenderLayer.getEntityTranslucent(this.getTextureLocation(animatable));
     }
-
 }

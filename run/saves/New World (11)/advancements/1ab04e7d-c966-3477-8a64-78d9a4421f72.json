@@ -1,0 +1,102 @@
+{
+  "minecraft:recipes/transportation/dark_oak_boat": {
+    "criteria": {
+      "in_water": "2021-07-04 19:07:02 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/birch_boat": {
+    "criteria": {
+      "in_water": "2021-07-04 19:07:02 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/red_sandstone": {
+    "criteria": {
+      "has_sand": "2021-07-04 19:06:21 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_salmon": {
+    "criteria": {
+      "has_salmon": "2021-07-04 19:07:03 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/acacia_boat": {
+    "criteria": {
+      "in_water": "2021-07-04 19:07:02 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/oak_boat": {
+    "criteria": {
+      "in_water": "2021-07-04 19:07:02 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_salmon_from_smoking": {
+    "criteria": {
+      "has_salmon": "2021-07-04 19:07:03 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_cod_from_campfire_cooking": {
+    "criteria": {
+      "has_cod": "2021-07-04 19:07:05 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_cod_from_smoking": {
+    "criteria": {
+      "has_cod": "2021-07-04 19:07:04 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_cod": {
+    "criteria": {
+      "has_cod": "2021-07-04 19:07:05 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/jungle_boat": {
+    "criteria": {
+      "in_water": "2021-07-04 19:07:02 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_salmon_from_campfire_cooking": {
+    "criteria": {
+      "has_salmon": "2021-07-04 19:07:03 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/spruce_boat": {
+    "criteria": {
+      "in_water": "2021-07-04 19:07:02 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/glass": {
+    "criteria": {
+      "has_sand": "2021-07-04 19:06:21 -0400"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:cold_ocean": "2021-07-04 19:06:41 -0400",
+      "minecraft:forest": "2021-07-04 19:05:27 -0400",
+      "minecraft:desert_hills": "2021-07-04 19:06:33 -0400",
+      "minecraft:desert": "2021-07-04 19:06:03 -0400",
+      "minecraft:birch_forest": "2021-07-04 19:05:52 -0400",
+      "minecraft:badlands": "2021-07-04 19:06:06 -0400",
+      "minecraft:beach": "2021-07-04 19:06:40 -0400",
+      "minecraft:river": "2021-07-04 19:06:47 -0400",
+      "minecraft:wooded_hills": "2021-07-04 19:05:31 -0400",
+      "minecraft:plains": "2021-07-04 19:05:40 -0400"
+    },
+    "done": false
+  },
+  "DataVersion": 2724
+}

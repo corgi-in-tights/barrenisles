@@ -1,6 +1,6 @@
 package ca.thecorgi.barrenisles.mixin;
 
-import ca.thecorgi.barrenisles.utils.registry.BarrenIslesStructures;
+import ca.thecorgi.barrenisles.utils.registry.StructureRegistry;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.util.collection.Pool;
 import net.minecraft.util.math.BlockPos;
@@ -28,8 +28,8 @@ public class NoiseChunkGeneratorMixin {
 
     private static Pool<SpawnSettings.SpawnEntry> getStructureSpawns(Biome biome, StructureAccessor accessor, SpawnGroup group, BlockPos pos) {
         if (group == SpawnGroup.CREATURE) {
-            if (accessor.getStructureAt(pos, true, BarrenIslesStructures.OASIS).hasChildren()) {
-                return BarrenIslesStructures.OASIS.getCreatureSpawns();
+            if (accessor.getStructureAt(pos, true, StructureRegistry.OASIS).hasChildren()) {
+                return StructureRegistry.OASIS.getCreatureSpawns();
             }
         }
         return null;

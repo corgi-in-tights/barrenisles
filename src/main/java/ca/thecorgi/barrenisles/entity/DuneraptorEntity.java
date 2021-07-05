@@ -2,15 +2,25 @@ package ca.thecorgi.barrenisles.entity;
 
 
 import net.minecraft.block.Blocks;
+import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.VertexConsumer;
+import net.minecraft.client.render.VertexConsumerProvider;
+import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
+import net.minecraft.entity.attribute.DefaultAttributeContainer;
+import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.HorseBaseEntity;
-import net.minecraft.entity.passive.RabbitEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.server.ServerConfigHandler;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
@@ -21,23 +31,39 @@ import software.bernie.geckolib3.core.controller.AnimationController;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
+import software.bernie.geckolib3.core.processor.IBone;
+import software.bernie.geckolib3.geo.render.built.GeoModel;
 
 import java.util.UUID;
+
+import static software.bernie.geckolib3.renderers.geo.GeoProjectilesRenderer.getPackedOverlay;
 
 
 public class DuneraptorEntity extends HorseBaseEntity implements IAnimatable, Saddleable {
     AnimationFactory factory = new AnimationFactory(this);
+
+    @Override
+    public double getMountedHeightOffset() {
+        return 1.2D;
+    }
 
     public DuneraptorEntity(EntityType<? extends HorseBaseEntity> type, World worldIn) {
         super(type, worldIn);
         this.ignoreCameraFrustum = true;
     }
 
+    public static DefaultAttributeContainer.Builder createDuneraptorAttributes() {
+        return MobEntity.createMobAttributes()
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.38D)
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 25.0D)
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 5D);
+    }
+
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (event.isMoving() && !this.isAttacking()) {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("duneraptor.run", true));
         } else if (this.isAttacking()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("duneraptor.attack", false));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("duneraptor.attack", true));
         } else {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("duneraptor.idle", true));
         }
@@ -169,4 +195,29 @@ public class DuneraptorEntity extends HorseBaseEntity implements IAnimatable, Sa
         }
     }
 
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return SoundEvents.ENTITY_RAVAGER_AMBIENT;
+    }
+
+    @Override
+    protected SoundEvent getHurtSound(DamageSource damageSource_1) {
+        return SoundEvents.ENTITY_RAVAGER_HURT;
+    }
+
+    @Override
+    protected SoundEvent getDeathSound() {
+        return SoundEvents.ENTITY_RAVAGER_DEATH;
+    }
+
+    @Override
+    public boolean isBreedingItem(ItemStack stack) {
+        return BREEDING_INGREDIENT.test(stack);
+    }
+
+    private static final Ingredient BREEDING_INGREDIENT;
+
+    static {
+        BREEDING_INGREDIENT = Ingredient.ofItems(Items.PORKCHOP, Items.RABBIT, Items.BEEF, Items.RABBIT, Items.MUTTON);
+    }
 }

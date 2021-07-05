@@ -1,27 +1,28 @@
 package ca.thecorgi.barrenisles.utils.registry;
 
-import ca.thecorgi.barrenisles.entity.BuramaphuEntity;
+//import ca.thecorgi.barrenisles.entity.BuramaphuEntity;
 
 import ca.thecorgi.barrenisles.entity.DuneraptorEntity;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
+import net.fabricmc.fabric.mixin.object.builder.SpawnRestrictionAccessor;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 import software.bernie.example.registry.EntityRegistryBuilder;
 
 import static ca.thecorgi.barrenisles.BarrenIsles.ModID;
 
 public class EntityRegistry {
-    public static final EntityType<DuneraptorEntity> DUNERAPTOR_ENTITY = buildEntity(DuneraptorEntity::new,
-            DuneraptorEntity.class, 1.5F, 2.0F);
-    public static final EntityType<BuramaphuEntity> BURAMAPHU_ENTITY = buildEntity(BuramaphuEntity::new,
-            BuramaphuEntity.class, 3F, 2.5F);
+    public static final EntityType<DuneraptorEntity> DUNERAPTOR = Registry.register(Registry.ENTITY_TYPE, new Identifier(ModID, "duneraptor"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, DuneraptorEntity::new).dimensions(EntityDimensions.fixed(1.15F, 1.9F)).build());
 
-    public static <T extends Entity> EntityType<T> buildEntity(EntityType.EntityFactory<T> entity, Class<T> entityClass,
-                                                               float width, float height) {
-            String name = entityClass.getSimpleName().toLowerCase();
-            return EntityRegistryBuilder.<T>createBuilder(new Identifier(ModID, name)).entity(entity)
-                    .category(SpawnGroup.CREATURE).dimensions(EntityDimensions.changing(width, height)).build();
+
+    public static void init() {
+        FabricDefaultAttributeRegistry.register(DUNERAPTOR, DuneraptorEntity.createDuneraptorAttributes());
+
     }
 }

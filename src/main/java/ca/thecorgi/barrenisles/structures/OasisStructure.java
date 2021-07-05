@@ -40,14 +40,15 @@ public class OasisStructure extends StructureFeature<DefaultFeatureConfig> {
         return Start::new;
     }
     private static final Pool<SpawnSettings.SpawnEntry> STRUCTURE_CREATURES = Pool.of(
-            new SpawnSettings.SpawnEntry(EntityRegistry.DUNERAPTOR_ENTITY, 90, 1, 1),
-            new SpawnSettings.SpawnEntry(EntityType.RABBIT, 100, 1, 3)
+            new SpawnSettings.SpawnEntry(EntityRegistry.DUNERAPTOR, 1, 1,1),
+            new SpawnSettings.SpawnEntry(EntityType.RABBIT, 3, 1, 3)
     );
 
     @Override
     public Pool<SpawnSettings.SpawnEntry> getCreatureSpawns() {
         return STRUCTURE_CREATURES;
     }
+
     @Override
     protected boolean shouldStartAt(ChunkGenerator chunkGenerator, BiomeSource biomeSource, long seed, ChunkRandom chunkRandom, ChunkPos chunkPos, Biome biome, ChunkPos chunkPos2, DefaultFeatureConfig featureConfig, HeightLimitView heightLimitView) {
         BlockPos centerOfChunk = new BlockPos((chunkPos.x << 4) + 7, 0, (chunkPos.z << 4) + 7);
@@ -85,10 +86,10 @@ public class OasisStructure extends StructureFeature<DefaultFeatureConfig> {
 
             this.setBoundingBoxFromChildren();
 
-            BarrenIsles.LOGGER.log(Level.DEBUG, "Oasis at " +
-                    this.children.get(0).getBoundingBox().getMinX() + " " +
-                    this.children.get(0).getBoundingBox().getMinY() + " " +
-                    this.children.get(0).getBoundingBox().getMinZ());
+//            BarrenIsles.LOGGER.log(Level.DEBUG, "Oasis at " +
+//                    this.children.get(0).getBoundingBox().getMinX() + " " +
+//                    this.children.get(0).getBoundingBox().getMinY() + " " +
+//                    this.children.get(0).getBoundingBox().getMinZ());
         }
 
     }
