@@ -2,17 +2,12 @@ package ca.thecorgi.barrenisles.entity;
 
 
 import net.minecraft.block.Blocks;
-import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.VertexConsumer;
-import net.minecraft.client.render.VertexConsumerProvider;
-import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.entity.passive.CowEntity;
 import net.minecraft.entity.passive.HorseBaseEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -32,12 +27,8 @@ import software.bernie.geckolib3.core.controller.AnimationController;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
-import software.bernie.geckolib3.core.processor.IBone;
-import software.bernie.geckolib3.geo.render.built.GeoModel;
 
 import java.util.UUID;
-
-import static software.bernie.geckolib3.renderers.geo.GeoProjectilesRenderer.getPackedOverlay;
 
 
 public class DuneraptorEntity extends HorseBaseEntity implements IAnimatable, Saddleable {
@@ -83,12 +74,12 @@ public class DuneraptorEntity extends HorseBaseEntity implements IAnimatable, Sa
 
     @Override
     protected void initGoals() {
-        this.goalSelector.add(1, new EscapeDangerGoal(this, 1.25D));
+        this.goalSelector.add(1, new EscapeDangerGoal(this, 0.95D));
         this.goalSelector.add(2, new LookAtEntityGoal(this, PlayerEntity.class, 5F));
         this.goalSelector.add(3, new WanderAroundGoal(this, 0.6D, 100));
         this.goalSelector.add(4, new SwimGoal(this));
         this.goalSelector.add(5, new LookAroundGoal(this));
-        this.goalSelector.add(6, new FollowParentGoal(this, 0.8D));
+        this.goalSelector.add(6, new FollowParentGoal(this, 0.75D));
     }
 
     @Override

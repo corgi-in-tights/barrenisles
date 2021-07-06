@@ -30,8 +30,8 @@ guiScale:0
 particles:0
 maxFps:120
 difficulty:2
-graphicsMode:1
-ao:2
+graphicsMode:0
+ao:0
 biomeBlendRadius:2
 renderClouds:true
 resourcePacks:["vanilla","Fabric Mods"]

@@ -1,6 +1,5 @@
 package ca.thecorgi.barrenisles.structures;
 
-import ca.thecorgi.barrenisles.BarrenIsles;
 import com.mojang.serialization.Codec;
 import net.minecraft.block.BlockState;
 import net.minecraft.structure.MarginedStructureStart;
@@ -22,7 +21,6 @@ import net.minecraft.world.gen.chunk.VerticalBlockSample;
 import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.StructureFeature;
 import net.minecraft.world.gen.feature.StructurePoolFeatureConfig;
-import org.apache.logging.log4j.Level;
 
 import static ca.thecorgi.barrenisles.BarrenIsles.ModID;
 
