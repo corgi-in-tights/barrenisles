@@ -12,6 +12,7 @@ import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.MobEntity;
+import net.minecraft.entity.passive.CowEntity;
 import net.minecraft.entity.passive.HorseBaseEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -44,7 +45,7 @@ public class DuneraptorEntity extends HorseBaseEntity implements IAnimatable, Sa
 
     @Override
     public double getMountedHeightOffset() {
-        return 1.2D;
+        return 1.12D;
     }
 
     public DuneraptorEntity(EntityType<? extends HorseBaseEntity> type, World worldIn) {
@@ -82,12 +83,12 @@ public class DuneraptorEntity extends HorseBaseEntity implements IAnimatable, Sa
 
     @Override
     protected void initGoals() {
-        // Entity will walk around.
-        this.goalSelector.add(7, new WanderAroundFarGoal(this, 1D, 100));
-        this.goalSelector.add(8, new LookAtEntityGoal(this, PlayerEntity.class, 6.5F));
-        this.goalSelector.add(5, new LookAroundGoal(this));
+        this.goalSelector.add(1, new EscapeDangerGoal(this, 1.25D));
+        this.goalSelector.add(2, new LookAtEntityGoal(this, PlayerEntity.class, 5F));
+        this.goalSelector.add(3, new WanderAroundGoal(this, 0.6D, 100));
         this.goalSelector.add(4, new SwimGoal(this));
-        this.targetSelector.add(6, new FollowTargetGoal<>(this, PlayerEntity.class, true));
+        this.goalSelector.add(5, new LookAroundGoal(this));
+        this.goalSelector.add(6, new FollowParentGoal(this, 0.8D));
     }
 
     @Override

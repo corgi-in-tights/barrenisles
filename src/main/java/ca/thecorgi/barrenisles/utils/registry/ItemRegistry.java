@@ -20,6 +20,6 @@ public class ItemRegistry {
         Registry.register(Registry.ITEM, new Identifier(ModID, "drumstick"), DRUMSTICK);
         Registry.register(Registry.ITEM, new Identifier(ModID, "cooked_drumstick"), COOKED_DRUMSTICK);
         Registry.register(Registry.ITEM, new Identifier(ModID, "duneraptor_spawn_egg"), new SpawnEggItem(EntityRegistry.DUNERAPTOR,
-                0xd5951d, 0xd5671d, new Item.Settings().group(MAIN_GROUP)));
+                0xd5671d, 0xd5951d, new Item.Settings().group(MAIN_GROUP)));
     }
 }
