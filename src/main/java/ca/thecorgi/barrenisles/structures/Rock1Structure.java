@@ -72,11 +72,6 @@ public class Rock1Structure extends StructureFeature<DefaultFeatureConfig> {
             this.children.forEach(piece -> piece.getBoundingBox().move(0, -1, 0));
 
             this.setBoundingBoxFromChildren();
-
-//            BarrenIsles.LOGGER.log(Level.DEBUG, "Ore Rock is at " +
-//                    this.children.get(0).getBoundingBox().getMinX() + " " +
-//                    this.children.get(0).getBoundingBox().getMinY() + " " +
-//                    this.children.get(0).getBoundingBox().getMinZ());
         }
 
     }

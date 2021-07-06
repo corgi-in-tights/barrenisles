@@ -1,9 +1,7 @@
 package ca.thecorgi.barrenisles;
 
 import ca.thecorgi.barrenisles.biomes.BiomeModifications;
-import ca.thecorgi.barrenisles.utils.registry.SpawnRegistry;
-import ca.thecorgi.barrenisles.utils.registry.StructureRegistry;
-import ca.thecorgi.barrenisles.utils.registry.EntityRegistry;
+import ca.thecorgi.barrenisles.utils.registry.*;
 import net.fabricmc.api.ModInitializer;
 import software.bernie.geckolib3.GeckoLib;
 
@@ -19,5 +17,6 @@ public class BarrenIsles implements ModInitializer {
         BiomeModifications.init();
         EntityRegistry.init();
         SpawnRegistry.init();
+        ItemRegistry.init();
     }
 }

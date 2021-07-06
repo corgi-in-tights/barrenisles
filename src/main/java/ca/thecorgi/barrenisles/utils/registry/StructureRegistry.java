@@ -38,7 +38,7 @@ public class StructureRegistry {
                 .adjustsSurface().register();
         FabricStructureBuilder.create(new Identifier(ModID, "tall_ore_rock"), ROCK_2)
                 .step(GenerationStep.Feature.SURFACE_STRUCTURES)
-                .defaultConfig(new StructureConfig(50, 27, 578325823))
+                .defaultConfig(new StructureConfig(50, 29, 579125823))
                 .superflatFeature(ROCK_2.configure(FeatureConfig.DEFAULT))
                 .adjustsSurface().register();
 

@@ -69,14 +69,9 @@ public class Rock2Structure extends StructureFeature<DefaultFeatureConfig> {
                     blockpos,this, this.random, false, true, heightLimitView);
 
             this.children.forEach(piece -> piece.translate(0, -1, 0));
-            this.children.forEach(piece -> piece.getBoundingBox().move(0, 1, 0));
+            this.children.forEach(piece -> piece.getBoundingBox().move(0, -1, 0));
 
             this.setBoundingBoxFromChildren();
-
-//            BarrenIsles.LOGGER.log(Level.DEBUG, "Tall Ore Rock is at " +
-//                    this.children.get(0).getBoundingBox().getMinX() + " " +
-//                    this.children.get(0).getBoundingBox().getMinY() + " " +
-//                    this.children.get(0).getBoundingBox().getMinZ());
         }
 
     }

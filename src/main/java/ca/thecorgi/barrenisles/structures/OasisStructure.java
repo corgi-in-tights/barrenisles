@@ -86,10 +86,6 @@ public class OasisStructure extends StructureFeature<DefaultFeatureConfig> {
 
             this.setBoundingBoxFromChildren();
 
-//            BarrenIsles.LOGGER.log(Level.DEBUG, "Oasis at " +
-//                    this.children.get(0).getBoundingBox().getMinX() + " " +
-//                    this.children.get(0).getBoundingBox().getMinY() + " " +
-//                    this.children.get(0).getBoundingBox().getMinZ());
         }
 
     }

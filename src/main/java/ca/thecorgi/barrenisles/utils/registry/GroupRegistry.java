@@ -7,8 +7,8 @@ import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 
 public class GroupRegistry {
-    public static final ItemGroup OTHER_GROUP = FabricItemGroupBuilder.create(
-            new Identifier("tutorial", "other"))
-            .icon(() -> new ItemStack(Items.BOWL))
+    public static final ItemGroup MAIN_GROUP = FabricItemGroupBuilder.create(
+            new Identifier("barrenisles", "main_group"))
+            .icon(() -> new ItemStack(ItemRegistry.DUNE_FEATHER))
             .build();
 }

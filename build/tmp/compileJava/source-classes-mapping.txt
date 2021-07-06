@@ -11,8 +11,6 @@ ca/thecorgi/barrenisles/utils/registry/SpawnRegistry.java
 ca/thecorgi/barrenisles/structures/OasisStructure.java
  ca.thecorgi.barrenisles.structures.OasisStructure
  ca.thecorgi.barrenisles.structures.OasisStructure$Start
-ca/thecorgi/barrenisles/utils/registry/ConfigStructureRegistry.java
- ca.thecorgi.barrenisles.utils.registry.ConfigStructureRegistry
 ca/thecorgi/barrenisles/BarrenIsles.java
  ca.thecorgi.barrenisles.BarrenIsles
 ca/thecorgi/barrenisles/utils/registry/ItemRegistry.java
@@ -29,6 +27,8 @@ ca/thecorgi/barrenisles/client/model/DuneraptorModel.java
 ca/thecorgi/barrenisles/structures/Rock1Structure.java
  ca.thecorgi.barrenisles.structures.Rock1Structure
  ca.thecorgi.barrenisles.structures.Rock1Structure$Start
+ca/thecorgi/barrenisles/food/BarrenIslesFoodComponents.java
+ ca.thecorgi.barrenisles.food.BarrenIslesFoodComponents
 ca/thecorgi/barrenisles/mixin/StructuresConfigAccessor.java
  ca.thecorgi.barrenisles.mixin.StructuresConfigAccessor
 ca/thecorgi/barrenisles/client/ClientInit.java
