@@ -10,7 +10,7 @@ public class BarrenIslesFoodComponents {
             .saturationModifier(0.9F)
             .statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 500, 0), 0.3F).build();
 
-    public static final FoodComponent COOKED_DRUMSTICK_C = (new FoodComponent.Builder())
+    public static final FoodComponent ROASTED_DRUMSTICK_C = (new FoodComponent.Builder())
             .hunger(5)
             .saturationModifier(6.9F).build();
 }

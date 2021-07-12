@@ -55,7 +55,7 @@ public class DuneraptorEntity extends HorseBaseEntity implements IAnimatable, Sa
 
     public static DefaultAttributeContainer.Builder createDuneraptorAttributes() {
         return MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.38D)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.34D)
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 25.0D)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 5D);
     }
@@ -84,12 +84,12 @@ public class DuneraptorEntity extends HorseBaseEntity implements IAnimatable, Sa
     @Override
     protected void initGoals() {
         this.goalSelector.add(0, new SwimGoal(this));
-        this.goalSelector.add(1, new EscapeDangerGoal(this, 1.25D));
+        this.goalSelector.add(1, new EscapeDangerGoal(this, 1D));
         this.goalSelector.add(3, new TemptGoal(this, 0.95D, BREEDING_INGREDIENT, true));
         this.goalSelector.add(2, new AnimalMateGoal(this, 1.0D, DuneraptorEntity.class));
-        this.goalSelector.add(4, new FollowParentGoal(this, 1.1D));
-        this.goalSelector.add(6, new WanderAroundFarGoal(this, 1.0D));
-        this.goalSelector.add(7, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F));
+        this.goalSelector.add(4, new FollowParentGoal(this, 0.7D));
+        this.goalSelector.add(6, new WanderAroundFarGoal(this, 0.85D));
+        this.goalSelector.add(7, new LookAtEntityGoal(this, PlayerEntity.class, 5.0F));
         this.goalSelector.add(8, new LookAroundGoal(this));
     }
 
@@ -243,15 +243,6 @@ public class DuneraptorEntity extends HorseBaseEntity implements IAnimatable, Sa
 
         return duneraptorEntity;
     }
-
-//    protected void setChildAttributes(PassiveEntity mate, HorseBaseEntity child) {
-//        double d = this.getAttributeBaseValue(EntityAttributes.GENERIC_MAX_HEALTH) + mate.getAttributeBaseValue(EntityAttributes.GENERIC_MAX_HEALTH) + (double)this.getChildHealthBonus();
-//        child.getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).setBaseValue(d / 3.0D);
-//        double e = this.getAttributeBaseValue(EntityAttributes.HORSE_JUMP_STRENGTH) + mate.getAttributeBaseValue(EntityAttributes.HORSE_JUMP_STRENGTH) + this.getChildJumpStrengthBonus();
-//        child.getAttributeInstance(EntityAttributes.HORSE_JUMP_STRENGTH).setBaseValue(e / 3.0D);
-//        double f = this.getAttributeBaseValue(EntityAttributes.GENERIC_MOVEMENT_SPEED) + mate.getAttributeBaseValue(EntityAttributes.GENERIC_MOVEMENT_SPEED) + this.getChildMovementSpeedBonus();
-//        child.getAttributeInstance(EntityAttributes.GENERIC_MOVEMENT_SPEED).setBaseValue(f / 3.0D);
-//    }
 
     @Override
     protected SoundEvent getAmbientSound() {
