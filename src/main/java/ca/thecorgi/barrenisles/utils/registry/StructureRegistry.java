@@ -11,8 +11,6 @@ import net.minecraft.world.gen.feature.ConfiguredStructureFeature;
 import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.FeatureConfig;
 import net.minecraft.world.gen.feature.StructureFeature;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import static ca.thecorgi.barrenisles.BarrenIsles.ModID;
 
@@ -25,7 +23,7 @@ public class StructureRegistry {
     public static ConfiguredStructureFeature<?, ?> CONFIGURED_ROCK_1 = StructureRegistry.ROCK_1.configure(DefaultFeatureConfig.DEFAULT);
     public static ConfiguredStructureFeature<?, ?> CONFIGURED_ROCK_2 = StructureRegistry.ROCK_2.configure(DefaultFeatureConfig.DEFAULT);
 
-    public static void init() {
+    public static void register() {
         FabricStructureBuilder.create(new Identifier(ModID, "oasis"), OASIS)
                 .step(GenerationStep.Feature.SURFACE_STRUCTURES)
                 .defaultConfig(new StructureConfig(18, 12, 320909345))

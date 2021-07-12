@@ -9,7 +9,7 @@ import static ca.thecorgi.barrenisles.BarrenIsles.ModID;
 import static ca.thecorgi.barrenisles.utils.registry.StructureRegistry.*;
 
 public class BiomeModifications {
-    public static void init() {
+    public static void register() {
         net.fabricmc.fabric.api.biome.v1.BiomeModifications.create(new Identifier(ModID, "oasis_addition"))
                 .add(
                         ModificationPhase.ADDITIONS,

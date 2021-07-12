@@ -13,10 +13,10 @@ public class BarrenIsles implements ModInitializer {
     public void onInitialize() {
         GeckoLib.initialize();
 
-        StructureRegistry.init();
-        BiomeModifications.init();
-        EntityRegistry.init();
-        SpawnRegistry.init();
-        ItemRegistry.init();
+        StructureRegistry.register();
+        BiomeModifications.register();
+        EntityRegistry.register();
+        SpawnRegistry.register();
+        ItemRegistry.register();
     }
 }
