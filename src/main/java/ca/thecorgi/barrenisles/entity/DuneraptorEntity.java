@@ -56,8 +56,8 @@ public class DuneraptorEntity extends HorseBaseEntity implements IAnimatable, Sa
 
     public static DefaultAttributeContainer.Builder createDuneraptorAttributes() {
         return MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, Math.floor(Math.random()*3*(0.27-0.21+0.01)+0.21))
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, Math.floor(Math.random()*(28-20+1)+20))
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.28)
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 25)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 5D);
     }
 
