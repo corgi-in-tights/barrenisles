@@ -1,3 +1,5 @@
+ca/thecorgi/barrenisles/client/renderer/GeoMobRenderer.java
+ ca.thecorgi.barrenisles.client.renderer.GeoMobRenderer
 ca/thecorgi/barrenisles/mixin/SpawnRestrictionMixin.java
  ca.thecorgi.barrenisles.mixin.SpawnRestrictionMixin
 ca/thecorgi/barrenisles/mixin/NoiseChunkGeneratorMixin.java

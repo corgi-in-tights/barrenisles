@@ -12,8 +12,8 @@ import static ca.thecorgi.barrenisles.utils.registry.GroupRegistry.MAIN_GROUP;
 
 public class ItemRegistry {
     public static final Item DUNE_FEATHER = new Item(new FabricItemSettings().group(MAIN_GROUP));
-    public static final Item DRUMSTICK = new Item(new FabricItemSettings().group(MAIN_GROUP).food(BarrenIslesFoodComponents.DRUMSTICK));
-    public static final Item COOKED_DRUMSTICK = new Item(new FabricItemSettings().group(MAIN_GROUP).food(BarrenIslesFoodComponents.COOKED_DRUMSTICK));
+    public static final Item DRUMSTICK = new Item(new FabricItemSettings().group(MAIN_GROUP).food(BarrenIslesFoodComponents.DRUMSTICK_C));
+    public static final Item COOKED_DRUMSTICK = new Item(new FabricItemSettings().group(MAIN_GROUP).food(BarrenIslesFoodComponents.COOKED_DRUMSTICK_C));
 
     public static void init() {
         Registry.register(Registry.ITEM, new Identifier(ModID, "dune_feather"), DUNE_FEATHER);

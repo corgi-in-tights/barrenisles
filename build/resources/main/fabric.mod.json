@@ -15,7 +15,7 @@
     "issues": "https://github.com/beepbeep-boop/barrenisles/issues"
   },
 
-  "license": "CC0-1.0",
+  "license": "LGPL v3",
   "icon": "assets/barrenisles/icon.png",
 
   "environment": "*",

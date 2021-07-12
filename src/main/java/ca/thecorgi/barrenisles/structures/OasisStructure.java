@@ -39,7 +39,7 @@ public class OasisStructure extends StructureFeature<DefaultFeatureConfig> {
     }
     private static final Pool<SpawnSettings.SpawnEntry> STRUCTURE_CREATURES = Pool.of(
             new SpawnSettings.SpawnEntry(EntityRegistry.DUNERAPTOR, 1, 1,1),
-            new SpawnSettings.SpawnEntry(EntityType.RABBIT, 3, 1, 3)
+            new SpawnSettings.SpawnEntry(EntityType.RABBIT, 6, 1, 3)
     );
 
     @Override
@@ -79,8 +79,8 @@ public class OasisStructure extends StructureFeature<DefaultFeatureConfig> {
                     structureManager,
                     blockpos,this, this.random, false, true, heightLimitView);
 
-            this.children.forEach(piece -> piece.translate(0, -6, 0));
-            this.children.forEach(piece -> piece.getBoundingBox().move(0, 3, 0));
+            this.children.forEach(piece -> piece.translate(0, 0, 0));
+            this.children.forEach(piece -> piece.getBoundingBox().move(0, 0, 0));
 
             this.setBoundingBoxFromChildren();
 

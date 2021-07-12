@@ -1,0 +1,22 @@
+{
+  "minecraft:recipes/misc/mojang_banner_pattern": {
+    "criteria": {
+      "has_enchanted_golden_apple": "2021-07-11 15:08:48 -0400"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:dark_forest": "2021-07-11 15:07:27 -0400",
+      "minecraft:plains": "2021-07-11 15:07:06 -0400"
+    },
+    "done": false
+  },
+  "minecraft:husbandry/tame_an_animal": {
+    "criteria": {
+      "tamed_animal": "2021-07-11 15:09:29 -0400"
+    },
+    "done": true
+  },
+  "DataVersion": 2724
+}
