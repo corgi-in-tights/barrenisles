@@ -8,12 +8,12 @@ import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.HorseBaseEntity;
 import net.minecraft.entity.passive.PassiveEntity;
-import net.minecraft.entity.passive.WolfEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.DyeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -24,7 +24,6 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.DyeColor;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
@@ -36,27 +35,29 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
+import java.util.Objects;
 import java.util.UUID;
 
 
+@SuppressWarnings("EntityConstructor")
 public class DuneraptorEntity extends HorseBaseEntity implements IAnimatable, Saddleable {
     AnimationFactory factory = new AnimationFactory(this);
     private static final Ingredient BREEDING_INGREDIENT;
 
     @Override
     public double getMountedHeightOffset() {
-        return 1.12D;
+        return 1.15D;
     }
 
-    public DuneraptorEntity(EntityType<? extends HorseBaseEntity> type, World worldIn) {
-        super(type, worldIn);
+    public DuneraptorEntity(EntityType<? extends HorseBaseEntity> type, World world) {
+        super(type, world);
         this.ignoreCameraFrustum = true;
     }
 
     public static DefaultAttributeContainer.Builder createDuneraptorAttributes() {
         return MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.34D)
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 25.0D)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, Math.floor(Math.random()*3*(0.27-0.21+0.01)+0.21))
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, Math.floor(Math.random()*(28-20+1)+20))
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 5D);
     }
 
@@ -84,7 +85,7 @@ public class DuneraptorEntity extends HorseBaseEntity implements IAnimatable, Sa
     @Override
     protected void initGoals() {
         this.goalSelector.add(0, new SwimGoal(this));
-        this.goalSelector.add(1, new EscapeDangerGoal(this, 1D));
+        this.goalSelector.add(1, new EscapeDangerGoal(this, 1.1D));
         this.goalSelector.add(3, new TemptGoal(this, 0.95D, BREEDING_INGREDIENT, true));
         this.goalSelector.add(2, new AnimalMateGoal(this, 1.0D, DuneraptorEntity.class));
         this.goalSelector.add(4, new FollowParentGoal(this, 0.7D));
@@ -105,20 +106,6 @@ public class DuneraptorEntity extends HorseBaseEntity implements IAnimatable, Sa
 
     @Override
     public ActionResult interactMob(PlayerEntity player, Hand hand) {
-//        ItemStack itemStack = player.getStackInHand(hand);
-//        ActionResult actionResult = itemStack.useOnEntity(player, this, hand);
-//
-//        if (this.isSaddled() && !this.hasPassengers() && !player.shouldCancelInteraction()) {
-//            if (!this.world.isClient) {
-//                player.setYaw(this.getYaw());
-//                player.setPitch(this.getPitch());
-//                this.setTame(true);
-//                this.setOwnerUuid(player.getUuid());
-//                this.putPlayerOnBack(player);
-//            }
-//        }
-//        return ActionResult.success(this.world.isClient);
-
         ItemStack itemStack = player.getStackInHand(hand);
         Item item = itemStack.getItem();
         ActionResult actionResult = itemStack.useOnEntity(player, this, hand);
@@ -130,7 +117,7 @@ public class DuneraptorEntity extends HorseBaseEntity implements IAnimatable, Sa
                     itemStack.decrement(1);
                 }
 
-                this.heal((float) item.getFoodComponent().getHunger());
+                this.heal((float) Objects.requireNonNull(item.getFoodComponent()).getHunger());
                 this.emitGameEvent(GameEvent.MOB_INTERACT, this.getCameraBlockPos());
                 return ActionResult.SUCCESS;
             }
@@ -149,10 +136,6 @@ public class DuneraptorEntity extends HorseBaseEntity implements IAnimatable, Sa
             }
         return super.interactMob(player, hand);
         }
-
-
-
-
 
     @Override
     public double getJumpStrength() {
@@ -219,8 +202,12 @@ public class DuneraptorEntity extends HorseBaseEntity implements IAnimatable, Sa
 
     @Override
     public void tickMovement() {
-        if (!this.world.getBlockState(this.getBlockPos().down()).isOf(Blocks.SAND)) {
-            this.setMovementSpeed(0.2F);
+        if (this.world.getBlockState(this.getBlockPos().down()).isOf(Blocks.SAND) ||
+                this.world.getBlockState(this.getBlockPos().down(2)).isOf(Blocks.SAND) ||
+                this.world.getBlockState(this.getBlockPos().down()).isOf(Blocks.SANDSTONE) ||
+                this.world.getBlockState(this.getBlockPos().down()).isOf(Blocks.SANDSTONE_SLAB) ||
+                this.world.getBlockState(this.getBlockPos().down()).isOf(Blocks.RED_SAND)) {
+            this.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 1,3));
         }
 
         super.tickMovement();
@@ -231,7 +218,6 @@ public class DuneraptorEntity extends HorseBaseEntity implements IAnimatable, Sa
             this.walkToParent();
         }
     }
-
 
     public DuneraptorEntity createChild(ServerWorld serverWorld, PassiveEntity passiveEntity) {
         DuneraptorEntity duneraptorEntity = (DuneraptorEntity)EntityRegistry.DUNERAPTOR.create(serverWorld);
