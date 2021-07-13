@@ -31,12 +31,12 @@ public class StructureRegistry {
                 .adjustsSurface().register();
         FabricStructureBuilder.create(new Identifier(ModID, "ore_rock"), ROCK_1)
                 .step(GenerationStep.Feature.SURFACE_STRUCTURES)
-                .defaultConfig(new StructureConfig(32, 16, 283223445))
+                .defaultConfig(new StructureConfig(28, 16, 283223445))
                 .superflatFeature(ROCK_1.configure(FeatureConfig.DEFAULT))
                 .adjustsSurface().register();
         FabricStructureBuilder.create(new Identifier(ModID, "tall_ore_rock"), ROCK_2)
                 .step(GenerationStep.Feature.SURFACE_STRUCTURES)
-                .defaultConfig(new StructureConfig(50, 29, 579125823))
+                .defaultConfig(new StructureConfig(40, 29, 579125823))
                 .superflatFeature(ROCK_2.configure(FeatureConfig.DEFAULT))
                 .adjustsSurface().register();
 

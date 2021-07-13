@@ -1,0 +1,14 @@
+{
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:forest": "2021-07-12 23:11:30 -0400",
+      "minecraft:taiga": "2021-07-12 23:11:41 -0400",
+      "minecraft:savanna_plateau": "2021-07-12 23:14:37 -0400",
+      "minecraft:beach": "2021-07-12 23:11:41 -0400",
+      "minecraft:river": "2021-07-12 23:14:34 -0400",
+      "minecraft:savanna": "2021-07-12 23:11:56 -0400"
+    },
+    "done": false
+  },
+  "DataVersion": 2724
+}

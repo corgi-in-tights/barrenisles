@@ -1,0 +1,14 @@
+{
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:forest": "2021-07-12 23:06:00 -0400",
+      "minecraft:taiga": "2021-07-12 23:06:42 -0400",
+      "minecraft:desert_hills": "2021-07-12 23:06:14 -0400",
+      "minecraft:desert": "2021-07-12 23:06:07 -0400",
+      "minecraft:river": "2021-07-12 23:06:06 -0400",
+      "minecraft:wooded_hills": "2021-07-12 23:07:10 -0400"
+    },
+    "done": false
+  },
+  "DataVersion": 2724
+}

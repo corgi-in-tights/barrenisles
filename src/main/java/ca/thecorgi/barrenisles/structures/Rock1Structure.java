@@ -66,7 +66,7 @@ public class Rock1Structure extends StructureFeature<DefaultFeatureConfig> {
                     structureManager,
                     blockpos,this, this.random, false, true, heightLimitView);
 
-            this.children.forEach(piece -> piece.translate(0, -1, 0));
+            this.children.forEach(piece -> piece.translate(0, 1, 0));
             this.children.forEach(piece -> piece.getBoundingBox().move(0, -1, 0));
 
             this.setBoundingBoxFromChildren();
