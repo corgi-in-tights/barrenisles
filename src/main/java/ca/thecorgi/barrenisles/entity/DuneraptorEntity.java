@@ -43,6 +43,7 @@ import java.util.UUID;
 public class DuneraptorEntity extends HorseBaseEntity implements IAnimatable, Saddleable {
     AnimationFactory factory = new AnimationFactory(this);
     private static final Ingredient BREEDING_INGREDIENT;
+    boolean isRunning = false;
 
     @Override
     public double getMountedHeightOffset() {
@@ -56,14 +57,25 @@ public class DuneraptorEntity extends HorseBaseEntity implements IAnimatable, Sa
 
     public static DefaultAttributeContainer.Builder createDuneraptorAttributes() {
         return MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.28)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.17)
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 25)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 5D);
     }
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (event.isMoving() && !this.isAttacking()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("duneraptor.run", true));
+            if (this.world.getBlockState(this.getBlockPos().down()).isOf(Blocks.SAND) ||
+                    this.world.getBlockState(this.getBlockPos().down(2)).isOf(Blocks.SAND) ||
+                    this.world.getBlockState(this.getBlockPos().down(3)).isOf(Blocks.SAND) ||
+                    this.world.getBlockState(this.getBlockPos().down(4)).isOf(Blocks.SAND)) {
+                boolean isRunning = true;
+                event.getController().setAnimation(new AnimationBuilder().addAnimation("duneraptor.run", true));
+            } else {
+                if (isRunning == true) {
+                    event.getController().setAnimation(new AnimationBuilder().addAnimation("duneraptor.slowdown", false));
+                }
+                event.getController().setAnimation(new AnimationBuilder().addAnimation("duneraptor.walk", true));
+            }
         } else if (this.isAttacking()) {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("duneraptor.attack", true));
         } else {
@@ -203,16 +215,13 @@ public class DuneraptorEntity extends HorseBaseEntity implements IAnimatable, Sa
     @Override
     public void tickMovement() {
         if (this.world.getBlockState(this.getBlockPos().down()).isOf(Blocks.SAND) ||
-                this.world.getBlockState(this.getBlockPos().down(2)).isOf(Blocks.SAND) ||
-                this.world.getBlockState(this.getBlockPos().down()).isOf(Blocks.SANDSTONE) ||
-                this.world.getBlockState(this.getBlockPos().down()).isOf(Blocks.SANDSTONE_SLAB) ||
-                this.world.getBlockState(this.getBlockPos().down()).isOf(Blocks.RED_SAND)) {
-            this.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 1,3));
+                this.world.getBlockState(this.getBlockPos().down(2)).isOf(Blocks.SAND)) {
+            this.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 1,4));
         }
 
         super.tickMovement();
         if (!this.world.isClient && this.isAlive()) {
-            if (this.random.nextInt(900) == 0 && this.deathTime == 0) {
+            if (this.random.nextInt(700) == 0 && this.deathTime == 0) {
                 this.heal(1.0F);
             }
             this.walkToParent();

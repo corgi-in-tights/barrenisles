@@ -24,8 +24,8 @@ import net.minecraft.world.gen.feature.StructurePoolFeatureConfig;
 
 import static ca.thecorgi.barrenisles.BarrenIsles.ModID;
 
-public class Rock2Structure extends StructureFeature<DefaultFeatureConfig> {
-    public Rock2Structure(Codec<DefaultFeatureConfig> codec) {
+public class TallRock2Structure extends StructureFeature<DefaultFeatureConfig> {
+    public TallRock2Structure(Codec<DefaultFeatureConfig> codec) {
         super(codec);
     }
 
@@ -66,8 +66,8 @@ public class Rock2Structure extends StructureFeature<DefaultFeatureConfig> {
                     structureManager,
                     blockpos,this, this.random, false, true, heightLimitView);
 
-            this.children.forEach(piece -> piece.translate(0, 1, 0));
-            this.children.forEach(piece -> piece.getBoundingBox().move(0, -1, 0));
+            this.children.forEach(piece -> piece.translate(0, 2, 0));
+            this.children.forEach(piece -> piece.getBoundingBox().move(0, -2, 0));
 
             this.setBoundingBoxFromChildren();
         }

@@ -17,7 +17,7 @@ import static ca.thecorgi.barrenisles.BarrenIsles.ModID;
 public class StructureRegistry {
     public static StructureFeature<DefaultFeatureConfig> OASIS = new OasisStructure(DefaultFeatureConfig.CODEC);
     public static StructureFeature<DefaultFeatureConfig> ROCK_1 = new Rock1Structure(DefaultFeatureConfig.CODEC);
-    public static StructureFeature<DefaultFeatureConfig> ROCK_2 = new Rock2Structure(DefaultFeatureConfig.CODEC);
+    public static StructureFeature<DefaultFeatureConfig> ROCK_2 = new TallRock2Structure(DefaultFeatureConfig.CODEC);
 
     public static ConfiguredStructureFeature<?, ?> CONFIGURED_OASIS = StructureRegistry.OASIS.configure(DefaultFeatureConfig.DEFAULT);
     public static ConfiguredStructureFeature<?, ?> CONFIGURED_ROCK_1 = StructureRegistry.ROCK_1.configure(DefaultFeatureConfig.DEFAULT);
