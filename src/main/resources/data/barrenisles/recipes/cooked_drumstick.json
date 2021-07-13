@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "barrenisles:drumstick"
+  },
+  "result": "barrenisles:cooked_drumstick",
+  "experience": 0.35,
+  "cookingtime": 160
+}

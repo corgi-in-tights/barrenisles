@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "barrenisles",
+  "version": "${version}",
+
+  "name": "Barren Isles",
+  "description": "The desert lays barren, it misses the tides, the predators and the surroundings. This mod aims to improve that.",
+  "authors": [
+    "corgi",
+    "Contributors: CircleF1sh, IrishBoy, Sawdinodude"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/barren-isles",
+    "sources": "https://github.com/beepbeep-boop/barrenisles/",
+    "issues": "https://github.com/beepbeep-boop/barrenisles/issues"
+  },
+
+  "license": "LGPL v3",
+  "icon": "assets/barrenisles/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "ca.thecorgi.barrenisles.BarrenIsles"
+    ],
+    "client": [
+      "ca.thecorgi.barrenisles.client.ClientInit"
+    ]
+  },
+  "mixins": [
+    "barrenisles.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.17.x",
+    "java": ">=16"
+  }
+}
