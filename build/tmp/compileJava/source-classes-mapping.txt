@@ -21,9 +21,9 @@ ca/thecorgi/barrenisles/utils/registry/GroupRegistry.java
  ca.thecorgi.barrenisles.utils.registry.GroupRegistry
 ca/thecorgi/barrenisles/client/renderer/DuneraptorRenderer.java
  ca.thecorgi.barrenisles.client.renderer.DuneraptorRenderer
-ca/thecorgi/barrenisles/structures/Rock2Structure.java
- ca.thecorgi.barrenisles.structures.Rock2Structure
- ca.thecorgi.barrenisles.structures.Rock2Structure$Start
+ca/thecorgi/barrenisles/structures/TallRock2Structure.java
+ ca.thecorgi.barrenisles.structures.TallRock2Structure
+ ca.thecorgi.barrenisles.structures.TallRock2Structure$Start
 ca/thecorgi/barrenisles/client/model/DuneraptorModel.java
  ca.thecorgi.barrenisles.client.model.DuneraptorModel
 ca/thecorgi/barrenisles/structures/Rock1Structure.java
