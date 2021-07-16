@@ -3,7 +3,9 @@ package ca.thecorgi.barrenisles.entity;
 
 import ca.thecorgi.barrenisles.utils.registry.EntityRegistry;
 import net.minecraft.block.Blocks;
-import net.minecraft.entity.*;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.Saddleable;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -38,6 +40,8 @@ import software.bernie.geckolib3.core.manager.AnimationFactory;
 import java.util.Objects;
 import java.util.UUID;
 
+import static ca.thecorgi.barrenisles.BarrenIsles.config;
+
 
 @SuppressWarnings("EntityConstructor")
 public class DuneraptorEntity extends HorseBaseEntity implements IAnimatable, Saddleable {
@@ -57,8 +61,8 @@ public class DuneraptorEntity extends HorseBaseEntity implements IAnimatable, Sa
 
     public static DefaultAttributeContainer.Builder createDuneraptorAttributes() {
         return MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.17)
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 25)
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, config.stats.duneraptor_health)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, config.stats.duneraptor_speed)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 5D);
     }
 

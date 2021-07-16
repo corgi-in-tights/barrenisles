@@ -1,6 +1,6 @@
 package ca.thecorgi.barrenisles.utils.registry;
 
-import ca.thecorgi.barrenisles.food.*;
+import ca.thecorgi.barrenisles.food.BarrenIslesFoodComponents;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
 import net.minecraft.item.SpawnEggItem;

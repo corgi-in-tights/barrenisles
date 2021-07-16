@@ -6,16 +6,17 @@
   "name": "Barren Isles",
   "description": "The desert lays barren, it misses the tides, the predators and the surroundings. This mod aims to improve that.",
   "authors": [
-    "corgi",
-    "Contributors: CircleF1sh, IrishBoy, Sawdinodude"
+    "corgi_in_tights",
+    "circlef1sh"
   ],
   "contact": {
     "homepage": "https://modrinth.com/mod/barren-isles",
     "sources": "https://github.com/beepbeep-boop/barrenisles/",
-    "issues": "https://github.com/beepbeep-boop/barrenisles/issues"
+    "issues": "https://github.com/beepbeep-boop/barrenisles/issues",
+    "discord": "https://discord.gg/mKtKUsN65y"
   },
 
-  "license": "LGPL v3",
+  "license": "LGPL-3.0",
   "icon": "assets/barrenisles/icon.png",
 
   "environment": "*",
@@ -25,6 +26,9 @@
     ],
     "client": [
       "ca.thecorgi.barrenisles.client.ClientInit"
+    ],
+    "modmenu": [
+      "ca.thecorgi.barrenisles.utils.config.ModMenuCompat"
     ]
   },
   "mixins": [

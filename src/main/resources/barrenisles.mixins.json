@@ -4,9 +4,11 @@
   "package": "ca.thecorgi.barrenisles.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
+    "FoliagePlacerTypeInvoker",
     "NoiseChunkGeneratorMixin",
+    "SpawnRestrictionMixin",
     "StructuresConfigAccessor",
-    "SpawnRestrictionMixin"
+    "TrunkPlacerTypeInvoker"
   ],
   "client": [
   ],

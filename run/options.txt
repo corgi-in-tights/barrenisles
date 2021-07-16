@@ -81,7 +81,7 @@ key_key.drop:key.keyboard.q
 key_key.inventory:key.keyboard.e
 key_key.chat:key.keyboard.t
 key_key.playerlist:key.keyboard.tab
-key_key.pickItem:key.mouse.middle
+key_key.pickItem:key.keyboard.grave.accent
 key_key.command:key.keyboard.slash
 key_key.socialInteractions:key.keyboard.p
 key_key.screenshot:key.keyboard.f2

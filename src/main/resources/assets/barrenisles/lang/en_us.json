@@ -4,5 +4,15 @@
   "item.barrenisles.drumstick": "Drumstick",
   "item.barrenisles.cooked_drumstick": "Cooked Drumstick",
   "item.barrenisles.duneraptor_spawn_egg": "Duneraptor Spawn Egg",
-  "itemGroup.barrenisles.main_group": "Barren Isles"
+  "itemGroup.barrenisles.main_group": "Barren Isles",
+  "text.autoconfig.barrenisles.title": "Barren Isles",
+  "text.autoconfig.barrenisles.option.spawn.spawn_duneraptors": "Spawn Duneraptors",
+  "text.autoconfig.barrenisles.option.spawn.spawn_tumbleweeds": "Spawn Duneraptors",
+  "text.autoconfig.barrenisles.option.generation.generate_oasis": "Generate Oasis",
+  "text.autoconfig.barrenisles.option.generation.generate_ore_rock": "Generate Ore Rock",
+  "text.autoconfig.barrenisles.option.generation.generate_ore_rock": "Generate Tall Ore Rock",
+  "text.autoconfig.barrenisles.option.stats.duneraptor_health": "Duneraptor Health",
+  "text.autoconfig.barrenisles.option.stats.duneraptor_health": "Duneraptor Speed",
+  "text.autoconfig.barrenisles.option.stats.duneraptor_health": "Tumbleweed Health",
+  "text.autoconfig.barrenisles.option.stats.duneraptor_health": "Tumbleweed Speed"
 }
