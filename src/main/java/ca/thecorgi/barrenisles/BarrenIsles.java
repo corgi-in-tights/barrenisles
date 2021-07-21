@@ -23,6 +23,8 @@ public class BarrenIsles implements ModInitializer {
     public void onInitialize() {
         GeckoLib.initialize();
 
+
+
         AutoConfig.register(BarrenIslesConfig.class, Toml4jConfigSerializer::new);
         config = AutoConfig.getConfigHolder(BarrenIslesConfig.class).getConfig();
 
@@ -33,4 +35,5 @@ public class BarrenIsles implements ModInitializer {
         FeatureRegistry.register();
         BlockRegistry.register();
     }
+
 }

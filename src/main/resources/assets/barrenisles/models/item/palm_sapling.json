@@ -1,3 +1,6 @@
 {
-  "parent": "barrenisles:block/palm_sapling"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "barrenisles:blocks/palm_sapling"
+  }
 }

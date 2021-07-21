@@ -1,6 +1,7 @@
 package ca.thecorgi.barrenisles.entity;
 
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.ai.goal.WanderAroundGoal;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.MobEntity;
@@ -35,6 +36,8 @@ public class TumbleweedEntity extends PathAwareEntity implements IAnimatable {
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (event.isMoving()) {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("tumbleweed.tumble", true));
+        } else {
+
         }
         return PlayState.CONTINUE;
     }
@@ -51,6 +54,7 @@ public class TumbleweedEntity extends PathAwareEntity implements IAnimatable {
 
     @Override
     protected void initGoals() {
-        this.goalSelector.add(1, new TumbleGoal(this, 1.1D,1000F));
+        this.goalSelector.add(10, new TumbleGoal(this, 1.1D,1000000000));
+        this.goalSelector.add(11, new WanderAroundGoal(this, 2));
     }
 }

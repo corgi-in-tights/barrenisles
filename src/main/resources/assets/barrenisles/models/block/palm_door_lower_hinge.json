@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_rh",
+  "textures": {
+    "bottom": "barrenisles:blocks/palm_door_lower",
+    "top": "barrenisles:blocks/palm_door_upper"
+  }
+}

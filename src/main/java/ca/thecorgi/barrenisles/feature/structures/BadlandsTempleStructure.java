@@ -67,7 +67,7 @@ public class BadlandsTempleStructure extends StructureFeature<DefaultFeatureConf
             int z = (chunkPos.z << 4) + 7;
             BlockPos.Mutable blockpos = new BlockPos.Mutable(x, 0, z);
             StructurePoolFeatureConfig structureSettingsAndStartPool = new StructurePoolFeatureConfig(() -> dynamicRegistryManager.get(Registry.STRUCTURE_POOL_KEY)
-                    .get(new Identifier(ModID, "badlands_temple_pool/start_pool")),
+                    .get(new Identifier(ModID, "badlands_temple/start_pool")),
                     9);
 
             // badlands_temple_main_hall, badlands_temple_underground

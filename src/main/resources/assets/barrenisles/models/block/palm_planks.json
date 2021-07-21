@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "barrenisles:blocks/oak_planks"
+    "all": "barrenisles:blocks/palm_planks"
   }
 }

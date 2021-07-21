@@ -1,11 +1,11 @@
 {
-  "name": "barrenisles:badlands_temple_pool/bottom_pool",
+  "name": "barrenisles:badlands_temple/start_pool",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
       "element": {
-        "location": "barrenisles:badlands_temple_bottom",
+        "location": "barrenisles:badlands_temple_top",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"

@@ -1,5 +1,6 @@
 package ca.thecorgi.barrenisles.utils.registry;
 
+import ca.thecorgi.barrenisles.blocks.PalmDoorBlock;
 import ca.thecorgi.barrenisles.blocks.PalmSaplingBlock;
 import ca.thecorgi.barrenisles.feature.tree.PalmSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -22,10 +23,11 @@ public class BlockRegistry {
     public static final Block PALM_PLANKS = new Block(FabricBlockSettings.of(Material.WOOD).strength(2).sounds(BlockSoundGroup.WOOD).breakByTool(FabricToolTags.AXES));
     public static final Block STRIPPED_PALM_LOG = new Block(FabricBlockSettings.of(Material.WOOD).strength(2).sounds(BlockSoundGroup.WOOD).breakByTool(FabricToolTags.AXES));
     public static final Block STRIPPED_PALM_WOOD = new Block(FabricBlockSettings.of(Material.WOOD).strength(2).sounds(BlockSoundGroup.WOOD).breakByTool(FabricToolTags.AXES));
-    public static final Block PALM_LEAVES = new Block(FabricBlockSettings.of(Material.LEAVES).strength(0.2f).breakByTool(FabricToolTags.SHEARS));
+    public static final Block PALM_LEAVES = new Block(FabricBlockSettings.of(Material.LEAVES).nonOpaque().breakByTool(FabricToolTags.SHEARS).strength(0.2F));
 
-    public static final PalmSaplingBlock PALM_SAPLING = new PalmSaplingBlock(new PalmSaplingGenerator(TREE_PALM), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING));
-
+    public static PalmDoorBlock PALM_DOOR;
+//    public static PalmSaplingBlock PALM_SAPLING;
+    public static final PalmSaplingBlock PALM_SAPLING = new PalmSaplingBlock(new PalmSaplingGenerator(TREE_PALM), Block.Settings.copy(Blocks.OAK_SAPLING));
 
     public static void register() {
         Registry.register(Registry.BLOCK, new Identifier(ModID, "palm_log"), PALM_LOG);
@@ -43,5 +45,7 @@ public class BlockRegistry {
 
         Registry.register(Registry.BLOCK, new Identifier(ModID, "palm_sapling"), PALM_SAPLING);
         Registry.register(Registry.ITEM, new Identifier(ModID, "palm_sapling"), new BlockItem(PALM_SAPLING, new FabricItemSettings().group(GroupRegistry.MAIN_GROUP)));
+
+        PALM_DOOR = new PalmDoorBlock(Block.Settings.copy(Blocks.JUNGLE_DOOR), "palm_door");
     }
 }

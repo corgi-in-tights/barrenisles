@@ -8,3 +8,9 @@ public class PalmSaplingBlock extends SaplingBlock {
         super(generator, settings);
     }
 }
+//    public PalmSaplingBlock(PalmSaplingGenerator block$Settings_1, FabricBlockSettings name) {
+//        super(block$Settings_1);
+//        Registry.register(Registry.BLOCK, new Identifier(BarrenIsles.ModID, name), this);
+//        Registry.register(Registry.ITEM, new Identifier(BarrenIsles.ModID, name), new BlockItem(this, new Item.Settings().group(GroupRegistry.MAIN_GROUP)));
+//    }
+//}

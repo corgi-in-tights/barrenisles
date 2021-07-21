@@ -75,26 +75,34 @@ public class StructureRegistry {
                             });
         }
 
-        FabricStructureBuilder.create(new Identifier(ModID, "oasis"), OASIS)
-                .step(GenerationStep.Feature.SURFACE_STRUCTURES)
-                .defaultConfig(new StructureConfig(18, 12, 320909345))
-                .superflatFeature(OASIS.configure(FeatureConfig.DEFAULT))
-                .adjustsSurface().register();
-        FabricStructureBuilder.create(new Identifier(ModID, "ore_rock"), ROCK_1)
-                .step(GenerationStep.Feature.SURFACE_STRUCTURES)
-                .defaultConfig(new StructureConfig(28, 16, 283223445))
-                .superflatFeature(ROCK_1.configure(FeatureConfig.DEFAULT))
-                .adjustsSurface().register();
-        FabricStructureBuilder.create(new Identifier(ModID, "tall_ore_rock"), ROCK_2)
-                .step(GenerationStep.Feature.SURFACE_STRUCTURES)
-                .defaultConfig(new StructureConfig(40, 29, 579125823))
-                .superflatFeature(ROCK_2.configure(FeatureConfig.DEFAULT))
-                .adjustsSurface().register();
-        FabricStructureBuilder.create(new Identifier(ModID, "badlands_temple"), BADLANDS_TEMPLE)
-                .step(GenerationStep.Feature.SURFACE_STRUCTURES)
-                .defaultConfig(new StructureConfig(35, 23, 854383894))
-                .superflatFeature(BADLANDS_TEMPLE.configure(FeatureConfig.DEFAULT))
-                .adjustsSurface().register();
+        if (config.generation.generate_oasis == true) {
+            FabricStructureBuilder.create(new Identifier(ModID, "oasis"), OASIS)
+                    .step(GenerationStep.Feature.SURFACE_STRUCTURES)
+                    .defaultConfig(new StructureConfig(18, 12, 320909345))
+                    .superflatFeature(OASIS.configure(FeatureConfig.DEFAULT))
+                    .adjustsSurface().register();
+        }
+        if (config.generation.generate_ore_rock == true) {
+            FabricStructureBuilder.create(new Identifier(ModID, "ore_rock"), ROCK_1)
+                    .step(GenerationStep.Feature.SURFACE_STRUCTURES)
+                    .defaultConfig(new StructureConfig(28, 16, 283223445))
+                    .superflatFeature(ROCK_1.configure(FeatureConfig.DEFAULT))
+                    .adjustsSurface().register();
+        }
+        if (config.generation.generate_tall_ore_rock == true) {
+            FabricStructureBuilder.create(new Identifier(ModID, "tall_ore_rock"), ROCK_2)
+                    .step(GenerationStep.Feature.SURFACE_STRUCTURES)
+                    .defaultConfig(new StructureConfig(40, 29, 579125823))
+                    .superflatFeature(ROCK_2.configure(FeatureConfig.DEFAULT))
+                    .adjustsSurface().register();
+        }
+        if (config.generation.generate_badlands_temple == true) {
+            FabricStructureBuilder.create(new Identifier(ModID, "badlands_temple"), BADLANDS_TEMPLE)
+                    .step(GenerationStep.Feature.UNDERGROUND_STRUCTURES)
+                    .defaultConfig(new StructureConfig(32, 24, 854383894))
+                    .superflatFeature(BADLANDS_TEMPLE.configure(FeatureConfig.DEFAULT))
+                    .adjustsSurface().register();
+        }
 
         Registry<ConfiguredStructureFeature<?, ?>> registry = BuiltinRegistries.CONFIGURED_STRUCTURE_FEATURE;
         Registry.register(registry, new Identifier(ModID, "configured_oasis"), CONFIGURED_OASIS);
