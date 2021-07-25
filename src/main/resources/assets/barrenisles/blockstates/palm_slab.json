@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "barrenisles:block/palm_slab"
+    },
+    "type=double": {
+      "model": "barrenisles:block/palm_planks"
+    },
+    "type=top": {
+      "model": "barrenisles:block/palm_slab_top"
+    }
+  }
+}

@@ -27,7 +27,7 @@ public class FeatureRegistry {
                     new BendingTrunkPlacer(4, 2, 1,5, ConstantIntProvider.create(1)),
                     new SimpleBlockStateProvider(PALM_LEAVES.getDefaultState()),
                     new SimpleBlockStateProvider(PALM_SAPLING.getDefaultState()),
-                    new RandomSpreadFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(0), ConstantIntProvider.create(2), 27),
+                    new RandomSpreadFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(1), ConstantIntProvider.create(3), 27),
                     new TwoLayersFeatureSize(0, 0, 0)
             ).build());
 
