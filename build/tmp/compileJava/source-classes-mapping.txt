@@ -10,6 +10,8 @@ ca/thecorgi/barrenisles/blocks/PalmDoorBlock.java
 ca/thecorgi/barrenisles/feature/structures/OasisStructure.java
  ca.thecorgi.barrenisles.feature.structures.OasisStructure
  ca.thecorgi.barrenisles.feature.structures.OasisStructure$Start
+ca/thecorgi/barrenisles/feature/tree/PalmFoliagePlacer.java
+ ca.thecorgi.barrenisles.feature.tree.PalmFoliagePlacer
 ca/thecorgi/barrenisles/blocks/DesertFlowerBlock.java
  ca.thecorgi.barrenisles.blocks.DesertFlowerBlock
 ca/thecorgi/barrenisles/mixin/FoliagePlacerTypeInvoker.java
@@ -42,6 +44,8 @@ ca/thecorgi/barrenisles/food/BarrenIslesFoodComponents.java
  ca.thecorgi.barrenisles.food.BarrenIslesFoodComponents
 ca/thecorgi/barrenisles/mixin/TrunkPlacerTypeInvoker.java
  ca.thecorgi.barrenisles.mixin.TrunkPlacerTypeInvoker
+ca/thecorgi/barrenisles/blocks/TallDesertFlowerBlock.java
+ ca.thecorgi.barrenisles.blocks.TallDesertFlowerBlock
 ca/thecorgi/barrenisles/mixin/NoiseChunkGeneratorMixin.java
  ca.thecorgi.barrenisles.mixin.NoiseChunkGeneratorMixin
 ca/thecorgi/barrenisles/entity/TumbleweedEntity.java
@@ -62,6 +66,8 @@ ca/thecorgi/barrenisles/utils/registry/ItemRegistry.java
  ca.thecorgi.barrenisles.utils.registry.ItemRegistry
 ca/thecorgi/barrenisles/utils/registry/GroupRegistry.java
  ca.thecorgi.barrenisles.utils.registry.GroupRegistry
+ca/thecorgi/barrenisles/BSChunkGenerator.java
+ ca.thecorgi.barrenisles.BSChunkGenerator
 ca/thecorgi/barrenisles/blocks/PalmSaplingBlock.java
  ca.thecorgi.barrenisles.blocks.PalmSaplingBlock
 ca/thecorgi/barrenisles/client/model/DuneraptorModel.java

@@ -40,7 +40,7 @@ public class TallRock2Structure extends StructureFeature<DefaultFeatureConfig> {
         int landHeight = chunkGenerator.getHeightInGround(centerOfChunk.getX(), centerOfChunk.getZ(), Heightmap.Type.WORLD_SURFACE_WG, heightLimitView);
         VerticalBlockSample columnOfBlocks = chunkGenerator.getColumnSample(centerOfChunk.getX(), centerOfChunk.getZ(), heightLimitView);
         BlockState topBlock = columnOfBlocks.getState(centerOfChunk.up(landHeight));
-        return topBlock.getFluidState().isEmpty();
+        return topBlock.getFluidState().isEmpty() && topBlock.isOpaque();
     }
 
     public static class Start extends MarginedStructureStart<DefaultFeatureConfig> {

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "barrenisles:palm_planks"
+    }
+  ],
+  "result": {
+    "item": "barrenisles:palm_button",
+    "count": 1
+  }
+}

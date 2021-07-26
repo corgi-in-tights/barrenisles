@@ -3,6 +3,7 @@
   "item.barrenisles.dune_feather": "Dune Feather",
   "item.barrenisles.drumstick": "Drumstick",
   "item.barrenisles.cooked_drumstick": "Cooked Drumstick",
+  "item.barrenisles.suspicious_berries": "Suspicious Berries",
   "item.barrenisles.duneraptor_spawn_egg": "Duneraptor Spawn Egg",
   "itemGroup.barrenisles.main_group": "Barren Isles",
   "text.autoconfig.barrenisles.title": "Barren Isles",
@@ -26,5 +27,19 @@
   "block.barrenisles.palm_planks": "Palm Planks",
   "block.barrenisles.palm_door": "Palm Door",
   "block.barrenisles.palm_sapling": "Palm Sapling",
-  "block.barrenisles.palm_leaves": "Palm Leaves"
+  "block.barrenisles.palm_leaves": "Palm Leaves",
+  "block.barrenisles.palm_slab": "Palm Slab",
+  "block.barrenisles.palm_stairs": "Palm Stairs",
+  "block.barrenisles.palm_trapdoor": "Palm Trapdoor",
+  "block.barrenisles.palm_fence": "Palm Fence",
+  "block.barrenisles.palm_fence_gate": "Palm Fence Gate",
+  "block.barrenisles.palm_pressure_plate": "Palm Pressure Plate",
+  "block.barrenisles.palm_button": "Palm Button",
+  "block.barrenisles.winecup": "Winecup",
+  "block.barrenisles.marigold": "Marigold",
+  "block.barrenisles.desert_Lily": "Desert Lily",
+  "block.barrenisles.barrel_cactus": "Barrel Cactus",
+  "block.barrenisles.thornweed": "Thornweed",
+  "block.barrenisles.suspicious_berry_bush": "Suspicious Berry Bush",
+  "block.barrenisles.poison_ivy": "Poison Ivy"
 }

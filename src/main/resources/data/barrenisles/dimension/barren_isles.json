@@ -1,10 +1,10 @@
 {
   "generator": {
-    "type": "barrenisles:barrenisles",
+    "type": "barrenisles:barren_isles",
     "custom_bool": true,
     "biome_source": {
       "type": "minecraft:fixed",
-      "biome": "minecraft:plains"
+      "biome": "minecraft:desert"
     }
   },
   "type": "barrenisles:barrenisles_type"
