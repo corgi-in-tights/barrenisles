@@ -32,12 +32,12 @@ public class BlockRegistry {
         return FabricBlockSettings.copyOf(block).breakByTool(FabricToolTags.AXES);
     }
     public static final Block PALM_LOG = new PillarBlock(copyWoodSettings(Blocks.OAK_LOG));
-    public static final Block PALM_PLANKS = new Block(copyWoodSettings(Blocks.OAK_PLANKS));
-    public static final Block PALM_SLAB = new SlabBlock(copyWoodSettings(Blocks.OAK_SLAB));
-    public static final Block PALM_STAIRS = new StairsBlock(PALM_PLANKS.getDefaultState(), copyWoodSettings(Blocks.OAK_STAIRS)) {};
     public static final Block PALM_WOOD = new PillarBlock(copyWoodSettings(Blocks.OAK_WOOD));
     public static final Block STRIPPED_PALM_LOG = new PillarBlock(copyWoodSettings(Blocks.STRIPPED_OAK_LOG));
     public static final Block STRIPPED_PALM_WOOD = new PillarBlock(copyWoodSettings(Blocks.STRIPPED_OAK_WOOD));
+    public static final Block PALM_PLANKS = new Block(copyWoodSettings(Blocks.OAK_PLANKS));
+    public static final Block PALM_SLAB = new SlabBlock(copyWoodSettings(Blocks.OAK_SLAB));
+    public static final Block PALM_STAIRS = new StairsBlock(PALM_PLANKS.getDefaultState(), copyWoodSettings(Blocks.OAK_STAIRS)) {};
     public static final Block PALM_LEAVES = new LeavesBlock(copyWoodSettings(Blocks.OAK_LEAVES));
     public static final Block PALM_DOOR = new PalmDoorBlock(copyWoodSettings(Blocks.OAK_DOOR));
     public static final Block PALM_TRAPDOOR = new PalmTrapdoorBlock(copyWoodSettings(Blocks.OAK_TRAPDOOR));
@@ -46,11 +46,15 @@ public class BlockRegistry {
     public static final Block PALM_FENCE_GATE = new FenceGateBlock(copyWoodSettings(Blocks.OAK_FENCE_GATE));
     public static final Block PALM_BUTTON = new WoodenButtonBlock(copyWoodSettings(Blocks.OAK_BUTTON)) {};
     public static final Block PALM_SAPLING = new PalmSaplingBlock(new PalmSaplingGenerator(TREE_PALM), Block.Settings.copy(Blocks.OAK_SAPLING));
+
     public static final Block WINECUP = new DesertFlowerBlock(StatusEffects.HASTE, 30, FabricBlockSettings.copyOf(Blocks.DANDELION));
     public static final Block POISON_IVY = new DesertFlowerBlock(StatusEffects.POISON, 50, FabricBlockSettings.copyOf(Blocks.DANDELION));
     public static final Block AGAVE = new DesertFlowerBlock(StatusEffects.WITHER, 70, FabricBlockSettings.copyOf(Blocks.DANDELION));
     public static final Block MARIGOLD = new DesertFlowerBlock(StatusEffects.SPEED, 40, FabricBlockSettings.copyOf(Blocks.DANDELION));
+    public static final Block DESERT_LILY = new TallDesertFlowerBlock(FabricBlockSettings.copyOf(Blocks.ROSE_BUSH));
+    public static final Block SUSPICIOUS_BERRY_BUSH = new DesertFlowerBlock(StatusEffects.NAUSEA, 50, FabricBlockSettings.copy(Blocks.SWEET_BERRY_BUSH));
     public static final Block THORNWEED = new ThornweedBlock(FabricBlockSettings.copyOf(Blocks.DEAD_BUSH));
+    public static final Block BARREL_CACTUS = new ThornweedBlock(FabricBlockSettings.copyOf(Blocks.DEAD_BUSH));
 
 
     public static void register() {
@@ -72,8 +76,11 @@ public class BlockRegistry {
         register("winecup", WINECUP);
         register("poison_ivy", POISON_IVY);
         register("agave", AGAVE);
+        register("desert_lily", DESERT_LILY);
+        register("suspicious_berry_bush", SUSPICIOUS_BERRY_BUSH, (Item) null);
         register("marigold", MARIGOLD);
         register("thornweed", THORNWEED);
+        register("barrel_cactus", BARREL_CACTUS);
 
         FuelRegistry fuelReg = FuelRegistry.INSTANCE;
         fuelReg.add(PALM_FENCE, 300);
@@ -99,7 +106,7 @@ public class BlockRegistry {
         );
 
         BlockRenderLayerMap.INSTANCE.putBlocks(
-                RenderLayer.getCutout(), PALM_SAPLING, PALM_DOOR, PALM_TRAPDOOR, MARIGOLD, AGAVE, POISON_IVY, THORNWEED, WINECUP);
+                RenderLayer.getCutout(), PALM_SAPLING, PALM_DOOR, PALM_TRAPDOOR, MARIGOLD, AGAVE, POISON_IVY, THORNWEED, WINECUP, DESERT_LILY, BARREL_CACTUS, SUSPICIOUS_BERRY_BUSH);
 
         ColorProviderRegistry.BLOCK.register(
                 (state, world, pos, tintIndex) -> {

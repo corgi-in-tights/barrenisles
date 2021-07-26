@@ -40,8 +40,8 @@ public class Rock1Structure extends StructureFeature<DefaultFeatureConfig> {
         int landHeight = chunkGenerator.getHeightInGround(centerOfChunk.getX(), centerOfChunk.getZ(), Heightmap.Type.WORLD_SURFACE_WG, heightLimitView);
         VerticalBlockSample columnOfBlocks = chunkGenerator.getColumnSample(centerOfChunk.getX(), centerOfChunk.getZ(), heightLimitView);
         BlockState topBlock = columnOfBlocks.getState(centerOfChunk.up(landHeight));
-//        Blockstate bottomBlock = colu
-        return topBlock.getFluidState().isEmpty();
+        BlockState bottomBlock = columnOfBlocks.getState(centerOfChunk.down());
+        return topBlock.getFluidState().isEmpty() && bottomBlock.isOpaque();
     }
 
     public static class Start extends MarginedStructureStart<DefaultFeatureConfig> {

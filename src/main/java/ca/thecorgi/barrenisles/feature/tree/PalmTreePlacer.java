@@ -36,7 +36,7 @@ public class PalmTreePlacer extends TrunkPlacer {
         // Set the ground beneath the trunk to dirt
         this.setToDirt(world, replacer, random, startPos.down(), config);
 
-        // Iterate until the trunk height limit and place two blocks using the getAndSetState method from TrunkPlacer
+        // Iterate until the trunk height limit and place two block using the getAndSetState method from TrunkPlacer
         for (int i = 0; i < height; i++) {
             this.getAndSetState(world, replacer, random, startPos.up(i), config);
             this.getAndSetState(world, replacer, random, startPos.up(i).east().north(), config);

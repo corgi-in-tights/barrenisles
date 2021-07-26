@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/fence_side",
   "textures": {
-    "texture": "barrenisles:blocks/palm_planks"
+    "texture": "barrenisles:block/palm_planks"
   }
 }

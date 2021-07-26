@@ -1,5 +1,6 @@
 package ca.thecorgi.barrenisles.utils.registry;
 
+import ca.thecorgi.barrenisles.feature.tree.PalmFoliagePlacer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.util.Identifier;
@@ -12,9 +13,8 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.TreeFeatureConfig;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
-import net.minecraft.world.gen.foliage.RandomSpreadFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
-import net.minecraft.world.gen.trunk.BendingTrunkPlacer;
+import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
 import static ca.thecorgi.barrenisles.BarrenIsles.ModID;
 import static ca.thecorgi.barrenisles.utils.registry.BlockRegistry.*;
@@ -24,10 +24,11 @@ public class FeatureRegistry {
     public static final ConfiguredFeature<TreeFeatureConfig, ?> TREE_PALM =
             Feature.TREE.configure(new TreeFeatureConfig.Builder(
                     new SimpleBlockStateProvider(PALM_LOG.getDefaultState()),
-                    new BendingTrunkPlacer(4, 2, 1,5, ConstantIntProvider.create(1)),
+//                    new BendingTrunkPlacer(1, 5, 6,7, ConstantIntProvider.create(2)),
+                    new StraightTrunkPlacer(3,4,5),
                     new SimpleBlockStateProvider(PALM_LEAVES.getDefaultState()),
                     new SimpleBlockStateProvider(PALM_SAPLING.getDefaultState()),
-                    new RandomSpreadFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(1), ConstantIntProvider.create(3), 27),
+                    new PalmFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(3), ConstantIntProvider.create(2)),
                     new TwoLayersFeatureSize(0, 0, 0)
             ).build());
 

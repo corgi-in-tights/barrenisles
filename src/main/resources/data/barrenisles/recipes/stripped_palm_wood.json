@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "barrenisles:stripped_palm_log"
+    },    {
+      "item": "barrenisles:stripped_palm_log"
+    },
+    {
+      "item": "barrenisles:stripped_palm_log"
+    },
+    {
+      "item": "barrenisles:stripped_palm_log"
+    }
+  ],
+  "result": {
+    "item": "barrenisles:stripped_palm_wood",
+    "count": 3
+  }
+}

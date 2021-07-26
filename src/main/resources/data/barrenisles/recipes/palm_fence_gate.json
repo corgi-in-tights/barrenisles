@@ -1,0 +1,20 @@
+
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#/#",
+    "#/#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "/": {
+      "item": "barrenisles:palm_planks"
+    }
+  },
+  "result": {
+    "item": "barrenisles:palm_fence_gate",
+    "count": 1
+  }
+}
