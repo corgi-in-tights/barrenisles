@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/pressure_plate_down",
   "textures": {
-    "texture": "barrenisles:block/palm_planks"
+    "texture": "barrenisles:blocks/palm_planks"
   }
 }

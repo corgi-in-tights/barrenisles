@@ -1,141 +1,77 @@
 package ca.thecorgi.barrenisles;
 
-import ca.thecorgi.barrenisles.feature.tree.PalmFoliagePlacer;
-import ca.thecorgi.barrenisles.feature.tree.PalmTreePlacer;
-import ca.thecorgi.barrenisles.mixin.FoliagePlacerTypeInvoker;
-import ca.thecorgi.barrenisles.mixin.TrunkPlacerTypeInvoker;
-import ca.thecorgi.barrenisles.utils.config.BarrenIslesConfig;
-import ca.thecorgi.barrenisles.utils.registry.*;
-import com.mojang.brigadier.context.CommandContext;
-import com.mojang.brigadier.exceptions.CommandSyntaxException;
-import me.shedaniel.autoconfig.AutoConfig;
-import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
-import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.dimension.v1.FabricDimensions;
-import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
+import ca.thecorgi.barrenisles.setup.Registration;
 import net.minecraft.block.Blocks;
-import net.minecraft.command.CommandException;
-import net.minecraft.entity.Entity;
-import net.minecraft.server.command.ServerCommandSource;
-import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.server.world.ServerWorld;
-import net.minecraft.text.LiteralText;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Vec3d;
-import net.minecraft.util.registry.Registry;
-import net.minecraft.util.registry.RegistryKey;
-import net.minecraft.world.TeleportTarget;
-import net.minecraft.world.World;
-import net.minecraft.world.dimension.DimensionOptions;
-import net.minecraft.world.dimension.DimensionType;
-import net.minecraft.world.gen.foliage.FoliagePlacerType;
-import net.minecraft.world.gen.trunk.TrunkPlacerType;
-import software.bernie.geckolib3.GeckoLib;
-
-import static net.minecraft.entity.EntityType.COW;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.InterModComms;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
+import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
+import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import java.util.stream.Collectors;
 
 
-public class BarrenIsles implements ModInitializer {
-    public static final String ModID = "barrenisles";
-    public static BarrenIslesConfig config;
+// The value here should match an entry in the META-INF/mods.toml file
+@Mod(BarrenIsles.MOD_ID)
+public class BarrenIsles
+{
+    public static final String MOD_ID = "barrenisles";
 
-    public static Identifier id(String path) {
-        return new Identifier(ModID, path);
-    }
-    public static final TrunkPlacerType<PalmTreePlacer> PALM_TREE_PLACER = TrunkPlacerTypeInvoker.callRegister("palm_trunk_placer", PalmTreePlacer.CODEC);
-    public static final FoliagePlacerType<PalmFoliagePlacer> PALM_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("palm_foliage_placer", PalmFoliagePlacer.CODEC);
+    // Directly reference a log4j logger.
+    public static final Logger LOGGER = LogManager.getLogger();
 
-    private static final RegistryKey<DimensionOptions> DIMENSION_KEY = RegistryKey.of(
-            Registry.DIMENSION_KEY,
-            new Identifier(ModID, "barrenisles")
-    );
+    public BarrenIsles() {
+        Registration.register();
+        // Register the setup method for modloading
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+        // Register the enqueueIMC method for modloading
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
+        // Register the processIMC method for modloading
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
+        // Register the doClientStuff method for modloading
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
-    private static RegistryKey<World> WORLD_KEY = RegistryKey.of(
-            Registry.WORLD_KEY,
-            DIMENSION_KEY.getValue()
-    );
-
-    private static final RegistryKey<DimensionType> DIMENSION_TYPE_KEY = RegistryKey.of(
-            Registry.DIMENSION_TYPE_KEY,
-            new Identifier(ModID, "barrenisles_type")
-    );
-
-    @Override
-    public void onInitialize() {
-        GeckoLib.initialize();
-
-        AutoConfig.register(BarrenIslesConfig.class, Toml4jConfigSerializer::new);
-        config = AutoConfig.getConfigHolder(BarrenIslesConfig.class).getConfig();
-
-        StructureRegistry.register();
-        EntityRegistry.register();
-        SpawnRegistry.register();
-        ItemRegistry.register();
-        FeatureRegistry.register();
-        BlockRegistry.register();
-
-        Registry.register(Registry.CHUNK_GENERATOR, new Identifier(ModID, "barrenisles"), BSChunkGenerator.CODEC);
-
-        WORLD_KEY = RegistryKey.of(Registry.WORLD_KEY, new Identifier(ModID, "barrenisles"));
-
-        ServerLifecycleEvents.SERVER_STARTED.register(server -> {
-            ServerWorld overworld = server.getWorld(World.OVERWORLD);
-            ServerWorld world = server.getWorld(WORLD_KEY);
-
-            if (world == null) throw new AssertionError("Test world doesn't exist.");
-
-            Entity entity = COW.create(overworld);
-
-            if (!entity.world.getRegistryKey().equals(World.OVERWORLD)) throw new AssertionError("Entity starting world isn't the overworld");
-
-            TeleportTarget target = new TeleportTarget(Vec3d.ZERO, new Vec3d(1, 1, 1), 45f, 60f);
-
-            Entity teleported = FabricDimensions.teleport(entity, world, target);
-
-            if (teleported == null) throw new AssertionError("Entity didn't teleport");
-
-            if (!teleported.world.getRegistryKey().equals(WORLD_KEY)) throw new AssertionError("Target world not reached.");
-
-            if (!teleported.getPos().equals(target.position)) throw new AssertionError("Target Position not reached.");
-        });
-
-//        CommandRegistrationCallback.EVENT.register((dispatcher, dedicated) ->
-//                dispatcher.register(literal("fabric_dimension_test").executes(BarrenIsles.this::swapTargeted))
-//        );
+        // Register ourselves for server and other game events we are interested in
+        MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private int swapTargeted(CommandContext<ServerCommandSource> context) throws CommandSyntaxException {
-        ServerPlayerEntity player = context.getSource().getPlayer();
-        ServerWorld serverWorld = player.getServerWorld();
-        ServerWorld modWorld = getModWorld(context);
-
-        if (serverWorld != modWorld) {
-            TeleportTarget target = new TeleportTarget(new Vec3d(0.5, 101, 0.5), Vec3d.ZERO, 0, 0);
-            FabricDimensions.teleport(player, modWorld, target);
-
-            if (player.world != modWorld) {
-                throw new CommandException(new LiteralText("Teleportation failed!"));
-            }
-
-            modWorld.setBlockState(new BlockPos(0, 100, 0), Blocks.DIAMOND_BLOCK.getDefaultState());
-            modWorld.setBlockState(new BlockPos(0, 101, 0), Blocks.TORCH.getDefaultState());
-        } else {
-            TeleportTarget target = new TeleportTarget(new Vec3d(0, 100, 0), Vec3d.ZERO,
-                    (float) Math.random() * 360 - 180, (float) Math.random() * 360 - 180);
-            FabricDimensions.teleport(player, getWorld(context, World.OVERWORLD), target);
-        }
-
-        return 1;
+    private void setup(final FMLCommonSetupEvent event)
+    {
+        // some preinit code
+        LOGGER.info("HELLO FROM PREINIT");
+        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
 
-    private ServerWorld getModWorld(CommandContext<ServerCommandSource> context) {
-        return getWorld(context, WORLD_KEY);
+    private void doClientStuff(final FMLClientSetupEvent event) {
+        // do something that can only be done on the client
+        LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().options);
+        Registration.transparency();
     }
 
-    private ServerWorld getWorld(CommandContext<ServerCommandSource> context, RegistryKey<World> dimensionRegistryKey) {
-        return context.getSource().getMinecraftServer().getWorld(dimensionRegistryKey);
-    }
+    private void enqueueIMC(final InterModEnqueueEvent event)
+    {
+        // some example code to dispatch IMC to another mod
+        InterModComms.sendTo("barrenisles", "helloworld", () -> { LOGGER.info("Hello world from the MDK"); return "Hello world";});
     }
 
+    private void processIMC(final InterModProcessEvent event)
+    {
+        // some example code to receive and process InterModComms from other mods
+        LOGGER.info("Got IMC {}", event.getIMCStream().
+                map(m->m.getMessageSupplier().get()).
+                collect(Collectors.toList()));
+    }
+    // You can use SubscribeEvent and let the Event Bus discover methods to call
+    @SubscribeEvent
+    public void onServerStarting(FMLServerStartingEvent event) {
+        // do something when the server starts
+        LOGGER.info("HELLO from server starting");
+    }
 
+}

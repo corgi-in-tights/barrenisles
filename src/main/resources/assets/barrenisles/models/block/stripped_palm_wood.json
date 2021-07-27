@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "barrenisles:block/stripped_palm_log"
+    "all": "barrenisles:blocks/stripped_palm_log"
   }
 }

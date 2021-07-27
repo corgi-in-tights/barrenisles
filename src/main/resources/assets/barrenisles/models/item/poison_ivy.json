@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "barrenisles:block/poison_ivy"
+    "layer0": "barrenisles:blocks/poison_ivy"
   }
 }

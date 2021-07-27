@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "barrenisles:block/palm_sapling"
+    "cross": "barrenisles:blocks/palm_sapling"
   }
 }

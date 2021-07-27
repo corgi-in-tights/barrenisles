@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "barrenisles:block/poison_ivy"
+    "cross": "barrenisles:blocks/poison_ivy"
   }
 }

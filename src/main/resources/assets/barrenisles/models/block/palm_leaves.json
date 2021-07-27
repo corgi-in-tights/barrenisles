@@ -1,6 +1,6 @@
 {
-  "parent": "block/leaves",
+  "parent": "block/cube_all",
   "textures": {
-    "all": "barrenisles:block/palm_leaves"
+    "all": "barrenisles:blocks/palm_leaves"
   }
 }

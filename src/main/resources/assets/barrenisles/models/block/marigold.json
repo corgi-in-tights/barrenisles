@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "barrenisles:block/marigold"
+    "cross": "barrenisles:blocks/marigold"
   }
 }
