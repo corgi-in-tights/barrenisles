@@ -20,38 +20,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a79abc9b-cbb6-490d-92ec-70ac980b10a0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules/barrenisles-forge.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/barrenisles-forge.test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/items/PalmButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/items/PalmPressurePlate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/lang/de_de.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/palm_door.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/palm_trapdoor.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/palm_wood.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/stripped_palm_wood.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/blocks/logs.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/blocks/logs_that_burn.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/blocks/planks.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/blocks/wooden_buttons.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/blocks/wooden_fences.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/blocks/wooden_pressure_plates.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/blocks/wooden_slabs.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/blocks/wooden_stairs.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/items/logs.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/items/logs_that_burn.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/items/planks.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/items/saplings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ca/thecorgi/barrenisles/BarrenIsles.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ca/thecorgi/barrenisles/client/ClientInit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ca/thecorgi/barrenisles/client/model/DuneraptorModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ca/thecorgi/barrenisles/client/renderer/DuneraptorRenderer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ca/thecorgi/barrenisles/utils/registry/EntityRegistry.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/barrenisles/animations/duneraptor.animation.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/fabric.mod.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/remapJar/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/sourcesJar/MANIFEST.MF" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/run/.mixin.out/audit/mixin_implementation_report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/.mixin.out/audit/mixin_implementation_report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/config/fabric/indigo-renderer.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-2.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-3.log.gz" afterDir="false" />
@@ -59,21 +48,15 @@
       <change beforePath="$PROJECT_DIR$/run/logs/debug-5.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-5.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/latest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/options.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/options.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/setup/ModBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/setup/ModBlocks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/setup/ModItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/setup/ModItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/lang/en_us.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to-be-added/data/barrenisles/recipes/palm_button.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/palm_button.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to-be-added/data/barrenisles/recipes/palm_fence.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/palm_fence.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to-be-added/data/barrenisles/recipes/palm_fence_gate.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/palm_fence_gate.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to-be-added/data/barrenisles/recipes/palm_pressure_plate.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/palm_pressure_plate.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to-be-added/data/barrenisles/recipes/palm_slab.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/palm_slab.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to-be-added/data/barrenisles/recipes/palm_stairs.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/palm_stairs.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to-be-added/data/barrenisles/recipes/palm_trapdoor.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/to-be-added/data/barrenisles/recipes/palm_wood.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/to-be-added/data/barrenisles/recipes/stripped_palm_log_to_planks.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/stripped_palm_log_to_planks.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to-be-added/data/barrenisles/recipes/stripped_palm_wood.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/to-be-added/data/minecraft/tags/blocks/logs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/to-be-added/data/minecraft/tags/blocks/logs_that_burn.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/to-be-added/data/minecraft/tags/blocks/planks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/to-be-added/data/minecraft/tags/blocks/wooden_buttons.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/to-be-added/data/minecraft/tags/blocks/wooden_fences.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/to-be-added/data/minecraft/tags/blocks/wooden_pressure_plates.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/to-be-added/data/minecraft/tags/blocks/wooden_slabs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/to-be-added/data/minecraft/tags/blocks/wooden_stairs.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +120,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/blocks" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/items" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -149,11 +132,11 @@
       <recent name="ca.thecorgi.barrenisles.setup" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\data\minecraft\tags\items" />
+      <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\data\minecraft\tags\blocks" />
       <recent name="C:\Users\Sammy_HD\Documents\mc_mods\barrenisles\src\main\resources\assets\barrenisles\textures\blocks" />
       <recent name="C:\Users\Sammy_HD\Documents\mc_mods\barrenisles\src\main\resources\assets\barrenisles\models\block\door" />
       <recent name="C:\Users\Sammy_HD\Documents\mc_mods\barrenisles\src\main\resources\data\barrenisles\recipes" />
-      <recent name="C:\Users\Sammy_HD\Documents\mc_mods\barrenisles\run\mods" />
-      <recent name="C:\Users\Sammy_HD\Documents\mc_mods\barrenisles\src" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ca.thecorgi.barrenisles.items" />
@@ -233,22 +216,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="237" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1627289973052" />
-    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1627378191158">
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1627379478991">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1627378191158" />
-    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1627378191158">
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1627379478991" />
+    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1627379478991">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1627378191158" />
-    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1627378191158">
+    <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1627379478991" />
+    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1627379478991">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1627378191158" />
-    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1627378191158">
+    <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1627379478991" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1627379478991">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1627378191158" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1627379478991" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1627318955699">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

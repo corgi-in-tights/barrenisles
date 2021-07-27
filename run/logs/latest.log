@@ -1,10 +1,10 @@
-[27Jul2021 11:29:57.845] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--gameDir, ., --launchTarget, fmluserdevclient, --fml.mcpVersion, 20210115.111550, --fml.mcVersion, 1.16.5, --fml.forgeGroup, net.minecraftforge, --fml.forgeVersion, 36.2.0, --assetIndex, 1.16, --assetsDir, C:\Users\Sammy_HD\.gradle\caches\forge_gradle\assets, --version, MOD_DEV, --username, Dev, --accessToken, ????????, --userProperties, {}]
-[27Jul2021 11:29:57.849] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 8.0.9+86+master.3cf110c starting: java version 1.8.0_241 by Oracle Corporation
-[27Jul2021 11:29:58.145] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
-[27Jul2021 11:29:58.180] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.2 Source=file:/C:/Users/Sammy_HD/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.2/1cf212283d26f706fd3074318870bebd14d2a9ed/mixin-0.8.2.jar Service=ModLauncher Env=CLIENT
-[27Jul2021 11:29:59.690] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmluserdevclient' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\Sammy_HD\.gradle\caches\forge_gradle\assets, --assetIndex, 1.16, --username, Dev, --accessToken, ????????, --userProperties, {}]
-[27Jul2021 11:30:03.262] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[27Jul2021 11:30:03.915] [Render thread/ERROR] [net.minecraft.client.Minecraft/]: Failed to verify authentication
+[27Jul2021 11:51:25.917] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--gameDir, ., --launchTarget, fmluserdevclient, --fml.mcpVersion, 20210115.111550, --fml.mcVersion, 1.16.5, --fml.forgeGroup, net.minecraftforge, --fml.forgeVersion, 36.2.0, --assetIndex, 1.16, --assetsDir, C:\Users\Sammy_HD\.gradle\caches\forge_gradle\assets, --version, MOD_DEV, --username, Dev, --accessToken, ????????, --userProperties, {}]
+[27Jul2021 11:51:25.920] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 8.0.9+86+master.3cf110c starting: java version 1.8.0_241 by Oracle Corporation
+[27Jul2021 11:51:26.212] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
+[27Jul2021 11:51:26.255] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.2 Source=file:/C:/Users/Sammy_HD/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.2/1cf212283d26f706fd3074318870bebd14d2a9ed/mixin-0.8.2.jar Service=ModLauncher Env=CLIENT
+[27Jul2021 11:51:27.747] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmluserdevclient' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\Sammy_HD\.gradle\caches\forge_gradle\assets, --assetIndex, 1.16, --username, Dev, --accessToken, ????????, --userProperties, {}]
+[27Jul2021 11:51:31.501] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[27Jul2021 11:51:32.048] [Render thread/ERROR] [net.minecraft.client.Minecraft/]: Failed to verify authentication
 com.mojang.authlib.exceptions.AuthenticationUnavailableException: null
 	at com.mojang.authlib.yggdrasil.YggdrasilSocialInteractionsService.checkPrivileges(YggdrasilSocialInteractionsService.java:97) ~[authlib-2.1.28.jar:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilSocialInteractionsService.<init>(YggdrasilSocialInteractionsService.java:40) ~[authlib-2.1.28.jar:?]
@@ -23,39 +23,39 @@ com.mojang.authlib.exceptions.AuthenticationUnavailableException: null
 	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.9.jar:?]
 	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.9.jar:?]
 	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:108) [forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
-[27Jul2021 11:30:03.920] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[27Jul2021 11:30:03.985] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.2 build 10
-[27Jul2021 11:30:04.383] [modloading-worker-11/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 36.2.0, for MC 1.16.5 with MCP 20210115.111550
-[27Jul2021 11:30:04.383] [modloading-worker-11/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v36.2.0 Initialized
-[27Jul2021 11:30:05.330] [Render thread/INFO] [com.mojang.text2speech.NarratorWindows/]: Narrator library for x64 successfully loaded
-[27Jul2021 11:30:05.368] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources
-[27Jul2021 11:30:05.401] [Worker-Main-8/INFO] [ca.thecorgi.barrenisles.BarrenIsles/]: HELLO FROM PREINIT
-[27Jul2021 11:30:05.402] [Worker-Main-8/INFO] [ca.thecorgi.barrenisles.BarrenIsles/]: DIRT BLOCK >> minecraft:dirt
-[27Jul2021 11:30:05.418] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[27Jul2021 11:30:05.657] [Worker-Main-13/INFO] [ca.thecorgi.barrenisles.BarrenIsles/]: Got game settings net.minecraft.client.GameSettings@4e381c7
-[27Jul2021 11:30:05.906] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: UP_TO_DATE Current: 36.2.0 Target: null
-[27Jul2021 11:30:09.357] [Worker-Main-11/INFO] [ca.thecorgi.barrenisles.BarrenIsles/]: Hello world from the MDK
-[27Jul2021 11:30:09.358] [Worker-Main-11/INFO] [ca.thecorgi.barrenisles.BarrenIsles/]: Got IMC [Hello world]
-[27Jul2021 11:30:10.292] [Render thread/INFO] [net.minecraft.client.audio.SoundSystem/]: OpenAL initialized.
-[27Jul2021 11:30:10.293] [Render thread/INFO] [net.minecraft.client.audio.SoundEngine/SOUNDS]: Sound engine started
-[27Jul2021 11:30:10.539] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
-[27Jul2021 11:30:10.657] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
-[27Jul2021 11:30:10.659] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[27Jul2021 11:30:10.664] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[27Jul2021 11:30:10.668] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[27Jul2021 11:30:10.669] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[27Jul2021 11:30:10.671] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[27Jul2021 11:30:11.105] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[27Jul2021 11:30:11.109] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[27Jul2021 11:30:11.110] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[27Jul2021 11:30:11.673] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
-[27Jul2021 11:30:19.224] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[27Jul2021 11:30:19.225] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[27Jul2021 11:30:19.226] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[27Jul2021 11:30:19.226] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[27Jul2021 11:30:19.227] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[27Jul2021 11:30:19.229] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar, main
-[27Jul2021 11:30:19.558] [Worker-Main-15/ERROR] [net.minecraft.client.resources.JsonReloadListener/]: Couldn't parse data file barrenisles:palm_wood from barrenisles:recipes/palm_wood.json
+[27Jul2021 11:51:32.056] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[27Jul2021 11:51:32.126] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.2 build 10
+[27Jul2021 11:51:33.577] [modloading-worker-2/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 36.2.0, for MC 1.16.5 with MCP 20210115.111550
+[27Jul2021 11:51:33.577] [modloading-worker-2/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v36.2.0 Initialized
+[27Jul2021 11:51:34.400] [Render thread/INFO] [com.mojang.text2speech.NarratorWindows/]: Narrator library for x64 successfully loaded
+[27Jul2021 11:51:34.443] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources
+[27Jul2021 11:51:34.457] [Worker-Main-8/INFO] [ca.thecorgi.barrenisles.BarrenIsles/]: HELLO FROM PREINIT
+[27Jul2021 11:51:34.458] [Worker-Main-8/INFO] [ca.thecorgi.barrenisles.BarrenIsles/]: DIRT BLOCK >> minecraft:dirt
+[27Jul2021 11:51:34.479] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[27Jul2021 11:51:34.712] [Worker-Main-8/INFO] [ca.thecorgi.barrenisles.BarrenIsles/]: Got game settings net.minecraft.client.GameSettings@483df49c
+[27Jul2021 11:51:34.976] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: UP_TO_DATE Current: 36.2.0 Target: null
+[27Jul2021 11:51:38.646] [Worker-Main-12/INFO] [ca.thecorgi.barrenisles.BarrenIsles/]: Hello world from the MDK
+[27Jul2021 11:51:38.647] [Worker-Main-12/INFO] [ca.thecorgi.barrenisles.BarrenIsles/]: Got IMC [Hello world]
+[27Jul2021 11:51:39.529] [Render thread/INFO] [net.minecraft.client.audio.SoundSystem/]: OpenAL initialized.
+[27Jul2021 11:51:39.530] [Render thread/INFO] [net.minecraft.client.audio.SoundEngine/SOUNDS]: Sound engine started
+[27Jul2021 11:51:39.825] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[27Jul2021 11:51:39.954] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
+[27Jul2021 11:51:39.955] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[27Jul2021 11:51:39.960] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[27Jul2021 11:51:39.965] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[27Jul2021 11:51:39.967] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[27Jul2021 11:51:39.969] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[27Jul2021 11:51:40.403] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[27Jul2021 11:51:40.408] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[27Jul2021 11:51:40.409] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[27Jul2021 11:51:40.954] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
+[27Jul2021 11:51:45.392] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[27Jul2021 11:51:45.392] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[27Jul2021 11:51:45.393] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[27Jul2021 11:51:45.394] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[27Jul2021 11:51:45.394] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[27Jul2021 11:51:45.397] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar, main
+[27Jul2021 11:51:45.714] [Worker-Main-15/ERROR] [net.minecraft.client.resources.JsonReloadListener/]: Couldn't parse data file barrenisles:palm_wood from barrenisles:recipes/palm_wood.json
 com.google.gson.JsonParseException: com.google.gson.stream.MalformedJsonException: Unterminated object at line 7 column 4 path $.pattern
 	at net.minecraft.util.JSONUtils.fromJson(JSONUtils.java:285) ~[forge:?]
 	at net.minecraft.util.JSONUtils.fromJson(JSONUtils.java:326) ~[forge:?]
@@ -77,7 +77,7 @@ Caused by: com.google.gson.stream.MalformedJsonException: Unterminated object at
 	at com.google.gson.internal.bind.TypeAdapters$35$1.read(TypeAdapters.java:910) ~[gson-2.8.0.jar:?]
 	at net.minecraft.util.JSONUtils.fromJson(JSONUtils.java:283) ~[forge:?]
 	... 10 more
-[27Jul2021 11:30:19.709] [Worker-Main-15/ERROR] [net.minecraft.client.resources.JsonReloadListener/]: Couldn't parse data file barrenisles:stripped_palm_wood from barrenisles:recipes/stripped_palm_wood.json
+[27Jul2021 11:51:45.840] [Worker-Main-15/ERROR] [net.minecraft.client.resources.JsonReloadListener/]: Couldn't parse data file barrenisles:stripped_palm_wood from barrenisles:recipes/stripped_palm_wood.json
 com.google.gson.JsonParseException: com.google.gson.stream.MalformedJsonException: Unterminated object at line 7 column 4 path $.pattern
 	at net.minecraft.util.JSONUtils.fromJson(JSONUtils.java:285) ~[forge:?]
 	at net.minecraft.util.JSONUtils.fromJson(JSONUtils.java:326) ~[forge:?]
@@ -99,16 +99,16 @@ Caused by: com.google.gson.stream.MalformedJsonException: Unterminated object at
 	at com.google.gson.internal.bind.TypeAdapters$35$1.read(TypeAdapters.java:910) ~[gson-2.8.0.jar:?]
 	at net.minecraft.util.JSONUtils.fromJson(JSONUtils.java:283) ~[forge:?]
 	... 10 more
-[27Jul2021 11:30:19.857] [Render thread/INFO] [net.minecraft.item.crafting.RecipeManager/]: Loaded 7 recipes
-[27Jul2021 11:30:20.396] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 927 advancements
-[27Jul2021 11:30:20.475] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
-[27Jul2021 11:30:20.870] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[27Jul2021 11:30:20.870] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[27Jul2021 11:30:20.871] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[27Jul2021 11:30:20.871] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[27Jul2021 11:30:20.872] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[27Jul2021 11:30:20.872] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar, main
-[27Jul2021 11:30:21.154] [Worker-Main-9/ERROR] [net.minecraft.client.resources.JsonReloadListener/]: Couldn't parse data file barrenisles:palm_wood from barrenisles:recipes/palm_wood.json
+[27Jul2021 11:51:45.986] [Render thread/INFO] [net.minecraft.item.crafting.RecipeManager/]: Loaded 7 recipes
+[27Jul2021 11:51:46.528] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 927 advancements
+[27Jul2021 11:51:46.607] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
+[27Jul2021 11:51:46.999] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[27Jul2021 11:51:46.999] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[27Jul2021 11:51:47.000] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[27Jul2021 11:51:47.001] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[27Jul2021 11:51:47.001] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[27Jul2021 11:51:47.001] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar, main
+[27Jul2021 11:51:47.310] [Worker-Main-14/ERROR] [net.minecraft.client.resources.JsonReloadListener/]: Couldn't parse data file barrenisles:palm_wood from barrenisles:recipes/palm_wood.json
 com.google.gson.JsonParseException: com.google.gson.stream.MalformedJsonException: Unterminated object at line 7 column 4 path $.pattern
 	at net.minecraft.util.JSONUtils.fromJson(JSONUtils.java:285) ~[forge:?]
 	at net.minecraft.util.JSONUtils.fromJson(JSONUtils.java:326) ~[forge:?]
@@ -130,7 +130,7 @@ Caused by: com.google.gson.stream.MalformedJsonException: Unterminated object at
 	at com.google.gson.internal.bind.TypeAdapters$35$1.read(TypeAdapters.java:910) ~[gson-2.8.0.jar:?]
 	at net.minecraft.util.JSONUtils.fromJson(JSONUtils.java:283) ~[forge:?]
 	... 10 more
-[27Jul2021 11:30:21.269] [Worker-Main-9/ERROR] [net.minecraft.client.resources.JsonReloadListener/]: Couldn't parse data file barrenisles:stripped_palm_wood from barrenisles:recipes/stripped_palm_wood.json
+[27Jul2021 11:51:47.432] [Worker-Main-14/ERROR] [net.minecraft.client.resources.JsonReloadListener/]: Couldn't parse data file barrenisles:stripped_palm_wood from barrenisles:recipes/stripped_palm_wood.json
 com.google.gson.JsonParseException: com.google.gson.stream.MalformedJsonException: Unterminated object at line 7 column 4 path $.pattern
 	at net.minecraft.util.JSONUtils.fromJson(JSONUtils.java:285) ~[forge:?]
 	at net.minecraft.util.JSONUtils.fromJson(JSONUtils.java:326) ~[forge:?]
@@ -152,62 +152,198 @@ Caused by: com.google.gson.stream.MalformedJsonException: Unterminated object at
 	at com.google.gson.internal.bind.TypeAdapters$35$1.read(TypeAdapters.java:910) ~[gson-2.8.0.jar:?]
 	at net.minecraft.util.JSONUtils.fromJson(JSONUtils.java:283) ~[forge:?]
 	... 10 more
-[27Jul2021 11:30:21.390] [Render thread/INFO] [net.minecraft.item.crafting.RecipeManager/]: Loaded 7 recipes
-[27Jul2021 11:30:21.830] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 927 advancements
-[27Jul2021 11:30:21.852] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
-[27Jul2021 11:30:22.505] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[27Jul2021 11:30:22.527] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Starting integrated minecraft server version 1.16.5
-[27Jul2021 11:30:22.528] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
-[27Jul2021 11:30:22.693] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[27Jul2021 11:30:23.142] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
-[27Jul2021 11:30:23.241] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
-[27Jul2021 11:30:24.031] [Server thread/INFO] [ca.thecorgi.barrenisles.BarrenIsles/]: HELLO from server starting
-[27Jul2021 11:30:24.058] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Time elapsed: 1351 ms
-[27Jul2021 11:30:25.837] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Changing view distance to 11, from 10
-[27Jul2021 11:30:26.452] [Netty Local Client IO #0/INFO] [net.minecraftforge.fml.network.NetworkHooks/]: Connected to a modded server.
-[27Jul2021 11:30:26.477] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.advancements.PlayerAdvancements@53adf662
-[27Jul2021 11:30:26.486] [Server thread/INFO] [net.minecraft.server.management.PlayerList/]: Dev[local:E:0f266610] logged in with entity id 319 at (54.787268398946, 70.07888191068191, -334.8409360374918)
-[27Jul2021 11:30:26.510] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
-[27Jul2021 11:30:26.667] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
-[27Jul2021 11:30:26.676] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[27Jul2021 11:30:26.755] [Render thread/WARN] [net.minecraft.client.network.play.ClientPlayNetHandler/]: Received passengers for unknown entity
-[27Jul2021 11:30:26.758] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 14 advancements
-[27Jul2021 11:30:27.065] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[27Jul2021 11:30:27.065] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[27Jul2021 11:30:59.831] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
-[27Jul2021 11:30:59.880] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[27Jul2021 11:31:00.094] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[27Jul2021 11:31:00.094] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[27Jul2021 11:31:12.963] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources
-[27Jul2021 11:31:15.417] [Render thread/INFO] [net.minecraft.client.audio.SoundSystem/]: OpenAL initialized.
-[27Jul2021 11:31:15.417] [Render thread/INFO] [net.minecraft.client.audio.SoundEngine/SOUNDS]: Sound engine started
-[27Jul2021 11:31:15.575] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
-[27Jul2021 11:31:15.649] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
-[27Jul2021 11:31:15.650] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[27Jul2021 11:31:15.653] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[27Jul2021 11:31:15.656] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[27Jul2021 11:31:15.657] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[27Jul2021 11:31:15.658] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[27Jul2021 11:31:15.827] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[27Jul2021 11:31:15.829] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[27Jul2021 11:31:15.830] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[27Jul2021 11:31:27.581] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
-[27Jul2021 11:31:27.587] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[27Jul2021 11:31:27.665] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[27Jul2021 11:31:27.665] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[27Jul2021 11:31:28.840] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Dev lost connection: Verbindung getrennt
-[27Jul2021 11:31:28.840] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev hat das Spiel verlassen
-[27Jul2021 11:31:28.845] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Stopping singleplayer server as player logged out
-[27Jul2021 11:31:28.881] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
-[27Jul2021 11:31:28.881] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
-[27Jul2021 11:31:28.881] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
-[27Jul2021 11:31:28.881] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[27Jul2021 11:31:29.321] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World (1)): All chunks are saved
-[27Jul2021 11:31:29.321] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[27Jul2021 11:31:29.322] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[27Jul2021 11:31:29.322] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[27Jul2021 11:31:29.322] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[27Jul2021 11:31:29.333] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World (1)): All chunks are saved
-[27Jul2021 11:31:29.339] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[27Jul2021 11:31:29.339] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[27Jul2021 11:31:32.290] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[27Jul2021 11:51:47.560] [Render thread/INFO] [net.minecraft.item.crafting.RecipeManager/]: Loaded 7 recipes
+[27Jul2021 11:51:47.992] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 927 advancements
+[27Jul2021 11:51:48.015] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
+[27Jul2021 11:51:48.666] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[27Jul2021 11:51:48.687] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Starting integrated minecraft server version 1.16.5
+[27Jul2021 11:51:48.687] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[27Jul2021 11:51:48.835] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[27Jul2021 11:51:49.320] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Einstiegsbereich wird vorbereitet: 0 %
+[27Jul2021 11:51:49.387] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Einstiegsbereich wird vorbereitet: 0 %
+[27Jul2021 11:51:49.578] [Server thread/INFO] [ca.thecorgi.barrenisles.BarrenIsles/]: HELLO from server starting
+[27Jul2021 11:51:49.587] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Time elapsed: 735 ms
+[27Jul2021 11:51:52.086] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Changing view distance to 11, from 10
+[27Jul2021 11:51:52.090] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 2463ms or 49 ticks behind
+[27Jul2021 11:51:52.797] [Netty Local Client IO #0/INFO] [net.minecraftforge.fml.network.NetworkHooks/]: Connected to a modded server.
+[27Jul2021 11:51:52.822] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.advancements.PlayerAdvancements@7e9d8fdc
+[27Jul2021 11:51:52.832] [Server thread/INFO] [net.minecraft.server.management.PlayerList/]: Dev[local:E:150b340d] logged in with entity id 323 at (55.45695692781571, 65.79845979988565, -319.6474909949455)
+[27Jul2021 11:51:52.863] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev hat das Spiel betreten
+[27Jul2021 11:51:53.007] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[27Jul2021 11:51:53.018] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[27Jul2021 11:51:53.111] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 14 advancements
+[27Jul2021 11:51:53.429] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[27Jul2021 11:51:53.430] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[27Jul2021 11:52:43.040] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 26 advancements
+[27Jul2021 11:53:10.528] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[27Jul2021 11:53:10.533] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[27Jul2021 11:53:10.741] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[27Jul2021 11:53:10.742] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[27Jul2021 11:53:11.286] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Dev lost connection: Verbindung getrennt
+[27Jul2021 11:53:11.286] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev hat das Spiel verlassen
+[27Jul2021 11:53:11.292] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Stopping singleplayer server as player logged out
+[27Jul2021 11:53:11.328] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[27Jul2021 11:53:11.328] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[27Jul2021 11:53:11.328] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[27Jul2021 11:53:11.328] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[27Jul2021 11:53:11.792] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World (1)): All chunks are saved
+[27Jul2021 11:53:11.792] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[27Jul2021 11:53:11.793] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[27Jul2021 11:53:11.793] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[27Jul2021 11:53:11.794] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[27Jul2021 11:53:11.805] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World (1)): All chunks are saved
+[27Jul2021 11:53:11.810] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[27Jul2021 11:53:11.810] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[27Jul2021 11:53:15.482] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[27Jul2021 11:53:15.483] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[27Jul2021 11:53:15.483] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[27Jul2021 11:53:15.484] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[27Jul2021 11:53:15.484] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[27Jul2021 11:53:15.484] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar, main
+[27Jul2021 11:53:15.792] [Worker-Main-23/ERROR] [net.minecraft.client.resources.JsonReloadListener/]: Couldn't parse data file barrenisles:palm_wood from barrenisles:recipes/palm_wood.json
+com.google.gson.JsonParseException: com.google.gson.stream.MalformedJsonException: Unterminated object at line 7 column 4 path $.pattern
+	at net.minecraft.util.JSONUtils.fromJson(JSONUtils.java:285) ~[forge:?]
+	at net.minecraft.util.JSONUtils.fromJson(JSONUtils.java:326) ~[forge:?]
+	at net.minecraft.client.resources.JsonReloadListener.prepare(JsonReloadListener.java:48) ~[forge:?]
+	at net.minecraft.client.resources.JsonReloadListener.prepare(JsonReloadListener.java:22) ~[forge:?]
+	at net.minecraft.client.resources.ReloadListener.lambda$reload$0(ReloadListener.java:12) ~[forge:?]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1604) [?:1.8.0_241]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1596) [?:1.8.0_241]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289) [?:1.8.0_241]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056) [?:1.8.0_241]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692) [?:1.8.0_241]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157) [?:1.8.0_241]
+Caused by: com.google.gson.stream.MalformedJsonException: Unterminated object at line 7 column 4 path $.pattern
+	at com.google.gson.stream.JsonReader.syntaxError(JsonReader.java:1559) ~[gson-2.8.0.jar:?]
+	at com.google.gson.stream.JsonReader.doPeek(JsonReader.java:491) ~[gson-2.8.0.jar:?]
+	at com.google.gson.stream.JsonReader.hasNext(JsonReader.java:414) ~[gson-2.8.0.jar:?]
+	at com.google.gson.internal.bind.TypeAdapters$29.read(TypeAdapters.java:738) ~[gson-2.8.0.jar:?]
+	at com.google.gson.internal.bind.TypeAdapters$29.read(TypeAdapters.java:714) ~[gson-2.8.0.jar:?]
+	at com.google.gson.internal.bind.TypeAdapters$35$1.read(TypeAdapters.java:910) ~[gson-2.8.0.jar:?]
+	at net.minecraft.util.JSONUtils.fromJson(JSONUtils.java:283) ~[forge:?]
+	... 10 more
+[27Jul2021 11:53:15.943] [Worker-Main-23/ERROR] [net.minecraft.client.resources.JsonReloadListener/]: Couldn't parse data file barrenisles:stripped_palm_wood from barrenisles:recipes/stripped_palm_wood.json
+com.google.gson.JsonParseException: com.google.gson.stream.MalformedJsonException: Unterminated object at line 7 column 4 path $.pattern
+	at net.minecraft.util.JSONUtils.fromJson(JSONUtils.java:285) ~[forge:?]
+	at net.minecraft.util.JSONUtils.fromJson(JSONUtils.java:326) ~[forge:?]
+	at net.minecraft.client.resources.JsonReloadListener.prepare(JsonReloadListener.java:48) ~[forge:?]
+	at net.minecraft.client.resources.JsonReloadListener.prepare(JsonReloadListener.java:22) ~[forge:?]
+	at net.minecraft.client.resources.ReloadListener.lambda$reload$0(ReloadListener.java:12) ~[forge:?]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1604) [?:1.8.0_241]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1596) [?:1.8.0_241]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289) [?:1.8.0_241]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056) [?:1.8.0_241]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692) [?:1.8.0_241]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157) [?:1.8.0_241]
+Caused by: com.google.gson.stream.MalformedJsonException: Unterminated object at line 7 column 4 path $.pattern
+	at com.google.gson.stream.JsonReader.syntaxError(JsonReader.java:1559) ~[gson-2.8.0.jar:?]
+	at com.google.gson.stream.JsonReader.doPeek(JsonReader.java:491) ~[gson-2.8.0.jar:?]
+	at com.google.gson.stream.JsonReader.hasNext(JsonReader.java:414) ~[gson-2.8.0.jar:?]
+	at com.google.gson.internal.bind.TypeAdapters$29.read(TypeAdapters.java:738) ~[gson-2.8.0.jar:?]
+	at com.google.gson.internal.bind.TypeAdapters$29.read(TypeAdapters.java:714) ~[gson-2.8.0.jar:?]
+	at com.google.gson.internal.bind.TypeAdapters$35$1.read(TypeAdapters.java:910) ~[gson-2.8.0.jar:?]
+	at net.minecraft.util.JSONUtils.fromJson(JSONUtils.java:283) ~[forge:?]
+	... 10 more
+[27Jul2021 11:53:16.065] [Render thread/INFO] [net.minecraft.item.crafting.RecipeManager/]: Loaded 7 recipes
+[27Jul2021 11:53:16.495] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 927 advancements
+[27Jul2021 11:53:16.515] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
+[27Jul2021 11:53:16.866] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[27Jul2021 11:53:16.867] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[27Jul2021 11:53:16.867] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[27Jul2021 11:53:16.868] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[27Jul2021 11:53:16.868] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[27Jul2021 11:53:16.868] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar, main
+[27Jul2021 11:53:17.128] [Worker-Main-21/ERROR] [net.minecraft.client.resources.JsonReloadListener/]: Couldn't parse data file barrenisles:palm_wood from barrenisles:recipes/palm_wood.json
+com.google.gson.JsonParseException: com.google.gson.stream.MalformedJsonException: Unterminated object at line 7 column 4 path $.pattern
+	at net.minecraft.util.JSONUtils.fromJson(JSONUtils.java:285) ~[forge:?]
+	at net.minecraft.util.JSONUtils.fromJson(JSONUtils.java:326) ~[forge:?]
+	at net.minecraft.client.resources.JsonReloadListener.prepare(JsonReloadListener.java:48) ~[forge:?]
+	at net.minecraft.client.resources.JsonReloadListener.prepare(JsonReloadListener.java:22) ~[forge:?]
+	at net.minecraft.client.resources.ReloadListener.lambda$reload$0(ReloadListener.java:12) ~[forge:?]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1604) [?:1.8.0_241]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1596) [?:1.8.0_241]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289) [?:1.8.0_241]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056) [?:1.8.0_241]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692) [?:1.8.0_241]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157) [?:1.8.0_241]
+Caused by: com.google.gson.stream.MalformedJsonException: Unterminated object at line 7 column 4 path $.pattern
+	at com.google.gson.stream.JsonReader.syntaxError(JsonReader.java:1559) ~[gson-2.8.0.jar:?]
+	at com.google.gson.stream.JsonReader.doPeek(JsonReader.java:491) ~[gson-2.8.0.jar:?]
+	at com.google.gson.stream.JsonReader.hasNext(JsonReader.java:414) ~[gson-2.8.0.jar:?]
+	at com.google.gson.internal.bind.TypeAdapters$29.read(TypeAdapters.java:738) ~[gson-2.8.0.jar:?]
+	at com.google.gson.internal.bind.TypeAdapters$29.read(TypeAdapters.java:714) ~[gson-2.8.0.jar:?]
+	at com.google.gson.internal.bind.TypeAdapters$35$1.read(TypeAdapters.java:910) ~[gson-2.8.0.jar:?]
+	at net.minecraft.util.JSONUtils.fromJson(JSONUtils.java:283) ~[forge:?]
+	... 10 more
+[27Jul2021 11:53:17.242] [Worker-Main-21/ERROR] [net.minecraft.client.resources.JsonReloadListener/]: Couldn't parse data file barrenisles:stripped_palm_wood from barrenisles:recipes/stripped_palm_wood.json
+com.google.gson.JsonParseException: com.google.gson.stream.MalformedJsonException: Unterminated object at line 7 column 4 path $.pattern
+	at net.minecraft.util.JSONUtils.fromJson(JSONUtils.java:285) ~[forge:?]
+	at net.minecraft.util.JSONUtils.fromJson(JSONUtils.java:326) ~[forge:?]
+	at net.minecraft.client.resources.JsonReloadListener.prepare(JsonReloadListener.java:48) ~[forge:?]
+	at net.minecraft.client.resources.JsonReloadListener.prepare(JsonReloadListener.java:22) ~[forge:?]
+	at net.minecraft.client.resources.ReloadListener.lambda$reload$0(ReloadListener.java:12) ~[forge:?]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1604) [?:1.8.0_241]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1596) [?:1.8.0_241]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289) [?:1.8.0_241]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056) [?:1.8.0_241]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692) [?:1.8.0_241]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157) [?:1.8.0_241]
+Caused by: com.google.gson.stream.MalformedJsonException: Unterminated object at line 7 column 4 path $.pattern
+	at com.google.gson.stream.JsonReader.syntaxError(JsonReader.java:1559) ~[gson-2.8.0.jar:?]
+	at com.google.gson.stream.JsonReader.doPeek(JsonReader.java:491) ~[gson-2.8.0.jar:?]
+	at com.google.gson.stream.JsonReader.hasNext(JsonReader.java:414) ~[gson-2.8.0.jar:?]
+	at com.google.gson.internal.bind.TypeAdapters$29.read(TypeAdapters.java:738) ~[gson-2.8.0.jar:?]
+	at com.google.gson.internal.bind.TypeAdapters$29.read(TypeAdapters.java:714) ~[gson-2.8.0.jar:?]
+	at com.google.gson.internal.bind.TypeAdapters$35$1.read(TypeAdapters.java:910) ~[gson-2.8.0.jar:?]
+	at net.minecraft.util.JSONUtils.fromJson(JSONUtils.java:283) ~[forge:?]
+	... 10 more
+[27Jul2021 11:53:17.359] [Render thread/INFO] [net.minecraft.item.crafting.RecipeManager/]: Loaded 7 recipes
+[27Jul2021 11:53:17.792] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 927 advancements
+[27Jul2021 11:53:17.810] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
+[27Jul2021 11:53:18.406] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[27Jul2021 11:53:18.408] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Starting integrated minecraft server version 1.16.5
+[27Jul2021 11:53:18.408] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[27Jul2021 11:53:18.436] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[27Jul2021 11:53:18.725] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Einstiegsbereich wird vorbereitet: 0 %
+[27Jul2021 11:53:18.806] [Server thread/INFO] [ca.thecorgi.barrenisles.BarrenIsles/]: HELLO from server starting
+[27Jul2021 11:53:18.824] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Time elapsed: 367 ms
+[27Jul2021 11:53:20.200] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Changing view distance to 11, from 10
+[27Jul2021 11:53:20.245] [Netty Local Client IO #1/INFO] [net.minecraftforge.fml.network.NetworkHooks/]: Connected to a modded server.
+[27Jul2021 11:53:20.248] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.advancements.PlayerAdvancements@27e0a466
+[27Jul2021 11:53:20.252] [Server thread/INFO] [net.minecraft.server.management.PlayerList/]: Dev[local:E:2aa8a2c2] logged in with entity id 1377 at (45.31930958224034, 65.0, -317.5939592486987)
+[27Jul2021 11:53:20.256] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev hat das Spiel betreten
+[27Jul2021 11:53:20.349] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[27Jul2021 11:53:20.355] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[27Jul2021 11:53:20.417] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 26 advancements
+[27Jul2021 11:53:20.492] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[27Jul2021 11:53:20.493] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[27Jul2021 11:53:38.062] [Server thread/INFO] [net.minecraft.entity.Entity/]: Villager VillagerEntity['Geistlicher'/1317, l='ServerLevel[New World]', x=95.32, y=69.00, z=-287.16] died, message: 'Geistlicher wurde von Zombie erschlagen'
+[27Jul2021 11:53:38.077] [Render thread/INFO] [net.minecraft.entity.Entity/]: Villager VillagerEntity['Geistlicher'/1317, l='ClientLevel', x=95.15, y=69.35, z=-287.26] died, message: 'Geistlicher starb'
+[27Jul2021 11:53:40.756] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[27Jul2021 11:53:40.760] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[27Jul2021 11:53:40.951] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[27Jul2021 11:53:40.952] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[27Jul2021 11:55:11.556] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[27Jul2021 11:55:11.560] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[27Jul2021 11:55:11.614] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[27Jul2021 11:55:11.615] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[27Jul2021 11:56:32.856] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[27Jul2021 11:56:32.860] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[27Jul2021 11:56:33.022] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[27Jul2021 11:56:33.022] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[27Jul2021 11:56:34.763] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Dev lost connection: Verbindung getrennt
+[27Jul2021 11:56:34.763] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev hat das Spiel verlassen
+[27Jul2021 11:56:34.768] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Stopping singleplayer server as player logged out
+[27Jul2021 11:56:34.806] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[27Jul2021 11:56:34.806] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[27Jul2021 11:56:34.806] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[27Jul2021 11:56:34.806] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[27Jul2021 11:56:35.418] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World (1)): All chunks are saved
+[27Jul2021 11:56:35.418] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[27Jul2021 11:56:35.418] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[27Jul2021 11:56:35.418] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[27Jul2021 11:56:35.419] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[27Jul2021 11:56:35.450] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World (1)): All chunks are saved
+[27Jul2021 11:56:35.629] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[27Jul2021 11:56:35.629] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[27Jul2021 12:04:10.021] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
