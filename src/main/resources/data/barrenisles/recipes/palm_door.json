@@ -1,7 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "###"
+    "##",
+    "##",
+    "##"
   ],
   "key": {
     "#": {
@@ -9,7 +11,7 @@
     }
   },
   "result": {
-    "item": "barrenisles:palm_slab",
-    "count": 1
+    "item": "barrenisles:palm_door",
+    "count": 3
   }
 }
