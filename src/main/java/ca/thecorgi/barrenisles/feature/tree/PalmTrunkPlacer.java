@@ -17,12 +17,11 @@ import java.util.function.BiConsumer;
 
 import static ca.thecorgi.barrenisles.BarrenIsles.PALM_TREE_PLACER;
 
-public class PalmTreePlacer extends TrunkPlacer {
-    // Use the fillTrunkPlacerFields to create our codec
-    public static final Codec<PalmTreePlacer> CODEC = RecordCodecBuilder.create(instance ->
-            fillTrunkPlacerFields(instance).apply(instance, PalmTreePlacer::new));
+public class PalmTrunkPlacer extends TrunkPlacer {
+    public static final Codec<PalmTrunkPlacer> CODEC = RecordCodecBuilder.create(instance ->
+            fillTrunkPlacerFields(instance).apply(instance, PalmTrunkPlacer::new));
 
-    public PalmTreePlacer(int baseHeight, int firstRandomHeight, int secondRandomHeight) {
+    public PalmTrunkPlacer(int baseHeight, int firstRandomHeight, int secondRandomHeight) {
         super(baseHeight, firstRandomHeight, secondRandomHeight);
     }
 
@@ -33,18 +32,25 @@ public class PalmTreePlacer extends TrunkPlacer {
 
     @Override
     public List<FoliagePlacer.TreeNode> generate(TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, Random random, int height, BlockPos startPos, TreeFeatureConfig config) {
-        // Set the ground beneath the trunk to dirt
+        int bendHeight = height / 2;
+
         this.setToDirt(world, replacer, random, startPos.down(), config);
 
-        // Iterate until the trunk height limit and place two block using the getAndSetState method from TrunkPlacer
-        for (int i = 0; i < height; i++) {
+        this.getAndSetState(world, replacer, random, startPos.east(), config);
+        this.getAndSetState(world, replacer, random, startPos.west(), config);
+        this.getAndSetState(world, replacer, random, startPos.west().up(), config);
+        this.getAndSetState(world, replacer, random, startPos.north(), config);
+        this.getAndSetState(world, replacer, random, startPos.south(), config);
+
+        for (int i = 0; i < bendHeight; i++) {
             this.getAndSetState(world, replacer, random, startPos.up(i), config);
-            this.getAndSetState(world, replacer, random, startPos.up(i).east().north(), config);
         }
 
-        // We create two TreeNodes - one for the first trunk, and the other for the second
-        // Put the highest block in the trunk as the center position for the FoliagePlacer to use
-        return ImmutableList.of(new FoliagePlacer.TreeNode(startPos.up(height), 0, false),
-                new FoliagePlacer.TreeNode(startPos.east().north().up(height), 0, false));
+        for (int i = bendHeight; i < height; i++) {
+            this.getAndSetState(world, replacer, random, startPos.up(i).east(), config);
+        }
+
+        return ImmutableList.of(new FoliagePlacer.TreeNode(startPos.up(height).east(), 0, false));
+//                new FoliagePlacer.TreeNode(startPos.east().north().up(height), 0, false))
     }
 }

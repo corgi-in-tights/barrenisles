@@ -11,11 +11,14 @@ public class BarrenIslesConfig implements ConfigData {
         @ConfigEntry.Gui.CollapsibleObject
         public Spawning spawn = new Spawning();
 
-    @ConfigEntry.Gui.CollapsibleObject
-    public Stats stats = new Stats();
+        @ConfigEntry.Gui.CollapsibleObject
+        public Stats stats = new Stats();
 
         @ConfigEntry.Gui.CollapsibleObject
         public Generation generation = new Generation();
+
+        @ConfigEntry.Gui.CollapsibleObject
+        public Client client = new Client();
 
         public static class Spawning {
             public boolean spawn_duneraptors = true;
@@ -34,5 +37,9 @@ public class BarrenIslesConfig implements ConfigData {
             public boolean generate_ore_rock = true;
             public boolean generate_tall_ore_rock = true;
             public boolean generate_badlands_temple = true;
+        }
+
+        public static class Client {
+            public boolean stop_experimental_advice = true;
         }
 }

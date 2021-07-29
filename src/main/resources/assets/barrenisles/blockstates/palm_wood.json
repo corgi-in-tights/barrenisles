@@ -1,15 +1,15 @@
 {
   "variants": {
     "axis=x": {
-      "model": "minecraft:block/palm_wood",
+      "model": "barrenisles:block/palm_wood",
       "x": 90,
       "y": 90
     },
     "axis=y": {
-      "model": "minecraft:block/palm_wood"
+      "model": "barrenisles:block/palm_wood"
     },
     "axis=z": {
-      "model": "minecraft:block/palm_wood",
+      "model": "barrenisles:block/palm_wood",
       "x": 90
     }
   }

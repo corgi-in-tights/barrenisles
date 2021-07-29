@@ -1,8 +1,10 @@
 package ca.thecorgi.barrenisles;
 
 import ca.thecorgi.barrenisles.feature.tree.PalmFoliagePlacer;
-import ca.thecorgi.barrenisles.feature.tree.PalmTreePlacer;
+import ca.thecorgi.barrenisles.feature.tree.PalmTreeDecorator;
+import ca.thecorgi.barrenisles.feature.tree.PalmTrunkPlacer;
 import ca.thecorgi.barrenisles.mixin.FoliagePlacerTypeInvoker;
+import ca.thecorgi.barrenisles.mixin.TreeDecoratorTypeInvoker;
 import ca.thecorgi.barrenisles.mixin.TrunkPlacerTypeInvoker;
 import ca.thecorgi.barrenisles.utils.config.BarrenIslesConfig;
 import ca.thecorgi.barrenisles.utils.registry.*;
@@ -30,6 +32,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.dimension.DimensionOptions;
 import net.minecraft.world.dimension.DimensionType;
 import net.minecraft.world.gen.foliage.FoliagePlacerType;
+import net.minecraft.world.gen.treedecorator.TreeDecoratorType;
 import net.minecraft.world.gen.trunk.TrunkPlacerType;
 import software.bernie.geckolib3.GeckoLib;
 
@@ -43,12 +46,14 @@ public class BarrenIsles implements ModInitializer {
     public static Identifier id(String path) {
         return new Identifier(ModID, path);
     }
-    public static final TrunkPlacerType<PalmTreePlacer> PALM_TREE_PLACER = TrunkPlacerTypeInvoker.callRegister("palm_trunk_placer", PalmTreePlacer.CODEC);
+    public static final TrunkPlacerType<PalmTrunkPlacer> PALM_TREE_PLACER = TrunkPlacerTypeInvoker.callRegister("palm_trunk_placer", PalmTrunkPlacer.CODEC);
     public static final FoliagePlacerType<PalmFoliagePlacer> PALM_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("palm_foliage_placer", PalmFoliagePlacer.CODEC);
+    public static final TreeDecoratorType<PalmTreeDecorator> PALM_TREE_DECORATOR = TreeDecoratorTypeInvoker.callRegister("rich_tree_decorator", PalmTreeDecorator.CODEC);
+
 
     private static final RegistryKey<DimensionOptions> DIMENSION_KEY = RegistryKey.of(
             Registry.DIMENSION_KEY,
-            new Identifier(ModID, "barrenisles")
+            new Identifier(ModID, "barren_isles")
     );
 
     private static RegistryKey<World> WORLD_KEY = RegistryKey.of(
@@ -58,7 +63,7 @@ public class BarrenIsles implements ModInitializer {
 
     private static final RegistryKey<DimensionType> DIMENSION_TYPE_KEY = RegistryKey.of(
             Registry.DIMENSION_TYPE_KEY,
-            new Identifier(ModID, "barrenisles_type")
+            new Identifier(ModID, "barren_isles_type")
     );
 
     @Override
@@ -71,13 +76,13 @@ public class BarrenIsles implements ModInitializer {
         StructureRegistry.register();
         EntityRegistry.register();
         SpawnRegistry.register();
-        ItemRegistry.register();
         FeatureRegistry.register();
         BlockRegistry.register();
+        ItemRegistry.register();
 
-        Registry.register(Registry.CHUNK_GENERATOR, new Identifier(ModID, "barrenisles"), BSChunkGenerator.CODEC);
+        Registry.register(Registry.CHUNK_GENERATOR, new Identifier(ModID, "barren_isles"), BSChunkGenerator.CODEC);
 
-        WORLD_KEY = RegistryKey.of(Registry.WORLD_KEY, new Identifier(ModID, "barrenisles"));
+        WORLD_KEY = RegistryKey.of(Registry.WORLD_KEY, new Identifier(ModID, "barren_isles"));
 
         ServerLifecycleEvents.SERVER_STARTED.register(server -> {
             ServerWorld overworld = server.getWorld(World.OVERWORLD);

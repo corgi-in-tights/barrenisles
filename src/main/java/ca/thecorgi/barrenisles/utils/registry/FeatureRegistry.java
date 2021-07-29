@@ -1,6 +1,7 @@
 package ca.thecorgi.barrenisles.utils.registry;
 
 import ca.thecorgi.barrenisles.feature.tree.PalmFoliagePlacer;
+import ca.thecorgi.barrenisles.feature.tree.PalmTrunkPlacer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.util.Identifier;
@@ -14,7 +15,6 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.TreeFeatureConfig;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
-import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
 import static ca.thecorgi.barrenisles.BarrenIsles.ModID;
 import static ca.thecorgi.barrenisles.utils.registry.BlockRegistry.*;
@@ -24,13 +24,16 @@ public class FeatureRegistry {
     public static final ConfiguredFeature<TreeFeatureConfig, ?> TREE_PALM =
             Feature.TREE.configure(new TreeFeatureConfig.Builder(
                     new SimpleBlockStateProvider(PALM_LOG.getDefaultState()),
-//                    new BendingTrunkPlacer(1, 5, 6,7, ConstantIntProvider.create(2)),
-                    new StraightTrunkPlacer(3,4,5),
+                    new PalmTrunkPlacer(6,2,1),
+//                    new ForkingTrunkPlacer(6, 2, 2),
                     new SimpleBlockStateProvider(PALM_LEAVES.getDefaultState()),
                     new SimpleBlockStateProvider(PALM_SAPLING.getDefaultState()),
-                    new PalmFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(3), ConstantIntProvider.create(2)),
+                    new PalmFoliagePlacer(ConstantIntProvider.create(5), ConstantIntProvider.create(4), ConstantIntProvider.create(3)),
+//                    new AcaciaFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0)),
                     new TwoLayersFeatureSize(0, 0, 0)
-            ).build());
+            )
+//                    .decorators(Collections.singletonList(PalmTreeDecorator.INSTANCE))
+                    .ignoreVines().build());
 
 
     public static void register() {
