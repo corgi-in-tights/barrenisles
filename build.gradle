@@ -14,11 +14,15 @@ repositories {
 	maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
 	maven { url "https://maven.shedaniel.me/" }
 	maven { url "https://raw.githubusercontent.com/TerraformersMC/Archive/main/releases/" }
-	repositories {
-		maven {
-			url "https://nexus.resourcefulbees.com/repository/maven-public/"
-		}
-	}
+//	maven {
+//		  url "https://nexus.resourcefulbees.com/repository/maven-public/"
+//	}
+//	maven {
+//		url "https://www.cursemaven.com"
+//		content {
+//			includeGroup "curse.maven"
+//		}
+//	}
 }
 
 dependencies {
@@ -40,7 +44,10 @@ dependencies {
 	modImplementation "com.terraformersmc:modmenu:2.0.2"
 
 	// Blame Fabric
-	modImplementation "com.telepathicgrunt:Blame-Fabric:1.17-4.0.0-fabric"
+//	modImplementation "com.telepathicgrunt:Blame-Fabric:1.17-4.0.0-fabric"
+
+	// DisableExperimentalAdvice
+//	include "curse.maven:disableadvice-401978:3346861"
 }
 
 processResources {

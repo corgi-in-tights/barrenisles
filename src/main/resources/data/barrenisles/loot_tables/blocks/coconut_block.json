@@ -6,26 +6,22 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "barrenisles:suspicious_berries"
+          "name": "barrenisles:coconut"
         }
       ],
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "barrenisles:suspicious_berry_bush",
+          "block": "barrenisles:coconut_block",
           "properties": {
-            "age": "3"
+            "age": "2"
           }
         }
       ],
       "functions": [
         {
           "function": "minecraft:set_count",
-          "count": {
-            "min": 2.0,
-            "max": 3.0,
-            "type": "minecraft:uniform"
-          }
+          "count": 2
         },
         {
           "function": "minecraft:apply_bonus",
@@ -42,26 +38,22 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "barrenisles:suspicious_berries"
+          "name": "barrenisles:coconut"
         }
       ],
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "barrenisles:suspicious_berry_bush",
+          "block": "barrenisles:coconut_block",
           "properties": {
-            "age": "2"
+            "age": "1"
           }
         }
       ],
       "functions": [
         {
           "function": "minecraft:set_count",
-          "count": {
-            "min": 1.0,
-            "max": 2.0,
-            "type": "minecraft:uniform"
-          }
+          "count": 1
         },
         {
           "function": "minecraft:apply_bonus",

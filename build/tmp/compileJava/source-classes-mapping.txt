@@ -2,6 +2,8 @@ ca/thecorgi/barrenisles/client/renderer/GeoMobRenderer.java
  ca.thecorgi.barrenisles.client.renderer.GeoMobRenderer
 ca/thecorgi/barrenisles/mixin/SpawnRestrictionMixin.java
  ca.thecorgi.barrenisles.mixin.SpawnRestrictionMixin
+ca/thecorgi/barrenisles/blocks/SuspiciousBerryBushBlock.java
+ ca.thecorgi.barrenisles.blocks.SuspiciousBerryBushBlock
 ca/thecorgi/barrenisles/feature/structures/TallRock2Structure.java
  ca.thecorgi.barrenisles.feature.structures.TallRock2Structure
  ca.thecorgi.barrenisles.feature.structures.TallRock2Structure$Start
@@ -10,6 +12,10 @@ ca/thecorgi/barrenisles/blocks/PalmDoorBlock.java
 ca/thecorgi/barrenisles/feature/structures/OasisStructure.java
  ca.thecorgi.barrenisles.feature.structures.OasisStructure
  ca.thecorgi.barrenisles.feature.structures.OasisStructure$Start
+ca/thecorgi/barrenisles/mixin/TreeDecoratorTypeInvoker.java
+ ca.thecorgi.barrenisles.mixin.TreeDecoratorTypeInvoker
+ca/thecorgi/barrenisles/mixin/StopExperimentalAdvice.java
+ ca.thecorgi.barrenisles.mixin.StopExperimentalAdvice
 ca/thecorgi/barrenisles/feature/tree/PalmFoliagePlacer.java
  ca.thecorgi.barrenisles.feature.tree.PalmFoliagePlacer
 ca/thecorgi/barrenisles/blocks/DesertFlowerBlock.java
@@ -25,6 +31,7 @@ ca/thecorgi/barrenisles/utils/registry/BlockRegistry.java
  ca.thecorgi.barrenisles.utils.registry.BlockRegistry$1
  ca.thecorgi.barrenisles.utils.registry.BlockRegistry$2
  ca.thecorgi.barrenisles.utils.registry.BlockRegistry$3
+ ca.thecorgi.barrenisles.utils.registry.BlockRegistry$4
 ca/thecorgi/barrenisles/blocks/ThornweedBlock.java
  ca.thecorgi.barrenisles.blocks.ThornweedBlock
 ca/thecorgi/barrenisles/feature/structures/Rock1Structure.java
@@ -37,11 +44,14 @@ ca/thecorgi/barrenisles/feature/structures/BadlandsTempleStructure.java
  ca.thecorgi.barrenisles.feature.structures.BadlandsTempleStructure$Start
 ca/thecorgi/barrenisles/utils/config/BarrenIslesConfig.java
  ca.thecorgi.barrenisles.utils.config.BarrenIslesConfig
+ ca.thecorgi.barrenisles.utils.config.BarrenIslesConfig$Client
  ca.thecorgi.barrenisles.utils.config.BarrenIslesConfig$Generation
  ca.thecorgi.barrenisles.utils.config.BarrenIslesConfig$Spawning
  ca.thecorgi.barrenisles.utils.config.BarrenIslesConfig$Stats
 ca/thecorgi/barrenisles/food/BarrenIslesFoodComponents.java
  ca.thecorgi.barrenisles.food.BarrenIslesFoodComponents
+ca/thecorgi/barrenisles/feature/tree/PalmTrunkPlacer.java
+ ca.thecorgi.barrenisles.feature.tree.PalmTrunkPlacer
 ca/thecorgi/barrenisles/mixin/TrunkPlacerTypeInvoker.java
  ca.thecorgi.barrenisles.mixin.TrunkPlacerTypeInvoker
 ca/thecorgi/barrenisles/blocks/TallDesertFlowerBlock.java
@@ -66,20 +76,22 @@ ca/thecorgi/barrenisles/utils/registry/ItemRegistry.java
  ca.thecorgi.barrenisles.utils.registry.ItemRegistry
 ca/thecorgi/barrenisles/utils/registry/GroupRegistry.java
  ca.thecorgi.barrenisles.utils.registry.GroupRegistry
+ca/thecorgi/barrenisles/feature/tree/PalmTreeDecorator.java
+ ca.thecorgi.barrenisles.feature.tree.PalmTreeDecorator
 ca/thecorgi/barrenisles/BSChunkGenerator.java
  ca.thecorgi.barrenisles.BSChunkGenerator
 ca/thecorgi/barrenisles/blocks/PalmSaplingBlock.java
  ca.thecorgi.barrenisles.blocks.PalmSaplingBlock
 ca/thecorgi/barrenisles/client/model/DuneraptorModel.java
  ca.thecorgi.barrenisles.client.model.DuneraptorModel
-ca/thecorgi/barrenisles/feature/tree/PalmTreePlacer.java
- ca.thecorgi.barrenisles.feature.tree.PalmTreePlacer
 ca/thecorgi/barrenisles/feature/tree/PalmSaplingGenerator.java
  ca.thecorgi.barrenisles.feature.tree.PalmSaplingGenerator
 ca/thecorgi/barrenisles/utils/config/ModMenuCompat.java
  ca.thecorgi.barrenisles.utils.config.ModMenuCompat
 ca/thecorgi/barrenisles/mixin/StructuresConfigAccessor.java
  ca.thecorgi.barrenisles.mixin.StructuresConfigAccessor
+ca/thecorgi/barrenisles/blocks/CoconutBlock.java
+ ca.thecorgi.barrenisles.blocks.CoconutBlock
 ca/thecorgi/barrenisles/client/ClientInit.java
  ca.thecorgi.barrenisles.client.ClientInit
 ca/thecorgi/barrenisles/utils/registry/StructureRegistry.java

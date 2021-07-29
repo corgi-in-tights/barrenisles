@@ -8,9 +8,11 @@
     "NoiseChunkGeneratorMixin",
     "SpawnRestrictionMixin",
     "StructuresConfigAccessor",
+    "TreeDecoratorTypeInvoker",
     "TrunkPlacerTypeInvoker"
   ],
   "client": [
+    "StopExperimentalAdvice"
   ],
   "injectors": {
     "defaultRequire": 1

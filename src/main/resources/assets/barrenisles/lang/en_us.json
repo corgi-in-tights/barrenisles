@@ -20,6 +20,8 @@
   "text.autoconfig.barrenisles.option.generation.generate_ore_rock": "Generate Ore Rock",
   "text.autoconfig.barrenisles.option.generation.generate_tall_ore_rock": "Generate Tall Ore Rock",
   "text.autoconfig.barrenisles.option.generation.generate_badlands_temple": "Generate Badlands Temple",
+  "text.autoconfig.barrenisles.option.client": "Client",
+  "text.autoconfig.barrenisles.option.client.stop_experimental_advice": "Stop Experimental Advice (bruh)",
   "block.barrenisles.palm_log": "Palm Log",
   "block.barrenisles.stripped_palm_log": "Stripped Palm Log",
   "block.barrenisles.palm_wood": "Palm Wood",

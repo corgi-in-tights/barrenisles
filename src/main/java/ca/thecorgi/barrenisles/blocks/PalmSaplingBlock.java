@@ -7,6 +7,8 @@ public class PalmSaplingBlock extends SaplingBlock {
     public PalmSaplingBlock(SaplingGenerator generator, Settings settings) {
         super(generator, settings);
     }
+
+
 }
 //    public PalmSaplingBlock(PalmSaplingGenerator block$Settings_1, FabricBlockSettings name) {
 //        super(block$Settings_1);

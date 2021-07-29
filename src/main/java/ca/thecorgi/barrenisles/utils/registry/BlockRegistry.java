@@ -3,10 +3,12 @@ package ca.thecorgi.barrenisles.utils.registry;
 import ca.thecorgi.barrenisles.BarrenIsles;
 import ca.thecorgi.barrenisles.blocks.*;
 import ca.thecorgi.barrenisles.feature.tree.PalmSaplingGenerator;
+import ca.thecorgi.barrenisles.food.BarrenIslesFoodComponents;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
@@ -18,19 +20,16 @@ import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.client.color.world.FoliageColors;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
+import net.minecraft.item.*;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import org.jetbrains.annotations.Nullable;
 
+import static ca.thecorgi.barrenisles.BarrenIsles.ModID;
 import static ca.thecorgi.barrenisles.utils.registry.FeatureRegistry.TREE_PALM;
+import static ca.thecorgi.barrenisles.utils.registry.GroupRegistry.BARREN_ISLES;
 
 public class BlockRegistry {
-
-    private static AbstractBlock.Settings copyWoodSettings(Block block) {
-        return FabricBlockSettings.copyOf(block).breakByTool(FabricToolTags.AXES);
-    }
     public static final Block PALM_LOG = new PillarBlock(copyWoodSettings(Blocks.OAK_LOG));
     public static final Block PALM_WOOD = new PillarBlock(copyWoodSettings(Blocks.OAK_WOOD));
     public static final Block STRIPPED_PALM_LOG = new PillarBlock(copyWoodSettings(Blocks.STRIPPED_OAK_LOG));
@@ -45,17 +44,19 @@ public class BlockRegistry {
     public static final Block PALM_FENCE = new FenceBlock(copyWoodSettings(Blocks.OAK_FENCE));
     public static final Block PALM_FENCE_GATE = new FenceGateBlock(copyWoodSettings(Blocks.OAK_FENCE_GATE));
     public static final Block PALM_BUTTON = new WoodenButtonBlock(copyWoodSettings(Blocks.OAK_BUTTON)) {};
-    public static final Block PALM_SAPLING = new PalmSaplingBlock(new PalmSaplingGenerator(TREE_PALM), Block.Settings.copy(Blocks.OAK_SAPLING));
+    public static final Block PALM_SAPLING = new SaplingBlock(new PalmSaplingGenerator(TREE_PALM), AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)) {};
 
     public static final Block WINECUP = new DesertFlowerBlock(StatusEffects.HASTE, 30, FabricBlockSettings.copyOf(Blocks.DANDELION));
     public static final Block POISON_IVY = new DesertFlowerBlock(StatusEffects.POISON, 50, FabricBlockSettings.copyOf(Blocks.DANDELION));
     public static final Block AGAVE = new DesertFlowerBlock(StatusEffects.WITHER, 70, FabricBlockSettings.copyOf(Blocks.DANDELION));
     public static final Block MARIGOLD = new DesertFlowerBlock(StatusEffects.SPEED, 40, FabricBlockSettings.copyOf(Blocks.DANDELION));
     public static final Block DESERT_LILY = new TallDesertFlowerBlock(FabricBlockSettings.copyOf(Blocks.ROSE_BUSH));
-    public static final Block SUSPICIOUS_BERRY_BUSH = new DesertFlowerBlock(StatusEffects.NAUSEA, 50, FabricBlockSettings.copy(Blocks.SWEET_BERRY_BUSH));
+    public static final Block SUSPICIOUS_BERRY_BUSH = new SuspiciousBerryBushBlock(FabricBlockSettings.copy(Blocks.SWEET_BERRY_BUSH));
+    public static final Item SUSPICIOUS_BERRIES = new AliasedBlockItem(SUSPICIOUS_BERRY_BUSH, new FabricItemSettings().group(BARREN_ISLES).food(BarrenIslesFoodComponents.SUSPICIOUS_BERRIES_C));
     public static final Block THORNWEED = new ThornweedBlock(FabricBlockSettings.copyOf(Blocks.DEAD_BUSH));
     public static final Block BARREL_CACTUS = new ThornweedBlock(FabricBlockSettings.copyOf(Blocks.DEAD_BUSH));
-
+    public static final Block COCONUT_BLOCK = new CoconutBlock(FabricBlockSettings.copyOf(Blocks.COCOA));
+    public static final Item COCONUT = new AliasedBlockItem(COCONUT_BLOCK, new FabricItemSettings().group(BARREN_ISLES).food(FoodComponents.MELON_SLICE));
 
     public static void register() {
         register("palm_log", PALM_LOG);
@@ -74,13 +75,16 @@ public class BlockRegistry {
         register("palm_button", PALM_BUTTON);
         register("palm_sapling", PALM_SAPLING);
         register("winecup", WINECUP);
+        register("marigold", MARIGOLD);
         register("poison_ivy", POISON_IVY);
         register("agave", AGAVE);
         register("desert_lily", DESERT_LILY);
-        register("suspicious_berry_bush", SUSPICIOUS_BERRY_BUSH, (Item) null);
-        register("marigold", MARIGOLD);
+        register("suspicious_berry_bush", SUSPICIOUS_BERRY_BUSH);
+        Registry.register(Registry.ITEM, new Identifier(ModID, "suspicious_berries"), SUSPICIOUS_BERRIES);
         register("thornweed", THORNWEED);
         register("barrel_cactus", BARREL_CACTUS);
+        register("coconut_block", COCONUT_BLOCK, (Item) null);
+        Registry.register(Registry.ITEM, new Identifier(ModID, "coconut"), COCONUT);
 
         FuelRegistry fuelReg = FuelRegistry.INSTANCE;
         fuelReg.add(PALM_FENCE, 300);
@@ -106,7 +110,7 @@ public class BlockRegistry {
         );
 
         BlockRenderLayerMap.INSTANCE.putBlocks(
-                RenderLayer.getCutout(), PALM_SAPLING, PALM_DOOR, PALM_TRAPDOOR, MARIGOLD, AGAVE, POISON_IVY, THORNWEED, WINECUP, DESERT_LILY, BARREL_CACTUS, SUSPICIOUS_BERRY_BUSH);
+                RenderLayer.getCutout(), PALM_SAPLING, PALM_DOOR, PALM_TRAPDOOR, MARIGOLD, AGAVE, POISON_IVY, THORNWEED, WINECUP, DESERT_LILY, BARREL_CACTUS, SUSPICIOUS_BERRY_BUSH, COCONUT_BLOCK);
 
         ColorProviderRegistry.BLOCK.register(
                 (state, world, pos, tintIndex) -> {
@@ -128,7 +132,7 @@ public class BlockRegistry {
 
 
     private static void register(String id, Block block) {
-        register(id, block, GroupRegistry.BARREN_ISLES);
+        register(id, block, BARREN_ISLES);
     }
 
     private static void register(String id, Block block, ItemGroup itemGroup) {
@@ -141,6 +145,10 @@ public class BlockRegistry {
         if (item != null) {
             Registry.register(Registry.ITEM, BarrenIsles.id(id), item);
         }
+    }
+
+    private static AbstractBlock.Settings copyWoodSettings(Block block) {
+        return FabricBlockSettings.copyOf(block).breakByTool(FabricToolTags.AXES);
     }
 
 }
