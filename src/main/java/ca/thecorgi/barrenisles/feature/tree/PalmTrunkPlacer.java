@@ -34,8 +34,11 @@ public class PalmTrunkPlacer extends TrunkPlacer {
     public List<FoliagePlacer.TreeNode> generate(TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, Random random, int height, BlockPos startPos, TreeFeatureConfig config) {
         int bendHeight = height / 2;
 
-        this.setToDirt(world, replacer, random, startPos.down(), config);
+        try {
+            this.setToDirt(world, replacer, random, startPos.down(), config);
+        } finally {
 
+        }
         this.getAndSetState(world, replacer, random, startPos.east(), config);
         this.getAndSetState(world, replacer, random, startPos.west(), config);
         this.getAndSetState(world, replacer, random, startPos.west().up(), config);

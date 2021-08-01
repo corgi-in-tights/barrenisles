@@ -25,11 +25,9 @@ public class FeatureRegistry {
             Feature.TREE.configure(new TreeFeatureConfig.Builder(
                     new SimpleBlockStateProvider(PALM_LOG.getDefaultState()),
                     new PalmTrunkPlacer(6,2,1),
-//                    new ForkingTrunkPlacer(6, 2, 2),
                     new SimpleBlockStateProvider(PALM_LEAVES.getDefaultState()),
                     new SimpleBlockStateProvider(PALM_SAPLING.getDefaultState()),
                     new PalmFoliagePlacer(ConstantIntProvider.create(5), ConstantIntProvider.create(4), ConstantIntProvider.create(3)),
-//                    new AcaciaFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0)),
                     new TwoLayersFeatureSize(0, 0, 0)
             )
 //                    .decorators(Collections.singletonList(PalmTreeDecorator.INSTANCE))

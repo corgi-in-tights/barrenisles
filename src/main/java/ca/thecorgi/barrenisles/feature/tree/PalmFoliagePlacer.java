@@ -46,107 +46,105 @@ public class PalmFoliagePlacer extends FoliagePlacer {
     protected void generate(TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, Random random, TreeFeatureConfig config, int trunkHeight, TreeNode treeNode, int foliageHeight, int radius, int offset) {
         BlockPos.Mutable center = treeNode.getCenter().mutableCopy();
 
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 0, 0))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 0, 0))));
 //
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(1, 0, 0))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(2, -1, 0))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(2, 1, 0))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(1, -1, 1))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(2, -1, 2))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(1, 0, 0))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(2, -1, 0))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(2, 1, 0))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(1, -1, 1))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(2, -1, 2))));
 //
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-1, 0, 0))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-2, -1, 0))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-2, 1, 0))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-1, -1, -1))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-2, -1, -2))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-1, 0, 0))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-2, -1, 0))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-2, 1, 0))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-1, -1, -1))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-2, -1, -2))));
 //
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 0, 1))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, -1, 2))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 1, 2))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(1, -1, -1))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(2, -1, -2))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 0, 1))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, -1, 2))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 1, 2))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(1, -1, -1))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(2, -1, -2))));
 //
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 0, -1))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, -1, -2))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 1, -2))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-1, -1, 1))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-2, -1, 2))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 0, -1))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, -1, -2))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 1, -2))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-1, -1, 1))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-2, -1, 2))));
 //
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(2, -2, 0))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-2, -2, 0))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, -2, -2))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, -2, 2))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 0, 0))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(2, -2, 0))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-2, -2, 0))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, -2, -2))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, -2, 2))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 0, 0))));
 //
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(1, 0, 0))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(2, -1, 0))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(2, 1, 0))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(1, -1, 1))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(2, -1, 2))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(1, 0, 0))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(2, -1, 0))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(2, 1, 0))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(1, -1, 1))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(2, -1, 2))));
 //
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-1, 0, 0))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-2, -1, 0))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-2, 1, 0))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-1, -1, -1))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-2, -1, -2))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-1, 0, 0))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-2, -1, 0))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-2, 1, 0))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-1, -1, -1))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-2, -1, -2))));
 //
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 0, 1))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, -1, 2))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 1, 2))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(1, -1, -1))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(2, -1, -2))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 0, 1))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, -1, 2))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 1, 2))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(1, -1, -1))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(2, -1, -2))));
 //
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 0, -1))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, -1, -2))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 1, -2))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-1, -1, 1))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-2, -1, 2))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 0, -1))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, -1, -2))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 1, -2))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-1, -1, 1))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-2, -1, 2))));
 //
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(2, -2, 0))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-2, -2, 0))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, -2, -2))));
-//        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, -2, 2))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(2, -2, 0))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-2, -2, 0))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, -2, -2))));
+//        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, -2, 2))));
 
 
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 0, 0))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 0, 0))));
 
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(1, 0, 0))));
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(1, -1, 0))));
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(2, -1, 0))));
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(2, -2, 0))));
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(1, 1, 0))));
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(2, 1, 0))));
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(3, 1, 0))));
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(3, 0, 0))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(1, 0, 0))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(1, -1, 0))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(2, -1, 0))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(2, -2, 0))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(1, 1, 0))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(2, 1, 0))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(3, 1, 0))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(3, 0, 0))));
 
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-1, 0, 0))));
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-1, -1, 0))));
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-2, -1, 0))));
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-2, -2, 0))));
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-1, 1, 0))));
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-2, 1, 0))));
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-3, 1, 0))));
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-3, 0, 0))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-1, 0, 0))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-1, -1, 0))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-2, -1, 0))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-2, -2, 0))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-1, 1, 0))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-2, 1, 0))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-3, 1, 0))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(-3, 0, 0))));
 
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 0, 1))));
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, -1, 1))));
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, -1, 2))));
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, -2, 2))));
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 1, 1))));
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 1, 2))));
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 1, 3))));
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 0, 3))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 0, 1))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, -1, 1))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, -1, 2))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, -2, 2))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 1, 1))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 1, 2))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 1, 3))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 0, 3))));
 
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 0, -1))));
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, -1, -1))));
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, -1, -2))));
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, -2, -2))));
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 1, -1))));
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 1, -2))));
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 1, -3))));
-        this.placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 0, -3))));
-
-
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 0, -1))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, -1, -1))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, -1, -2))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, -2, -2))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 1, -1))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 1, -2))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 1, -3))));
+        placeFoliageBlock(world, replacer, random, config, new BlockPos(center.add(new Vec3i(0, 0, -3))));
     }
 
     @Override
@@ -156,7 +154,6 @@ public class PalmFoliagePlacer extends FoliagePlacer {
 
     @Override
     protected boolean isInvalidForLeaves(Random random, int dx, int y, int dz, int radius, boolean giantTrunk) {
-        // Our FoliagePlacer doesn't set any restrictions on leaves
         return false;
     }
 }
