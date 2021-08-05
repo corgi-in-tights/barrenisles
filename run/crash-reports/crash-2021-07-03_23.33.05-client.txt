@@ -15,13 +15,13 @@ software.bernie.geckolib3.geo.exception.GeckoLibException: barrenisles:animation
 	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
 	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
 	at software.bernie.geckolib3.core.controller.AnimationController.setAnimation(AnimationController.java:177)
-	at ca.thecorgi.barrenisles.entity.BuramaphuEntity.predicate(BuramaphuEntity.java:32)
+	at de.xyndra.barrenisles.entity.BuramaphuEntity.predicate(BuramaphuEntity.java:32)
 	at software.bernie.geckolib3.core.controller.AnimationController.testAnimationPredicate(AnimationController.java:488)
 	at software.bernie.geckolib3.core.controller.AnimationController.process(AnimationController.java:359)
 	at software.bernie.geckolib3.core.processor.AnimationProcessor.tickAnimation(AnimationProcessor.java:65)
 	at software.bernie.geckolib3.model.AnimatedGeoModel.setLivingAnimations(AnimatedGeoModel.java:78)
-	at ca.thecorgi.barrenisles.client.model.BuramaphuModel.setLivingAnimations(BuramaphuModel.java:31)
-	at ca.thecorgi.barrenisles.client.model.BuramaphuModel.setLivingAnimations(BuramaphuModel.java:12)
+	at de.xyndra.barrenisles.client.model.BuramaphuModel.setLivingAnimations(BuramaphuModel.java:31)
+	at de.xyndra.barrenisles.client.model.BuramaphuModel.setLivingAnimations(BuramaphuModel.java:12)
 	at software.bernie.geckolib3.renderers.geo.GeoEntityRenderer.render(GeoEntityRenderer.java:153)
 	at software.bernie.geckolib3.renderers.geo.GeoEntityRenderer.render(GeoEntityRenderer.java:41)
 	at net.minecraft.client.render.entity.EntityRenderDispatcher.render(EntityRenderDispatcher.java:131)
@@ -58,19 +58,19 @@ Stacktrace:
 	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
 	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
 	at software.bernie.geckolib3.core.controller.AnimationController.setAnimation(AnimationController.java:177)
-	at ca.thecorgi.barrenisles.entity.BuramaphuEntity.predicate(BuramaphuEntity.java:32)
+	at de.xyndra.barrenisles.entity.BuramaphuEntity.predicate(BuramaphuEntity.java:32)
 	at software.bernie.geckolib3.core.controller.AnimationController.testAnimationPredicate(AnimationController.java:488)
 	at software.bernie.geckolib3.core.controller.AnimationController.process(AnimationController.java:359)
 	at software.bernie.geckolib3.core.processor.AnimationProcessor.tickAnimation(AnimationProcessor.java:65)
 	at software.bernie.geckolib3.model.AnimatedGeoModel.setLivingAnimations(AnimatedGeoModel.java:78)
-	at ca.thecorgi.barrenisles.client.model.BuramaphuModel.setLivingAnimations(BuramaphuModel.java:31)
-	at ca.thecorgi.barrenisles.client.model.BuramaphuModel.setLivingAnimations(BuramaphuModel.java:12)
+	at de.xyndra.barrenisles.client.model.BuramaphuModel.setLivingAnimations(BuramaphuModel.java:31)
+	at de.xyndra.barrenisles.client.model.BuramaphuModel.setLivingAnimations(BuramaphuModel.java:12)
 	at software.bernie.geckolib3.renderers.geo.GeoEntityRenderer.render(GeoEntityRenderer.java:153)
 	at software.bernie.geckolib3.renderers.geo.GeoEntityRenderer.render(GeoEntityRenderer.java:41)
 
 -- Entity being rendered --
 Details:
-	Entity Type: barrenisles:buramaphuentity (ca.thecorgi.barrenisles.entity.BuramaphuEntity)
+	Entity Type: barrenisles:buramaphuentity (de.xyndra.barrenisles.entity.BuramaphuEntity)
 	Entity ID: 1
 	Entity Name: entity.barrenisles.buramaphuentity
 	Entity's Exact location: 154.50, 4.00, 230.50
@@ -81,7 +81,7 @@ Details:
 
 -- Renderer details --
 Details:
-	Assigned renderer: ca.thecorgi.barrenisles.client.renderer.BuramaphuRenderer@2b69f552
+	Assigned renderer: de.xyndra.barrenisles.client.renderer.BuramaphuRenderer@2b69f552
 	Location: 0.00,0.00,0.00 - World: (0,0,0), Section: (at 0,0,0 in 0,0,0; chunk contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
 	Rotation: 0.0
 	Delta: 0.0

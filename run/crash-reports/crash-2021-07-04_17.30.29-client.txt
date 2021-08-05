@@ -6,8 +6,8 @@ Description: Rendering entity in world
 
 java.util.NoSuchElementException: No value present
 	at java.base/java.util.Optional.get(Optional.java:143)
-	at ca.thecorgi.barrenisles.client.renderer.DuneraptorRenderer.render(DuneraptorRenderer.java:38)
-	at ca.thecorgi.barrenisles.client.renderer.DuneraptorRenderer.render(DuneraptorRenderer.java:16)
+	at de.xyndra.barrenisles.client.renderer.DuneraptorRenderer.render(DuneraptorRenderer.java:38)
+	at de.xyndra.barrenisles.client.renderer.DuneraptorRenderer.render(DuneraptorRenderer.java:16)
 	at software.bernie.geckolib3.renderers.geo.GeoEntityRenderer.render(GeoEntityRenderer.java:162)
 	at software.bernie.geckolib3.renderers.geo.GeoEntityRenderer.render(GeoEntityRenderer.java:41)
 	at net.minecraft.client.render.entity.EntityRenderDispatcher.render(EntityRenderDispatcher.java:131)
@@ -35,14 +35,14 @@ A detailed walkthrough of the error, its code path and all known details is as f
 Thread: Render thread
 Stacktrace:
 	at java.base/java.util.Optional.get(Optional.java:143)
-	at ca.thecorgi.barrenisles.client.renderer.DuneraptorRenderer.render(DuneraptorRenderer.java:38)
-	at ca.thecorgi.barrenisles.client.renderer.DuneraptorRenderer.render(DuneraptorRenderer.java:16)
+	at de.xyndra.barrenisles.client.renderer.DuneraptorRenderer.render(DuneraptorRenderer.java:38)
+	at de.xyndra.barrenisles.client.renderer.DuneraptorRenderer.render(DuneraptorRenderer.java:16)
 	at software.bernie.geckolib3.renderers.geo.GeoEntityRenderer.render(GeoEntityRenderer.java:162)
 	at software.bernie.geckolib3.renderers.geo.GeoEntityRenderer.render(GeoEntityRenderer.java:41)
 
 -- Entity being rendered --
 Details:
-	Entity Type: barrenisles:duneraptorentity (ca.thecorgi.barrenisles.entity.DuneraptorEntity)
+	Entity Type: barrenisles:duneraptorentity (de.xyndra.barrenisles.entity.DuneraptorEntity)
 	Entity ID: 110
 	Entity Name: Duneraptor
 	Entity's Exact location: -80.50, 4.00, 239.50
@@ -53,7 +53,7 @@ Details:
 
 -- Renderer details --
 Details:
-	Assigned renderer: ca.thecorgi.barrenisles.client.renderer.DuneraptorRenderer@279a49d2
+	Assigned renderer: de.xyndra.barrenisles.client.renderer.DuneraptorRenderer@279a49d2
 	Location: 0.00,-1.62,0.00 - World: (0,-2,0), Section: (at 0,14,0 in 0,-1,0; chunk contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
 	Rotation: 0.0
 	Delta: 0.29999852

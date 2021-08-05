@@ -5,7 +5,7 @@ Time: 2021-06-26, 1:31 a.m.
 Description: Ticking entity
 
 java.lang.NullPointerException: Cannot read field "height" because "this.dimensions" is null
-	at ca.thecorgi.barrenisles.entity.DuneraptorEntity.getMountedHeightOffset(DuneraptorEntity.java:211)
+	at de.xyndra.barrenisles.entity.DuneraptorEntity.getMountedHeightOffset(DuneraptorEntity.java:211)
 	at net.minecraft.entity.Entity.updatePassengerPosition(Entity.java:1824)
 	at net.minecraft.entity.Entity.updatePassengerPosition(Entity.java:1819)
 	at net.minecraft.entity.passive.HorseBaseEntity.updatePassengerPosition(HorseBaseEntity.java:883)
@@ -39,7 +39,7 @@ A detailed walkthrough of the error, its code path and all known details is as f
 -- Head --
 Thread: Render thread
 Stacktrace:
-	at ca.thecorgi.barrenisles.entity.DuneraptorEntity.getMountedHeightOffset(DuneraptorEntity.java:211)
+	at de.xyndra.barrenisles.entity.DuneraptorEntity.getMountedHeightOffset(DuneraptorEntity.java:211)
 	at net.minecraft.entity.Entity.updatePassengerPosition(Entity.java:1824)
 	at net.minecraft.entity.Entity.updatePassengerPosition(Entity.java:1819)
 	at net.minecraft.entity.passive.HorseBaseEntity.updatePassengerPosition(HorseBaseEntity.java:883)
@@ -52,7 +52,7 @@ Stacktrace:
 
 -- Entity being ticked --
 Details:
-	Entity Type: barrenisles:duneraptorentity (ca.thecorgi.barrenisles.entity.DuneraptorEntity)
+	Entity Type: barrenisles:duneraptorentity (de.xyndra.barrenisles.entity.DuneraptorEntity)
 	Entity ID: 3
 	Entity Name: Duneraptor
 	Entity's Exact location: -177.99, 4.00, 224.67

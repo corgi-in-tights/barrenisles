@@ -15,6 +15,8 @@
   "text.autoconfig.barrenisles.option.stats.tumbleweed_health": "Tumbleweed Health",
   "text.autoconfig.barrenisles.option.stats.tumbleweed_speed": "Tumbleweed Speed",
   "text.autoconfig.barrenisles.option.generation": "World Gen",
+  "block.barrenisles.coconut": "Kokosnuss",
+  "item.barrenisles.coconut_open": "offene Kokosnuss",
   "text.autoconfig.barrenisles.option.generation.generate_oasis": "Generate Oasis",
   "text.autoconfig.barrenisles.option.generation.generate_ore_rock": "Generate Ore Rock",
   "text.autoconfig.barrenisles.option.generation.generate_tall_ore_rock": "Generate Tall Ore Rock",

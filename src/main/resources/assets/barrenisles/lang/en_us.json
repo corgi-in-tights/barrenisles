@@ -32,6 +32,8 @@
   "block.barrenisles.palm_pressure_plate": "Palm Pressure Plate",
   "block.barrenisles.palm_sapling": "Palm Sapling",
   "block.barrenisles.palm_fence": "Palm Fence",
+  "item.barrenisles.coconut": "Coconut",
+  "block.barrenisles.coconut_open": "Open Coconut",
   "block.barrenisles.palm_fence_gate": "Palm Fence Gate",
   "block.barrenisles.palm_leaves": "Palm Leaves"
 }
