@@ -1,5 +1,6 @@
 package ca.thecorgi.barrenisles.utils.registry;
 
+import ca.thecorgi.barrenisles.entity.CoyoteEntity;
 import ca.thecorgi.barrenisles.entity.DuneraptorEntity;
 import ca.thecorgi.barrenisles.entity.TumbleweedEntity;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
@@ -17,10 +18,13 @@ public class EntityRegistry {
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, DuneraptorEntity::new).dimensions(EntityDimensions.fixed(1.15F, 1.9F)).build());
     public static final EntityType<TumbleweedEntity> TUMBLEWEED = Registry.register(Registry.ENTITY_TYPE, new Identifier(ModID, "tumbleweed"),
             FabricEntityTypeBuilder.create(SpawnGroup.AMBIENT, TumbleweedEntity::new).dimensions(EntityDimensions.fixed(1F, 1F)).build());
+    public static final EntityType<CoyoteEntity> COYOTE = Registry.register(Registry.ENTITY_TYPE, new Identifier(ModID, "coyote"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, CoyoteEntity::new).dimensions(EntityDimensions.fixed(0.75F, 0.9F)).build());
 
 
     public static void register() {
         FabricDefaultAttributeRegistry.register(DUNERAPTOR, DuneraptorEntity.createDuneraptorAttributes());
         FabricDefaultAttributeRegistry.register(TUMBLEWEED, TumbleweedEntity.createTumbleweedAttributes());
+        FabricDefaultAttributeRegistry.register(COYOTE, CoyoteEntity.createCoyoteAttributes());
     }
 }

@@ -47,7 +47,7 @@ public class BlockRegistry {
     public static final Block PALM_SAPLING = new SaplingBlock(new PalmSaplingGenerator(TREE_PALM), AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)) {};
 
     public static final Block WINECUP = new DesertFlowerBlock(StatusEffects.HASTE, 30, FabricBlockSettings.copyOf(Blocks.DANDELION));
-    public static final Block POISON_IVY = new DesertFlowerBlock(StatusEffects.POISON, 50, FabricBlockSettings.copyOf(Blocks.DANDELION));
+    public static final Block POISON_IVY = new PoisonIvyBlock(FabricBlockSettings.copyOf(Blocks.DANDELION));
     public static final Block AGAVE = new DesertFlowerBlock(StatusEffects.WITHER, 70, FabricBlockSettings.copyOf(Blocks.DANDELION));
     public static final Block MARIGOLD = new DesertFlowerBlock(StatusEffects.SPEED, 40, FabricBlockSettings.copyOf(Blocks.DANDELION));
     public static final Block DESERT_LILY = new TallDesertFlowerBlock(FabricBlockSettings.copyOf(Blocks.ROSE_BUSH));

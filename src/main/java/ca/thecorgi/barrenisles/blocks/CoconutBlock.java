@@ -15,6 +15,6 @@ public class CoconutBlock extends CocoaBlock {
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         BlockState blockState = world.getBlockState(pos.offset((Direction)state.get(FACING)));
-        return blockState.isOf(BlockRegistry.PALM_LOG);
+        return blockState.isOf(BlockRegistry.PALM_LOG) || blockState.isOf(BlockRegistry.STRIPPED_PALM_LOG) || blockState.isOf(BlockRegistry.PALM_WOOD) || blockState.isOf(BlockRegistry.STRIPPED_PALM_WOOD);
     }
 }

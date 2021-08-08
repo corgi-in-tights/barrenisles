@@ -19,7 +19,7 @@ public class TumbleweedModel extends AnimatedGeoModel<TumbleweedEntity> {
 
     @Override
     public Identifier getTextureLocation(TumbleweedEntity entity) {
-        return new Identifier(ModID, "textures/model/entity/tumbleweed.png");
+        return new Identifier(ModID, "textures/entity/tumbleweed.png");
     }
 
 //    @SuppressWarnings({ "unchecked", "rawtypes" })

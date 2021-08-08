@@ -2,6 +2,7 @@ package ca.thecorgi.barrenisles.client;
 
 import ca.thecorgi.barrenisles.client.renderer.DuneraptorRenderer;
 import ca.thecorgi.barrenisles.client.renderer.TumbleweedRenderer;
+import ca.thecorgi.barrenisles.client.renderer.coyote.CoyoteRenderer;
 import ca.thecorgi.barrenisles.utils.registry.BlockRegistry;
 import ca.thecorgi.barrenisles.utils.registry.EntityRegistry;
 import net.fabricmc.api.ClientModInitializer;
@@ -13,6 +14,7 @@ public class ClientInit implements ClientModInitializer {
     public void onInitializeClient() {
         EntityRendererRegistry.INSTANCE.register(EntityRegistry.DUNERAPTOR, DuneraptorRenderer::new);
         EntityRendererRegistry.INSTANCE.register(EntityRegistry.TUMBLEWEED, TumbleweedRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityRegistry.COYOTE, CoyoteRenderer::new);
         BlockRegistry.registerClient();
     }
 }

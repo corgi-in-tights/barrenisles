@@ -14,7 +14,7 @@ public class BarrenIslesConfig implements ConfigData {
         @ConfigEntry.Gui.CollapsibleObject
         public Stats stats = new Stats();
 
-        @ConfigEntry.Gui.CollapsibleObject
+        @ConfigEntry.Gui.RequiresRestart
         public Generation generation = new Generation();
 
         @ConfigEntry.Gui.CollapsibleObject
@@ -22,6 +22,7 @@ public class BarrenIslesConfig implements ConfigData {
 
         public static class Spawning {
             public boolean spawn_duneraptors = true;
+            public boolean spawn_coyotes = false;
             public boolean spawn_tumbleweeds = false;
         }
 
@@ -30,6 +31,9 @@ public class BarrenIslesConfig implements ConfigData {
             public double duneraptor_speed = 0.18;
             public double tumbleweed_health = 3;
             public double tumbleweed_speed = 0.21;
+            public double coyote_health = 25;
+            public double coyote_speed = 0.245;
+            public double coyote_attack_damage = 3.5;
         }
 
         public static class Generation {
