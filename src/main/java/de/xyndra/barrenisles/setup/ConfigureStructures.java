@@ -13,6 +13,7 @@ public class ConfigureStructures {
      */
     public static StructureFeature<?, ?> CONFIGURED_ROCK_1 = ModStructures.ROCK_1.get().configured(IFeatureConfig.NONE);
     public static StructureFeature<?, ?> CONFIGURED_ROCK_2 = ModStructures.ROCK_2.get().configured(IFeatureConfig.NONE);
+    public static StructureFeature<?, ?> CONFIGURED_OASIS = ModStructures.OASIS.get().configured(IFeatureConfig.NONE);
 
     /**
      * Registers the configured structure which is what gets added to the biomes.
@@ -25,6 +26,7 @@ public class ConfigureStructures {
         Registry<StructureFeature<?, ?>> registry = WorldGenRegistries.CONFIGURED_STRUCTURE_FEATURE;
         Registry.register(registry, new ResourceLocation("barrenisles", "configured_ROCK_1"), CONFIGURED_ROCK_1);
         Registry.register(registry, new ResourceLocation("barrenisles", "configured_ROCK_2"), CONFIGURED_ROCK_2);
+        Registry.register(registry, new ResourceLocation("barrenisles", "configured_OASIS"), CONFIGURED_OASIS);
 
         /* Ok so, this part may be hard to grasp but basically, just add your structure to this to
          * prevent any sort of crash or issue with other mod's custom ChunkGenerators. If they use
@@ -43,5 +45,6 @@ public class ConfigureStructures {
          */
         FlatGenerationSettings.STRUCTURE_FEATURES.put(ModStructures.ROCK_1.get(), CONFIGURED_ROCK_1);
         FlatGenerationSettings.STRUCTURE_FEATURES.put(ModStructures.ROCK_2.get(), CONFIGURED_ROCK_2);
+        FlatGenerationSettings.STRUCTURE_FEATURES.put(ModStructures.OASIS.get(), CONFIGURED_OASIS);
     }
 }

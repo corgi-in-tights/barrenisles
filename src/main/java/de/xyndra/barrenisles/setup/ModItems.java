@@ -34,6 +34,9 @@ public class ModItems {
     public static final RegistryObject<Item> N = Registration.ITEMS.register("agave", () -> new BlockItem(ModBlocks.AGAVE, new Item.Properties().tab(creativeTab)));
     public static final RegistryObject<Item> O = Registration.ITEMS.register("marigold", () -> new BlockItem(ModBlocks.MARIGOLD, new Item.Properties().tab(creativeTab)));
     public static final RegistryObject<Item> P = Registration.ITEMS.register("desert_lily", () -> new TallBlockItem(ModBlocks.DESERT_LILY, new Item.Properties().tab(creativeTab)));
+    public static final RegistryObject<Item> Q = Registration.ITEMS.register("thornweed", () -> new BlockItem(ModBlocks.THORNWEED, new Item.Properties().tab(creativeTab)));
+    public static final RegistryObject<Item> S = Registration.ITEMS.register("barrel_cactus", () -> new BlockItem(ModBlocks.BARRELCACTUS, new Item.Properties().tab(creativeTab)));
+    public static final RegistryObject<Item> R = Registration.ITEMS.register("suspicious_berry_bush", () -> new SUS_BERRY(ModBlocks.SUS_BERRY_BUSH, new Item.Properties().tab(creativeTab)));
     public static final RegistryObject<Item> DUNERAPTORFEATHER = Registration.ITEMS.register("dune_feather", () -> new DuneraptorFeather(new Item.Properties().tab(creativeTab)));
 
     public static void register() {};

@@ -2,7 +2,9 @@ package de.xyndra.barrenisles.setup;
 
 import de.xyndra.barrenisles.blocks.DesertFlowerBlock;
 import de.xyndra.barrenisles.PalmTree;
+import de.xyndra.barrenisles.blocks.SusBerryBush;
 import de.xyndra.barrenisles.blocks.TallDesertFlowerBlock;
+import de.xyndra.barrenisles.blocks.Thornweed;
 import net.minecraft.block.*;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.Direction;
@@ -92,6 +94,9 @@ public class ModBlocks {
     public static final Block AGAVE = new DesertFlowerBlock(Effects.WITHER, 70, Block.box(0.0D,0.0D,0.0D,15.0D,15.0D,15.0D),Block.Properties.copy(Blocks.CACTUS));
     public static final Block MARIGOLD = new DesertFlowerBlock(Effects.MOVEMENT_SPEED, 40, Block.box(3.0D,0.0D,3.2D,14.0D,15.0D,14.2D),Block.Properties.copy(Blocks.CACTUS));
     public static final Block DESERT_LILY = new TallDesertFlowerBlock(Block.Properties.copy(Blocks.ROSE_BUSH));
+    public static final Block THORNWEED = new Thornweed(Block.Properties.copy(Blocks.SWEET_BERRY_BUSH));
+    public static final Block BARRELCACTUS = new Thornweed(Block.Properties.copy(Blocks.SWEET_BERRY_BUSH));
+    public static final Block SUS_BERRY_BUSH = new SusBerryBush(Block.Properties.copy(Blocks.SWEET_BERRY_BUSH));
     public static final TrapDoorBlock PALMTRAPDOOR = new TrapDoorBlock(Block.Properties.copy(Blocks.OAK_TRAPDOOR).noOcclusion()) {};
     public static final RegistryObject<Block> PALMDOORREGISTRY = Registration.BLOCKS.register("palm_door", () -> PALMDOOR);
     public static final RegistryObject<Block> PALMLOGREGISTRY = Registration.BLOCKS.register("palm_log", () -> PALMLOG);
@@ -113,6 +118,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> M = Registration.BLOCKS.register("agave", () -> AGAVE);
     public static final RegistryObject<Block> N = Registration.BLOCKS.register("marigold", () -> MARIGOLD);
     public static final RegistryObject<Block> O = Registration.BLOCKS.register("desert_lily", () -> DESERT_LILY);
+    public static final RegistryObject<Block> P = Registration.BLOCKS.register("thornweed", () -> THORNWEED);
+    public static final RegistryObject<Block> R = Registration.BLOCKS.register("barrel_cactus", () -> BARRELCACTUS);
+    public static final RegistryObject<Block> Q = Registration.BLOCKS.register("suspicious_berry_bush", () -> SUS_BERRY_BUSH);
     public static final RegistryObject<Block> PALMPRESSUREPLATEREGISTRY = Registration.BLOCKS.register("palm_pressure_plate", () -> PALMPRESSUREPLATE);
 
     public static void register() {};
@@ -125,8 +133,12 @@ public class ModBlocks {
         RenderTypeLookup.setRenderLayer(AGAVE, RenderType.cutout());
         RenderTypeLookup.setRenderLayer(MARIGOLD, RenderType.cutout());
         RenderTypeLookup.setRenderLayer(DESERT_LILY, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(THORNWEED, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(BARRELCACTUS, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(SUS_BERRY_BUSH, RenderType.cutout());
         RenderTypeLookup.setRenderLayer(PALMSAPLING, RenderType.cutout());
         RenderTypeLookup.setRenderLayer(PALMLEAVES, RenderType.cutoutMipped());
         RenderTypeLookup.setRenderLayer(COCONUT, RenderType.cutout());
+
     }
 }

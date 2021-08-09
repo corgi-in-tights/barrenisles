@@ -2,8 +2,8 @@
 	"credit": "Made by corgi in tights#0737",
 	"texture_size": [32, 32],
 	"textures": {
-		"1": "barrenisles:block/coconut",
-		"particle": "barrenisles:block/coconut"
+		"1": "barrenisles:block/coconut_block",
+		"particle": "barrenisles:block/coconut_block"
 	},
 	"elements": [
 		{

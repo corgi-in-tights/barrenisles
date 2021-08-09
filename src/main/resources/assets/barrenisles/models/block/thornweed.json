@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "barrenisles:blocks/thornweed"
+    "cross": "barrenisles:block/thornweed"
   }
 }

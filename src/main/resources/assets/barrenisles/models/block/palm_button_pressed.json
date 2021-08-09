@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/button_pressed",
   "textures": {
-    "texture": "barrenisles:blocks/palm_planks"
+    "texture": "barrenisles:block/palm_planks"
   }
 }

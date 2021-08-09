@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "barrenisles:blocks/winecup"
+    "cross": "barrenisles:block/winecup"
   }
 }
