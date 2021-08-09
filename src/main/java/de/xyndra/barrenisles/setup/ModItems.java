@@ -5,6 +5,7 @@ import de.xyndra.barrenisles.items.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.TallBlockItem;
 import net.minecraftforge.fml.RegistryObject;
 
 public class ModItems {
@@ -24,10 +25,15 @@ public class ModItems {
     public static final RegistryObject<Item> E = Registration.ITEMS.register("palm_wood", () -> new BlockItem(ModBlocks.PALMWOOD, new Item.Properties().tab(creativeTab)));
     public static final RegistryObject<Item> F = Registration.ITEMS.register("stripped_palm_log", () -> new BlockItem(ModBlocks.STRIPPEDPALMLOG, new Item.Properties().tab(creativeTab)));
     public static final RegistryObject<Item> G = Registration.ITEMS.register("stripped_palm_wood", () -> new BlockItem(ModBlocks.STRIPPEDPALMWOOD, new Item.Properties().tab(creativeTab)));
-    public static final RegistryObject<Item> H = Registration.ITEMS.register("palm_leaves", () -> new BlockItem(ModBlocks.PALMLEAVES, new Item.Properties().tab(creativeTab)));
+    public static final RegistryObject<Item> PALMLEAVES = Registration.ITEMS.register("palm_leaves", () -> new BlockItem(ModBlocks.PALMLEAVES, new Item.Properties().tab(creativeTab)));
     public static final RegistryObject<Item> I = Registration.ITEMS.register("coconut", () -> new BlockItem(ModBlocks.COCONUT, new Item.Properties().tab(creativeTab)));
     public static final RegistryObject<Item> J = Registration.ITEMS.register("coconut_open", () -> new Coconut_open(new Item.Properties().tab(creativeTab)));
     public static final RegistryObject<Item> K = Registration.ITEMS.register("palm_sapling", () -> new BlockItem(ModBlocks.PALMSAPLING, new Item.Properties().tab(creativeTab)));
+    public static final RegistryObject<Item> L = Registration.ITEMS.register("winecup", () -> new BlockItem(ModBlocks.WINECUP, new Item.Properties().tab(creativeTab)));
+    public static final RegistryObject<Item> M = Registration.ITEMS.register("poison_ivy", () -> new BlockItem(ModBlocks.POISON_IVY, new Item.Properties().tab(creativeTab)));
+    public static final RegistryObject<Item> N = Registration.ITEMS.register("agave", () -> new BlockItem(ModBlocks.AGAVE, new Item.Properties().tab(creativeTab)));
+    public static final RegistryObject<Item> O = Registration.ITEMS.register("marigold", () -> new BlockItem(ModBlocks.MARIGOLD, new Item.Properties().tab(creativeTab)));
+    public static final RegistryObject<Item> P = Registration.ITEMS.register("desert_lily", () -> new TallBlockItem(ModBlocks.DESERT_LILY, new Item.Properties().tab(creativeTab)));
     public static final RegistryObject<Item> DUNERAPTORFEATHER = Registration.ITEMS.register("dune_feather", () -> new DuneraptorFeather(new Item.Properties().tab(creativeTab)));
 
     public static void register() {};

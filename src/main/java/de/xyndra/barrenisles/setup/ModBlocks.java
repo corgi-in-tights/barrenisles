@@ -1,7 +1,10 @@
 package de.xyndra.barrenisles.setup;
 
+import de.xyndra.barrenisles.blocks.DesertFlowerBlock;
 import de.xyndra.barrenisles.PalmTree;
+import de.xyndra.barrenisles.blocks.TallDesertFlowerBlock;
 import net.minecraft.block.*;
+import net.minecraft.potion.Effects;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.client.renderer.RenderType;
@@ -18,9 +21,6 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
-
-
-
 import javax.annotation.Nullable;
 
 
@@ -33,7 +33,7 @@ public class ModBlocks {
     public static final StairsBlock PALMSTAIRS = new StairsBlock(Blocks.OAK_STAIRS.defaultBlockState(), Block.Properties.copy(Blocks.OAK_STAIRS)) {};
     public static final PressurePlateBlock PALMPRESSUREPLATE = new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, Block.Properties.copy(Blocks.OAK_BUTTON)) {};
     public static final DoorBlock PALMDOOR = new DoorBlock(Block.Properties.copy(Blocks.OAK_DOOR).noOcclusion()) {};
-    public static final RotatedPillarBlock PALMLOG = new RotatedPillarBlock(Block.Properties.copy(Blocks.OAK_LOG)) {
+    public static final Block PALMLOG = new RotatedPillarBlock(Block.Properties.copy(Blocks.OAK_LOG)) {
         @Override
         @Nullable
         public BlockState getToolModifiedState(BlockState state, World world, BlockPos pos, PlayerEntity player, ItemStack stack, ToolType toolType) {
@@ -86,7 +86,12 @@ public class ModBlocks {
             }
         }
     };
-    public static final Block PALMLEAVES = new Block(Block.Properties.copy(Blocks.OAK_LEAVES).noOcclusion()) {};
+    public static final LeavesBlock PALMLEAVES = new LeavesBlock(Block.Properties.copy(Blocks.OAK_LEAVES).noOcclusion().harvestTool(ToolType.HOE));
+    public static final Block WINECUP = new DesertFlowerBlock(Effects.DIG_SPEED, 30, Block.box(0.5D,0.0D,0.5D,14.5D,15.0D,14.5D),Block.Properties.copy(Blocks.CACTUS));
+    public static final Block POISON_IVY = new DesertFlowerBlock(Effects.POISON, 50, Block.box(0.0D,0.0D,0.0D, 15.0D,15.0D,15.0D),Block.Properties.copy(Blocks.CACTUS));
+    public static final Block AGAVE = new DesertFlowerBlock(Effects.WITHER, 70, Block.box(0.0D,0.0D,0.0D,15.0D,15.0D,15.0D),Block.Properties.copy(Blocks.CACTUS));
+    public static final Block MARIGOLD = new DesertFlowerBlock(Effects.MOVEMENT_SPEED, 40, Block.box(3.0D,0.0D,3.2D,14.0D,15.0D,14.2D),Block.Properties.copy(Blocks.CACTUS));
+    public static final Block DESERT_LILY = new TallDesertFlowerBlock(Block.Properties.copy(Blocks.ROSE_BUSH));
     public static final TrapDoorBlock PALMTRAPDOOR = new TrapDoorBlock(Block.Properties.copy(Blocks.OAK_TRAPDOOR).noOcclusion()) {};
     public static final RegistryObject<Block> PALMDOORREGISTRY = Registration.BLOCKS.register("palm_door", () -> PALMDOOR);
     public static final RegistryObject<Block> PALMLOGREGISTRY = Registration.BLOCKS.register("palm_log", () -> PALMLOG);
@@ -103,6 +108,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> H = Registration.BLOCKS.register("palm_leaves", () -> PALMLEAVES);
     public static final RegistryObject<Block> I = Registration.BLOCKS.register("coconut", () -> COCONUT);
     public static final RegistryObject<Block> J = Registration.BLOCKS.register("palm_sapling", () -> PALMSAPLING);
+    public static final RegistryObject<Block> K = Registration.BLOCKS.register("winecup", () -> WINECUP);
+    public static final RegistryObject<Block> L = Registration.BLOCKS.register("poison_ivy", () -> POISON_IVY);
+    public static final RegistryObject<Block> M = Registration.BLOCKS.register("agave", () -> AGAVE);
+    public static final RegistryObject<Block> N = Registration.BLOCKS.register("marigold", () -> MARIGOLD);
+    public static final RegistryObject<Block> O = Registration.BLOCKS.register("desert_lily", () -> DESERT_LILY);
     public static final RegistryObject<Block> PALMPRESSUREPLATEREGISTRY = Registration.BLOCKS.register("palm_pressure_plate", () -> PALMPRESSUREPLATE);
 
     public static void register() {};
@@ -110,6 +120,11 @@ public class ModBlocks {
     public static void transparency() {
         RenderTypeLookup.setRenderLayer(PALMDOOR, RenderType.cutout());
         RenderTypeLookup.setRenderLayer(PALMTRAPDOOR, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(WINECUP, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(POISON_IVY, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(AGAVE, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(MARIGOLD, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(DESERT_LILY, RenderType.cutout());
         RenderTypeLookup.setRenderLayer(PALMSAPLING, RenderType.cutout());
         RenderTypeLookup.setRenderLayer(PALMLEAVES, RenderType.cutoutMipped());
         RenderTypeLookup.setRenderLayer(COCONUT, RenderType.cutout());

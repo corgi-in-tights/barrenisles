@@ -6,7 +6,16 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "barrenisles:desert_lily"
+          "name": "barrenisles:desert_lily",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "barrenisles:desert_lily",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ]
         }
       ],
       "conditions": [
