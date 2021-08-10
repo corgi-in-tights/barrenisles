@@ -38,10 +38,11 @@
   "block.barrenisles.palm_pressure_plate": "Palm Pressure Plate",
   "block.barrenisles.palm_button": "Palm Button",
   "block.barrenisles.winecup": "Winecup",
+  "block.barrenisles.agave": "agave",
   "block.barrenisles.marigold": "Marigold",
-  "block.barrenisles.desert_Lily": "Desert Lily",
+  "block.barrenisles.desert_lily": "Desert Lily",
   "block.barrenisles.barrel_cactus": "Barrel Cactus",
   "block.barrenisles.thornweed": "Thornweed",
-  "block.barrenisles.suspicious_berry_bush": "Suspicious Berry Bush",
+  "item.barrenisles.suspicious_berry_bush": "Suspicious Berry Bush",
   "block.barrenisles.poison_ivy": "Poison Ivy"
 }

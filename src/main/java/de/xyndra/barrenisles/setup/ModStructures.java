@@ -67,7 +67,7 @@ public class ModStructures {
                 true);
 
         setupMapSpacingAndLand(
-                ROCK_2.get(), /* The instance of the structure */
+                OASIS.get(), /* The instance of the structure */
                 new StructureSeparationSettings(10 /* average distance apart in chunks between spawn attempts */,
                         5 /* minimum distance apart in chunks between spawn attempts. MUST BE LESS THAN ABOVE VALUE*/,
                         35098374 /* this modifies the seed of the structure so no two structures always spawn over each-other. Make this large and unique. */),

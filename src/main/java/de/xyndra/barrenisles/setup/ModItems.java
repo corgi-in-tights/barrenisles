@@ -10,6 +10,7 @@ import net.minecraftforge.fml.RegistryObject;
 
 public class ModItems {
     public static final ItemGroup creativeTab = new Creative_Tab();
+    public static final Item sus_berry = new SUS_BERRY(ModBlocks.SUS_BERRY_BUSH, new Item.Properties().tab(creativeTab));
     public static final RegistryObject<Item> DRUMSTICK = Registration.ITEMS.register("drumstick", () -> new Drumstick(new Item.Properties().tab(creativeTab)));
     public static final RegistryObject<Item> COOKED_DRUMSTICK = Registration.ITEMS.register("cooked_drumstick", () -> new CookedDrumstick(new Item.Properties().tab(creativeTab)));
     public static final RegistryObject<Item> PALMDOORITEM = Registration.ITEMS.register("palm_door", () -> new PalmDoorItem(new Item.Properties().tab(creativeTab)));
@@ -36,7 +37,7 @@ public class ModItems {
     public static final RegistryObject<Item> P = Registration.ITEMS.register("desert_lily", () -> new TallBlockItem(ModBlocks.DESERT_LILY, new Item.Properties().tab(creativeTab)));
     public static final RegistryObject<Item> Q = Registration.ITEMS.register("thornweed", () -> new BlockItem(ModBlocks.THORNWEED, new Item.Properties().tab(creativeTab)));
     public static final RegistryObject<Item> S = Registration.ITEMS.register("barrel_cactus", () -> new BlockItem(ModBlocks.BARRELCACTUS, new Item.Properties().tab(creativeTab)));
-    public static final RegistryObject<Item> R = Registration.ITEMS.register("suspicious_berry_bush", () -> new SUS_BERRY(ModBlocks.SUS_BERRY_BUSH, new Item.Properties().tab(creativeTab)));
+    public static final RegistryObject<Item> R = Registration.ITEMS.register("suspicious_berry_bush", () -> sus_berry);
     public static final RegistryObject<Item> DUNERAPTORFEATHER = Registration.ITEMS.register("dune_feather", () -> new DuneraptorFeather(new Item.Properties().tab(creativeTab)));
 
     public static void register() {};

@@ -20,21 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a79abc9b-cbb6-490d-92ec-70ac980b10a0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/blocks/SusBerryBush.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/blocks/Thornweed.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/items/SUS_BERRY.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/structures/oasis_structure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/suspicious_berry_bush_stage0.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/suspicious_berry_bush_stage1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/suspicious_berry_bush_stage2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/suspicious_berry_bush_stage3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/palm_leaves_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/suspicious_berry_bush_stage0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/suspicious_berry_bush_stage1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/suspicious_berry_bush_stage2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/suspicious_berry_bush_stage3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/blocks/tall_flowers.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/items/tall_flowers.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.lock" afterDir="false" />
@@ -42,6 +27,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/.mixin.out/audit/mixin_implementation_report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/.mixin.out/audit/mixin_implementation_report.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
@@ -51,97 +37,15 @@
       <change beforePath="$PROJECT_DIR$/run/logs/debug-5.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-5.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/latest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/options.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/options.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/BarrenIsles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/BarrenIsles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/setup/ConfigureStructures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/setup/ConfigureStructures.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/setup/ModBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/setup/ModBlocks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/blocks/SusBerryBush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/blocks/SusBerryBush.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/setup/ModItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/setup/ModItems.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/setup/ModStructures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/setup/ModStructures.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/blockstates/barrel_cactus.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/blockstates/barrel_cactus.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/blockstates/coconut.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/blockstates/coconut.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/blockstates/desert_lily.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/blockstates/desert_lily.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/blockstates/palm_wood.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/blockstates/palm_wood.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/blockstates/stripped_palm_wood.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/blockstates/stripped_palm_wood.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/blockstates/suspicious_berry_bush.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/blockstates/suspicious_berry_bush.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/lang/en_us.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/agave.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/agave.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/barrel_cactus.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/barrel_cactus.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/coconut_block_stage0.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/coconut_stage0.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/coconut_block_stage1.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/coconut_stage1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/coconut_block_stage2.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/coconut_stage2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/desert_lily.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/desert_lily.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/desert_lily_top.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/desert_lily_top.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/door/palm_door_lower.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/door/palm_door_lower.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/door/palm_door_lower_hinge.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/door/palm_door_lower_hinge.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/door/palm_door_upper.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/door/palm_door_upper.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/door/palm_door_upper_hinge.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/door/palm_door_upper_hinge.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/fence/palm_fence_gate.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/fence/palm_fence_gate.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/fence/palm_fence_gate_open.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/fence/palm_fence_gate_open.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/fence/palm_fence_gate_wall.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/fence/palm_fence_gate_wall.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/fence/palm_fence_gate_wall_open.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/fence/palm_fence_gate_wall_open.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/fence/palm_fence_inventory.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/fence/palm_fence_inventory.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/fence/palm_fence_post.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/fence/palm_fence_post.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/fence/palm_fence_side.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/fence/palm_fence_side.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/marigold.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/marigold.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_button.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_button.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_button_inventory.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_button_inventory.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_button_pressed.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_button_pressed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_leaves.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_leaves.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_log.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_log.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_planks.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_planks.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_pressure_plate.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_pressure_plate.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_pressure_plate_down.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_pressure_plate_down.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_sapling.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_sapling.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_slab.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_slab.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_slab_top.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_slab_top.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_stairs.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_stairs.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_stairs_inner.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_stairs_inner.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_stairs_outer.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_stairs_outer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_wood.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/palm_wood.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/poison_ivy.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/poison_ivy.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/stripped_palm_log.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/stripped_palm_log.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/stripped_palm_wood.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/stripped_palm_wood.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/thornweed.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/thornweed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/trapdoor/palm_trapdoor_bottom.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/trapdoor/palm_trapdoor_bottom.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/trapdoor/palm_trapdoor_open.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/trapdoor/palm_trapdoor_open.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/trapdoor/palm_trapdoor_top.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/trapdoor/palm_trapdoor_top.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/winecup.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/winecup.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/agave.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/agave.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/barrel_cactus.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/barrel_cactus.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/coconut.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/coconut.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/cooked_drumstick.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/cooked_drumstick.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/desert_lily.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/desert_lily.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/drumstick.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/drumstick.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/dune_feather.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/dune_feather.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/marigold.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/marigold.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/palm_door.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/palm_door.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/palm_sapling.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/palm_sapling.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/poison_ivy.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/poison_ivy.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/suspicious_berries.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/suspicious_berries.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/thornweed.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/thornweed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/winecup.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/winecup.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/coconut.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/coconut_block.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/palm_leaves.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/palm_leaves.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/stripped_palm_log.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/stripped_palm_log.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/stripped_palm_log_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/stripped_palm_log_top.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/thornweed.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/thornweed.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/blocks/coconut.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/blocks/coconut_block.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/blocks/thornweed.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/blocks/thornweed.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/barrenisles/loot_tables/entities/duneraptor.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/palm_button.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/palm_button.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/palm_fence.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/palm_fence.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/palm_fence_gate.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/palm_fence_gate.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/palm_planks.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/palm_planks.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/palm_pressure_plate.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/palm_pressure_plate.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/palm_slab.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/palm_slab.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/palm_stairs.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/palm_stairs.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/palm_trapdoor.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/palm_trapdoor.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/palm_wood.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/palm_wood.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/stripped_palm_log_to_planks.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/stripped_palm_log_to_planks.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/stripped_palm_wood.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/stripped_palm_wood.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/blocks/small_flowers.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/blocks/small_flowers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/items/small_flowers.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/items/small_flowers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/palm_leaves_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/palm_leaves_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/barrenisles/structures/oasis.nbt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/structures/oasis.nbt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +93,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/data/barrenisles/structures" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -198,17 +102,13 @@
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets\barrenisles\textures\blocks" />
-      <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets" />
-      <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets\barrenisles\blockstates" />
-      <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets\barrenisles\models\block" />
-      <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets\barrenisles\models" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ca.thecorgi.barrenisles.setup" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets\barrenisles\textures\block" />
       <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\data\barrenisles\structures" />
       <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets\barrenisles\textures\blocks" />
-      <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets\barrenisles\textures\block" />
       <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\data\barrenisles\loot_tables\blocks" />
       <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources" />
     </key>
@@ -218,8 +118,12 @@
       <recent name="ca.thecorgi.barrenisles.items" />
       <recent name="ca.thecorgi.barrenisles.setup" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="ca.thecorgi.barrenisles.setup" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets\barrenisles\textures\blocks" />
+      <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets" />
+      <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets\barrenisles\blockstates" />
+      <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets\barrenisles\models\block" />
+      <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets\barrenisles\models" />
     </key>
   </component>
   <component name="RunManager">
@@ -301,22 +205,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="237" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1628544361732" />
-    <state width="1877" height="225" key="GridCell.Tab.0.bottom" timestamp="1628544813626">
+    <state width="1877" height="240" key="GridCell.Tab.0.bottom" timestamp="1628594576822">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="225" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1628544813626" />
-    <state width="1877" height="225" key="GridCell.Tab.0.center" timestamp="1628544813626">
+    <state width="1877" height="240" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1628594576822" />
+    <state width="1877" height="240" key="GridCell.Tab.0.center" timestamp="1628594576822">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="225" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1628544813626" />
-    <state width="1877" height="225" key="GridCell.Tab.0.left" timestamp="1628544813626">
+    <state width="1877" height="240" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1628594576822" />
+    <state width="1877" height="240" key="GridCell.Tab.0.left" timestamp="1628594576822">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="225" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1628544813626" />
-    <state width="1877" height="225" key="GridCell.Tab.0.right" timestamp="1628544813626">
+    <state width="1877" height="240" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1628594576822" />
+    <state width="1877" height="240" key="GridCell.Tab.0.right" timestamp="1628594576822">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="225" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1628544813626" />
+    <state width="1877" height="240" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1628594576822" />
     <state x="540" y="255" key="IDE.errors.dialog" timestamp="1628413588194">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
