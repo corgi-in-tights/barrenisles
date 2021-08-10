@@ -88,7 +88,6 @@ public class ModBlocks {
             }
         }
     };
-    public static final LeavesBlock PALMLEAVES = new LeavesBlock(Block.Properties.copy(Blocks.OAK_LEAVES).noOcclusion().harvestTool(ToolType.HOE));
     public static final Block WINECUP = new DesertFlowerBlock(Effects.DIG_SPEED, 30, Block.box(0.5D,0.0D,0.5D,14.5D,15.0D,14.5D),Block.Properties.copy(Blocks.CACTUS));
     public static final Block POISON_IVY = new DesertFlowerBlock(Effects.POISON, 50, Block.box(0.0D,0.0D,0.0D, 15.0D,15.0D,15.0D),Block.Properties.copy(Blocks.CACTUS));
     public static final Block AGAVE = new DesertFlowerBlock(Effects.WITHER, 70, Block.box(0.0D,0.0D,0.0D,15.0D,15.0D,15.0D),Block.Properties.copy(Blocks.CACTUS));
@@ -110,7 +109,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> E = Registration.BLOCKS.register("palm_wood", () -> PALMWOOD);
     public static final RegistryObject<Block> F = Registration.BLOCKS.register("stripped_palm_log", () -> STRIPPEDPALMLOG);
     public static final RegistryObject<Block> G = Registration.BLOCKS.register("stripped_palm_wood", () -> STRIPPEDPALMWOOD);
-    public static final RegistryObject<Block> H = Registration.BLOCKS.register("palm_leaves", () -> PALMLEAVES);
+    public static final RegistryObject<Block> H = Registration.BLOCKS.register("palm_leaves", () -> new LeavesBlock(Block.Properties.copy(Blocks.OAK_LEAVES).noOcclusion().harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> I = Registration.BLOCKS.register("coconut", () -> COCONUT);
     public static final RegistryObject<Block> J = Registration.BLOCKS.register("palm_sapling", () -> PALMSAPLING);
     public static final RegistryObject<Block> K = Registration.BLOCKS.register("winecup", () -> WINECUP);
@@ -137,7 +136,7 @@ public class ModBlocks {
         RenderTypeLookup.setRenderLayer(BARRELCACTUS, RenderType.cutout());
         RenderTypeLookup.setRenderLayer(SUS_BERRY_BUSH, RenderType.cutout());
         RenderTypeLookup.setRenderLayer(PALMSAPLING, RenderType.cutout());
-        RenderTypeLookup.setRenderLayer(PALMLEAVES, RenderType.cutoutMipped());
+        RenderTypeLookup.setRenderLayer(H.get(), RenderType.cutout());
         RenderTypeLookup.setRenderLayer(COCONUT, RenderType.cutout());
 
     }

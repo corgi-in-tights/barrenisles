@@ -26,7 +26,7 @@ public class ModItems {
     public static final RegistryObject<Item> E = Registration.ITEMS.register("palm_wood", () -> new BlockItem(ModBlocks.PALMWOOD, new Item.Properties().tab(creativeTab)));
     public static final RegistryObject<Item> F = Registration.ITEMS.register("stripped_palm_log", () -> new BlockItem(ModBlocks.STRIPPEDPALMLOG, new Item.Properties().tab(creativeTab)));
     public static final RegistryObject<Item> G = Registration.ITEMS.register("stripped_palm_wood", () -> new BlockItem(ModBlocks.STRIPPEDPALMWOOD, new Item.Properties().tab(creativeTab)));
-    public static final RegistryObject<Item> PALMLEAVES = Registration.ITEMS.register("palm_leaves", () -> new BlockItem(ModBlocks.PALMLEAVES, new Item.Properties().tab(creativeTab)));
+    public static final RegistryObject<Item> PALMLEAVES = Registration.ITEMS.register("palm_leaves", () -> new BlockItem(ModBlocks.H.get(), new Item.Properties().tab(creativeTab)));
     public static final RegistryObject<Item> I = Registration.ITEMS.register("coconut", () -> new BlockItem(ModBlocks.COCONUT, new Item.Properties().tab(creativeTab)));
     public static final RegistryObject<Item> J = Registration.ITEMS.register("coconut_open", () -> new Coconut_open(new Item.Properties().tab(creativeTab)));
     public static final RegistryObject<Item> K = Registration.ITEMS.register("palm_sapling", () -> new BlockItem(ModBlocks.PALMSAPLING, new Item.Properties().tab(creativeTab)));

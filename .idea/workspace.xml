@@ -20,28 +20,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a79abc9b-cbb6-490d-92ec-70ac980b10a0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/.mixin.out/audit/mixin_implementation_report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/.mixin.out/audit/mixin_implementation_report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-2.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-3.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug-4.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-4.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug-5.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-5.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/latest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/BarrenIsles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/BarrenIsles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/setup/ModStructures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/setup/ModStructures.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/lang/en_us.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/setup/ModBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/setup/ModBlocks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/setup/ModItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/setup/ModItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/palm_leaves.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/palm_leaves.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/palm_leaves_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/palm_leaves_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/blocks/agave.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/blocks/coconut_block.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/blocks/marigold.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/blocks/palm_door_lower.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/blocks/palm_door_upper.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/blocks/palm_leaves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/blocks/palm_log.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/blocks/palm_log_top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/blocks/palm_planks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/blocks/palm_sapling.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/blocks/palm_trapdoor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/blocks/poison_ivy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/blocks/stripped_palm_log.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/blocks/stripped_palm_log_top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/blocks/thornweed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/blocks/winecup.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +77,12 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="barrenisles-forge" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="barrenisles-forge" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -113,10 +126,10 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets\barrenisles\textures\block" />
+      <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets\barrenisles\textures" />
       <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\data\barrenisles\structures" />
       <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets\barrenisles\textures\blocks" />
       <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\data\barrenisles\loot_tables\blocks" />
-      <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="de.xyndra.barrenisles.structures" />
@@ -125,14 +138,14 @@
       <recent name="ca.thecorgi.barrenisles.setup" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets\barrenisles\textures\block" />
+      <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets\barrenisles\textures\palm_leaves" />
+      <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets\barrenisles\textures" />
       <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets\barrenisles\textures\blocks" />
       <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets" />
-      <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets\barrenisles\blockstates" />
-      <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets\barrenisles\models\block" />
-      <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets\barrenisles\models" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.barrenisles-forge [jar]">
+  <component name="RunManager" selected="Gradle.barrenisles-forge [build]">
     <configuration name="barrenisles [runClient]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -145,6 +158,25 @@
         <option name="taskNames">
           <list>
             <option value="runClient" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="barrenisles-forge [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -211,6 +243,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.barrenisles-forge [build]" />
         <item itemvalue="Gradle.barrenisles-forge [runClient]" />
         <item itemvalue="Gradle.barrenisles-forge [runServer]" />
         <item itemvalue="Gradle.barrenisles-forge [jar]" />
@@ -271,22 +304,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="237" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1628544361732" />
-    <state width="1877" height="240" key="GridCell.Tab.0.bottom" timestamp="1628625734898">
+    <state width="1877" height="237" key="GridCell.Tab.0.bottom" timestamp="1628632813850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1628625734898" />
-    <state width="1877" height="240" key="GridCell.Tab.0.center" timestamp="1628625734898">
+    <state width="1877" height="237" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1628632813850" />
+    <state width="1877" height="237" key="GridCell.Tab.0.center" timestamp="1628632813850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1628625734898" />
-    <state width="1877" height="240" key="GridCell.Tab.0.left" timestamp="1628625734898">
+    <state width="1877" height="237" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1628632813850" />
+    <state width="1877" height="237" key="GridCell.Tab.0.left" timestamp="1628632813850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1628625734898" />
-    <state width="1877" height="240" key="GridCell.Tab.0.right" timestamp="1628625734898">
+    <state width="1877" height="237" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1628632813850" />
+    <state width="1877" height="237" key="GridCell.Tab.0.right" timestamp="1628632813850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1628625734898" />
+    <state width="1877" height="237" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1628632813850" />
     <state x="540" y="255" key="IDE.errors.dialog" timestamp="1628413588194">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
