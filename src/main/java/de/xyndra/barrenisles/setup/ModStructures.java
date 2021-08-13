@@ -2,6 +2,7 @@ package de.xyndra.barrenisles.setup;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
+import de.xyndra.barrenisles.structures.badlands_temple_structure;
 import de.xyndra.barrenisles.structures.oasis_structure;
 import de.xyndra.barrenisles.structures.rock_1_structure;
 import de.xyndra.barrenisles.structures.rock_2_structure;
@@ -45,6 +46,7 @@ public class ModStructures {
     public static final RegistryObject<Structure<NoFeatureConfig>> ROCK_1 = DEFERRED_REGISTRY_STRUCTURE.register("rock_1", () -> (new rock_1_structure(NoFeatureConfig.CODEC)));
     public static final RegistryObject<Structure<NoFeatureConfig>> ROCK_2 = DEFERRED_REGISTRY_STRUCTURE.register("rock_2", () -> (new rock_2_structure(NoFeatureConfig.CODEC)));
     public static final RegistryObject<Structure<NoFeatureConfig>> OASIS = DEFERRED_REGISTRY_STRUCTURE.register("oasis", () -> (new oasis_structure(NoFeatureConfig.CODEC)));
+    public static final RegistryObject<Structure<NoFeatureConfig>> BADLANDS_TEMPLE = DEFERRED_REGISTRY_STRUCTURE.register("badlands_temple", () -> (new badlands_temple_structure(NoFeatureConfig.CODEC)));
 
     /**
      * This is where we set the rarity of your structures and determine if land conforms to it.
@@ -71,6 +73,13 @@ public class ModStructures {
                 new StructureSeparationSettings(18 /* average distance apart in chunks between spawn attempts */,
                         12 /* minimum distance apart in chunks between spawn attempts. MUST BE LESS THAN ABOVE VALUE*/,
                         35098374 /* this modifies the seed of the structure so no two structures always spawn over each-other. Make this large and unique. */),
+                true);
+
+        setupMapSpacingAndLand(
+                BADLANDS_TEMPLE.get(), /* The instance of the structure */
+                new StructureSeparationSettings(32 /* average distance apart in chunks between spawn attempts */,
+                        24 /* minimum distance apart in chunks between spawn attempts. MUST BE LESS THAN ABOVE VALUE*/,
+                        854383894 /* this modifies the seed of the structure so no two structures always spawn over each-other. Make this large and unique. */),
                 true);
         // Add more structures here and so on
     }

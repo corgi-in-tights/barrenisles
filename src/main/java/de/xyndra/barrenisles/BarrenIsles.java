@@ -110,6 +110,8 @@ public class BarrenIsles
         }
         if(event.getCategory() == Biome.Category.DESERT){
             event.getGeneration().getStructures().add(() -> ConfigureStructures.CONFIGURED_OASIS);
+        }if(event.getCategory() == Biome.Category.MESA){
+            event.getGeneration().getStructures().add(() -> ConfigureStructures.CONFIGURED_BADLANDS_TEMPLE);
         }
     }
 
@@ -165,6 +167,7 @@ public class BarrenIsles
             tempMap.putIfAbsent(ModStructures.ROCK_1.get(), DimensionStructuresSettings.DEFAULTS.get(ModStructures.ROCK_1.get()));
             tempMap.putIfAbsent(ModStructures.ROCK_2.get(), DimensionStructuresSettings.DEFAULTS.get(ModStructures.ROCK_2.get()));
             tempMap.putIfAbsent(ModStructures.OASIS.get(), DimensionStructuresSettings.DEFAULTS.get(ModStructures.OASIS.get()));
+            tempMap.putIfAbsent(ModStructures.BADLANDS_TEMPLE.get(), DimensionStructuresSettings.DEFAULTS.get(ModStructures.BADLANDS_TEMPLE.get()));
             serverWorld.getChunkSource().generator.getSettings().structureConfig = tempMap;
         }
     }
