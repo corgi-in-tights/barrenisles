@@ -1,8 +1,13 @@
 package de.xyndra.barrenisles.setup;
 
 import de.xyndra.barrenisles.BarrenIsles;
+import de.xyndra.barrenisles.tree.PalmTreeFeature;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.WorldGenRegistries;
+import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
@@ -19,9 +24,17 @@ public class Registration {
 
         ModItems.register();
         ModBlocks.register();
+
     }
 
     public static void transparency(){
         ModBlocks.transparency();
     }
+
+    public static void registerx(String key, ConfiguredFeature<BaseTreeFeatureConfig, ?> configuredFeature){
+        Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, key, configuredFeature);
+    }
+
+
+
 }
