@@ -32,7 +32,7 @@ public class BarrenIslesConfig implements ConfigData {
             public double tumbleweed_health = 3;
             public double tumbleweed_speed = 0.21;
             public double coyote_health = 25;
-            public double coyote_speed = 0.245;
+            public double coyote_speed = 0.278;
             public double coyote_attack_damage = 3.5;
         }
 

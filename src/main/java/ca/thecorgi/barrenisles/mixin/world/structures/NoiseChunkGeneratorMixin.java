@@ -1,4 +1,4 @@
-package ca.thecorgi.barrenisles.mixin;
+package ca.thecorgi.barrenisles.mixin.world.structures;
 
 import ca.thecorgi.barrenisles.utils.registry.StructureRegistry;
 import net.minecraft.entity.SpawnGroup;

@@ -4,12 +4,12 @@
   "package": "ca.thecorgi.barrenisles.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "FoliagePlacerTypeInvoker",
-    "NoiseChunkGeneratorMixin",
-    "SpawnRestrictionMixin",
-    "StructuresConfigAccessor",
-    "TreeDecoratorTypeInvoker",
-    "TrunkPlacerTypeInvoker"
+    "world.features.FoliagePlacerTypeInvoker",
+    "world.features.TreeDecoratorTypeInvoker",
+    "world.features.TrunkPlacerTypeInvoker",
+    "world.structures.NoiseChunkGeneratorMixin",
+    "world.structures.SpawnRestrictionMixin",
+    "world.structures.StructuresConfigAccessor"
   ],
   "client": [
     "StopExperimentalAdvice"

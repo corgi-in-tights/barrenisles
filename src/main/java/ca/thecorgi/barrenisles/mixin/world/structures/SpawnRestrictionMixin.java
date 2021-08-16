@@ -1,4 +1,4 @@
-package ca.thecorgi.barrenisles.mixin;
+package ca.thecorgi.barrenisles.mixin.world.structures;
 
 import ca.thecorgi.barrenisles.utils.registry.EntityRegistry;
 import net.minecraft.entity.EntityType;
@@ -6,7 +6,6 @@ import net.minecraft.entity.SpawnRestriction;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.world.Heightmap;
-
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 

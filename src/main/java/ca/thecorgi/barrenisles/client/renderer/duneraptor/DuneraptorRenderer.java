@@ -1,6 +1,7 @@
-package ca.thecorgi.barrenisles.client.renderer;
+package ca.thecorgi.barrenisles.client.renderer.duneraptor;
 
 import ca.thecorgi.barrenisles.client.model.DuneraptorModel;
+import ca.thecorgi.barrenisles.client.renderer.GeoMobRenderer;
 import ca.thecorgi.barrenisles.entity.DuneraptorEntity;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;

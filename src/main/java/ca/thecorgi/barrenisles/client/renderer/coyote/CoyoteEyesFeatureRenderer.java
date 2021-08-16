@@ -7,6 +7,7 @@ import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.LightType;
 import software.bernie.geckolib3.renderers.geo.GeoLayerRenderer;
 import software.bernie.geckolib3.renderers.geo.IGeoRenderer;
 
@@ -23,8 +24,10 @@ public class CoyoteEyesFeatureRenderer extends GeoLayerRenderer<CoyoteEntity> {
     }
 
     protected boolean isHungry(CoyoteEntity entity) {
-        long x = entity.world.getTimeOfDay();
-        if (x > 13000 && x < 24000) {
+        int x = entity.world.getLightLevel(LightType.SKY, entity.getBlockPos()) - entity.world.getAmbientDarkness();
+//        if (x > 13000 && x < 24000) {
+        System.out.println(x);
+        if (x > 0) {
             return true;
         } else {
             return false;

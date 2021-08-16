@@ -1,4 +1,4 @@
-package ca.thecorgi.barrenisles.mixin;
+package ca.thecorgi.barrenisles.mixin.world.structures;
 
 import net.minecraft.world.gen.chunk.StructureConfig;
 import net.minecraft.world.gen.chunk.StructuresConfig;

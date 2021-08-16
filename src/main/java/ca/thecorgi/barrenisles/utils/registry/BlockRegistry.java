@@ -2,25 +2,29 @@ package ca.thecorgi.barrenisles.utils.registry;
 
 import ca.thecorgi.barrenisles.BarrenIsles;
 import ca.thecorgi.barrenisles.blocks.*;
+import ca.thecorgi.barrenisles.blocks.blockentities.GoldVaseBlockEntity;
+import ca.thecorgi.barrenisles.blocks.blockentities.VaseBlockEntity;
 import ca.thecorgi.barrenisles.feature.tree.PalmSaplingGenerator;
-import ca.thecorgi.barrenisles.food.BarrenIslesFoodComponents;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.*;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.client.color.world.FoliageColors;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.*;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import org.jetbrains.annotations.Nullable;
@@ -52,11 +56,14 @@ public class BlockRegistry {
     public static final Block MARIGOLD = new DesertFlowerBlock(StatusEffects.SPEED, 40, FabricBlockSettings.copyOf(Blocks.DANDELION));
     public static final Block DESERT_LILY = new TallDesertFlowerBlock(FabricBlockSettings.copyOf(Blocks.ROSE_BUSH));
     public static final Block SUSPICIOUS_BERRY_BUSH = new SuspiciousBerryBushBlock(FabricBlockSettings.copy(Blocks.SWEET_BERRY_BUSH));
-    public static final Item SUSPICIOUS_BERRIES = new AliasedBlockItem(SUSPICIOUS_BERRY_BUSH, new FabricItemSettings().group(BARREN_ISLES).food(BarrenIslesFoodComponents.SUSPICIOUS_BERRIES_C));
     public static final Block THORNWEED = new ThornweedBlock(FabricBlockSettings.copyOf(Blocks.DEAD_BUSH));
     public static final Block BARREL_CACTUS = new ThornweedBlock(FabricBlockSettings.copyOf(Blocks.DEAD_BUSH));
-    public static final Block COCONUT_BLOCK = new CoconutBlock(FabricBlockSettings.copyOf(Blocks.COCOA));
-    public static final Item COCONUT = new AliasedBlockItem(COCONUT_BLOCK, new FabricItemSettings().group(BARREN_ISLES).food(FoodComponents.MELON_SLICE));
+    public static final Block COCONUT = new CoconutBlock(FabricBlockSettings.copyOf(Blocks.COCOA));
+    public static final Block VASE = new VaseBlock(AbstractBlock.Settings.of(Material.DECORATION).strength(0.3F).nonOpaque());
+    public static final Block GOLD_VASE = new GoldVaseBlock(AbstractBlock.Settings.of(Material.DECORATION).strength(0.6F).nonOpaque());
+
+    public static final BlockEntityType<VaseBlockEntity> VASE_BLOCK_ENTITY = FabricBlockEntityTypeBuilder.create(VaseBlockEntity::new, VASE).build();
+    public static final BlockEntityType<GoldVaseBlockEntity> GOLD_VASE_BLOCK_ENTITY = FabricBlockEntityTypeBuilder.create(GoldVaseBlockEntity::new, GOLD_VASE).build();
 
     public static void register() {
         register("palm_log", PALM_LOG);
@@ -79,12 +86,14 @@ public class BlockRegistry {
         register("poison_ivy", POISON_IVY);
         register("agave", AGAVE);
         register("desert_lily", DESERT_LILY);
-        register("suspicious_berry_bush", SUSPICIOUS_BERRY_BUSH);
-        Registry.register(Registry.ITEM, new Identifier(ModID, "suspicious_berries"), SUSPICIOUS_BERRIES);
+        register("suspicious_berry_bush", SUSPICIOUS_BERRY_BUSH, (Item) null);
         register("thornweed", THORNWEED);
         register("barrel_cactus", BARREL_CACTUS);
-        register("coconut_block", COCONUT_BLOCK, (Item) null);
-        Registry.register(Registry.ITEM, new Identifier(ModID, "coconut"), COCONUT);
+        register("coconut", COCONUT, (Item) null);
+        register("vase", VASE, (Item) null);
+        register("gold_vase", GOLD_VASE, (Item) null);
+
+        Registry.register(Registry.BLOCK_ENTITY_TYPE, new Identifier(ModID, "vase_block_entity"), VASE_BLOCK_ENTITY);
 
         FuelRegistry fuelReg = FuelRegistry.INSTANCE;
         fuelReg.add(PALM_FENCE, 300);
@@ -110,7 +119,7 @@ public class BlockRegistry {
         );
 
         BlockRenderLayerMap.INSTANCE.putBlocks(
-                RenderLayer.getCutout(), PALM_SAPLING, PALM_DOOR, PALM_TRAPDOOR, MARIGOLD, AGAVE, POISON_IVY, THORNWEED, WINECUP, DESERT_LILY, BARREL_CACTUS, SUSPICIOUS_BERRY_BUSH, COCONUT_BLOCK);
+                RenderLayer.getCutout(), PALM_SAPLING, PALM_DOOR, PALM_TRAPDOOR, MARIGOLD, AGAVE, POISON_IVY, THORNWEED, WINECUP, DESERT_LILY, BARREL_CACTUS, SUSPICIOUS_BERRY_BUSH, COCONUT);
 
         ColorProviderRegistry.BLOCK.register(
                 (state, world, pos, tintIndex) -> {

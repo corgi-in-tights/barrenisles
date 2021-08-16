@@ -38,7 +38,7 @@ public class PalmTreeDecorator extends TreeDecorator {
                 };
 
                 BlockPos targetPosition = logPosition.offset(side, 1);
-                replacer.accept(targetPosition, BlockRegistry.COCONUT_BLOCK.getDefaultState());
+                replacer.accept(targetPosition, BlockRegistry.COCONUT.getDefaultState());
             }
         }
     }

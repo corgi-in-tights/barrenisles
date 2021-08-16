@@ -1,4 +1,4 @@
-package ca.thecorgi.barrenisles.mixin;
+package ca.thecorgi.barrenisles.mixin.world.features;
 
 import com.mojang.serialization.Codec;
 import net.minecraft.world.gen.trunk.TrunkPlacer;

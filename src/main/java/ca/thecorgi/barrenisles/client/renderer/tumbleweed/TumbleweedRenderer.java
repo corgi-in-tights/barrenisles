@@ -1,4 +1,4 @@
-package ca.thecorgi.barrenisles.client.renderer;
+package ca.thecorgi.barrenisles.client.renderer.tumbleweed;
 
 import ca.thecorgi.barrenisles.client.model.TumbleweedModel;
 import ca.thecorgi.barrenisles.entity.TumbleweedEntity;

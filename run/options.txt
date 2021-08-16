@@ -26,13 +26,13 @@ fovEffectScale:1.0
 gamma:1.0
 renderDistance:12
 entityDistanceScaling:1.0
-guiScale:0
+guiScale:4
 particles:0
 maxFps:120
 difficulty:2
 graphicsMode:1
-ao:0
-biomeBlendRadius:2
+ao:2
+biomeBlendRadius:4
 renderClouds:true
 resourcePacks:["vanilla","Fabric Mods"]
 incompatibleResourcePacks:[]

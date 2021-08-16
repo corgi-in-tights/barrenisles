@@ -27,7 +27,7 @@ public class PoisonIvyBlock extends PlantBlock {
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
         if (entity instanceof LivingEntity) {
             entity.slowMovement(state, new Vec3d(0.400000011920929D, 0.425D, 0.400000011920929D));
-            ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.POISON,2,1,true,false));
+            ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.POISON,3,1,true,false));
         }
     }
 }

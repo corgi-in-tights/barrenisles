@@ -25,7 +25,7 @@
       "ca.thecorgi.barrenisles.BarrenIsles"
     ],
     "client": [
-      "ca.thecorgi.barrenisles.client.ClientInit"
+      "ca.thecorgi.barrenisles.BarrenIslesClient"
     ],
     "modmenu": [
       "ca.thecorgi.barrenisles.utils.config.ModMenuCompat"

@@ -1,0 +1,12 @@
+{
+  "barren_night": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "barrenisles:records/barren_night",
+        "stream": true,
+        "attenuation_distance": 16
+      }
+    ]
+  }
+}
