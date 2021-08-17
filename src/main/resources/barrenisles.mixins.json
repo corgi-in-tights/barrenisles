@@ -12,7 +12,8 @@
     "world.structures.StructuresConfigAccessor"
   ],
   "client": [
-    "StopExperimentalAdvice"
+    "StopExperimentalAdviceMixin",
+    "blocks.BlockOverlayRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

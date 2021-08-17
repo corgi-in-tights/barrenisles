@@ -3,29 +3,19 @@ package ca.thecorgi.barrenisles.entity;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ai.Durations;
-import net.minecraft.entity.ai.goal.*;
+import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.data.DataTracker;
-import net.minecraft.entity.data.TrackedData;
-import net.minecraft.entity.data.TrackedDataHandlerRegistry;
-import net.minecraft.entity.mob.Angerable;
 import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.entity.passive.AnimalEntity;
-import net.minecraft.entity.passive.PassiveEntity;
+import net.minecraft.entity.mob.SpiderEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
-import net.minecraft.nbt.NbtCompound;
-import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
-import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.LightType;
 import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
 import software.bernie.geckolib3.core.builder.AnimationBuilder;
@@ -34,20 +24,18 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-import java.util.UUID;
-
 import static ca.thecorgi.barrenisles.BarrenIsles.config;
 
 
 @SuppressWarnings("EntityConstructor")
-public class CoyoteEntity extends AnimalEntity implements IAnimatable, Angerable {
-    private static final TrackedData<Integer> ANGER_TIME;
-    private static final UniformIntProvider ANGER_TIME_RANGE;
-    private UUID targetUuid;
+public class CoyoteEntity extends SpiderEntity implements IAnimatable {
+//    private static final TrackedData<Integer> ANGER_TIME;
+//    private static final UniformIntProvider ANGER_TIME_RANGE;
+//    private UUID targetUuid;
 
     AnimationFactory factory = new AnimationFactory(this);
 
-    public CoyoteEntity(EntityType<? extends AnimalEntity> type, World world) {
+    public CoyoteEntity(EntityType<? extends SpiderEntity> type, World world) {
         super(type, world);
         this.ignoreCameraFrustum = true;
     }
@@ -62,7 +50,7 @@ public class CoyoteEntity extends AnimalEntity implements IAnimatable, Angerable
 
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
-        if (event.isMoving() && !this.isAttacking()) {
+        if (event.isMoving()) {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("coyote.walk", true));
         } else {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("coyote.idle", true));
@@ -79,58 +67,58 @@ public class CoyoteEntity extends AnimalEntity implements IAnimatable, Angerable
     public AnimationFactory getFactory() {
         return this.factory;
     }
-
-
-    @Override
-    protected void initGoals() {
-        this.goalSelector.add(1, new SwimGoal(this));
-        this.targetSelector.add(2, (new RevengeGoal(this, new Class[0])).setGroupRevenge());
-        this.targetSelector.add(3, new FollowTargetGoal<PlayerEntity>(this, PlayerEntity.class,true));
-        this.goalSelector.add(4, new PounceAtTargetGoal(this, 0.4F));
-        this.goalSelector.add(5, new NightAttackGoal(this));
-        this.goalSelector.add(6, new AnimalMateGoal(this, 1.0D));
-        this.goalSelector.add(7, new WanderAroundFarGoal(this, 1.0D));
-        this.targetSelector.add(8, new UniversalAngerGoal(this, true));
-        this.goalSelector.add(9, new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
-        this.goalSelector.add(10, new LookAroundGoal(this));
-    }
+//
+//
+//    @Override
+//    protected void initGoals() {
+//        this.goalSelector.add(1, new SwimGoal(this));
+//        this.targetSelector.add(2, (new RevengeGoal(this, new Class[0])).setGroupRevenge());
+//        this.targetSelector.add(3, new FollowTargetGoal<PlayerEntity>(this, PlayerEntity.class,true));
+//        this.goalSelector.add(4, new PounceAtTargetGoal(this, 0.4F));
+//        this.goalSelector.add(5, new NightAttackGoal(this));
+//        this.goalSelector.add(6, new AnimalMateGoal(this, 1.0D));
+//        this.goalSelector.add(7, new WanderAroundFarGoal(this, 1.0D));
+//        this.targetSelector.add(8, new UniversalAngerGoal(this, true));
+//        this.goalSelector.add(9, new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
+//        this.goalSelector.add(10, new LookAroundGoal(this));
+//    }
 
 //    @Override
 //    public void setTamed(boolean tamed) {
 //    }
 
-    @Nullable
-    @Override
-    public PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
-        return null;
-    }
-
-    protected void initDataTracker() {
-        super.initDataTracker();
-        this.dataTracker.startTracking(ANGER_TIME, 0);
-    }
-
-    public void writeCustomDataToNbt(NbtCompound nbt) {
-        super.writeCustomDataToNbt(nbt);
-        this.writeAngerToNbt(nbt);
-    }
-
-    public void readCustomDataFromNbt(NbtCompound nbt) {
-        super.readCustomDataFromNbt(nbt);
-        this.readAngerFromNbt(this.world, nbt);
-    }
-
-    public void tickMovement() {
-        super.tickMovement();
-        if (!this.world.isClient && this.onGround) {
-            this.world.sendEntityStatus(this, (byte)8);
-        }
-
-        if (!this.world.isClient) {
-            this.tickAngerLogic((ServerWorld)this.world, true);
-        }
-
-    }
+//    @Nullable
+//    @Override
+//    public PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
+//        return null;
+//    }
+////
+//    protected void initDataTracker() {
+//        super.initDataTracker();
+////        this.dataTracker.startTracking(ANGER_TIME, 0);
+//    }
+//
+//    public void writeCustomDataToNbt(NbtCompound nbt) {
+//        super.writeCustomDataToNbt(nbt);
+////        this.writeAngerToNbt(nbt);
+//    }
+//
+//    public void readCustomDataFromNbt(NbtCompound nbt) {
+//        super.readCustomDataFromNbt(nbt);
+////        this.readAngerFromNbt(this.world, nbt);
+//    }
+//
+//    public void tickMovement() {
+//        super.tickMovement();
+//        if (!this.world.isClient && this.onGround) {
+//            this.world.sendEntityStatus(this, (byte)8);
+//        }
+//
+//        if (!this.world.isClient) {
+//            this.tickAngerLogic((ServerWorld)this.world, true);
+//        }
+//
+//    }
 
     public void tick() {
         super.tick();
@@ -210,26 +198,26 @@ public class CoyoteEntity extends AnimalEntity implements IAnimatable, Angerable
         return 8;
     }
 
-    public int getAngerTime() {
-        return (Integer)this.dataTracker.get(ANGER_TIME);
-    }
-
-    public void setAngerTime(int ticks) {
-        this.dataTracker.set(ANGER_TIME, ticks);
-    }
-
-    public void chooseRandomAngerTime() {
-        this.setAngerTime(ANGER_TIME_RANGE.get(this.random));
-    }
-
-    @Nullable
-    public UUID getAngryAt() {
-        return this.targetUuid;
-    }
-
-    public void setAngryAt(@Nullable UUID uuid) {
-        this.targetUuid = uuid;
-    }
+//    public int getAngerTime() {
+//        return (Integer)this.dataTracker.get(ANGER_TIME);
+//    }
+//
+//    public void setAngerTime(int ticks) {
+//        this.dataTracker.set(ANGER_TIME, ticks);
+//    }
+//
+//    public void chooseRandomAngerTime() {
+//        this.setAngerTime(ANGER_TIME_RANGE.get(this.random));
+//    }
+//
+//    @Nullable
+//    public UUID getAngryAt() {
+//        return this.targetUuid;
+//    }
+//
+//    public void setAngryAt(@Nullable UUID uuid) {
+//        this.targetUuid = uuid;
+//    }
 
 //    public CoyoteEntity createChild(ServerWorld serverWorld, PassiveEntity passiveEntity) {
 //        CoyoteEntity coyoteEntity = (CoyoteEntity)EntityType.WOLF.create(serverWorld);
@@ -241,29 +229,29 @@ public class CoyoteEntity extends AnimalEntity implements IAnimatable, Angerable
 //        return coyoteEntity;
 //    }
 
-    public boolean canBreedWith(AnimalEntity other) {
-        if (other == this) {
-            return false;
-        } else if (!(other instanceof CoyoteEntity)) {
-            return false;
-        } else {
-            CoyoteEntity coyoteEntity = (CoyoteEntity)other;
-            return this.isInLove() && coyoteEntity.isInLove();
-        }
-    }
+//    public boolean canBreedWith(AnimalEntity other) {
+//        if (other == this) {
+//            return false;
+//        } else if (!(other instanceof CoyoteEntity)) {
+//            return false;
+//        } else {
+//            CoyoteEntity coyoteEntity = (CoyoteEntity)other;
+//            return this.isInLove() && coyoteEntity.isInLove();
+//        }
+//    }
 
-    public boolean canBeLeashedBy(PlayerEntity player) {
-        return !this.hasAngerTime() && super.canBeLeashedBy(player);
-    }
+//    public boolean canBeLeashedBy(PlayerEntity player) {
+//        return !this.hasAngerTime() && super.canBeLeashedBy(player);
+//    }
 
     public Vec3d getLeashOffset() {
         return new Vec3d(0.0D, (double)(0.6F * this.getStandingEyeHeight()), (double)(this.getWidth() * 0.4F));
     }
 
-    static {
-        ANGER_TIME = DataTracker.registerData(CoyoteEntity.class, TrackedDataHandlerRegistry.INTEGER);
-        ANGER_TIME_RANGE = Durations.betweenSeconds(20, 39);
-    }
+//    static {
+//        ANGER_TIME = DataTracker.registerData(CoyoteEntity.class, TrackedDataHandlerRegistry.INTEGER);
+//        ANGER_TIME_RANGE = Durations.betweenSeconds(20, 39);
+//    }
 }
 
 

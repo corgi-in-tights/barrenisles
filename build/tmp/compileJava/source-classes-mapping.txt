@@ -8,8 +8,6 @@ ca/thecorgi/barrenisles/feature/structures/OasisStructure.java
  ca.thecorgi.barrenisles.feature.structures.OasisStructure$Start
 ca/thecorgi/barrenisles/client/gui/VaseGUI.java
  ca.thecorgi.barrenisles.client.gui.VaseGUI
-ca/thecorgi/barrenisles/mixin/StopExperimentalAdvice.java
- ca.thecorgi.barrenisles.mixin.StopExperimentalAdvice
 ca/thecorgi/barrenisles/feature/tree/PalmFoliagePlacer.java
  ca.thecorgi.barrenisles.feature.tree.PalmFoliagePlacer
 ca/thecorgi/barrenisles/BarrenIsles.java
@@ -35,6 +33,8 @@ ca/thecorgi/barrenisles/feature/tree/PalmTrunkPlacer.java
  ca.thecorgi.barrenisles.feature.tree.PalmTrunkPlacer
 ca/thecorgi/barrenisles/blocks/TallDesertFlowerBlock.java
  ca.thecorgi.barrenisles.blocks.TallDesertFlowerBlock
+ca/thecorgi/barrenisles/client/renderer/QuicksandOverlay.java
+ ca.thecorgi.barrenisles.client.renderer.QuicksandOverlay
 ca/thecorgi/barrenisles/entity/TumbleweedEntity.java
  ca.thecorgi.barrenisles.entity.TumbleweedEntity
 ca/thecorgi/barrenisles/client/model/TumbleweedModel.java
@@ -45,6 +45,10 @@ ca/thecorgi/barrenisles/blocks/VaseBlock.java
  ca.thecorgi.barrenisles.blocks.VaseBlock
 ca/thecorgi/barrenisles/utils/registry/ItemRegistry.java
  ca.thecorgi.barrenisles.utils.registry.ItemRegistry
+ca/thecorgi/barrenisles/utils/registry/ParticleRegistry.java
+ ca.thecorgi.barrenisles.utils.registry.ParticleRegistry
+ca/thecorgi/barrenisles/blocks/QuicksandBlock.java
+ ca.thecorgi.barrenisles.blocks.QuicksandBlock
 ca/thecorgi/barrenisles/client/renderer/tumbleweed/TumbleweedRenderer.java
  ca.thecorgi.barrenisles.client.renderer.tumbleweed.TumbleweedRenderer
 ca/thecorgi/barrenisles/blocks/PalmSaplingBlock.java
@@ -88,6 +92,8 @@ ca/thecorgi/barrenisles/utils/config/BarrenIslesConfig.java
  ca.thecorgi.barrenisles.utils.config.BarrenIslesConfig$Generation
  ca.thecorgi.barrenisles.utils.config.BarrenIslesConfig$Spawning
  ca.thecorgi.barrenisles.utils.config.BarrenIslesConfig$Stats
+ca/thecorgi/barrenisles/mixin/StopExperimentalAdviceMixin.java
+ ca.thecorgi.barrenisles.mixin.StopExperimentalAdviceMixin
 ca/thecorgi/barrenisles/mixin/world/features/TreeDecoratorTypeInvoker.java
  ca.thecorgi.barrenisles.mixin.world.features.TreeDecoratorTypeInvoker
 ca/thecorgi/barrenisles/mixin/world/features/TrunkPlacerTypeInvoker.java
@@ -98,6 +104,8 @@ ca/thecorgi/barrenisles/utils/registry/EntityRegistry.java
  ca.thecorgi.barrenisles.utils.registry.EntityRegistry
 ca/thecorgi/barrenisles/utils/registry/SpawnRegistry.java
  ca.thecorgi.barrenisles.utils.registry.SpawnRegistry
+ca/thecorgi/barrenisles/mixin/blocks/BlockOverlayRendererMixin.java
+ ca.thecorgi.barrenisles.mixin.blocks.BlockOverlayRendererMixin
 ca/thecorgi/barrenisles/entity/TumbleGoal.java
  ca.thecorgi.barrenisles.entity.TumbleGoal
 ca/thecorgi/barrenisles/client/gui/GoldVaseGUI.java

@@ -7,7 +7,7 @@ import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.LightType;
+import net.minecraft.util.math.BlockPos;
 import software.bernie.geckolib3.renderers.geo.GeoLayerRenderer;
 import software.bernie.geckolib3.renderers.geo.IGeoRenderer;
 
@@ -23,16 +23,29 @@ public class CoyoteEyesFeatureRenderer extends GeoLayerRenderer<CoyoteEntity> {
         this.renderer = entityRendererIn;
     }
 
+//    protected boolean isHungry(CoyoteEntity entity) {
+//        int x = entity.world.getLightLevel(LightType.BLOCK, entity.getBlockPos());
+////        System.out.println(entity.
+//        if (x > 5) {
+//            return true;
+//        } else {
+//            return false;
+//        }
+//    }
     protected boolean isHungry(CoyoteEntity entity) {
-        int x = entity.world.getLightLevel(LightType.SKY, entity.getBlockPos()) - entity.world.getAmbientDarkness();
-//        if (x > 13000 && x < 24000) {
-        System.out.println(x);
-        if (x > 0) {
-            return true;
-        } else {
-            return false;
+        if (entity.world.isDay() && !entity.world.isClient) {
+            float f = entity.getBrightnessAtEyes();
+            BlockPos blockPos = new BlockPos(entity.getX(), entity.getEyeY(), entity.getZ());
+//        if (f > 0.5F && entity.getRandom().random.nextFloat() * 30.0F < (f - 0.4F) * 2.0F && entity.world.isSkyVisible(blockPos)) {
+            if (f > 0.5F && entity.world.random.nextFloat() * 30.0F < (f - 0.4F) * 2.0F && entity.world.isSkyVisible(blockPos)) {
+                return true;
+            } else if (entity.world.getLightLevel(entity.getBlockPos()) < 5) {
+                return true;
+            }
         }
+        return false;
     }
+
 
     @Override
     public void render(MatrixStack matrixStackIn, VertexConsumerProvider bufferIn, int packedLightIn, CoyoteEntity entitylivingbaseIn, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {

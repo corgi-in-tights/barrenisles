@@ -25,6 +25,7 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import org.jetbrains.annotations.Nullable;
@@ -61,6 +62,7 @@ public class BlockRegistry {
     public static final Block COCONUT = new CoconutBlock(FabricBlockSettings.copyOf(Blocks.COCOA));
     public static final Block VASE = new VaseBlock(AbstractBlock.Settings.of(Material.DECORATION).strength(0.3F).nonOpaque());
     public static final Block GOLD_VASE = new GoldVaseBlock(AbstractBlock.Settings.of(Material.DECORATION).strength(0.6F).nonOpaque());
+    public static final Block QUICKSAND = new QuicksandBlock(FabricBlockSettings.of(Material.POWDER_SNOW).strength(0.7F).breakByTool(FabricToolTags.SHOVELS).sounds(BlockSoundGroup.POWDER_SNOW).dynamicBounds());
 
     public static final BlockEntityType<VaseBlockEntity> VASE_BLOCK_ENTITY = FabricBlockEntityTypeBuilder.create(VaseBlockEntity::new, VASE).build();
     public static final BlockEntityType<GoldVaseBlockEntity> GOLD_VASE_BLOCK_ENTITY = FabricBlockEntityTypeBuilder.create(GoldVaseBlockEntity::new, GOLD_VASE).build();
@@ -92,6 +94,7 @@ public class BlockRegistry {
         register("coconut", COCONUT, (Item) null);
         register("vase", VASE, (Item) null);
         register("gold_vase", GOLD_VASE, (Item) null);
+        register("quicksand", QUICKSAND, (Item) null);
 
         Registry.register(Registry.BLOCK_ENTITY_TYPE, new Identifier(ModID, "vase_block_entity"), VASE_BLOCK_ENTITY);
 

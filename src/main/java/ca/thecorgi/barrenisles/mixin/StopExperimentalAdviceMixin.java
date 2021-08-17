@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import static ca.thecorgi.barrenisles.BarrenIsles.config;
 
 @Mixin(MinecraftClient.class)
-public abstract class StopExperimentalAdvice {
+public abstract class StopExperimentalAdviceMixin {
         // taken from https://www.curseforge.com/minecraft/mc-mods/fabric-disable-custom-worlds-advice
         @ModifyVariable(
                 method = "startIntegratedServer(Ljava/lang/String;Lnet/minecraft/util/registry/DynamicRegistryManager$Impl;Ljava/util/function/Function;Lcom/mojang/datafixers/util/Function4;ZLnet/minecraft/client/MinecraftClient$WorldLoadAction;)V",
