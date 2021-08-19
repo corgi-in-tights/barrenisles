@@ -104,8 +104,6 @@ ca/thecorgi/barrenisles/utils/registry/EntityRegistry.java
  ca.thecorgi.barrenisles.utils.registry.EntityRegistry
 ca/thecorgi/barrenisles/utils/registry/SpawnRegistry.java
  ca.thecorgi.barrenisles.utils.registry.SpawnRegistry
-ca/thecorgi/barrenisles/mixin/blocks/BlockOverlayRendererMixin.java
- ca.thecorgi.barrenisles.mixin.blocks.BlockOverlayRendererMixin
 ca/thecorgi/barrenisles/entity/TumbleGoal.java
  ca.thecorgi.barrenisles.entity.TumbleGoal
 ca/thecorgi/barrenisles/client/gui/GoldVaseGUI.java

@@ -62,8 +62,8 @@ public class BlockRegistry {
     public static final Block COCONUT = new CoconutBlock(FabricBlockSettings.copyOf(Blocks.COCOA));
     public static final Block VASE = new VaseBlock(AbstractBlock.Settings.of(Material.DECORATION).strength(0.3F).nonOpaque());
     public static final Block GOLD_VASE = new GoldVaseBlock(AbstractBlock.Settings.of(Material.DECORATION).strength(0.6F).nonOpaque());
-    public static final Block QUICKSAND = new QuicksandBlock(FabricBlockSettings.of(Material.POWDER_SNOW).strength(0.7F).breakByTool(FabricToolTags.SHOVELS).sounds(BlockSoundGroup.POWDER_SNOW).dynamicBounds());
-
+    public static final Block QUICKSAND = new QuicksandBlock(FabricBlockSettings.of(Material.POWDER_SNOW).strength(0.344F).breakByTool(FabricToolTags.SHOVELS).sounds(BlockSoundGroup.POWDER_SNOW).nonOpaque().dynamicBounds());
+//    public static final Block QUICKSAND = new QuicksandBlock(AbstractBlock.Settings.of(Material.POWDER_SNOW).strength(0.4F).sounds(BlockSoundGroup.POWDER_SNOW).dynamicBounds());
     public static final BlockEntityType<VaseBlockEntity> VASE_BLOCK_ENTITY = FabricBlockEntityTypeBuilder.create(VaseBlockEntity::new, VASE).build();
     public static final BlockEntityType<GoldVaseBlockEntity> GOLD_VASE_BLOCK_ENTITY = FabricBlockEntityTypeBuilder.create(GoldVaseBlockEntity::new, GOLD_VASE).build();
 
