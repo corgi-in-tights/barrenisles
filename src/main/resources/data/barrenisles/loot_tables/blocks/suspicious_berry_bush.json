@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "barrenisles:suspicious_berries"
+          "name": "barrenisles:suspicious_berry_bush"
         }
       ],
       "conditions": [
@@ -42,7 +42,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "barrenisles:suspicious_berries"
+          "name": "barrenisles:suspicious_berry_bush"
         }
       ],
       "conditions": [

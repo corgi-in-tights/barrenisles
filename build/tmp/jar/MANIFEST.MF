@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Specification-Title: barrenisles
+Specification-Vendor: barrenislessareus
+Specification-Version: 1
+Implementation-Title: barrenisles-forge
+Implementation-Version: 1.0
+Implementation-Vendor: barrenislessareus
+Implementation-Timestamp: 2021-08-22T12:59:08+0200
+

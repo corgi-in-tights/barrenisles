@@ -5,26 +5,36 @@ chatColors:true
 chatLinks:true
 chatLinksPrompt:true
 enableVsync:true
+<<<<<<< Updated upstream
 entityShadows:true
 forceUnicodeFont:true
+=======
+entityShadows:false
+forceUnicodeFont:false
+>>>>>>> Stashed changes
 discrete_mouse_scroll:false
 invertYMouse:false
 realmsNotifications:true
 reducedDebugInfo:false
 snooperEnabled:false
+<<<<<<< Updated upstream
 showSubtitles:true
+=======
+showSubtitles:false
+>>>>>>> Stashed changes
 touchscreen:false
 fullscreen:false
 bobView:true
 toggleCrouch:false
 toggleSprint:false
 mouseSensitivity:0.5
-fov:0.0
+fov:0.5
 screenEffectScale:1.0
 fovEffectScale:1.0
 gamma:3.0
 renderDistance:10
 entityDistanceScaling:1.0
+<<<<<<< Updated upstream
 guiScale:0
 particles:0
 maxFps:60
@@ -34,6 +44,17 @@ ao:2
 biomeBlendRadius:2
 renderClouds:true
 resourcePacks:["vanilla","mod_resources"]
+=======
+guiScale:2
+particles:1
+maxFps:120
+difficulty:2
+graphicsMode:0
+ao:0
+biomeBlendRadius:2
+renderClouds:false
+resourcePacks:["vanilla","Fabric Mods"]
+>>>>>>> Stashed changes
 incompatibleResourcePacks:[]
 lastServer:
 lang:de_de
@@ -64,8 +85,13 @@ rawMouseInput:true
 glDebugVerbosity:1
 skipMultiplayerWarning:true
 hideMatchedNames:true
+<<<<<<< Updated upstream
 joinedFirstServer:false
 syncChunkWrites:true
+=======
+joinedFirstServer:true
+syncChunkWrites:false
+>>>>>>> Stashed changes
 key_key.attack:key.mouse.left
 key_key.use:key.mouse.right
 key_key.forward:key.keyboard.w

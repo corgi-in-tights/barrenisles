@@ -26,5 +26,13 @@
       <option name="name" value="maven" />
       <option name="url" value="https://maven.minecraftforge.net/" />
     </remote-repository>
+<<<<<<< Updated upstream
+=======
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/" />
+    </remote-repository>
+>>>>>>> Stashed changes
   </component>
 </project>

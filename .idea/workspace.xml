@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a79abc9b-cbb6-490d-92ec-70ac980b10a0" name="Default Changelist" comment="">
+<<<<<<< Updated upstream
       <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/structures/badlands_temple_structure.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/structures/badlands_temple_bottom.nbt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/structures/badlands_temple_top.nbt" afterDir="false" />
@@ -37,16 +38,219 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/.mixin.out/audit/mixin_implementation_report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/.mixin.out/audit/mixin_implementation_report.txt" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/.gradle/7.1.1/dependencies-accessors/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.1.1/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.1.1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Sammy_HD.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/barrenisles-forge.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/barrenisles-forge.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/barrenisles.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/barrenisles.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changelog.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/BarrenIsles.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/ClientListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/CommonListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/Creative_Tab.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/blocks/BushBlock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/blocks/DesertFlowerBlock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/blocks/SusBerryBush.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/blocks/TallDesertFlowerBlock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/blocks/TallFlowerBlock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/blocks/Thornweed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/entitys/duneraptor/DuneraptorEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/entitys/duneraptor/DuneraptorModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/entitys/duneraptor/DuneraptorRenderer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/items/Coconut_open.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/items/CookedDrumstick.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/items/Drumstick.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/items/DuneraptorFeather.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/items/DuneraptorSpawnEgg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/items/PalmButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/items/PalmDoorItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/items/PalmLogItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/items/PalmPlanksItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/items/PalmPressurePlate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/items/PalmTrapdoorItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/items/SUS_BERRY.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/setup/ConfigureStructures.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/setup/EntityRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/setup/ModBlocks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/setup/ModItems.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/setup/ModStructures.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/setup/Registration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/structures/oasis_structure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/structures/rock_1_structure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/structures/rock_2_structure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/tree/FeatureUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/tree/NormalPalmTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/tree/NormalPalmTreeFeature.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/tree/PalmFoliagePlacer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/tree/PalmTreeFeature.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/tree/PalmTrunkPlacer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/tree/TreeFeatures.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/tree/mixin/TrunkPlacerTypeInvoker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/accesstransformer.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/mods.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/blockstates/coconut.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/lang/de_de.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/suspicious_berry_bush.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/coconut_open.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/suspicious_berry_bush.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/suspicious_berry_bush.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/item/coconut.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/items/cooked_drumstick.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/items/drumstick.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/items/dune_feather.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/items/palm_door.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/open_coconut_1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/open_coconut_2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/open_coconut_3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/recipes/palm_door.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pack.mcmeta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ca/thecorgi/barrenisles/BarrenIsles.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ca/thecorgi/barrenisles/client/ClientInit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ca/thecorgi/barrenisles/client/model/DuneraptorModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ca/thecorgi/barrenisles/client/renderer/DuneraptorRenderer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ca/thecorgi/barrenisles/utils/registry/EntityRegistry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/barrenisles/animations/duneraptor.animation.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/fabric.mod.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/remapJar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/sourcesJar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/.mixin.out/audit/mixin_implementation_report.csv" beforeDir="false" afterPath="$PROJECT_DIR$/run/.mixin.out/audit/mixin_implementation_report.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/.mixin.out/audit/mixin_implementation_report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/.mixin.out/audit/mixin_implementation_report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/run/logs/debug-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-2.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-3.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-4.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-4.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-5.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-5.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/latest.log" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/BarrenIsles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/BarrenIsles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/setup/ConfigureStructures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/setup/ConfigureStructures.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/setup/ModStructures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/setup/ModStructures.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/run/options.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/options.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/BSChunkGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/BarrenIsles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/blocks/CoconutBlock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/blocks/DesertFlowerBlock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/blocks/PalmDoorBlock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/blocks/PalmSaplingBlock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/blocks/PalmTrapdoorBlock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/blocks/PoisonIvyBlock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/blocks/SuspiciousBerryBushBlock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/blocks/TallDesertFlowerBlock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/blocks/ThornweedBlock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/client/ClientInit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/client/model/CoyoteModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/client/model/DuneraptorModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/client/model/TumbleweedModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/client/renderer/DuneraptorRenderer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/client/renderer/GeoMobRenderer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/client/renderer/TumbleweedRenderer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/client/renderer/coyote/CoyoteEyesFeatureRenderer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/client/renderer/coyote/CoyoteRenderer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/entity/CoyoteEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/entity/DuneraptorEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/entity/TumbleGoal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/entity/TumbleweedEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/feature/structures/BadlandsTempleStructure.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/feature/structures/OasisStructure.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/feature/structures/Rock1Structure.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/feature/structures/TallRock2Structure.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/feature/tree/PalmFoliagePlacer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/feature/tree/PalmSaplingGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/feature/tree/PalmTreeDecorator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/feature/tree/PalmTrunkPlacer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/food/BarrenIslesFoodComponents.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/mixin/FoliagePlacerTypeInvoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/tree/mixin/FoliagePlacerTypeInvoker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/mixin/NoiseChunkGeneratorMixin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/mixin/SpawnRestrictionMixin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/mixin/StopExperimentalAdvice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/mixin/StructuresConfigAccessor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/mixin/TreeDecoratorTypeInvoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/xyndra/barrenisles/tree/mixin/TreeDecoratorTypeInvoker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/mixin/TrunkPlacerTypeInvoker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/utils/config/BarrenIslesConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/utils/config/ModMenuCompat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/utils/registry/BlockRegistry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/utils/registry/DimensionRegistry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/utils/registry/EntityRegistry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/utils/registry/FeatureRegistry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/utils/registry/GroupRegistry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/utils/registry/ItemRegistry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/utils/registry/SpawnRegistry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/thecorgi/barrenisles/utils/registry/StructureRegistry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/animations/coyote.animation.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/blockstates/coconut_block.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/geo/coyote.geo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/geo/tumbleweed.geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/geo/tumbleweed.geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/lang/en_us.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/coconut_block_stage0.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/coconut_stage0.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/coconut_block_stage1.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/coconut_stage1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/coconut_block_stage2.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/block/coconut_stage2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/coconut.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/coconut.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/coyote_spawn_egg.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/models/item/suspicious_berries.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/coconut_block.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/coconut_block.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/palm_leaves.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/palm_leaves.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/palm_leaves_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/palm_leaves_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/thornweed.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/block/thornweed.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/entity/coyote/coyote.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/entity/coyote/coyote_eyes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/entity/duneraptor.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/model/entity/duneraptor.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/entity/tumbleweed.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/model/entity/tumbleweed.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/item/suspicious_berries.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/barrenisles/textures/item/suspicious_berry_bush.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/barrenisles.mixins.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/barrenisles/dimension/barren_isles.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/barrenisles/dimension_type/barren_isles_type.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/barrenisles/loot_tables/blocks/coconut_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/loot_tables/blocks/coconut.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/barrenisles/loot_tables/blocks/desert_lily.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/loot_tables/blocks/desert_lily.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/barrenisles/loot_tables/blocks/palm_leaves.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/loot_tables/blocks/palm_leaves.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/barrenisles/loot_tables/blocks/suspicious_berry_bush.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/loot_tables/blocks/suspicious_berry_bush.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/barrenisles/loot_tables/chests/badlands_temple_loot.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/barrenisles/loot_tables/chests/badlands_temple_main_hall.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/barrenisles/loot_tables/chests/badlands_temple_underground.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/barrenisles/structures/badlands_temple_bottom.nbt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/barrenisles/structures/badlands_temple_top.nbt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/barrenisles/structures/oasis.nbt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/structures/oasis.nbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/barrenisles/structures/rock_1.nbt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/structures/rock_1.nbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/barrenisles/structures/rock_2.nbt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/barrenisles/structures/rock_2.nbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/barrenisles/worldgen/template_pool/badlands_temple/side_pool.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/barrenisles/worldgen/template_pool/badlands_temple/start_pool.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fabric.mod.json" beforeDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,12 +323,17 @@
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
   <component name="RecentsManager">
+<<<<<<< Updated upstream
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets\barrenisles\textures\block" />
       <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets\barrenisles\textures\palm_leaves" />
       <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets\barrenisles\textures" />
       <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets\barrenisles\textures\blocks" />
       <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets" />
+=======
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ca.thecorgi.barrenisles.setup" />
+>>>>>>> Stashed changes
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\data\barrenisles\worldgen\template_pool" />
@@ -139,12 +348,25 @@
       <recent name="ca.thecorgi.barrenisles.items" />
       <recent name="ca.thecorgi.barrenisles.setup" />
     </key>
+<<<<<<< Updated upstream
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ca.thecorgi.barrenisles.setup" />
     </key>
   </component>
   <component name="RunManager" selected="Gradle.barrenisles-forge [runClient]">
     <configuration name="barrenisles [runClient]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+=======
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge" />
+      <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\java\de\xyndra\barrenisles\entitys\duneraptor" />
+      <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets\barrenisles\textures\block" />
+      <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets\barrenisles\textures\palm_leaves" />
+      <recent name="C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\src\main\resources\assets\barrenisles\textures" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.barrenisles-forge [runClient]">
+    <configuration name="barrenisles-forge [buildDependents]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+>>>>>>> Stashed changes
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -155,7 +377,11 @@
         </option>
         <option name="taskNames">
           <list>
+<<<<<<< Updated upstream
             <option value="runClient" />
+=======
+            <option value="buildDependents" />
+>>>>>>> Stashed changes
           </list>
         </option>
         <option name="vmOptions" />
@@ -243,9 +469,15 @@
       <list>
         <item itemvalue="Gradle.barrenisles-forge [runClient]" />
         <item itemvalue="Gradle.barrenisles-forge [build]" />
+<<<<<<< Updated upstream
         <item itemvalue="Gradle.barrenisles-forge [runServer]" />
         <item itemvalue="Gradle.barrenisles-forge [jar]" />
         <item itemvalue="Gradle.barrenisles [runClient]" />
+=======
+        <item itemvalue="Gradle.barrenisles-forge [buildDependents]" />
+        <item itemvalue="Gradle.barrenisles-forge [runServer]" />
+        <item itemvalue="Gradle.barrenisles-forge [jar]" />
+>>>>>>> Stashed changes
       </list>
     </recent_temporary>
   </component>
@@ -282,22 +514,43 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" width="1245" height="851" key="#Project_Structure/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1628316603149" />
+<<<<<<< Updated upstream
     <state x="690" y="275" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1628780854423">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="275" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1628780854423" />
+=======
+    <state x="690" y="275" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1631901522476">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="275" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1631901522476" />
+>>>>>>> Stashed changes
     <state x="705" y="310" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1628680147999">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="705" y="310" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1628680147999" />
+<<<<<<< Updated upstream
     <state x="765" y="223" key="#com.intellij.ide.util.MemberChooser" timestamp="1628786622820">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="223" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1628786622820" />
+=======
+    <state x="765" y="223" key="#com.intellij.ide.util.MemberChooser" timestamp="1629544371510">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="223" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1629544371510" />
+>>>>>>> Stashed changes
     <state x="564" y="436" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1628761019331">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="564" y="436" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1628761019331" />
+<<<<<<< Updated upstream
+=======
+    <state x="725" y="375" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1629545508807">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="725" y="375" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1629545508807" />
+>>>>>>> Stashed changes
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1628767854597">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -306,6 +559,7 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="676" y="329" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1628185640774" />
+<<<<<<< Updated upstream
     <state x="740" y="237" key="FileChooserDialogImpl" timestamp="1628544361732">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -326,6 +580,28 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="241" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1628887455619" />
+=======
+    <state x="740" y="237" key="FileChooserDialogImpl" timestamp="1630167025710">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="237" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1630167025710" />
+    <state width="1877" height="265" key="GridCell.Tab.0.bottom" timestamp="1631902068438">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="265" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1631902068438" />
+    <state width="1877" height="265" key="GridCell.Tab.0.center" timestamp="1631902068438">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="265" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1631902068438" />
+    <state width="1877" height="265" key="GridCell.Tab.0.left" timestamp="1631902068438">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="265" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1631902068438" />
+    <state width="1877" height="265" key="GridCell.Tab.0.right" timestamp="1631902068438">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="265" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1631902068438" />
+>>>>>>> Stashed changes
     <state x="540" y="255" key="IDE.errors.dialog" timestamp="1628413588194">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -334,9 +610,28 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1628413437104" />
+<<<<<<< Updated upstream
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1628511242633">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1628511242633" />
+=======
+    <state x="634" y="151" key="git4idea.branch.GitSmartOperationDialog" timestamp="1631884819553">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="634" y="151" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1631884819553" />
+    <state x="342" y="95" key="new project wizard" timestamp="1630167081996">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="342" y="95" key="new project wizard/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1630167081996" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1629304412889">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1629304412889" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1629281947120">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1280.680@0.0.1920.1040" timestamp="1629281947120" />
+>>>>>>> Stashed changes
   </component>
 </project>

@@ -2,10 +2,14 @@ package de.xyndra.barrenisles.setup;
 
 import de.xyndra.barrenisles.Creative_Tab;
 import de.xyndra.barrenisles.items.*;
+<<<<<<< Updated upstream
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.TallBlockItem;
+=======
+import net.minecraft.item.*;
+>>>>>>> Stashed changes
 import net.minecraftforge.fml.RegistryObject;
 
 public class ModItems {
@@ -40,5 +44,10 @@ public class ModItems {
     public static final RegistryObject<Item> R = Registration.ITEMS.register("suspicious_berry_bush", () -> sus_berry);
     public static final RegistryObject<Item> DUNERAPTORFEATHER = Registration.ITEMS.register("dune_feather", () -> new DuneraptorFeather(new Item.Properties().tab(creativeTab)));
 
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
     public static void register() {};
 }

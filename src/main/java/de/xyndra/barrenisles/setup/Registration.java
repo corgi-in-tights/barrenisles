@@ -1,8 +1,13 @@
 package de.xyndra.barrenisles.setup;
 
 import de.xyndra.barrenisles.BarrenIsles;
+<<<<<<< Updated upstream
 import de.xyndra.barrenisles.tree.PalmTreeFeature;
 import net.minecraft.block.Block;
+=======
+import net.minecraft.block.Block;
+import net.minecraft.entity.EntityType;
+>>>>>>> Stashed changes
 import net.minecraft.item.Item;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
@@ -15,16 +20,28 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class Registration {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, BarrenIsles.MOD_ID);
+<<<<<<< Updated upstream
+=======
+    public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITIES, BarrenIsles.MOD_ID);
+>>>>>>> Stashed changes
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, BarrenIsles.MOD_ID);
 
     public static void register() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         BLOCKS.register(modEventBus);
         ITEMS.register(modEventBus);
+<<<<<<< Updated upstream
 
         ModItems.register();
         ModBlocks.register();
 
+=======
+        ENTITIES.register(modEventBus);
+
+        ModItems.register();
+        EntityRegistry.register();
+        ModBlocks.register();
+>>>>>>> Stashed changes
     }
 
     public static void transparency(){

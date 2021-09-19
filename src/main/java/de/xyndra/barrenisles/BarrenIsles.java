@@ -29,6 +29,10 @@ import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+<<<<<<< Updated upstream
+=======
+import software.bernie.geckolib3.GeckoLib;
+>>>>>>> Stashed changes
 
 import java.lang.reflect.Method;
 import java.util.HashMap;
@@ -57,6 +61,10 @@ public class BarrenIsles
         // The comments for BiomeLoadingEvent and StructureSpawnListGatherEvent says to do HIGH for additions.
         forgeBus.addListener(EventPriority.HIGH, this::biomeModification);
 
+<<<<<<< Updated upstream
+=======
+        GeckoLib.initialize();
+>>>>>>> Stashed changes
 
         Registration.register();
         // Register the setup method for modloading
@@ -110,8 +118,11 @@ public class BarrenIsles
         }
         if(event.getCategory() == Biome.Category.DESERT){
             event.getGeneration().getStructures().add(() -> ConfigureStructures.CONFIGURED_OASIS);
+<<<<<<< Updated upstream
         }if(event.getCategory() == Biome.Category.MESA){
             event.getGeneration().getStructures().add(() -> ConfigureStructures.CONFIGURED_BADLANDS_TEMPLE);
+=======
+>>>>>>> Stashed changes
         }
     }
 
@@ -167,7 +178,10 @@ public class BarrenIsles
             tempMap.putIfAbsent(ModStructures.ROCK_1.get(), DimensionStructuresSettings.DEFAULTS.get(ModStructures.ROCK_1.get()));
             tempMap.putIfAbsent(ModStructures.ROCK_2.get(), DimensionStructuresSettings.DEFAULTS.get(ModStructures.ROCK_2.get()));
             tempMap.putIfAbsent(ModStructures.OASIS.get(), DimensionStructuresSettings.DEFAULTS.get(ModStructures.OASIS.get()));
+<<<<<<< Updated upstream
             tempMap.putIfAbsent(ModStructures.BADLANDS_TEMPLE.get(), DimensionStructuresSettings.DEFAULTS.get(ModStructures.BADLANDS_TEMPLE.get()));
+=======
+>>>>>>> Stashed changes
             serverWorld.getChunkSource().generator.getSettings().structureConfig = tempMap;
         }
     }

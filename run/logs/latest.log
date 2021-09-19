@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 [13Aug2021 22:44:23.795] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--gameDir, ., --launchTarget, fmluserdevclient, --fml.mcpVersion, 20210115.111550, --fml.mcVersion, 1.16.5, --fml.forgeGroup, net.minecraftforge, --fml.forgeVersion, 36.2.0, --assetIndex, 1.16, --assetsDir, C:\Users\Sammy_HD\.gradle\caches\forge_gradle\assets, --version, MOD_DEV, --username, Dev, --accessToken, ????????, --userProperties, {}]
 [13Aug2021 22:44:23.799] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 8.0.9+86+master.3cf110c starting: java version 1.8.0_241 by Oracle Corporation
 [13Aug2021 22:44:24.097] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
@@ -5,6 +6,15 @@
 [13Aug2021 22:44:25.639] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmluserdevclient' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\Sammy_HD\.gradle\caches\forge_gradle\assets, --assetIndex, 1.16, --username, Dev, --accessToken, ????????, --userProperties, {}]
 [13Aug2021 22:44:29.404] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
 [13Aug2021 22:44:29.970] [Render thread/ERROR] [net.minecraft.client.Minecraft/]: Failed to verify authentication
+=======
+[17Sep2021 20:11:18.483] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--gameDir, ., --launchTarget, fmluserdevclient, --fml.mcpVersion, 20210115.111550, --fml.mcVersion, 1.16.5, --fml.forgeGroup, net.minecraftforge, --fml.forgeVersion, 36.2.0, --assetIndex, 1.16, --assetsDir, C:\Users\Sammy_HD\.gradle\caches\forge_gradle\assets, --version, MOD_DEV, --username, Dev, --accessToken, ????????, --userProperties, {}]
+[17Sep2021 20:11:18.487] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 8.0.9+86+master.3cf110c starting: java version 1.8.0_241 by Oracle Corporation
+[17Sep2021 20:11:18.786] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
+[17Sep2021 20:11:18.820] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.2 Source=file:/C:/Users/Sammy_HD/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.2/1cf212283d26f706fd3074318870bebd14d2a9ed/mixin-0.8.2.jar Service=ModLauncher Env=CLIENT
+[17Sep2021 20:11:20.320] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmluserdevclient' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\Sammy_HD\.gradle\caches\forge_gradle\assets, --assetIndex, 1.16, --username, Dev, --accessToken, ????????, --userProperties, {}]
+[17Sep2021 20:11:24.036] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[17Sep2021 20:11:24.609] [Render thread/ERROR] [net.minecraft.client.Minecraft/]: Failed to verify authentication
+>>>>>>> Stashed changes
 com.mojang.authlib.exceptions.AuthenticationUnavailableException: null
 	at com.mojang.authlib.yggdrasil.YggdrasilSocialInteractionsService.checkPrivileges(YggdrasilSocialInteractionsService.java:97) ~[authlib-2.1.28.jar:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilSocialInteractionsService.<init>(YggdrasilSocialInteractionsService.java:40) ~[authlib-2.1.28.jar:?]
@@ -23,6 +33,7 @@ com.mojang.authlib.exceptions.AuthenticationUnavailableException: null
 	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.9.jar:?]
 	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.9.jar:?]
 	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:108) [forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
+<<<<<<< Updated upstream
 [13Aug2021 22:44:29.976] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
 [13Aug2021 22:44:30.040] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.2 build 10
 [13Aug2021 22:44:30.476] [modloading-worker-9/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 36.2.0, for MC 1.16.5 with MCP 20210115.111550
@@ -131,6 +142,105 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at com.mojang.blaze3d.systems.RenderSystem.flipFrame(RenderSystem.java:93) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
 	at net.minecraft.client.MainWindow.updateDisplay(MainWindow.java:305) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
 	at net.minecraft.client.Minecraft.runTick(Minecraft.java:996) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
+=======
+[17Sep2021 20:11:24.615] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[17Sep2021 20:11:24.693] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.2 build 10
+[17Sep2021 20:11:25.074] [modloading-worker-2/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 36.2.0, for MC 1.16.5 with MCP 20210115.111550
+[17Sep2021 20:11:25.074] [modloading-worker-2/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v36.2.0 Initialized
+[17Sep2021 20:11:25.455] [Render thread/WARN] [net.minecraft.client.GameSettings/]: Removed resource pack Fabric Mods from options because it doesn't seem to exist anymore
+[17Sep2021 20:11:26.016] [Render thread/INFO] [com.mojang.text2speech.NarratorWindows/]: Narrator library for x64 successfully loaded
+[17Sep2021 20:11:26.053] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Mod Resources, Default
+[17Sep2021 20:11:26.151] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[17Sep2021 20:11:26.666] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: UP_TO_DATE Current: 36.2.0 Target: null
+[17Sep2021 20:11:28.724] [Worker-Main-14/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'barrenisles:blockstates/palm_wood.json' in resourcepack: 'Mod Resources' for variant: 'axis=z': Unknown blockstate property: 'axis'
+[17Sep2021 20:11:28.724] [Worker-Main-14/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'barrenisles:blockstates/palm_wood.json' in resourcepack: 'Mod Resources' for variant: 'axis=x': Unknown blockstate property: 'axis'
+[17Sep2021 20:11:28.724] [Worker-Main-14/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'barrenisles:blockstates/palm_wood.json' in resourcepack: 'Mod Resources' for variant: 'axis=y': Unknown blockstate property: 'axis'
+[17Sep2021 20:11:28.724] [Worker-Main-14/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'barrenisles:blockstates/palm_wood.json' missing model for variant: 'barrenisles:palm_wood#'
+[17Sep2021 20:11:28.731] [Worker-Main-14/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'barrenisles:blockstates/stripped_palm_wood.json' in resourcepack: 'Mod Resources' for variant: 'axis=z': Unknown blockstate property: 'axis'
+[17Sep2021 20:11:28.731] [Worker-Main-14/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'barrenisles:blockstates/stripped_palm_wood.json' in resourcepack: 'Mod Resources' for variant: 'axis=x': Unknown blockstate property: 'axis'
+[17Sep2021 20:11:28.731] [Worker-Main-14/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'barrenisles:blockstates/stripped_palm_wood.json' in resourcepack: 'Mod Resources' for variant: 'axis=y': Unknown blockstate property: 'axis'
+[17Sep2021 20:11:28.731] [Worker-Main-14/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'barrenisles:blockstates/stripped_palm_wood.json' missing model for variant: 'barrenisles:stripped_palm_wood#'
+[17Sep2021 20:11:30.328] [Worker-Main-12/INFO] [de.xyndra.barrenisles.BarrenIsles/]: Got IMC []
+[17Sep2021 20:11:31.207] [Render thread/INFO] [net.minecraft.client.audio.SoundSystem/]: OpenAL initialized.
+[17Sep2021 20:11:31.208] [Render thread/INFO] [net.minecraft.client.audio.SoundEngine/SOUNDS]: Sound engine started
+[17Sep2021 20:11:31.477] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[17Sep2021 20:11:31.634] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
+[17Sep2021 20:11:31.636] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[17Sep2021 20:11:31.642] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[17Sep2021 20:11:31.648] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[17Sep2021 20:11:31.649] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[17Sep2021 20:11:31.652] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[17Sep2021 20:11:32.088] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[17Sep2021 20:11:32.093] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[17Sep2021 20:11:32.094] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[17Sep2021 20:11:32.637] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
+[17Sep2021 20:11:35.817] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[17Sep2021 20:11:35.818] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[17Sep2021 20:11:35.818] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[17Sep2021 20:11:35.819] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[17Sep2021 20:11:35.819] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[17Sep2021 20:11:35.822] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar, geckolib-forge-1.16.5-3.0.44_mapped_official_1.16.5.jar, main
+[17Sep2021 20:11:36.801] [Render thread/INFO] [net.minecraft.item.crafting.RecipeManager/]: Loaded 7 recipes
+[17Sep2021 20:11:37.725] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 927 advancements
+[17Sep2021 20:11:37.824] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
+[17Sep2021 20:11:39.052] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[17Sep2021 20:11:39.052] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[17Sep2021 20:11:39.053] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[17Sep2021 20:11:39.053] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[17Sep2021 20:11:39.054] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[17Sep2021 20:11:39.054] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar, geckolib-forge-1.16.5-3.0.44_mapped_official_1.16.5.jar, main
+[17Sep2021 20:11:39.960] [Render thread/INFO] [net.minecraft.item.crafting.RecipeManager/]: Loaded 7 recipes
+[17Sep2021 20:11:40.778] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 927 advancements
+[17Sep2021 20:11:40.814] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
+[17Sep2021 20:11:41.444] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[17Sep2021 20:11:41.475] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Starting integrated minecraft server version 1.16.5
+[17Sep2021 20:11:41.476] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[17Sep2021 20:11:41.618] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[17Sep2021 20:11:41.801] [Server thread/ERROR] [net.minecraft.world.gen.feature.template.TemplateManager/]: Couldn't load structure barrenisles:rock_2: java.io.EOFException
+[17Sep2021 20:11:41.819] [Server thread/ERROR] [net.minecraft.world.gen.feature.template.TemplateManager/]: Couldn't load structure barrenisles:oasis: java.io.EOFException
+[17Sep2021 20:11:41.837] [Server thread/ERROR] [net.minecraft.world.gen.feature.template.TemplateManager/]: Couldn't load structure barrenisles:rock_1: java.io.EOFException
+[17Sep2021 20:11:42.169] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
+[17Sep2021 20:11:42.169] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
+[17Sep2021 20:11:42.402] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Time elapsed: 767 ms
+[17Sep2021 20:11:42.463] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Changing view distance to 11, from 10
+[17Sep2021 20:11:43.128] [Netty Local Client IO #0/INFO] [net.minecraftforge.fml.network.NetworkHooks/]: Connected to a modded server.
+[17Sep2021 20:11:43.161] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.advancements.PlayerAdvancements@e0d5450
+[17Sep2021 20:11:43.182] [Server thread/INFO] [net.minecraft.server.management.PlayerList/]: Dev[local:E:ee27945b] logged in with entity id 23 at (-263.3762567328302, 64.0, 653.585980349243)
+[17Sep2021 20:11:43.202] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[17Sep2021 20:11:43.328] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[17Sep2021 20:11:43.341] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[17Sep2021 20:11:43.376] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 50 advancements
+[17Sep2021 20:11:43.666] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[17Sep2021 20:11:43.667] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[17Sep2021 20:11:58.194] [Server thread/WARN] [net.minecraft.network.play.ServerPlayNetHandler/]: Duneraptor (vehicle of Dev) moved wrongly! 0.6841413733361605
+[17Sep2021 20:11:59.343] [Server thread/WARN] [net.minecraft.network.play.ServerPlayNetHandler/]: Duneraptor (vehicle of Dev) moved wrongly! 1.002611969886999
+[17Sep2021 20:12:04.196] [Server thread/WARN] [net.minecraft.network.play.ServerPlayNetHandler/]: Duneraptor (vehicle of Dev) moved wrongly! 1.704399567649574
+[17Sep2021 20:12:04.630] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev has made the advancement [Best Friends Forever]
+[17Sep2021 20:12:04.646] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] Dev has made the advancement [Best Friends Forever]
+[17Sep2021 20:12:04.647] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 53 advancements
+[17Sep2021 20:12:05.298] [Server thread/WARN] [net.minecraft.network.play.ServerPlayNetHandler/]: Duneraptor (vehicle of Dev) moved wrongly! 1.1159812161451441
+[17Sep2021 20:12:05.347] [Server thread/WARN] [net.minecraft.network.play.ServerPlayNetHandler/]: Duneraptor (vehicle of Dev) moved wrongly! 0.6796103285565209
+[17Sep2021 20:12:05.547] [Server thread/WARN] [net.minecraft.network.play.ServerPlayNetHandler/]: Duneraptor (vehicle of Dev) moved wrongly! 0.6923910457534532
+[17Sep2021 20:12:29.556] [Render thread/FATAL] [net.minecraftforge.common.ForgeMod/]: Preparing crash report with UUID e9fdca3b-2db2-48db-a0b3-a27f4d2d0ca4
+[17Sep2021 20:12:30.614] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[17Sep2021 20:12:30.615] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[17Sep2021 20:12:30.622] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[17Sep2021 20:12:30.622] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[17Sep2021 20:12:31.183] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World (2)): All chunks are saved
+[17Sep2021 20:12:31.183] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[17Sep2021 20:12:31.184] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[17Sep2021 20:12:31.184] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[17Sep2021 20:12:31.185] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[17Sep2021 20:12:31.198] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World (2)): All chunks are saved
+[17Sep2021 20:12:31.202] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[17Sep2021 20:12:31.202] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[17Sep2021 20:12:32.225] [Render thread/FATAL] [net.minecraft.client.Minecraft/]: Reported exception thrown!
+net.minecraft.crash.ReportedException: Ticking entity
+	at net.minecraft.world.World.guardEntityTick(World.java:559) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
+	at net.minecraft.client.world.ClientWorld.tickEntities(ClientWorld.java:161) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.tick(Minecraft.java:1483) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:953) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
+>>>>>>> Stashed changes
 	at net.minecraft.client.Minecraft.run(Minecraft.java:607) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
 	at net.minecraft.client.main.Main.main(Main.java:184) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_241]
@@ -144,6 +254,7 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.9.jar:?]
 	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.9.jar:?]
 	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:108) [forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
+<<<<<<< Updated upstream
 [13Aug2021 22:44:47.992] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 927 advancements
 [13Aug2021 22:44:48.095] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
 [13Aug2021 22:44:48.518] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
@@ -729,3 +840,173 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 [13Aug2021 22:58:18.105] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
 [13Aug2021 22:58:18.106] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
 [13Aug2021 22:58:19.219] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+=======
+Caused by: java.lang.IllegalArgumentException: Can't find attribute minecraft:horse.jump_strength
+	at net.minecraft.entity.ai.attributes.AttributeModifierMap.getAttributeInstance(AttributeModifierMap.java:21) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
+	at net.minecraft.entity.ai.attributes.AttributeModifierMap.getValue(AttributeModifierMap.java:28) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
+	at net.minecraft.entity.ai.attributes.AttributeModifierManager.getValue(AttributeModifierManager.java:67) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
+	at net.minecraft.entity.LivingEntity.getAttributeValue(LivingEntity.java:1729) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
+	at net.minecraft.entity.passive.horse.AbstractHorseEntity.getCustomJump(AbstractHorseEntity.java:298) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
+	at net.minecraft.entity.passive.horse.AbstractHorseEntity.travel(AbstractHorseEntity.java:686) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
+	at net.minecraft.entity.LivingEntity.aiStep(LivingEntity.java:2449) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
+	at net.minecraft.entity.MobEntity.aiStep(MobEntity.java:488) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
+	at net.minecraft.entity.AgeableEntity.aiStep(AgeableEntity.java:115) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
+	at net.minecraft.entity.passive.AnimalEntity.aiStep(AnimalEntity.java:51) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
+	at net.minecraft.entity.passive.horse.AbstractHorseEntity.aiStep(AbstractHorseEntity.java:511) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
+	at net.minecraft.entity.LivingEntity.tick(LivingEntity.java:2158) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
+	at net.minecraft.entity.MobEntity.tick(MobEntity.java:300) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
+	at net.minecraft.entity.passive.horse.AbstractHorseEntity.tick(AbstractHorseEntity.java:547) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
+	at net.minecraft.client.world.ClientWorld.tickNonPassenger(ClientWorld.java:192) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
+	at net.minecraft.world.World.guardEntityTick(World.java:554) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?]
+	... 16 more
+[17Sep2021 20:12:32.250] [Render thread/INFO] [STDOUT/]: [net.minecraft.util.registry.Bootstrap:realStdoutPrintln:123]: ---- Minecraft Crash Report ----
+// There are four lights!
+
+Time: 17.09.21 20:12
+Description: Ticking entity
+
+java.lang.IllegalArgumentException: Can't find attribute minecraft:horse.jump_strength
+	at net.minecraft.entity.ai.attributes.AttributeModifierMap.getAttributeInstance(AttributeModifierMap.java:21) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?] {re:classloading}
+	at net.minecraft.entity.ai.attributes.AttributeModifierMap.getValue(AttributeModifierMap.java:28) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?] {re:classloading}
+	at net.minecraft.entity.ai.attributes.AttributeModifierManager.getValue(AttributeModifierManager.java:67) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.getAttributeValue(LivingEntity.java:1729) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?] {re:classloading}
+	at net.minecraft.entity.passive.horse.AbstractHorseEntity.getCustomJump(AbstractHorseEntity.java:298) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?] {re:classloading}
+	at net.minecraft.entity.passive.horse.AbstractHorseEntity.travel(AbstractHorseEntity.java:686) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.aiStep(LivingEntity.java:2449) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.aiStep(MobEntity.java:488) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.AgeableEntity.aiStep(AgeableEntity.java:115) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?] {re:classloading}
+	at net.minecraft.entity.passive.AnimalEntity.aiStep(AnimalEntity.java:51) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?] {re:classloading}
+	at net.minecraft.entity.passive.horse.AbstractHorseEntity.aiStep(AbstractHorseEntity.java:511) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.tick(LivingEntity.java:2158) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.tick(MobEntity.java:300) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.passive.horse.AbstractHorseEntity.tick(AbstractHorseEntity.java:547) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?] {re:classloading}
+	at net.minecraft.client.world.ClientWorld.tickNonPassenger(ClientWorld.java:192) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.world.World.guardEntityTick(World.java:554) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.world.ClientWorld.tickEntities(ClientWorld.java:161) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.tick(Minecraft.java:1483) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:953) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.run(Minecraft.java:607) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:184) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_241] {}
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_241] {}
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_241] {}
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_241] {}
+	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:52) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.9.jar:?] {}
+	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:108) [forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at net.minecraft.entity.ai.attributes.AttributeModifierMap.getAttributeInstance(AttributeModifierMap.java:21) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.ai.attributes.AttributeModifierMap.getValue(AttributeModifierMap.java:28) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.ai.attributes.AttributeModifierManager.getValue(AttributeModifierManager.java:67) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.getAttributeValue(LivingEntity.java:1729) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.passive.horse.AbstractHorseEntity.getCustomJump(AbstractHorseEntity.java:298) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.passive.horse.AbstractHorseEntity.travel(AbstractHorseEntity.java:686) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.aiStep(LivingEntity.java:2449) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.aiStep(MobEntity.java:488) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.AgeableEntity.aiStep(AgeableEntity.java:115) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.passive.AnimalEntity.aiStep(AnimalEntity.java:51) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.passive.horse.AbstractHorseEntity.aiStep(AbstractHorseEntity.java:511) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.tick(LivingEntity.java:2158) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.tick(MobEntity.java:300) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.passive.horse.AbstractHorseEntity.tick(AbstractHorseEntity.java:547) ~[forge:?] {re:classloading}
+	at net.minecraft.client.world.ClientWorld.tickNonPassenger(ClientWorld.java:192) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+-- Entity being ticked --
+Details:
+	Entity Type: barrenisles:duneraptor (de.xyndra.barrenisles.entitys.duneraptor.DuneraptorEntity)
+	Entity ID: 24
+	Entity Name: Duneraptor
+	Entity's Exact location: -244.95, 63.00, 657.89
+	Entity's Block location: World: (-245,63,657), Chunk: (at 11,3,1 in -16,41; contains blocks -256,0,656 to -241,255,671), Region: (-1,1; contains chunks -32,32 to -1,63, blocks -512,0,512 to -1,255,1023)
+	Entity's Momentum: 0.00, -0.08, 0.00
+	Entity's Passengers: [ClientPlayerEntity['Dev'/23, l='ClientLevel', x=-244.95, y=64.00, z=657.89]]
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.world.World.guardEntityTick(World.java:554) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.world.ClientWorld.tickEntities(ClientWorld.java:161) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+
+
+-- Affected level --
+Details:
+	All players: 1 total; [ClientPlayerEntity['Dev'/23, l='ClientLevel', x=-244.95, y=64.00, z=657.89]]
+	Chunk stats: Client Chunk Cache: 841, 576
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (0,93,0), Chunk: (at 0,5,0 in 0,0; contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 157772 game time, 157772 day time
+	Server brand: forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.world.ClientWorld.fillReportDetails(ClientWorld.java:447) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.fillReport(Minecraft.java:2029) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.run(Minecraft.java:623) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:184) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_241] {}
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_241] {}
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_241] {}
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_241] {}
+	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:52) ~[forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.9.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.9.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.9.jar:?] {}
+	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:108) [forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.jar:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.5
+	Minecraft Version ID: 1.16.5
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_241, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1924157040 bytes (1835 MB) / 3561488384 bytes (3396 MB) up to 7621050368 bytes (7268 MB)
+	CPUs: 12
+	JVM Flags: 2 total; -XX:+IgnoreUnrecognizedVMOptions -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	ModLauncher: 8.0.9+86+master.3cf110c
+	ModLauncher launch target: fmluserdevclient
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/mixin-0.8.2.jar mixin PLUGINSERVICE 
+		/eventbus-4.0.0.jar eventbus PLUGINSERVICE 
+		/forge-1.16.5-36.2.0_mapped_official_1.16.5-launcher.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.2.0_mapped_official_1.16.5-launcher.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-3.0.1.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.5-36.2.0_mapped_official_1.16.5-launcher.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.2.0_mapped_official_1.16.5-launcher.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.2.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.5-36.2.0_mapped_official_1.16.5-launcher.jar fml TRANSFORMATIONSERVICE 
+	FML: 36.2
+	Forge: net.minecraftforge:36.2.0
+	FML Language Providers: 
+		javafml@36.2
+		minecraft@1
+	Mod List: 
+		client-extra.jar                                  |Minecraft                     |minecraft                     |1.16.5              |DONE      |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		forge-1.16.5-36.2.0_mapped_official_1.16.5-recomp.|Forge                         |forge                         |36.2.0              |DONE      |Manifest: NOSIGNATURE
+		geckolib-forge-1.16.5-3.0.44_mapped_official_1.16.|GeckoLib                      |geckolib3                     |3.0.44              |DONE      |Manifest: NOSIGNATURE
+		main                                              |Barren Isles                  |barrenisles                   |NONE                |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: e9fdca3b-2db2-48db-a0b3-a27f4d2d0ca4
+	Launched Version: MOD_DEV
+	Backend library: LWJGL version 3.2.2 build 10
+	Backend API: Radeon RX 570 Series GL version 4.6.13571 Compatibility Profile Context 19.30.02 26.20.13002.133, ATI Technologies Inc.
+	GL Caps: Using framebuffer using OpenGL 3.0
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'forge'
+	Type: Client (map_client.txt)
+	Graphics mode: fast
+	Resource Packs: vanilla, Fabric Mods
+	Current Language: English (US)
+	CPU: 12x AMD Ryzen 5 3600 6-Core Processor 
+[17Sep2021 20:12:32.255] [Render thread/INFO] [STDOUT/]: [net.minecraft.util.registry.Bootstrap:realStdoutPrintln:123]: #@!@# Game crashed! Crash report saved to: #@!@# C:\Users\Sammy_HD\Documents\GitHub\barrenisles-forge\run\.\crash-reports\crash-2021-09-17_20.12.32-client.txt
+>>>>>>> Stashed changes
