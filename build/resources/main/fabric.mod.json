@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "id": "barrenisles",
   "version": "fabric-1.17-1.0.6",
+  "accessWidener": "barrenisles.accesswidener",
 
   "name": "Barren Isles",
   "description": "The desert lays barren, it misses the tides, the predators and the surroundings. This mod aims to improve that.",
@@ -39,6 +40,7 @@
     "fabricloader": ">=0.11.3",
     "fabric": "*",
     "minecraft": "1.17.x",
+    "geckolib3": "*",
     "java": ">=16"
   }
 }

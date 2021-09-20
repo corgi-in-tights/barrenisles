@@ -111,6 +111,4 @@ public class StructureRegistry {
                     .adjustsSurface().register();
         }
     }
-
-
 }

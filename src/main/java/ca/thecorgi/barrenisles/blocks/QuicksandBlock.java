@@ -54,7 +54,7 @@ public class QuicksandBlock extends PowderSnowBlock {
         if (!(entity instanceof LivingEntity) || entity.getBlockStateAtPos().isOf(this) && entity.getType() != EntityRegistry.DUNERAPTOR && entity.getType() != EntityRegistry.TUMBLEWEED) {
             entity.slowMovement(state, new Vec3d(0.24, 0.105D, 0.24));
             if (world.getBlockState(new BlockPos(entity.getX(), entity.getY() + 1.6F, entity.getZ())).getBlock() == BlockRegistry.QUICKSAND && world.getBlockState(pos).getBlock() == BlockRegistry.QUICKSAND) {
-                entity.damage(DamageSource.IN_WALL, 1F);
+                entity.damage(DamageSource.IN_WALL, 0.5F);
             }
         }
 

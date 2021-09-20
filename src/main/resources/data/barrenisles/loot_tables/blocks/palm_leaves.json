@@ -2,14 +2,14 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 1,
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:alternatives",
           "children": [
             {
               "type": "minecraft:item",
-              "name": "barrenisles:palm_leaves",
               "conditions": [
                 {
                   "condition": "minecraft:alternative",
@@ -17,7 +17,9 @@
                     {
                       "condition": "minecraft:match_tool",
                       "predicate": {
-                        "item": "minecraft:shears"
+                        "items": [
+                          "minecraft:shears"
+                        ]
                       }
                     },
                     {
@@ -35,11 +37,12 @@
                     }
                   ]
                 }
-              ]
+              ],
+              "name": "barrenisles:palm_leaves"
+
             },
             {
               "type": "minecraft:item",
-              "name": "barrenisles:palm_sapling",
               "conditions": [
                 {
                   "condition": "minecraft:survives_explosion"
@@ -48,36 +51,26 @@
                   "condition": "minecraft:table_bonus",
                   "enchantment": "minecraft:fortune",
                   "chances": [
-                    0.05,
-                    0.0625,
-                    0.083333336,
+                    0.025,
+                    0.027777778,
+                    0.03125,
+                    0.041666668,
                     0.1
                   ]
                 }
-              ]
+              ],
+              "name": "barrenisles:palm_sapling"
             }
           ]
         }
       ]
     },
     {
-      "rolls": 1,
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:stick",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 2
-              }
-            },
-            {
-              "function": "minecraft:explosion_decay"
-            }
-          ],
           "conditions": [
             {
               "condition": "minecraft:table_bonus",
@@ -90,7 +83,22 @@
                 0.1
               ]
             }
-          ]
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1.0,
+                "max": 2.0
+              },
+              "add": false
+            },
+            {
+              "function": "minecraft:explosion_decay"
+            }
+          ],
+          "name": "minecraft:stick"
         }
       ],
       "conditions": [
@@ -102,7 +110,9 @@
               {
                 "condition": "minecraft:match_tool",
                 "predicate": {
-                  "item": "minecraft:shears"
+                  "items": [
+                    "minecraft:shears"
+                  ]
                 }
               },
               {

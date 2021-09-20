@@ -9,7 +9,7 @@ import software.bernie.geckolib3.model.provider.data.EntityModelData;
 
 import static ca.thecorgi.barrenisles.BarrenIsles.ModID;
 
-public class DuneraptorModel extends AnimatedGeoModel<DuneraptorEntity> {
+public class    DuneraptorModel extends AnimatedGeoModel<DuneraptorEntity> {
     @Override
     public Identifier getAnimationFileLocation(DuneraptorEntity entity) {
         return new Identifier(ModID, "animations/duneraptor.animation.json");
@@ -22,7 +22,7 @@ public class DuneraptorModel extends AnimatedGeoModel<DuneraptorEntity> {
 
     @Override
     public Identifier getTextureLocation(DuneraptorEntity entity) {
-        return new Identifier(ModID, "textures/entity/duneraptor.png");
+        return new Identifier(ModID, "textures/entity/duneraptor/duneraptor.png");
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })

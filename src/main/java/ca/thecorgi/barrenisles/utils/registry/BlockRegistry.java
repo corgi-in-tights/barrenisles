@@ -31,7 +31,6 @@ import net.minecraft.util.registry.Registry;
 import org.jetbrains.annotations.Nullable;
 
 import static ca.thecorgi.barrenisles.BarrenIsles.ModID;
-import static ca.thecorgi.barrenisles.utils.registry.FeatureRegistry.TREE_PALM;
 import static ca.thecorgi.barrenisles.utils.registry.GroupRegistry.BARREN_ISLES;
 
 public class BlockRegistry {
@@ -49,7 +48,7 @@ public class BlockRegistry {
     public static final Block PALM_FENCE = new FenceBlock(copyWoodSettings(Blocks.OAK_FENCE));
     public static final Block PALM_FENCE_GATE = new FenceGateBlock(copyWoodSettings(Blocks.OAK_FENCE_GATE));
     public static final Block PALM_BUTTON = new WoodenButtonBlock(copyWoodSettings(Blocks.OAK_BUTTON)) {};
-    public static final Block PALM_SAPLING = new SaplingBlock(new PalmSaplingGenerator(TREE_PALM), AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)) {};
+    public static final Block PALM_SAPLING = new SaplingBlock(new PalmSaplingGenerator(ConfiguredFeatureRegistry.PALM_TREE), AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)) {};
 
     public static final Block WINECUP = new DesertFlowerBlock(StatusEffects.HASTE, 30, FabricBlockSettings.copyOf(Blocks.DANDELION));
     public static final Block POISON_IVY = new PoisonIvyBlock(FabricBlockSettings.copyOf(Blocks.DANDELION));
@@ -63,7 +62,6 @@ public class BlockRegistry {
     public static final Block VASE = new VaseBlock(AbstractBlock.Settings.of(Material.DECORATION).strength(0.3F).nonOpaque());
     public static final Block GOLD_VASE = new GoldVaseBlock(AbstractBlock.Settings.of(Material.DECORATION).strength(0.6F).nonOpaque());
     public static final Block QUICKSAND = new QuicksandBlock(FabricBlockSettings.of(Material.POWDER_SNOW).strength(0.344F).breakByTool(FabricToolTags.SHOVELS).sounds(BlockSoundGroup.POWDER_SNOW).nonOpaque().dynamicBounds());
-//    public static final Block QUICKSAND = new QuicksandBlock(AbstractBlock.Settings.of(Material.POWDER_SNOW).strength(0.4F).sounds(BlockSoundGroup.POWDER_SNOW).dynamicBounds());
     public static final BlockEntityType<VaseBlockEntity> VASE_BLOCK_ENTITY = FabricBlockEntityTypeBuilder.create(VaseBlockEntity::new, VASE).build();
     public static final BlockEntityType<GoldVaseBlockEntity> GOLD_VASE_BLOCK_ENTITY = FabricBlockEntityTypeBuilder.create(GoldVaseBlockEntity::new, GOLD_VASE).build();
 

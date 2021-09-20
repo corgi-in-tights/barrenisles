@@ -5,8 +5,43 @@
       {
         "name": "barrenisles:records/barren_night",
         "stream": true,
-        "attenuation_distance": 16
+        "attenuation_distance": 8
+      }
+    ]
+  },
+  "barrenisles.entity.duneraptor.ambient": {
+    "category": "entity",
+    "sounds": [
+      {
+        "name": "barrenisles:entity/duneraptor/duneraptor_ambient_1",
+        "stream": false,
+        "attenuation_distance": 8
+      },
+      {
+        "name": "barrenisles:entity/duneraptor/duneraptor_ambient_2",
+        "stream": false,
+        "attenuation_distance": 8
+      }
+      ]
+    },
+    "barrenisles.entity.duneraptor.hurt": {
+      "category": "entity",
+      "sounds": [
+        {
+          "name": "barrenisles:entity/duneraptor/duneraptor_hurt",
+          "stream": false,
+          "attenuation_distance": 8
+        }
+      ]
+    },
+  "barrenisles.entity.duneraptor.attack": {
+    "category": "entity",
+    "sounds": [
+      {
+        "name": "barrenisles:entity/duneraptor/duneraptor_attack",
+        "stream": false,
+        "attenuation_distance": 8
       }
     ]
   }
-}
+  }

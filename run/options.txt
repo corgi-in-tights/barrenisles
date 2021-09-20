@@ -25,10 +25,10 @@ screenEffectScale:1.0
 fovEffectScale:1.0
 gamma:1.0
 renderDistance:12
-entityDistanceScaling:1.0
+entityDistanceScaling:0.75
 guiScale:5
 particles:0
-maxFps:120
+maxFps:60
 difficulty:2
 graphicsMode:1
 ao:2

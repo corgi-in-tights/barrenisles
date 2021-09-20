@@ -44,7 +44,6 @@ public class BarrenIsles implements ModInitializer {
         FeatureRegistry.register();
         BlockRegistry.register();
         ItemRegistry.register();
-        DimensionRegistry.register();
         GUIRegistry.register();
     }
 }
