@@ -1,2 +1,9 @@
 Manifest-Version: 1.0
+Specification-Title: barrenisles
+Specification-Vendor: barrenislessareus
+Specification-Version: 1
+Implementation-Title: Barren Isles
+Implementation-Version: forge-1.16.5-1.0.7
+Implementation-Vendor: barrenislessareus
+Implementation-Timestamp: 2021-09-27T21:09:10+0800
 

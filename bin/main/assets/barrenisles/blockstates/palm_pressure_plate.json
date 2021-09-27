@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "barrenisles:block/palm_pressure_plate"
+    },
+    "powered=true": {
+      "model": "barrenisles:block/palm_pressure_plate_down"
+    }
+  }
+}

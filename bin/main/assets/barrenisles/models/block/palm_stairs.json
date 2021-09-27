@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "barrenisles:block/palm_planks",
+    "top": "barrenisles:block/palm_planks",
+    "side": "barrenisles:block/palm_planks"
+  }
+}

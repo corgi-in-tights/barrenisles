@@ -1,0 +1,7 @@
+{
+  "parent": "barrenisles:block/templates/trapdoor_open",
+  "textures": {
+    "texture": "barrenisles:block/palm_trapdoor",
+    "texture2": "barrenisles:block/palm_trapdoor"
+  }
+}
