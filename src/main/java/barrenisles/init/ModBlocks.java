@@ -28,6 +28,8 @@ import net.minecraft.block.SaplingBlock;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.WoodButtonBlock;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.potion.Effects;
@@ -164,5 +166,21 @@ public class ModBlocks {
     // Copy plant properties
     private static <T extends Block> AbstractBlock.Properties copy_plant(T block) {
     	return AbstractBlock.Properties.copy(block).noOcclusion();
+    }
+    
+    public static void transparency() {
+        RenderTypeLookup.setRenderLayer(palm_door.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(palm_trapdoor.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(winecup.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(poison_ivy.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(agave.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(marigold.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(desert_lily.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(thornweed.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(barrel_cactus.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(suspicious_berry_bush.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(palm_sapling.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(palm_leaves.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(coconut.get(), RenderType.cutout());
     }
 }

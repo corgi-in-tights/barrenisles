@@ -7,7 +7,7 @@ import javax.annotation.Nullable;
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.MobEntity;
-import net.minecraft.entity.ai.attributes.AttributeModifierMap.MutableAttribute;
+import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.goal.Goal;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.vector.Vector3d;
@@ -31,10 +31,11 @@ public class TumbleweedEntity extends CreatureEntity implements IAnimatable {
         start_pos = this.blockPosition();
     }
 
-    public static MutableAttribute createTumbleweedAttributes() {
+    public static AttributeModifierMap createTumbleweedAttributes() {
         return MobEntity.createMobAttributes()
                 .add(Attributes.MAX_HEALTH, 3)
-                .add(Attributes.MOVEMENT_SPEED, 0.21F);
+                .add(Attributes.MOVEMENT_SPEED, 0.21F)
+                .build();
     }
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
@@ -87,7 +88,7 @@ public class TumbleweedEntity extends CreatureEntity implements IAnimatable {
         @Nullable
         private Vector3d findPos() {
            Vector3d vector3d;
-           if ( !TumbleweedEntity.this.closerThan(TumbleweedEntity.this.start_pos, 22) ) {
+           if ( !this.closerThan(TumbleweedEntity.this.start_pos, 22) ) {
               Vector3d vector3d1 = Vector3d.atCenterOf(TumbleweedEntity.this.start_pos);
               vector3d = vector3d1.subtract(TumbleweedEntity.this.position()).normalize();
            } else {
@@ -97,11 +98,11 @@ public class TumbleweedEntity extends CreatureEntity implements IAnimatable {
            Vector3d vector3d2 = RandomPositionGenerator.getLandPos(TumbleweedEntity.this, 8, 7);
            return vector3d2 != null ? vector3d2 : RandomPositionGenerator.getLandPos(TumbleweedEntity.this, 8, 4);
         }
+        
+        private boolean closerThan(BlockPos pos, int weight) {
+            return pos.closerThan(TumbleweedEntity.this.blockPosition(), (double)weight);
+        }
      }
-    
-    private boolean closerThan(BlockPos pos, int weight) {
-        return pos.closerThan(this.blockPosition(), (double)weight);
-    }
     
     public class TumbleGoal extends WanderGoal {
         public final float probability;

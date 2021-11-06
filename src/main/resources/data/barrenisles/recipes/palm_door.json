@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "barrenisles:palm_planks"
+    }
+  },
+  "result": {
+    "item": "barrenisles:palm_door",
+    "count": 3
+  }
+}

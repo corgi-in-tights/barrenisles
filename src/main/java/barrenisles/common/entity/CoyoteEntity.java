@@ -14,7 +14,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.MobEntity;
-import net.minecraft.entity.ai.attributes.AttributeModifierMap.MutableAttribute;
+import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.LookAtGoal;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
@@ -65,11 +65,12 @@ public class CoyoteEntity extends SpiderEntity implements IAnimatable {
         this.entityData.define(DATA_FLAGS_ID, (byte)0);
      }
 
-    public static MutableAttribute createCoyoteAttributes() {
+    public static AttributeModifierMap createCoyoteAttributes() {
         return MobEntity.createMobAttributes()
                 .add(Attributes.MAX_HEALTH, 25)
                 .add(Attributes.MOVEMENT_SPEED, 0.33F)
-                .add(Attributes.ATTACK_DAMAGE, 3.5F);
+                .add(Attributes.ATTACK_DAMAGE, 3.5F)
+                .build();
     }
     
     @Override
