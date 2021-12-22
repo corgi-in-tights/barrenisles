@@ -19,6 +19,7 @@ public class BarrenIslesBlocks {
 	// Misc
 	
 	public static RegistryObject<Block> coconut;
+	public static RegistryObject<Block> quicksand;
 	
 	// Palm
 	

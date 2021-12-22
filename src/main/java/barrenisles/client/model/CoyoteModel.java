@@ -25,7 +25,6 @@ public class CoyoteModel extends AnimatedGeoModel<CoyoteEntity> {
         return new ResourceLocation(BarrenIslesMod.MODID, "textures/entity/coyote/coyote.png");
     }
 
-    @SuppressWarnings({ "rawtypes", "unchecked" })
 	@Override
     public void setLivingAnimations(CoyoteEntity entity, Integer uniqueID, AnimationEvent customPredicate) {
         super.setLivingAnimations(entity, uniqueID, customPredicate);

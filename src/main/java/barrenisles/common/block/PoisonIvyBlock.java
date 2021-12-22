@@ -26,7 +26,7 @@ public class PoisonIvyBlock extends BushBlock {
     @Override
     public void entityInside(BlockState state, World world, BlockPos pos, Entity entity) {
         if (entity instanceof LivingEntity) {
-        	entity.makeStuckInBlock(state, new Vector3d((double)0.8F, 0.75D, (double)0.8F));
+        	entity.makeStuckInBlock(state, new Vector3d(0.8F, 0.75D, 0.8F));
             ((LivingEntity) entity).addEffect(new EffectInstance(Effects.POISON,3,1,true,false));
         }
     }

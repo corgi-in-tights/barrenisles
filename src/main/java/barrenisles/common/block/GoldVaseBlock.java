@@ -1,84 +1,103 @@
 package barrenisles.common.block;
 
 import barrenisles.common.tileentity.GoldVaseTileEntity;
+import barrenisles.common.tileentity.VaseTileEntity;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.HorizontalBlock;
+import net.minecraft.block.ContainerBlock;
+import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.inventory.container.INamedContainerProvider;
-import net.minecraft.pathfinding.PathType;
-import net.minecraft.state.DirectionProperty;
-import net.minecraft.stats.Stat;
-import net.minecraft.stats.Stats;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ActionResultType;
+import net.minecraft.block.BlockRenderType;
 import net.minecraft.util.Hand;
-import net.minecraft.util.Mirror;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.Rotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
+import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.network.NetworkHooks;
 
-public class GoldVaseBlock extends Block {
-	public static final DirectionProperty FACING = HorizontalBlock.FACING;
-	protected static final VoxelShape SHAPE = Block.box(1.0D, 0.0D, 1.0D, 15.0D, 14.0D, 15.0D);
-	public static final ITextComponent CONTAINER_TITLE = new TranslationTextComponent("container.gold_vase");
+import javax.annotation.Nullable;
 
-	public GoldVaseBlock(AbstractBlock.Properties settings) {
-		super(settings);
-	}
-
-	@Override
-	public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
-		return SHAPE;
-	 }
-	 
-	protected Stat<ResourceLocation> getOpenChestStat() {
-		return Stats.CUSTOM.get(Stats.OPEN_CHEST);
+public class GoldVaseBlock extends ContainerBlock
+{
+	public GoldVaseBlock()
+	{
+		super(AbstractBlock.Properties.of(Material.DECORATION).strength(0.6F).noOcclusion());
 	}
 
-	@Override
-	public ActionResultType use(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockRayTraceResult trace) {
-		if (world.isClientSide) {
-			return ActionResultType.SUCCESS;
-		} else {
-			INamedContainerProvider tileEntity = (INamedContainerProvider) world.getBlockEntity(pos);
-			if (tileEntity != null) {
-				player.openMenu(tileEntity);
-				player.awardStat(this.getOpenChestStat());
-			}
-			return ActionResultType.CONSUME;
-		}
-	}
-		   
-	public BlockState rotate(BlockState state, Rotation rotation) {
-		return state.setValue(FACING, rotation.rotate(state.getValue(FACING)));
-	}
-
-	@SuppressWarnings("deprecation")
-	public BlockState mirror(BlockState state, Mirror mirror) {
-		return state.rotate(mirror.getRotation(state.getValue(FACING)));
-	}
-	
-	@Override
-	public boolean isPathfindable(BlockState state, IBlockReader reader, BlockPos pos, PathType pathType) {
-		return false;
-	}
-	
-	@Override
-	public boolean hasTileEntity(BlockState state) {
-		return true;
-	}
-	
 	@Override
 	public TileEntity createTileEntity(BlockState state, IBlockReader world) {
+		return newBlockEntity(world);
+	}
+
+	@Nullable
+	@Override
+	public TileEntity newBlockEntity(IBlockReader level) {
 		return new GoldVaseTileEntity();
 	}
+
+	@Override
+	public boolean hasTileEntity(BlockState state)
+	{
+		return true;
+	}
+
+	@Override
+	public ActionResultType use(BlockState state, World level, BlockPos pos, PlayerEntity player, Hand hand, BlockRayTraceResult hit) {
+		if (level.isClientSide) return ActionResultType.SUCCESS;
+
+		INamedContainerProvider namedContainerProvider = this.getMenuProvider(state, level, pos);
+		if (namedContainerProvider != null) {
+			if (!(player instanceof ServerPlayerEntity)) return ActionResultType.FAIL;
+			ServerPlayerEntity serverPlayerEntity = (ServerPlayerEntity)player;
+			NetworkHooks.openGui(serverPlayerEntity, namedContainerProvider, (packetBuffer)->{});
+		}
+		return ActionResultType.SUCCESS;
+	}
+
+	@Override
+	public void onRemove(BlockState state, World level, BlockPos pos, BlockState newState, boolean isMoving) {
+		if (state.getBlock() != newState.getBlock()) {
+			TileEntity tileentity = level.getBlockEntity(pos);
+			if (tileentity instanceof GoldVaseTileEntity) {
+				GoldVaseTileEntity vaseTileEntity = (GoldVaseTileEntity) tileentity;
+				vaseTileEntity.dropAllContents(level, pos);
+			}
+			super.onRemove(state, level, pos, newState, isMoving);
+		}
+	}
+
+	@Override
+	public boolean hasAnalogOutputSignal(BlockState state) {
+		return false;
+	}
+
+	@Override
+	public int getAnalogOutputSignal(BlockState state, World level, BlockPos pos) {
+		return 0;
+	}
+
+	@Override
+	public BlockRenderType getRenderShape(BlockState state) {
+		return BlockRenderType.MODEL;
+	}
+
+	@Override
+	public VoxelShape getShape(BlockState state, IBlockReader level, BlockPos pos, ISelectionContext context) {
+		return CHEST_SHAPE;
+	}
+
+	private static final Vector3d CHEST_MIN_CORNER = new Vector3d(1.0, 0.0, 1.0);
+	private static final Vector3d CHEST_MAX_CORNER = new Vector3d(15.0, 8.0, 15.0);
+	private static final VoxelShape CHEST_SHAPE = Block.box(
+			CHEST_MIN_CORNER.x, CHEST_MIN_CORNER.y, CHEST_MIN_CORNER.z,
+			CHEST_MAX_CORNER.x, CHEST_MAX_CORNER.y, CHEST_MAX_CORNER.z);
+
 }

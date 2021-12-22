@@ -1,9 +1,0 @@
-{
-    "type": "minecraft:stonecutting",
-    "ingredient": {
-        "item": "barrenisles:coconut"
-    },
-    "result": "barrenisles:coconut_open",
-    "group": "open_the_coconut",
-    "count": 1
-}

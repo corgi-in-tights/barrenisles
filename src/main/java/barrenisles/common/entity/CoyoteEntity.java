@@ -22,7 +22,6 @@ import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.monster.SpiderEntity;
-import net.minecraft.entity.passive.FoxEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.network.datasync.DataParameter;
@@ -44,10 +43,10 @@ import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
 public class CoyoteEntity extends SpiderEntity implements IAnimatable {
-	private static final DataParameter<Integer> DATA_TYPE_ID = EntityDataManager.defineId(FoxEntity.class, DataSerializers.INT);
-	private static final DataParameter<Byte> DATA_FLAGS_ID = EntityDataManager.defineId(FoxEntity.class, DataSerializers.BYTE);
-	private static final DataParameter<Optional<UUID>> DATA_TRUSTED_ID_0 = EntityDataManager.defineId(FoxEntity.class, DataSerializers.OPTIONAL_UUID);
-	private static final DataParameter<Optional<UUID>> DATA_TRUSTED_ID_1 = EntityDataManager.defineId(FoxEntity.class, DataSerializers.OPTIONAL_UUID);
+	private static final DataParameter<Integer> DATA_TYPE_ID = EntityDataManager.defineId(CoyoteEntity.class, DataSerializers.INT);
+	private static final DataParameter<Byte> DATA_FLAGS_ID = EntityDataManager.defineId(CoyoteEntity.class, DataSerializers.BYTE);
+	private static final DataParameter<Optional<UUID>> DATA_TRUSTED_ID_0 = EntityDataManager.defineId(CoyoteEntity.class, DataSerializers.OPTIONAL_UUID);
+	private static final DataParameter<Optional<UUID>> DATA_TRUSTED_ID_1 = EntityDataManager.defineId(CoyoteEntity.class, DataSerializers.OPTIONAL_UUID);
 	
     AnimationFactory factory = new AnimationFactory(this);
 	public float crouchAmount;
@@ -77,7 +76,7 @@ public class CoyoteEntity extends SpiderEntity implements IAnimatable {
     protected void registerGoals() {
     	this.goalSelector.addGoal(1, new SwimGoal(this));
     	this.targetSelector.addGoal(2, new RevengeGoal(LivingEntity.class, true, null));
-    	this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<PlayerEntity>(this, PlayerEntity.class,true));
+    	this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, PlayerEntity.class,true));
     	this.goalSelector.addGoal(4, new PounceGoal());
     	this.goalSelector.addGoal(5, new NightAttackGoal(this));
       	this.goalSelector.addGoal(9, new LookAtGoal(this, PlayerEntity.class, 8.0F));
@@ -136,8 +135,8 @@ public class CoyoteEntity extends SpiderEntity implements IAnimatable {
     
     private List<UUID> getTrustedUUIDs() {
         List<UUID> list = Lists.newArrayList();
-        list.add(this.entityData.get(DATA_TRUSTED_ID_0).orElse((UUID)null));
-        list.add(this.entityData.get(DATA_TRUSTED_ID_1).orElse((UUID)null));
+        list.add(this.entityData.get(DATA_TRUSTED_ID_0).orElse(null));
+        list.add(this.entityData.get(DATA_TRUSTED_ID_1).orElse(null));
         return list;
      }
     

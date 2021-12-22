@@ -1,68 +1,106 @@
 package barrenisles.common.tileentity;
 
-import javax.annotation.Nullable;
-
-import barrenisles.api.blocks.BarrenIslesBlocks;
 import barrenisles.api.tileentities.BarrenIslesTileEntityType;
-import barrenisles.common.block.GoldVaseBlock;
+import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.INamedContainerProvider;
-import net.minecraft.inventory.container.ChestContainer;
+import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.network.NetworkManager;
+import net.minecraft.network.play.server.SUpdateTileEntityPacket;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraftforge.common.extensions.IForgeTileEntity;
+import net.minecraft.util.text.TranslationTextComponent;
+import net.minecraft.world.World;
 
-public class GoldVaseTileEntity extends TileEntity implements IForgeTileEntity, INamedContainerProvider {
-	public float openness;
-	public float oOpenness;
-	public int openCount;
+import javax.annotation.Nullable;
 
-	public GoldVaseTileEntity() {
-		super(BarrenIslesTileEntityType.gold_vase_tileentity.get());
-	}
-	
-	public boolean triggerEvent(int num, int count) {
-		if (num == 1) {
-			this.openCount = count;
-	        return true;
-	    } else {
-	        return super.triggerEvent(num, count);
-	    }
-	}
+public class GoldVaseTileEntity extends TileEntity implements INamedContainerProvider {
+    public static final int NUMBER_OF_SLOTS = 5;
 
-	public void setRemoved() {
-		this.clearCache();
-	    super.setRemoved();
-	}
+    public GoldVaseTileEntity()
+    {
+        super(BarrenIslesTileEntityType.gold_vase_tile_entity.get());
+        vaseContents = VaseContents.createForTileEntity(NUMBER_OF_SLOTS,
+                this::canPlayerAccessInventory, this::setChanged);
+    }
+    public boolean canPlayerAccessInventory(PlayerEntity player) {
+        if (this.level.getBlockEntity(this.worldPosition) != this) return false;
+        final double X_CENTRE_OFFSET = 0.5;
+        final double Y_CENTRE_OFFSET = 0.5;
+        final double Z_CENTRE_OFFSET = 0.5;
+        final double MAXIMUM_DISTANCE_SQ = 8.0 * 8.0;
+        return player.distanceToSqr(worldPosition.getX() + X_CENTRE_OFFSET, worldPosition.getY() + Y_CENTRE_OFFSET, worldPosition.getZ() + Z_CENTRE_OFFSET) < MAXIMUM_DISTANCE_SQ;
+    }
 
-	public void startOpen() {
-		++this.openCount;
-	    this.level.blockEvent(this.worldPosition, BarrenIslesBlocks.gold_vase.get(), 1, this.openCount);
-	}
+    private static final String CHESTCONTENTS_INVENTORY_TAG = "contents";
 
-	public void stopOpen() {
-		--this.openCount;
-	    this.level.blockEvent(this.worldPosition, BarrenIslesBlocks.gold_vase.get(), 1, this.openCount);
-	}
+    @Override
+    public CompoundNBT save(CompoundNBT tag)
+    {
+        super.save(tag);
+        CompoundNBT inventoryNBT = vaseContents.serializeNBT();
+        tag.put(CHESTCONTENTS_INVENTORY_TAG, inventoryNBT);
+        return tag;
+    }
 
-	public boolean stillValid(PlayerEntity player) {
-		if (this.level.getBlockEntity(this.worldPosition) != this) {
-			return false;
-	    } else {
-	        return !(player.distanceToSqr((double)this.worldPosition.getX() + 0.5D, (double)this.worldPosition.getY() + 0.5D, (double)this.worldPosition.getZ() + 0.5D) > 64.0D);
-	    }
-	}
+    @Override
+    public void load(BlockState blockState, CompoundNBT parentNBTTagCompound)
+    {
+        super.load(blockState, parentNBTTagCompound); // The super call is required to save and load the tiles location
+        CompoundNBT inventoryNBT = parentNBTTagCompound.getCompound(CHESTCONTENTS_INVENTORY_TAG);
+        vaseContents.deserializeNBT(inventoryNBT);
+        if (vaseContents.getContainerSize() != NUMBER_OF_SLOTS)
+            throw new IllegalArgumentException("Corrupted NBT: Number of inventory slots did not match expected.");
+    }
 
-	@Nullable
-	@Override
-	public Container createMenu(int windowId, PlayerInventory playerInv, PlayerEntity player) {
-		return ChestContainer.fiveRows(windowId, playerInv);
-	}
+    @Override
+    @Nullable
+    public SUpdateTileEntityPacket getUpdatePacket()
+    {
+        CompoundNBT nbtTagCompound = new CompoundNBT();
+        save(nbtTagCompound);
+        int tileEntityType = 42;  // arbitrary number; only used for vanilla TileEntities.  You can use it, or not, as you want.
+        return new SUpdateTileEntityPacket(this.worldPosition, tileEntityType, nbtTagCompound);
+    }
 
-	@Override
-	public ITextComponent getDisplayName() {
-		return GoldVaseBlock.CONTAINER_TITLE;
-	}
+    @Override
+    public void onDataPacket(NetworkManager net, SUpdateTileEntityPacket pkt) {
+        BlockState blockState = level.getBlockState(worldPosition);
+        load(blockState, pkt.getTag());
+    }
+
+    @Override
+    public CompoundNBT getUpdateTag()
+    {
+        CompoundNBT nbtTagCompound = new CompoundNBT();
+        save(nbtTagCompound);
+        return nbtTagCompound;
+    }
+
+    @Override
+    public void handleUpdateTag(BlockState blockState, CompoundNBT tag)
+    {
+        this.load(blockState, tag);
+    }
+
+    public void dropAllContents(World world, BlockPos blockPos) {
+        InventoryHelper.dropContents(world, blockPos, vaseContents);
+    }
+
+    @Override
+    public ITextComponent getDisplayName() {
+        return new TranslationTextComponent("container.barrenisles.gold_vase");
+    }
+
+    @Nullable
+    @Override
+    public Container createMenu(int containerId, PlayerInventory inventory, PlayerEntity player) {
+        return GoldVaseContainer.createContainerServerSide(containerId, inventory, vaseContents);
+    }
+
+    private final VaseContents vaseContents;
 }

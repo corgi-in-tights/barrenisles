@@ -2,11 +2,11 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 1.0,
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "barrenisles:suspicious_berry_bush"
+          "name": "barrenisles:suspicious_berries"
         }
       ],
       "conditions": [
@@ -38,11 +38,11 @@
       ]
     },
     {
-      "rolls": 1.0,
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "barrenisles:suspicious_berry_bush"
+          "name": "barrenisles:suspicious_berries"
         }
       ],
       "conditions": [

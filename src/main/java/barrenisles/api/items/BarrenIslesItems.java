@@ -10,7 +10,6 @@ public class BarrenIslesItems {
     public static RegistryObject<Item> cooked_drumstick;
     public static RegistryObject<Item> suspicious_berries;
     public static RegistryObject<Item> coconut;
-    public static RegistryObject<Item> coconut_open;
     public static RegistryObject<Item> vase;
     public static RegistryObject<Item> gold_vase;
     public static RegistryObject<Item> quicksand_bucket;

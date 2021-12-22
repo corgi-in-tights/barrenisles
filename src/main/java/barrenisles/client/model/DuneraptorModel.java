@@ -24,7 +24,6 @@ public class DuneraptorModel extends AnimatedGeoModel<DuneraptorEntity> {
         return new ResourceLocation(BarrenIslesMod.MODID, "textures/entity/duneraptor.png");
     }
 
-    @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
     public void setLivingAnimations(DuneraptorEntity entity, Integer uniqueID, AnimationEvent customPredicate) {
         super.setLivingAnimations(entity, uniqueID, customPredicate);

@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "barrenisles:item/music_disc_barren_night"
-  }
-}

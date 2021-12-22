@@ -1,10 +1,10 @@
 {
   "barren_night": {
-    "category": "record",
+    "subtitle": "barren_night",
     "sounds": [
       {
-        "name": "barrenisles:records/barren_night",
-        "stream": true,
+        "name": "barrenisles:barren_night",
+        "steam": true,
         "attenuation_distance": 16
       }
     ]

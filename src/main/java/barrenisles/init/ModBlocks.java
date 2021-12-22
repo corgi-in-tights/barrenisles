@@ -6,6 +6,7 @@ import barrenisles.common.block.GoldVaseBlock;
 import barrenisles.common.block.PalmDoorBlock;
 import barrenisles.common.block.PalmTrapdoorBlock;
 import barrenisles.common.block.PoisonIvyBlock;
+import barrenisles.common.block.QuickSandBlock;
 import barrenisles.common.block.SuspiciousBerryBushBlock;
 import barrenisles.common.block.TallDesertFlowerBlock;
 import barrenisles.common.block.ThornweedBlock;
@@ -19,6 +20,10 @@ import net.minecraft.block.FenceBlock;
 import net.minecraft.block.FenceGateBlock;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.PressurePlateBlock;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.MaterialColor;
+import net.minecraft.item.Items;
+import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -117,14 +122,11 @@ public class ModBlocks {
         coconut = registerWithoutBlockItem("coconut", 
     			() -> new CoconutBlock(copy_plant(Blocks.COCOA)));
     			
-        gold_vase = register("gold_vase", 
-        		() -> new GoldVaseBlock(AbstractBlock.Properties.of(Material.DECORATION).strength(0.6F).noOcclusion()));
+        gold_vase = register("gold_vase", GoldVaseBlock::new);
+        vase = register("vase", VaseBlock::new);
         
-        vase = register("vase", 
-        		() -> new VaseBlock(AbstractBlock.Properties.of(Material.DECORATION).strength(0.6F).noOcclusion()));
-        
-        // quicksand = register("quicksand", 
-    	// 		() -> new QuickSandBlock(AbstractBlock.Properties.of(Material.SAND).strength(0.344F).harvestTool(ToolType.SHOVEL).sound(SoundType.SAND)));
+        quicksand = register("quicksand",
+    	 		() -> new QuickSandBlock(AbstractBlock.Properties.of(Material.PLANT).strength(0.344F).harvestTool(ToolType.SHOVEL).sound(SoundType.SAND).noOcclusion()));
     }
     
     // Call in main mod file

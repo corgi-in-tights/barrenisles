@@ -1,10 +1,20 @@
 package barrenisles.core;
 
+import barrenisles.api.blocks.BarrenIslesBlocks;
+import barrenisles.api.items.BarrenIslesItems;
+import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.client.gui.ScreenManager;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.item.BucketItem;
+import net.minecraft.item.ItemStack;
+import net.minecraft.stats.Stats;
+import net.minecraft.util.SoundEvents;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.entity.EntityAttributeModificationEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -39,25 +49,26 @@ public class BarrenIslesMod
     public static final String MODID = "barrenisles";
 
     public BarrenIslesMod() {
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::preInit);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
-		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::entityAttributeCreationEvent);
-		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::ModificateAttributes);
+        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+        bus.addListener(this::preInit);
+        bus.addListener(this::clientSetup);
+        bus.addListener(this::entityAttributeCreationEvent);
+        bus.addListener(this::ModificateAttributes);
 
-		ModSounds.register(FMLJavaModLoadingContext.get().getModEventBus());
-        ModItems.register(FMLJavaModLoadingContext.get().getModEventBus());
-        ModBlocks.register(FMLJavaModLoadingContext.get().getModEventBus());
-        ModEntities.register(FMLJavaModLoadingContext.get().getModEventBus());
+		ModSounds.register(bus);
+        ModItems.register(bus);
+        ModBlocks.register(bus);
+        ModEntities.register(bus);
         
-        ModTileEntityTypes.register(FMLJavaModLoadingContext.get().getModEventBus());
-        ModContainers.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModTileEntityTypes.register(bus);
+        ModContainers.register(bus);
         
         MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.addListener(this::onBlockClickEvent);
     }
     
     private void preInit(final FMLCommonSetupEvent event)
     {
-        logger.info("Barren Isles is starting preinit");
     }
 
     private void clientSetup(final FMLClientSetupEvent event) 
@@ -65,18 +76,17 @@ public class BarrenIslesMod
     	logger.info("Barren Isles setup in client...");
     	
     	// Register Vases GUI.
-    	ScreenManager.register(BarrenIslesContainers.gold_vase_container.get(), GoldVaseScreen::new);
     	ScreenManager.register(BarrenIslesContainers.vase_container.get(), VaseScreen::new);
+        ScreenManager.register(BarrenIslesContainers.gold_vase_container.get(), GoldVaseScreen::new);
     	
     	// Register Entity renderer
     	RenderingRegistry.registerEntityRenderingHandler(BarrenIslesEntities.coyote.get(),
-				manager -> new CoyoteRenderer(manager));
+                CoyoteRenderer::new);
     	RenderingRegistry.registerEntityRenderingHandler(BarrenIslesEntities.duneraptor.get(),
-				manager -> new DuneraptorRenderer(manager));
+                DuneraptorRenderer::new);
     	RenderingRegistry.registerEntityRenderingHandler(BarrenIslesEntities.tumbleweed.get(),
-				manager -> new TumbleweedRenderer(manager));
-    	
-    	//Hacks to create translucent flowers.
+                TumbleweedRenderer::new);
+
     	ModBlocks.transparency();
     }
     
@@ -89,5 +99,17 @@ public class BarrenIslesMod
     
     public void ModificateAttributes(EntityAttributeModificationEvent e) {
     	e.add(BarrenIslesEntities.duneraptor.get(), Attributes.ATTACK_DAMAGE, 5D);
+    }
+
+    public void onBlockClickEvent(PlayerInteractEvent.RightClickBlock e) {
+        if(e.getPlayer().getItemInHand(e.getHand()).getItem() instanceof BucketItem &&
+                e.getPlayer().level.getBlockState(e.getPos()).is(BarrenIslesBlocks.quicksand.get())) {
+            ItemStack quickSandBucket = new ItemStack(BarrenIslesItems.quicksand_bucket.get());
+            e.getPlayer().awardStat(Stats.ITEM_USED.get(BarrenIslesItems.quicksand_bucket.get()));
+            e.getPlayer().playSound(SoundEvents.BUCKET_FILL, 1.0F, 1.0F);
+            e.getPlayer().level.destroyBlock(e.getPos(), true);
+            e.getPlayer().setItemInHand(e.getHand(), quickSandBucket);
+            if (!e.getPlayer().level.isClientSide) CriteriaTriggers.FILLED_BUCKET.trigger((ServerPlayerEntity)e.getPlayer(), quickSandBucket);
+        }
     }
 }
