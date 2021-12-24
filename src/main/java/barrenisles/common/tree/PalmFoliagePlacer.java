@@ -2,7 +2,7 @@ package barrenisles.common.tree;
 
 import com.mojang.serialization.Codec;
 
-import barrenisles.api.blocks.BarrenIslesBlocks;
+import barrenisles.api.BarrenIslesBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.Direction;

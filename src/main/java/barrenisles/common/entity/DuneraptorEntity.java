@@ -1,6 +1,7 @@
 package barrenisles.common.entity;
 
 import net.minecraft.block.BlockState;
+import net.minecraft.entity.AgeableEntity;
 import net.minecraft.entity.ai.attributes.AttributeModifierManager;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.passive.RabbitEntity;
@@ -49,14 +50,15 @@ import java.util.UUID;
 
 import javax.annotation.Nullable;
 
-import barrenisles.api.entity.BarrenIslesEntities;
+import barrenisles.api.BarrenIslesEntities;
 
 public class DuneraptorEntity extends AbstractHorseEntity implements IAnimatable {
 
     private AnimationFactory factory = new AnimationFactory(this);
     private boolean saddled = false;
     private boolean isRunning = false;
-    private static Ingredient BREEDING_INGREDIENT;
+    private static final Ingredient BREEDING_INGREDIENT = Ingredient.of(Items.PORKCHOP, Items.RABBIT, Items.BEEF, Items.RABBIT, Items.MUTTON, Items.CHICKEN);
+
     int hunger = 3;
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
@@ -96,9 +98,7 @@ public class DuneraptorEntity extends AbstractHorseEntity implements IAnimatable
         this.goalSelector.addGoal(8, new RandomWalkingGoal(this, 0.3F));
         this.goalSelector.addGoal(9, new AvoidEntityGoal<>(this, MobEntity.class, 4.5F, 0.8D, 1.2D));
         this.goalSelector.addGoal(10, new MeleeAttackGoal(this, 1.2D, false));
-        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<RabbitEntity>(this, RabbitEntity.class, 5, true, false, (entity) -> {
-            return (isDuneraptorHungry());
-        }));
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, RabbitEntity.class, 5, true, false, (entity) -> (isDuneraptorHungry())));
         this.goalSelector.addGoal(11, new DuneraptorRestGoal(this, 1.2D));
     }
     
@@ -114,7 +114,6 @@ public class DuneraptorEntity extends AbstractHorseEntity implements IAnimatable
             if (this.random.nextInt(700) == 0 && this.deathTime == 0) {
                 this.heal(1.0F);
                 hunger--;
-                System.out.println(hunger);
             }
         }
     }
@@ -127,6 +126,10 @@ public class DuneraptorEntity extends AbstractHorseEntity implements IAnimatable
         } else {
             return this.getHealth() <= 25;
         }
+    }
+
+    public boolean canEquipPlayer(PlayerEntity player) {
+        return player != null && player.getUUID().equals(this.getOwnerUUID());
     }
 
     @Override
@@ -147,17 +150,34 @@ public class DuneraptorEntity extends AbstractHorseEntity implements IAnimatable
                 return ActionResultType.SUCCESS;
             }
             if (!this.isFood(itemStack)) {
-                    if (this.isSaddled() && !this.getPassengers().isEmpty() && !player.canRiderInteract()) {
-                        if (!this.level.isClientSide) {
-                            this.setTamed(true);
-                            this.setOwnerUUID(player.getUUID());
-                            this.push(player);
-                        }
+                if (this.isSaddled() && !this.getPassengers().isEmpty() && !player.canRiderInteract()) {
+                    if (!this.level.isClientSide) {
+                        this.setTamed(true);
+                        this.setOwnerUUID(player.getUUID());
+                        this.push(player);
                     }
                 }
-            return ActionResultType.SUCCESS;
             }
+            if (this.isSaddled() && !itemStack.isEmpty()) {
+                ActionResultType actionresulttype = itemStack.interactLivingEntity(player, this, hand);
+                if (actionresulttype.consumesAction()) {
+                    return actionresulttype;
+                }
+            }
+            if (this.canEquipPlayer(player) && !this.isBaby()) {
+                this.doPlayerRide(player);
+                return ActionResultType.sidedSuccess(this.level.isClientSide);
+            }
+
+            return ActionResultType.SUCCESS;
+        }
+
         return super.mobInteract(player, hand);
+    }
+
+    @Override
+    public DuneraptorEntity getBreedOffspring(ServerWorld level, AgeableEntity entity) {
+        return BarrenIslesEntities.duneraptor.get().create(level);
     }
     
     @Override
@@ -168,11 +188,7 @@ public class DuneraptorEntity extends AbstractHorseEntity implements IAnimatable
     }
 
     public boolean isDuneraptorHungry() {
-        if (hunger == 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return hunger == 0;
     }
 
     @Override
@@ -205,19 +221,19 @@ public class DuneraptorEntity extends AbstractHorseEntity implements IAnimatable
     }
 
     public AttributeModifierManager getAttributes(){
-
         return new AttributeModifierManager(DuneraptorEntity.createDuneraptorAttributes());
     }
 
-    @SuppressWarnings("rawtypes")
 	@Override
     public void registerControllers(AnimationData data) {
-        data.addAnimationController(new AnimationController(this, "controller", 0, this::predicate));
+        data.addAnimationController(new AnimationController<>(this, "controller", 0, this::predicate));
     }
-    
-    public void writeCustomDataToTag(CompoundNBT tag) {
-        this.setEating(tag.getBoolean("eating_haystack"));
-        this.setBred(tag.getBoolean("bred"));
+
+    @Override
+    public void addAdditionalSaveData(CompoundNBT tag) {
+        super.addAdditionalSaveData(tag);
+        tag.putBoolean("eating_haystack", this.isEating());
+        tag.putBoolean("bred", this.isBred());
         tag.putInt("temper", this.getTemper());
         tag.putBoolean("tame", this.isTamed());
         if (this.getOwnerUUID() != null) {
@@ -231,7 +247,9 @@ public class DuneraptorEntity extends AbstractHorseEntity implements IAnimatable
         }
     }
 
-    public void readCustomDataFromTag(CompoundNBT tag) {
+    @Override
+    public void readAdditionalSaveData(CompoundNBT tag) {
+        super.readAdditionalSaveData(tag);
         this.setEating(tag.getBoolean("eating_haystack"));
         this.setBred(tag.getBoolean("bred"));
         this.setTemper(tag.getInt("temper"));
@@ -262,19 +280,11 @@ public class DuneraptorEntity extends AbstractHorseEntity implements IAnimatable
         return this.factory;
     }
     
-    static {
-        BREEDING_INGREDIENT = Ingredient.of(Items.PORKCHOP, Items.RABBIT, Items.BEEF, Items.RABBIT, Items.MUTTON, Items.CHICKEN);
-    }
-    
-    public DuneraptorEntity createChild(ServerWorld serverWorld, Entity passiveEntity) {
-        return (DuneraptorEntity)BarrenIslesEntities.duneraptor.get().create(serverWorld);
-    }
-    
     static class DuneraptorRestGoal extends Goal {
         protected final CreatureEntity mob;
         private long lastUpdateTime;
 
-        public DuneraptorRestGoal(DuneraptorEntity mob,Double speed) {
+        public DuneraptorRestGoal(DuneraptorEntity mob, double speed) {
             this.mob = mob;
             this.setFlags(EnumSet.of(Flag.MOVE, Flag.LOOK));
         }
@@ -296,19 +306,9 @@ public class DuneraptorEntity extends AbstractHorseEntity implements IAnimatable
                 }
             }
         }
-        
-        static class DuneraptorAttackGoal extends MeleeAttackGoal {
-            public DuneraptorAttackGoal(DuneraptorEntity duneraptor) {
-                super(duneraptor, 1.2D, true);
-            }
-        }
 
         protected double getSquaredMaxAttackDistance(LivingEntity entity) {
             return (4.0F + entity.getBbWidth());
         }
-    }
-
-    static {
-        BREEDING_INGREDIENT = Ingredient.of(Items.PORKCHOP, Items.RABBIT, Items.BEEF, Items.RABBIT, Items.MUTTON, Items.CHICKEN);
     }
 }

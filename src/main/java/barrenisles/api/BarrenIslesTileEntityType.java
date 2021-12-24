@@ -1,4 +1,4 @@
-package barrenisles.api.tileentities;
+package barrenisles.api;
 
 import barrenisles.common.tileentity.GoldVaseTileEntity;
 import barrenisles.common.tileentity.VaseTileEntity;

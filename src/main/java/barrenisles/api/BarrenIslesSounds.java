@@ -1,4 +1,4 @@
-package barrenisles.api.sounds;
+package barrenisles.api;
 
 import net.minecraft.util.SoundEvent;
 import net.minecraftforge.fml.RegistryObject;

@@ -1,6 +1,6 @@
 package barrenisles.init;
 
-import static barrenisles.api.entity.BarrenIslesEntities.*;
+import static barrenisles.api.BarrenIslesEntities.*;
 
 import barrenisles.common.entity.CoyoteEntity;
 import barrenisles.common.entity.DuneraptorEntity;

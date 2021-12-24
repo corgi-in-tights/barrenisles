@@ -1,6 +1,7 @@
-package barrenisles.api.items;
+package barrenisles.api;
 
 import barrenisles.common.block.DesertDiscItem;
+import barrenisles.common.item.ModSpawnEggItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 
@@ -15,4 +16,8 @@ public class BarrenIslesItems {
     public static RegistryObject<Item> quicksand_bucket;
     
     public static RegistryObject<DesertDiscItem> barren_night_disc;
+
+    public static RegistryObject<ModSpawnEggItem> tumbleweed_spawn_egg;
+    public static RegistryObject<ModSpawnEggItem> coyote_spawn_egg;
+    public static RegistryObject<ModSpawnEggItem> duneraptor_spawn_egg;
 }

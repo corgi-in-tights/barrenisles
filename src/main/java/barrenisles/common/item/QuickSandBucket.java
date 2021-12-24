@@ -2,7 +2,7 @@ package barrenisles.common.item;
 
 import javax.annotation.Nullable;
 
-import barrenisles.api.blocks.BarrenIslesBlocks;
+import barrenisles.api.BarrenIslesBlocks;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

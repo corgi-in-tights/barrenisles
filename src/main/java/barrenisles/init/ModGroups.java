@@ -1,6 +1,6 @@
 package barrenisles.init;
 
-import barrenisles.api.items.BarrenIslesItems;
+import barrenisles.api.BarrenIslesItems;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 

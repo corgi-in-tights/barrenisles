@@ -7,7 +7,7 @@ import org.apache.commons.lang3.ArrayUtils;
 import com.google.common.collect.ImmutableList;
 import com.mojang.serialization.Codec;
 
-import barrenisles.api.blocks.BarrenIslesBlocks;
+import barrenisles.api.BarrenIslesBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.Direction;

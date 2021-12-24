@@ -28,11 +28,15 @@ public class DuneraptorModel extends AnimatedGeoModel<DuneraptorEntity> {
     public void setLivingAnimations(DuneraptorEntity entity, Integer uniqueID, AnimationEvent customPredicate) {
         super.setLivingAnimations(entity, uniqueID, customPredicate);
         IBone head = this.getAnimationProcessor().getBone("head");
+        IBone saddle = this.getAnimationProcessor().getBone("saddle");
 
         EntityModelData extraData = (EntityModelData) customPredicate.getExtraDataOfType(EntityModelData.class).get(0);
         if (head != null) {
             head.setRotationX(extraData.headPitch * ((float) Math.PI / 180F));
             head.setRotationY(extraData.netHeadYaw * ((float) Math.PI / 180F));
+        }
+        if(saddle != null && !entity.isSaddled()) {
+            saddle.setHidden(true);
         }
     }
 }

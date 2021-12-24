@@ -1,6 +1,6 @@
 package barrenisles.common.tileentity;
 
-import barrenisles.api.tileentities.BarrenIslesContainers;
+import barrenisles.api.BarrenIslesContainers;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.container.Container;

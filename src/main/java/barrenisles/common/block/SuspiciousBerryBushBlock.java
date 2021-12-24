@@ -20,9 +20,9 @@ import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 
-import static barrenisles.api.items.BarrenIslesItems.suspicious_berries;
+import static barrenisles.api.BarrenIslesItems.suspicious_berries;
 
-import barrenisles.api.items.BarrenIslesItems; 
+import barrenisles.api.BarrenIslesItems;
 
 public class SuspiciousBerryBushBlock extends SweetBerryBushBlock {
 	

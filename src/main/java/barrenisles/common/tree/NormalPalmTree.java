@@ -10,7 +10,7 @@ import net.minecraft.world.gen.feature.TwoLayerFeature;
 
 import javax.annotation.Nullable;
 
-import barrenisles.api.blocks.BarrenIslesBlocks;
+import barrenisles.api.BarrenIslesBlocks;
 
 import java.util.Random;
 

@@ -3,6 +3,8 @@ package barrenisles.common.block;
 import barrenisles.common.tileentity.GoldVaseTileEntity;
 import barrenisles.common.tileentity.VaseTileEntity;
 import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.AnvilBlock;
+import net.minecraft.block.BellBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ContainerBlock;
@@ -16,6 +18,7 @@ import net.minecraft.block.BlockRenderType;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
+import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
@@ -52,6 +55,7 @@ public class GoldVaseBlock extends ContainerBlock
 	@Override
 	public ActionResultType use(BlockState state, World level, BlockPos pos, PlayerEntity player, Hand hand, BlockRayTraceResult hit) {
 		if (level.isClientSide) return ActionResultType.SUCCESS;
+		if(player.isShiftKeyDown()) return ActionResultType.FAIL;
 
 		INamedContainerProvider namedContainerProvider = this.getMenuProvider(state, level, pos);
 		if (namedContainerProvider != null) {
@@ -91,13 +95,20 @@ public class GoldVaseBlock extends ContainerBlock
 
 	@Override
 	public VoxelShape getShape(BlockState state, IBlockReader level, BlockPos pos, ISelectionContext context) {
-		return CHEST_SHAPE;
+		return VASE_SHAPE;
 	}
 
-	private static final Vector3d CHEST_MIN_CORNER = new Vector3d(1.0, 0.0, 1.0);
-	private static final Vector3d CHEST_MAX_CORNER = new Vector3d(15.0, 8.0, 15.0);
-	private static final VoxelShape CHEST_SHAPE = Block.box(
-			CHEST_MIN_CORNER.x, CHEST_MIN_CORNER.y, CHEST_MIN_CORNER.z,
-			CHEST_MAX_CORNER.x, CHEST_MAX_CORNER.y, CHEST_MAX_CORNER.z);
-
+	private static final VoxelShape FIRST_VASE_SHAPE = Block.box(
+			3.0, 0.0, 3.0,
+			13.0, 9.0, 13.0);
+	private static final VoxelShape SECOND_VASE_SHAPE = Block.box(
+			4.0, 9.0, 4.0,
+			8.0, 2.0, 8.0);
+	private static final VoxelShape THIRD_VASE_SHAPE = Block.box(
+			5.0, 11.0, 5.0,
+			6.0, 3.0, 6.0);
+	private static final VoxelShape FOURTH_VASE_SHAPE = Block.box(
+			4.0, 14.0, 4.0,
+			8.0, 2.0, 8.0);
+	private static final VoxelShape VASE_SHAPE = VoxelShapes.or(FIRST_VASE_SHAPE, SECOND_VASE_SHAPE, THIRD_VASE_SHAPE, FOURTH_VASE_SHAPE);
 }

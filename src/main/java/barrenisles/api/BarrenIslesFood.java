@@ -1,4 +1,4 @@
-package barrenisles.api.food;
+package barrenisles.api;
 
 import net.minecraft.item.Food;
 import net.minecraft.potion.EffectInstance;

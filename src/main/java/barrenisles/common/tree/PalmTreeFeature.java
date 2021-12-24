@@ -6,7 +6,7 @@ import java.util.Random;
 
 import com.mojang.serialization.Codec;
 
-import barrenisles.api.blocks.BarrenIslesBlocks;
+import barrenisles.api.BarrenIslesBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.SaplingBlock;
 import net.minecraft.util.Direction;

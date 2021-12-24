@@ -1,15 +1,13 @@
 package barrenisles.init;
 
-import static barrenisles.api.tileentities.BarrenIslesTileEntityType.*;
+import static barrenisles.api.BarrenIslesTileEntityType.*;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Set;
 
 import barrenisles.common.tileentity.GoldVaseTileEntity;
 import com.google.common.collect.Sets;
 
-import barrenisles.api.blocks.BarrenIslesBlocks;
+import barrenisles.api.BarrenIslesBlocks;
 import barrenisles.common.tileentity.VaseTileEntity;
 import barrenisles.core.BarrenIslesMod;
 import net.minecraft.block.Block;

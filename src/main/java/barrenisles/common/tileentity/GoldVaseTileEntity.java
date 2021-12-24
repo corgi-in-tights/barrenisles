@@ -1,6 +1,6 @@
 package barrenisles.common.tileentity;
 
-import barrenisles.api.tileentities.BarrenIslesTileEntityType;
+import barrenisles.api.BarrenIslesTileEntityType;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;

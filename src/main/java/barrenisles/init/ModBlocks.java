@@ -22,7 +22,6 @@ import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.PressurePlateBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MaterialColor;
-import net.minecraft.item.Items;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -40,11 +39,12 @@ import net.minecraft.item.Item;
 import net.minecraft.potion.Effects;
 import net.minecraft.block.StairsBlock;
 
-import static barrenisles.api.blocks.BarrenIslesBlocks.*;
+import static barrenisles.api.BarrenIslesBlocks.*;
 
 import java.util.function.Supplier;
 
 public class ModBlocks {
+
     public static final DeferredRegister<Block> BLOCKS
     = DeferredRegister.create(ForgeRegistries.BLOCKS, BarrenIslesMod.MODID);
     
@@ -126,7 +126,7 @@ public class ModBlocks {
         vase = register("vase", VaseBlock::new);
         
         quicksand = register("quicksand",
-    	 		() -> new QuickSandBlock(AbstractBlock.Properties.of(Material.PLANT).strength(0.344F).harvestTool(ToolType.SHOVEL).sound(SoundType.SAND).noOcclusion()));
+    	 		() -> new QuickSandBlock(AbstractBlock.Properties.of(Material.WEB).strength(0.344F).harvestTool(ToolType.SHOVEL).sound(SoundType.SAND).noOcclusion().dynamicShape()));
     }
     
     // Call in main mod file
@@ -144,7 +144,6 @@ public class ModBlocks {
     
     // Register blocks, with own texture and model
     // name - block id,
-    // Supplier<T> block - you can create Supplier with anonymous class: () -> block_name
     private static <T extends Block>RegistryObject<T> register(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

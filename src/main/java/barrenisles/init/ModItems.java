@@ -1,8 +1,10 @@
 
 package barrenisles.init;
 
-import barrenisles.api.sounds.BarrenIslesSounds;
+import barrenisles.api.BarrenIslesEntities;
+import barrenisles.api.BarrenIslesSounds;
 import barrenisles.common.block.DesertDiscItem;
+import barrenisles.common.item.ModSpawnEggItem;
 import barrenisles.common.item.QuickSandBucket;
 import net.minecraft.item.Item;
 import net.minecraft.item.Foods;
@@ -14,11 +16,11 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import barrenisles.core.BarrenIslesMod;
 
-import static barrenisles.api.items.BarrenIslesItems.*;
+import static barrenisles.api.BarrenIslesItems.*;
 import static barrenisles.init.ModGroups.BARREN_ISLES;
 
-import barrenisles.api.blocks.BarrenIslesBlocks;
-import barrenisles.api.food.BarrenIslesFood;
+import barrenisles.api.BarrenIslesBlocks;
+import barrenisles.api.BarrenIslesFood;
 import net.minecraft.item.BlockItem;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -61,12 +63,25 @@ public class ModItems
     					.tab(BARREN_ISLES)));
     	
     	barren_night_disc = ITEMS.register("music_disc_barren_night",
-    			() -> new DesertDiscItem(20, () -> BarrenIslesSounds.barren_night.get(),
+    			() -> new DesertDiscItem(20, BarrenIslesSounds.barren_night,
     					new Item.Properties()
     					.stacksTo(1)
     					.tab(BARREN_ISLES)
     					.rarity(Rarity.RARE)));
-    }
+
+		tumbleweed_spawn_egg = ITEMS.register("tumbleweed_spawn_egg",
+				() -> new ModSpawnEggItem(() -> BarrenIslesEntities.tumbleweed.get(), 0x4d3c02, 0x6b5505,
+						new Item.Properties().tab(BARREN_ISLES)));
+
+		coyote_spawn_egg = ITEMS.register("coyote_spawn_egg",
+				() -> new ModSpawnEggItem(() -> BarrenIslesEntities.coyote.get(), 0x40372f, 0xd0ae9c,
+						new Item.Properties().tab(BARREN_ISLES)));
+
+		duneraptor_spawn_egg = ITEMS.register("duneraptor_spawn_egg",
+				() -> new ModSpawnEggItem(() -> BarrenIslesEntities.duneraptor.get(), 0xd5671d, 0xd5951d,
+						new Item.Properties().tab(BARREN_ISLES)));
+
+	}
     
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

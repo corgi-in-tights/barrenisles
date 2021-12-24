@@ -1,8 +1,10 @@
 package barrenisles.core;
 
-import barrenisles.api.blocks.BarrenIslesBlocks;
-import barrenisles.api.items.BarrenIslesItems;
+import barrenisles.api.BarrenIslesBlocks;
+import barrenisles.api.BarrenIslesItems;
+import barrenisles.init.ModStructures;
 import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.entity.player.ServerPlayerEntity;
@@ -10,6 +12,8 @@ import net.minecraft.item.BucketItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.Stats;
 import net.minecraft.util.SoundEvents;
+import net.minecraft.world.FoliageColors;
+import net.minecraft.world.biome.BiomeColors;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.entity.EntityAttributeModificationEvent;
@@ -24,8 +28,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import barrenisles.api.entity.BarrenIslesEntities;
-import barrenisles.api.tileentities.BarrenIslesContainers;
+import barrenisles.api.BarrenIslesEntities;
+import barrenisles.api.BarrenIslesContainers;
 import barrenisles.client.gui.inventory.screen.GoldVaseScreen;
 import barrenisles.client.gui.inventory.screen.VaseScreen;
 import barrenisles.client.renderer.CoyoteRenderer;
@@ -50,54 +54,60 @@ public class BarrenIslesMod
 
     public BarrenIslesMod() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-        bus.addListener(this::preInit);
-        bus.addListener(this::clientSetup);
-        bus.addListener(this::entityAttributeCreationEvent);
-        bus.addListener(this::ModificateAttributes);
 
 		ModSounds.register(bus);
         ModItems.register(bus);
         ModBlocks.register(bus);
         ModEntities.register(bus);
-        
-        ModTileEntityTypes.register(bus);
+        ModStructures.register(bus);
+
         ModContainers.register(bus);
+        ModTileEntityTypes.register(bus);
+
+        bus.addListener(this::setup);
+        bus.addListener(this::clientSetup);
+        bus.addListener(this::entityAttributeCreationEvent);
+        bus.addListener(this::onAttributeModification);
         
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.addListener(this::onBlockClickEvent);
     }
-    
-    private void preInit(final FMLCommonSetupEvent event)
+
+    private void setup(final FMLCommonSetupEvent event)
     {
+        event.enqueueWork( () -> {
+            ModStructures.setupStructures();
+            BarrenIslesConfiguredStructures.registerConfiguredStructures();
+        });
     }
 
     private void clientSetup(final FMLClientSetupEvent event) 
     {
-    	logger.info("Barren Isles setup in client...");
-    	
-    	// Register Vases GUI.
-    	ScreenManager.register(BarrenIslesContainers.vase_container.get(), VaseScreen::new);
+        logger.info("Barren Isles setup in client...");
+        // Register Vases GUI.
+        ScreenManager.register(BarrenIslesContainers.vase_container.get(), VaseScreen::new);
         ScreenManager.register(BarrenIslesContainers.gold_vase_container.get(), GoldVaseScreen::new);
-    	
-    	// Register Entity renderer
-    	RenderingRegistry.registerEntityRenderingHandler(BarrenIslesEntities.coyote.get(),
-                CoyoteRenderer::new);
-    	RenderingRegistry.registerEntityRenderingHandler(BarrenIslesEntities.duneraptor.get(),
-                DuneraptorRenderer::new);
-    	RenderingRegistry.registerEntityRenderingHandler(BarrenIslesEntities.tumbleweed.get(),
-                TumbleweedRenderer::new);
 
-    	ModBlocks.transparency();
+        // Register Entity renderer
+        RenderingRegistry.registerEntityRenderingHandler(BarrenIslesEntities.coyote.get(), CoyoteRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(BarrenIslesEntities.duneraptor.get(), DuneraptorRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(BarrenIslesEntities.tumbleweed.get(), TumbleweedRenderer::new);
+
+        ModBlocks.transparency();
+
+        Minecraft.getInstance().getBlockColors().register((state, world, pos, tintIndex) -> world != null && pos != null ?
+                        BiomeColors.getAverageFoliageColor(world, pos) : FoliageColors.getDefaultColor(),
+                BarrenIslesBlocks.palm_leaves.get());
     }
-    
+
     public void entityAttributeCreationEvent(EntityAttributeCreationEvent event) {
 		logger.info("BarrenIsles is starting entity attribute event");
 		event.put(BarrenIslesEntities.coyote.get(), CoyoteEntity.createCoyoteAttributes());
 		event.put(BarrenIslesEntities.duneraptor.get(), DuneraptorEntity.createDuneraptorAttributes());
 		event.put(BarrenIslesEntities.tumbleweed.get(), TumbleweedEntity.createTumbleweedAttributes());
 	}
-    
-    public void ModificateAttributes(EntityAttributeModificationEvent e) {
+
+    public void onAttributeModification(EntityAttributeModificationEvent e) {
     	e.add(BarrenIslesEntities.duneraptor.get(), Attributes.ATTACK_DAMAGE, 5D);
     }
 

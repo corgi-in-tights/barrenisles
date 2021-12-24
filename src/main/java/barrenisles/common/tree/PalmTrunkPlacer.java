@@ -2,7 +2,7 @@ package barrenisles.common.tree;
 
 import com.google.common.collect.Lists;
 
-import barrenisles.api.blocks.BarrenIslesBlocks;
+import barrenisles.api.BarrenIslesBlocks;
 
 import java.util.List;
 import java.util.Random;

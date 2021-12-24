@@ -1,4 +1,4 @@
-package barrenisles.api.blocks;
+package barrenisles.api;
 
 import net.minecraft.block.Block;
 import net.minecraftforge.fml.RegistryObject;

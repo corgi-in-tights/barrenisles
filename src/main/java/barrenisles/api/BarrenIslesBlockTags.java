@@ -1,4 +1,4 @@
-package barrenisles.api.blocks;
+package barrenisles.api;
 
 import barrenisles.core.BarrenIslesMod;
 import net.minecraft.block.Block;

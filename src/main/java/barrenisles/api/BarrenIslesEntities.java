@@ -1,4 +1,4 @@
-package barrenisles.api.entity;
+package barrenisles.api;
 
 import barrenisles.common.entity.CoyoteEntity;
 import barrenisles.common.entity.DuneraptorEntity;

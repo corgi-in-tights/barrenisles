@@ -1,6 +1,6 @@
 package barrenisles.init;
 
-import static barrenisles.api.tileentities.BarrenIslesContainers.*;
+import static barrenisles.api.BarrenIslesContainers.*;
 
 import barrenisles.common.tileentity.GoldVaseContainer;
 import barrenisles.common.tileentity.VaseContainer;
