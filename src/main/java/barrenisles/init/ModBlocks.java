@@ -4,6 +4,7 @@ import barrenisles.common.block.CoconutBlock;
 import barrenisles.common.block.DesertFlowerBlock;
 import barrenisles.common.block.GoldVaseBlock;
 import barrenisles.common.block.PalmDoorBlock;
+import barrenisles.common.block.PalmLogBlock;
 import barrenisles.common.block.PalmTrapdoorBlock;
 import barrenisles.common.block.PoisonIvyBlock;
 import barrenisles.common.block.QuickSandBlock;
@@ -21,8 +22,6 @@ import net.minecraft.block.FenceGateBlock;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.PressurePlateBlock;
 import net.minecraft.block.SoundType;
-import net.minecraft.block.WebBlock;
-import net.minecraft.block.material.MaterialColor;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -51,7 +50,7 @@ public class ModBlocks {
     
     static {
     	palm_log = register("palm_log", 
-    			() -> new RotatedPillarBlock(copy(Blocks.OAK_LOG)));
+    			() -> new PalmLogBlock(copy(Blocks.OAK_LOG)));
     	
         palm_wood = register("palm_wood", 
     			() -> new RotatedPillarBlock(copy(Blocks.OAK_WOOD)));
@@ -105,7 +104,7 @@ public class ModBlocks {
         agave = register("agave", 
     			() -> new DesertFlowerBlock(Effects.WITHER, 70, copy_plant(Blocks.DANDELION)));
     			
-        marigold = register("marigold", 
+        marigold = register("marigold",
     			() -> new DesertFlowerBlock(Effects.MOVEMENT_SPEED, 40, copy_plant(Blocks.DANDELION)));
     			
         desert_lily = register("desert_lily", 
@@ -144,8 +143,7 @@ public class ModBlocks {
     // name - block id,
     // Supplier<T> block - you can create Supplier with anonymous class: () -> block_name
     private static <T extends Block>RegistryObject<T> registerWithoutBlockItem(String name, Supplier<T> block) {
-        RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        return toReturn;
+        return BLOCKS.register(name, block);
     }
     
     // Register blocks, with own texture and model
