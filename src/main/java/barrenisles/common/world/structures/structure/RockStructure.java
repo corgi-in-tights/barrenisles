@@ -37,7 +37,7 @@ public class RockStructure extends Structure<NoFeatureConfig> {
 
     @Override
     public GenerationStage.Decoration step() {
-        return GenerationStage.Decoration.SURFACE_STRUCTURES;
+        return GenerationStage.Decoration.TOP_LAYER_MODIFICATION;
     }
 
     @Override

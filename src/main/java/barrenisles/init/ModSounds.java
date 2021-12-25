@@ -16,8 +16,7 @@ public class ModSounds {
     
 	static {
 		barren_night = 
-    		SOUNDS.register("barren_night",
-    		() -> new SoundEvent(new ResourceLocation(BarrenIslesMod.MODID, "barren_night")));
+    		SOUNDS.register("barren_night", () -> new SoundEvent(new ResourceLocation(BarrenIslesMod.MODID, "barren_night")));
 	}
 	
 	public static void register(IEventBus eventBus) {

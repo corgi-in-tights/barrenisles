@@ -25,11 +25,11 @@ import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 
-public class QuickSandBucket extends Item {
+public class QuicksandBucket extends Item {
 	private final Block content;
 	private final java.util.function.Supplier<? extends Block> blockSupplier;
 
-	public QuickSandBucket(java.util.function.Supplier<? extends Block> supplier, Item.Properties builder) {
+	public QuicksandBucket(java.util.function.Supplier<? extends Block> supplier, Item.Properties builder) {
 		super(builder);
 		this.content = BarrenIslesBlocks.quicksand.get();
 		this.blockSupplier = supplier;
@@ -78,23 +78,19 @@ public class QuickSandBucket extends Item {
 		BlockState blockstate = world.getBlockState(pos);
 		Material material = blockstate.getMaterial();
 		boolean flag1 = blockstate.getMaterial() == Material.AIR;
-		if (!flag1) {
-			return false;
-			//return raytraceResult != null && this.emptyBucket(player, world, raytraceResult.getBlockPos().relative(raytraceResult.getDirection()), raytraceResult);
-		} else {
+		if (!flag1) return false;
+		else {
 			if (!world.isClientSide && !material.isLiquid()) {
 				world.destroyBlock(pos, true);
 			}
 			if (!world.setBlock(pos, this.content.defaultBlockState(), 11)) {
 				return false;
 			} else {
-
 				this.playEmptySound(player, world, pos);
 				return true;
 			}
 		}
 	}
-
 	protected void playEmptySound(@Nullable PlayerEntity player, IWorld world, BlockPos pos) {
 		world.playSound(player, pos, SoundEvents.BUCKET_EMPTY, SoundCategory.BLOCKS, 1.0F, 1.0F);
 	}

@@ -21,6 +21,7 @@ import net.minecraft.block.FenceGateBlock;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.PressurePlateBlock;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.WebBlock;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -124,9 +125,14 @@ public class ModBlocks {
     			
         gold_vase = register("gold_vase", GoldVaseBlock::new);
         vase = register("vase", VaseBlock::new);
-        
-        quicksand = register("quicksand",
-    	 		() -> new QuickSandBlock(AbstractBlock.Properties.of(Material.WEB).strength(0.344F).harvestTool(ToolType.SHOVEL).sound(SoundType.SAND).noOcclusion().dynamicShape()));
+
+        quicksand = registerWithoutBlockItem("quicksand",
+    	 		() -> new QuickSandBlock(AbstractBlock.Properties.of(Material.WEB)
+                        .strength(0.344F)
+                        .requiresCorrectToolForDrops()
+                        .harvestTool(ToolType.SHOVEL)
+                        .sound(SoundType.SAND)
+                        .noCollission()));
     }
     
     // Call in main mod file

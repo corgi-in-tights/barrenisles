@@ -5,7 +5,7 @@ import barrenisles.api.BarrenIslesEntities;
 import barrenisles.api.BarrenIslesSounds;
 import barrenisles.common.block.DesertDiscItem;
 import barrenisles.common.item.ModSpawnEggItem;
-import barrenisles.common.item.QuickSandBucket;
+import barrenisles.common.item.QuicksandBucket;
 import net.minecraft.item.Item;
 import net.minecraft.item.Foods;
 import net.minecraft.item.Items;
@@ -56,14 +56,14 @@ public class ModItems
 						.food(Foods.MELON_SLICE)));
     	
     	quicksand_bucket = ITEMS.register("quicksand_bucket",
-    			() -> new QuickSandBucket(BarrenIslesBlocks.quicksand,
+    			() -> new QuicksandBucket(BarrenIslesBlocks.quicksand,
     					new Item.Properties()
     					.craftRemainder(Items.BUCKET)
     					.stacksTo(1)
     					.tab(BARREN_ISLES)));
     	
     	barren_night_disc = ITEMS.register("music_disc_barren_night",
-    			() -> new DesertDiscItem(20, BarrenIslesSounds.barren_night,
+    			() -> new DesertDiscItem(20, () -> BarrenIslesSounds.barren_night.get(),
     					new Item.Properties()
     					.stacksTo(1)
     					.tab(BARREN_ISLES)

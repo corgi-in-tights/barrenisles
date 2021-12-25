@@ -37,7 +37,7 @@ public class BadlandsTempleStructure extends Structure<NoFeatureConfig> {
 
     @Override
     public GenerationStage.Decoration step() {
-        return GenerationStage.Decoration.SURFACE_STRUCTURES;
+        return GenerationStage.Decoration.UNDERGROUND_STRUCTURES;
     }
 
     private static final List<MobSpawnInfo.Spawners> STRUCTURE_MONSTERS = ImmutableList.of();
@@ -64,7 +64,7 @@ public class BadlandsTempleStructure extends Structure<NoFeatureConfig> {
         // the chunk generator will place for that dimension.
         IBlockReader columnOfBlocks = chunkGenerator.getBaseColumn(centerOfChunk.getX(), centerOfChunk.getZ());
 
-        // Combine the column of blocks with land height and you get the top block itself which you can test.
+        // Combine the column of blocks with land height, and you get the top block itself which you can test.
         BlockState topBlock = columnOfBlocks.getBlockState(centerOfChunk.above(landHeight));
 
         // Now we test to make sure our structure is not spawning on water or other fluids.
